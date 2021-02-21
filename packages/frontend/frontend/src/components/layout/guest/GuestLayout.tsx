@@ -20,7 +20,7 @@ export function GuestLayout({
                 <div className="col-12">
                   <img
                     className="header-logo"
-                    src="/img/logo/regular.png"
+                    src="/img/logo/regular.gif"
                     style={{width: '100%'}}
                   />
                   <Card>
