@@ -1,0 +1,29 @@
+export declare class ConfigEntity {
+    id: number;
+    siteName: string;
+    siteLink: string;
+    siteBeta: number;
+    emulatorIP: string;
+    emulatorPort: string;
+    swfAdminHabbo: string;
+    swfHabbo: string;
+    swfExternalVariables: string;
+    swfExternalTexts: string;
+    swfProductData: string;
+    swfFurniData: string;
+    swfFigureData: string;
+    swfBaseURL: string;
+    swfBadgeURL: string;
+    swfOverrideVariables: string;
+    swfOverrideTexts: string;
+    loadingMessage: string;
+    groupBadgeURL: string;
+    sendGridAPIKey: string;
+    sendGridAPISender: string;
+    sendGridForgotPasswordTemplate: string;
+    googleRecaptchaClientKey: string;
+    googleRecaptchaSecretKey: string;
+    websocketEnabled: number;
+    websocketIP: string;
+    websocketPort: string;
+}

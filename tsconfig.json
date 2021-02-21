@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@instinct-prj/admin": ["packages/frontend/admin/src"],
+      "@instinct-prj/backend":  ["packages/backend/backend/src"],
+      "@instinct-prj/interface": ["packages/shared/interface/src"],
+      "@instinct-prj/frontend": ["packages/frontend/frontend/src"],
+      "@instinct-prj/modern-theme": ["packages/frontend/modern-theme/src"]
+    },
+    "noEmit": true
+  },
+  "include": [
+    "packages"
+  ]
+}

@@ -1,0 +1,160 @@
+$backgroundOne: linear-gradient(135deg,#15507c,#0c3a65) no-repeat fixed;
+$backgroundTwo: #001726;
+
+$primaryFontColor: white;
+
+body {
+  background: $backgroundOne;
+}
+
+.header-container.is-small {
+  height: 100px;
+}
+
+.header-container {
+  background-image: none;
+
+  .logo-container {
+    display: none;
+  }
+
+  .header-content {
+    padding-top: 15px;
+    width: 100%;
+    max-width: 1055px;
+    margin: 0 auto;
+  }
+
+  .header-logo {
+    margin-left: -30px;
+    margin-top: -10px;
+    width: 350px;
+  }
+
+}
+
+.account-buttons {
+  margin-top: 10px;
+}
+
+.navigation-container {
+  background: $backgroundTwo;
+
+  .navigation-menu {
+
+    .navigation-item.main-link-item>a {
+      width: 138px;
+      height: 33px;
+      margin-top: -50px;
+      margin-left: 10px;
+      background-size: cover;
+    }
+
+    .navigation-item > a {
+      color: $primaryFontColor;
+    }
+
+  }
+}
+
+.footer-container {
+  background: $backgroundOne;
+  color: white !important;
+}
+
+.article-container {
+
+  .article-header {
+    background-color: $backgroundTwo !important;
+    color: $primaryFontColor !important;
+  }
+
+  .article-content {
+    background-color: transparent !important;
+    box-shadow: 0 0 10px $backgroundTwo !important;
+  }
+
+}
+
+.login-popup {
+  &:after {
+    background-image: none;
+  }
+}
+
+.page-container .page-content article.default-section, .page-container .page-content aside.default-section {
+  background: $backgroundTwo;
+  color: $primaryFontColor;
+}
+
+.table {
+  color: $primaryFontColor;
+}
+
+.page-container .related-articles-container .related-article-container .related-article-title {
+  color: $primaryFontColor;
+}
+
+.default-table th {
+  color: $primaryFontColor;
+}
+
+.ranking-content td:nth-child(2) a {
+  color: $primaryFontColor;
+}
+
+.members-container .member-container .member-content {
+  color: $primaryFontColor;
+}
+
+.aside-title {
+  border: none;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.hotel-container {
+  z-index: 100;
+}
+
+.page-container[data-page = "profile"] .profile-header .header-content {
+  background: url(https://i.imgur.com/5nou6fm.png);
+}
+
+.img-overflow {
+  img {
+    max-width: 100%;
+  }
+}
+
+input {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 300;
+}
+::-webkit-scrollbar {
+  width: 14px;
+  height: 18px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #001726;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  height: 6px;
+  -webkit-border-radius: 7px;
+  -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.client-modals {
+  .modal {
+    pointer-events: none !important;
+  }
+}
+
