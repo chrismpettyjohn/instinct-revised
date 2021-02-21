@@ -52,4 +52,7 @@ export class ConfigEntity {
 
   @Column({name: 'websocket_port'})
   websocketPort!: string;
+
+  @Column({name: 'discord_url'})
+  discordURL!: string;
 }

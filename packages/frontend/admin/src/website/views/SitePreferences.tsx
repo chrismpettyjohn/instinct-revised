@@ -31,6 +31,15 @@ export function SitePreferences() {
         />
       </FormGroup>
       <FormGroup>
+        <h4>Discord URL</h4>
+        <Input
+          type="text"
+          name="discordURL"
+          onChange={setConfig}
+          value={config.discordURL}
+        />
+      </FormGroup>
+      <FormGroup>
         <h4>Beta Mode</h4>
         <Toggle
           checked={config.siteBeta}

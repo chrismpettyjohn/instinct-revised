@@ -11,6 +11,7 @@ export interface Config {
   websocketEnabled: boolean;
   websocketIP: string;
   websocketPort: string;
+  discordURL: string;
 }
 
 export const defaultConfig: Config = {
@@ -26,4 +27,5 @@ export const defaultConfig: Config = {
   websocketEnabled: false,
   websocketIP: '',
   websocketPort: '',
+  discordURL: '',
 };

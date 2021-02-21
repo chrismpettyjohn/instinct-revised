@@ -76,4 +76,8 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsString()
   @IsOptional()
   websocketPort!: string;
+
+  @IsString()
+  @IsOptional()
+  discordURL!: string;
 }

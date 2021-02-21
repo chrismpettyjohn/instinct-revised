@@ -1,16 +1,23 @@
 import React from 'react';
-import { Column, Container, MyProfile, RecentNews } from '@instinct-prj/frontend';
-import { PraiseLouis } from './praise-louis/PraiseLouis';
+import {NewsSlider} from './news-slider/NewsSlider';
+import {SocialMedia} from './social-media/SocialMedia';
+import {
+  Column,
+  Container,
+  MyProfile,
+  UserOfTheWeek,
+} from '@instinct-prj/frontend';
 
 export function HomePage() {
   return (
     <Container>
       <Column side="left">
         <MyProfile />
-        <PraiseLouis />
+        <NewsSlider />
       </Column>
       <Column side="right">
-        <RecentNews />
+        <UserOfTheWeek />
+        <SocialMedia />=
       </Column>
     </Container>
   );

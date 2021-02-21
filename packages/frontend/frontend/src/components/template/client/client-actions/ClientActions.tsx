@@ -40,11 +40,7 @@ export function ClientActions() {
         />
       </button>
       <button onClick={reloadPage}>
-        <Icon
-          className="mr-0"
-          family="fas"
-          type="sync"
-        />
+        <Icon className="mr-0" family="fas" type="sync" />
       </button>
       <button style={{cursor: 'default'}}>
         <Icon family="fas" type="user" />

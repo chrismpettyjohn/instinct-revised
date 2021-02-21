@@ -11,7 +11,11 @@ export function Header({children}: HeaderProps) {
       <div className="header-content row">
         <div className="col-6 text-left">
           <Link to="/">
-            <img className="header-logo" src="/img/logo/regular.gif" style={{width: 300}} />
+            <img
+              className="header-logo"
+              src="/img/logo/regular.gif"
+              style={{width: 300}}
+            />
           </Link>
         </div>
         <div className="col-6 text-right">

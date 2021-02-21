@@ -14,6 +14,7 @@ export interface ConfigDTO {
   websocketEnabled: boolean;
   websocketIP: string;
   websocketPort: string;
+  discordURL: string;
 }
 
 export const exampleConfigDTO: ConfigDTO = {
@@ -32,4 +33,5 @@ export const exampleConfigDTO: ConfigDTO = {
   websocketEnabled: false,
   websocketIP: '',
   websocketPort: '',
+  discordURL: '',
 };

@@ -15,6 +15,7 @@ export function configWire(configEntity: ConfigEntity): Config {
     websocketEnabled: configEntity.websocketEnabled === 1,
     websocketIP: configEntity.websocketIP,
     websocketPort: configEntity.websocketPort,
+    discordURL: configEntity.discordURL,
   };
 }
 

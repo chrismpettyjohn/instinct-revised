@@ -1,6 +1,6 @@
 import React from 'react';
 import {HomePage} from './home-page/HomePage';
-import { UserLayout, setURL} from '@instinct-prj/frontend';
+import {UserLayout, setURL} from '@instinct-prj/frontend';
 
 setURL('me', <Home />);
 
