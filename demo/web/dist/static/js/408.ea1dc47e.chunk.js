@@ -1,1 +1,0 @@
-(this["webpackJsonp@instinct-prj/web-demo"]=this["webpackJsonp@instinct-prj/web-demo"]||[]).push([[408],{1019:function(s,t){Prism.languages.t4=Prism.languages["t4-cs"]=Prism.languages["t4-templating"].createT4("csharp")}}]);
