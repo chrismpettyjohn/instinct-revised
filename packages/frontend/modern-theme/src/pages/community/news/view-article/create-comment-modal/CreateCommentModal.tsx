@@ -1,9 +1,12 @@
-import {Icon} from '@instinct-prj/frontend';
 import React, {SyntheticEvent, useState} from 'react';
+import {articleService, Icon} from '@instinct-prj/frontend';
 import {CreateCommentModalProps} from './CreateCommentModal.types';
 import {Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 
-export function CreateCommentModal({article}: CreateCommentModalProps) {
+export function CreateCommentModal({
+  article,
+  onCreation,
+}: CreateCommentModalProps) {
   const [comment, setComment] = useState('');
   const [isOpen, setModal] = useState(false);
   const [isLoading, setLoading] = useState(false);
@@ -16,6 +19,12 @@ export function CreateCommentModal({article}: CreateCommentModalProps) {
     event.preventDefault();
     try {
       setLoading(true);
+      const newComment = await articleService.createComment(article.id, {
+        content: comment,
+      });
+      onCreation(newComment);
+      setComment('');
+      setModal(false);
     } finally {
       setLoading(false);
     }

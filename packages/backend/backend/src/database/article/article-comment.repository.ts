@@ -10,6 +10,6 @@ export class ArticleCommentRepository extends BaseRepository<ArticleCommentEntit
     @InjectRepository(ArticleCommentEntity)
     articleCommentRepo: Repository<ArticleCommentEntity>
   ) {
-    super(articleCommentRepo, []);
+    super(articleCommentRepo, ['user', 'user.rank']);
   }
 }

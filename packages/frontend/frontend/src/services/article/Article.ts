@@ -1,7 +1,13 @@
 import {ArticleTypes} from './';
 import {AxiosResponse} from 'axios';
 import {backendAPI} from '../../api';
-import {Article, ArticleCategory, ArticleDTO} from '@instinct-prj/interface';
+import {
+  Article,
+  ArticleCategory,
+  ArticleComment,
+  ArticleCommentDTO,
+  ArticleDTO,
+} from '@instinct-prj/interface';
 
 class ArticleService implements ArticleTypes {
   async getAll() {
@@ -48,6 +54,18 @@ class ArticleService implements ArticleTypes {
 
   async deleteCategoryByID(categoryID: number) {
     await backendAPI.delete(`categories/${categoryID}`);
+  }
+
+  async createComment(articleID: number, commentDTO: ArticleCommentDTO) {
+    const newComment: AxiosResponse<ArticleComment> = await backendAPI.post(
+      `articles/${articleID}/comments`,
+      commentDTO
+    );
+    return newComment.data;
+  }
+
+  async deleteComment(articleID: number, commentID: number) {
+    await backendAPI.delete(`articles/${articleID}/comments/${commentID}`);
   }
 }
 

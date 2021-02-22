@@ -16,6 +16,7 @@ export interface RankDTO {
   websiteManageBetaCodes: boolean;
   websiteManageGuestbook: boolean;
   websiteManageEmulator: boolean;
+  websiteManageComments: boolean;
 }
 
 export function rankWireToRankDTO(rankWire: Rank): RankDTO {
@@ -35,5 +36,6 @@ export function rankWireToRankDTO(rankWire: Rank): RankDTO {
     websiteManageBetaCodes: rankWire.permissions.websiteManageBetaCodes,
     websiteManageGuestbook: rankWire.permissions.websiteManageGuestbook,
     websiteManageEmulator: rankWire.permissions.websiteManageEmulator,
+    websiteManageComments: rankWire.permissions.websiteManageComments,
   };
 }

@@ -2,7 +2,10 @@ import {useEffect, useState} from 'react';
 import {Article} from '@instinct-prj/interface';
 import {articleService} from '../../services/article';
 
-export function useFetchArticleByID(articleID: string): Article | undefined {
+export function useFetchArticleByID(
+  articleID: string,
+  refresh = 0
+): Article | undefined {
   const [article, setArticle] = useState<Article>();
 
   useEffect(() => {
@@ -13,7 +16,7 @@ export function useFetchArticleByID(articleID: string): Article | undefined {
     }
 
     fetchArticle();
-  }, [articleID]);
+  }, [articleID, refresh]);
 
   return article;
 }

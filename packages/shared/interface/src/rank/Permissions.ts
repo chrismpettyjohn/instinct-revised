@@ -10,6 +10,7 @@ export interface Permissions {
   websiteManageBetaCodes: boolean;
   websiteManageGuestbook: boolean;
   websiteManageEmulator: boolean;
+  websiteManageComments: boolean;
 }
 
 export const examplePermissions: Permissions = {
@@ -24,4 +25,5 @@ export const examplePermissions: Permissions = {
   websiteManageBetaCodes: true,
   websiteManageGuestbook: true,
   websiteManageEmulator: true,
+  websiteManageComments: true,
 };

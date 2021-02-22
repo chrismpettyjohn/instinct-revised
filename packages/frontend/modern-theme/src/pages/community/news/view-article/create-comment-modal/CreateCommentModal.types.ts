@@ -1,5 +1,6 @@
-import {Article} from '@instinct-prj/interface';
+import {Article, ArticleComment} from '@instinct-prj/interface';
 
 export interface CreateCommentModalProps {
   article: Article;
+  onCreation(comment: ArticleComment): void;
 }

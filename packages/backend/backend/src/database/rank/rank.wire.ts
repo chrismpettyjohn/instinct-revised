@@ -47,6 +47,9 @@ export function rankWire(rankEntity: RankEntity): Rank {
       websiteManageEmulator: permissionStatusToBoolean(
         rankEntity.websiteManageEmulator
       ),
+      websiteManageComments: permissionStatusToBoolean(
+        rankEntity.websiteManageComments
+      ),
     },
   };
 }
@@ -74,6 +77,9 @@ export function rankDataTransferObjectToEntity(rankDTO: RankDTO): RankEntity {
     ),
     websiteManageEmulator: booleanToPermissionStatus(
       rankDTO.websiteManageEmulator
+    ),
+    websiteManageComments: booleanToPermissionStatus(
+      rankDTO.websiteManageComments
     ),
   };
 }

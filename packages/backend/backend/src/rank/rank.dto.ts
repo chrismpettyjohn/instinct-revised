@@ -48,4 +48,7 @@ export class RankDTOClass implements RankDTO {
 
   @IsBoolean()
   websiteManageEmulator!: boolean;
+
+  @IsBoolean()
+  websiteManageComments!: boolean;
 }

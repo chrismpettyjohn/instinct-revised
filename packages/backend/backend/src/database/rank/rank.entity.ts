@@ -51,4 +51,7 @@ export class RankEntity {
 
   @Column({name: 'website_manage_emulator', type: 'enum', default: '0'})
   websiteManageEmulator!: PermissionStatus;
+
+  @Column({name: 'website_manage_comments', type: 'enum', default: '0'})
+  websiteManageComments!: PermissionStatus;
 }

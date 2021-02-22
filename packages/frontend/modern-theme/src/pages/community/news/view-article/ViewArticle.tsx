@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ViewArticle.scss';
 import {Link, useRoute} from 'wouter';
 import {ArticleBody} from './article-body/ArticleBody';
@@ -17,10 +17,11 @@ import {ViewComments} from './view-comments/ViewComments';
 setURL('community/news/:articleID', <ViewArticle />);
 
 export function ViewArticle() {
+  const [refresh, setRefresh] = useState(0);
   const [match, params] = useRoute<{articleID: string}>(
     '/community/news/:articleID'
   );
-  const article = useFetchArticleByID(params!.articleID);
+  const article = useFetchArticleByID(params!.articleID, refresh);
 
   return (
     <UserLayout section="article">
@@ -43,7 +44,10 @@ export function ViewArticle() {
           <div className="row">
             <div className="col-8">
               <ArticleBody article={article} />
-              <ViewComments article={article} />
+              <ViewComments
+                article={article}
+                onChange={() => setRefresh(_ => _ + 1)}
+              />
             </div>
             <div className="col-4">
               <RecentNews />
