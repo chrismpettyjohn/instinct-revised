@@ -121,7 +121,7 @@ export function RankEditor({
                 >
                   <img
                     alt="rank badge"
-                    src={`${config.swfBadgeURL}/${state.rank.badge}.gif`}
+                    src={`${config.rankBadgeURL}/${state.rank.badge}.gif`}
                   />
                 </div>
               </div>

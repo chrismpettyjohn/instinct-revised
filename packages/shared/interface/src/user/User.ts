@@ -32,7 +32,7 @@ export const exampleUser: User = {
 };
 
 export interface InternalUser
-  extends Omit<User, 'joinDate' | 'lastLoginDate' | 'rank'> {
+  extends Omit<User, 'joinDate' | 'lastLoginDate' | 'rank' | 'online'> {
   email: string;
   rankID: number;
 }
@@ -42,3 +42,5 @@ export interface InternalUserDTO
   userOfTheWeek: number;
   password: string;
 }
+
+export type UpdateInternalUserDTO = Partial<InternalUserDTO>;

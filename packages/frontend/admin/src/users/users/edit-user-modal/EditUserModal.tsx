@@ -2,7 +2,7 @@ import {omit} from 'lodash';
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {EditUserModalProps} from './EditUserModal.types';
-import {InternalUser, InternalUserDTO} from '@instinct-prj/interface';
+import {InternalUser, UpdateInternalUserDTO} from '@instinct-prj/interface';
 import {
   FormGroup,
   Modal,
@@ -22,9 +22,8 @@ import {
 
 export function EditUserModal({user, onUpdated}: EditUserModalProps) {
   const ranks = useFetchAllRanks();
-  const [updatedUser, setUpdatedUser] = useState<InternalUserDTO>({
-    ...omit(user, 'joinDate', 'lastLoginDate'),
-    password: '',
+  const [updatedUser, setUpdatedUser] = useState<UpdateInternalUserDTO>({
+    ...omit(user, ['joinDate', 'lastLoginDate', 'password', 'online']),
     userOfTheWeek: user.userOfTheWeek ? 1 : 0,
   });
   const [confirmDelete, setConfirmDelete] = useState(false);

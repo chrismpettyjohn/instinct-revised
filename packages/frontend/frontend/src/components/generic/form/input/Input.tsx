@@ -6,7 +6,12 @@ export function Input(props: InputProps) {
   function onChange(event: ChangeEvent<HTMLInputElement>): void {
     if (props.onChange) {
       // @ts-ignore - value does indeed exist sir
-      props.onChange(props.name, event.target.value);
+      props.onChange(
+        props.name,
+        props.type === 'number'
+          ? Number(event.target.value)
+          : event.target.value
+      );
     }
   }
 

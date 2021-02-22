@@ -12,6 +12,7 @@ import {sessionContext} from '../../../context/session';
 import {sessionService} from '../../../services/session';
 import {RenderError} from '../../generic/error/RenderError';
 import React, {useContext, useEffect, useState} from 'react';
+import {ServerMaintenanceGuard} from '../../guard/server-maintenance';
 
 export function Bootstrap() {
   useBanListener();
@@ -45,11 +46,13 @@ export function Bootstrap() {
     return (
       <SkeletonTheme color="#0f416d" highlightColor="#1a4d6e">
         <ToastContainer />
-        <BannedGuard>
-          <Router />
-          <Client />
-          <DataPolling />
-        </BannedGuard>
+        <ServerMaintenanceGuard>
+          <BannedGuard>
+            <Router />
+            <Client />
+            <DataPolling />
+          </BannedGuard>
+        </ServerMaintenanceGuard>
       </SkeletonTheme>
     );
   } catch {

@@ -6,6 +6,7 @@ import {sessionContext} from '../../../context/session';
 import {sessionService} from '../../../services/session';
 
 const FIVE_MINUTE_IN_MS = 300000000;
+const THIRTY_SECONDS_IN_MS = 30000;
 
 export function DataPolling() {
   const {setConfig} = useContext(configContext);
@@ -24,8 +25,14 @@ export function DataPolling() {
     setHealth(health);
   }
 
+  async function refreshHealth() {
+    const health = await configService.getHealth();
+    setHealth(health);
+  }
+
   useEffect(() => {
     setInterval(refresh, FIVE_MINUTE_IN_MS);
+    setInterval(refreshHealth, THIRTY_SECONDS_IN_MS);
   }, []);
 
   return null;

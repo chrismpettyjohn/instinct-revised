@@ -105,7 +105,7 @@ export function ViewArticle() {
                       </div>
                     </div>
                     <div style={{marginTop: 8, marginLeft: 30}}>
-                      <img src={`${config.swfBadgeURL}/ADM.gif`} />
+                      <img src={`${config.rankBadgeURL}/ADM.gif`} />
                     </div>
                   </div>
                 </div>

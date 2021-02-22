@@ -16,6 +16,8 @@ export function configWire(configEntity: ConfigEntity): Config {
     websocketIP: configEntity.websocketIP,
     websocketPort: configEntity.websocketPort,
     discordURL: configEntity.discordURL,
+    rankBadgeURL: configEntity.rankBadgeURL,
+    maintenanceEnabled: configEntity.maintenanceEnabled === 1,
   };
 }
 
@@ -27,5 +29,6 @@ export function configDTOWire(configEntity: ConfigEntity): ConfigDTO {
     sendGridAPISender: configEntity.sendGridAPISender,
     sendGridForgotPasswordTemplate: configEntity.sendGridForgotPasswordTemplate,
     googleRecaptchaClientKey: configEntity.googleRecaptchaClientKey,
+    maintenanceEnabled: configEntity.maintenanceEnabled === 1,
   };
 }

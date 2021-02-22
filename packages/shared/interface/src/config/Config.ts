@@ -6,12 +6,14 @@ export interface Config {
   emulatorPort: string;
   nitroURL: string;
   loadingMessage: string;
+  rankBadgeURL: string;
   groupBadgeURL: string;
   googleRecaptchaClientKey: string;
   websocketEnabled: boolean;
   websocketIP: string;
   websocketPort: string;
   discordURL: string;
+  maintenanceEnabled: boolean;
 }
 
 export const defaultConfig: Config = {
@@ -22,10 +24,12 @@ export const defaultConfig: Config = {
   siteLink: 'http://localhost:3000',
   nitroURL: 'https://nitro.imchris.dev',
   loadingMessage: 'Please wait as I do some things',
+  rankBadgeURL: '',
   groupBadgeURL: 'http://localhost:3000/swfs/other/images/Badgeparts/generated',
   googleRecaptchaClientKey: '',
   websocketEnabled: false,
   websocketIP: '',
   websocketPort: '',
   discordURL: '',
+  maintenanceEnabled: false,
 };

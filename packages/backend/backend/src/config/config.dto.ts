@@ -4,6 +4,7 @@ import {
   IsEmail,
   IsIP,
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsPort,
   IsString,
@@ -49,6 +50,11 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsString()
   @IsNotEmpty()
   @IsOptional()
+  rankBadgeURL!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
   sendGridAPIKey!: string;
 
   @IsEmail()
@@ -80,4 +86,8 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsString()
   @IsOptional()
   discordURL!: string;
+
+  @IsBoolean()
+  @IsOptional()
+  maintenanceEnabled!: boolean;
 }

@@ -31,6 +31,7 @@ export class ConfigController {
         ...configDTO,
         siteBeta: configDTO.siteBeta ? 1 : 0,
         websocketEnabled: configDTO.websocketEnabled ? 1 : 0,
+        maintenanceEnabled: configDTO.maintenanceEnabled ? 1 : 0,
       }
     );
     const updatedConfig = await this.configRepo.findOneOrFail();

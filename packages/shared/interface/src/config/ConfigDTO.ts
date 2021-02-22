@@ -6,6 +6,7 @@ export interface ConfigDTO {
   emulatorPort: string;
   nitroURL: string;
   loadingMessage: string;
+  rankBadgeURL: string;
   groupBadgeURL: string;
   sendGridAPIKey: string;
   sendGridAPISender: string;
@@ -15,6 +16,7 @@ export interface ConfigDTO {
   websocketIP: string;
   websocketPort: string;
   discordURL: string;
+  maintenanceEnabled: boolean;
 }
 
 export const exampleConfigDTO: ConfigDTO = {
@@ -25,6 +27,7 @@ export const exampleConfigDTO: ConfigDTO = {
   siteLink: 'http://localhost:3000',
   nitroURL: '',
   loadingMessage: 'Please wait as I do some things',
+  rankBadgeURL: '',
   groupBadgeURL: 'http://localhost:3000/swfs/other/images/Badgeparts/generated',
   sendGridAPIKey: '',
   sendGridAPISender: '',
@@ -34,4 +37,5 @@ export const exampleConfigDTO: ConfigDTO = {
   websocketIP: '',
   websocketPort: '',
   discordURL: '',
+  maintenanceEnabled: false,
 };

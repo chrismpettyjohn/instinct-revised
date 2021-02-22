@@ -1,6 +1,6 @@
 import {OrderBy} from './database.types';
 import EventEmitter from 'eventemitter3';
-import {FindConditions, Repository} from 'typeorm';
+import {FindConditions, QueryBuilder, Repository} from 'typeorm';
 import {BaseRepositoryEvents} from './base.repository.types';
 
 export abstract class BaseRepository<Entity> {
@@ -70,5 +70,9 @@ export abstract class BaseRepository<Entity> {
   async delete(conditions: FindConditions<Entity>): Promise<void> {
     await this.repo.delete(conditions);
     this.eventEmitter.emit('OBJECT_DELETED', conditions);
+  }
+
+  getInstance(): Repository<Entity> {
+    return this.repo;
   }
 }

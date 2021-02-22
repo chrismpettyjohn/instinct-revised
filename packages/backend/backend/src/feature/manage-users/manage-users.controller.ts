@@ -1,11 +1,11 @@
 import Moment from 'moment';
 import {UserPipe} from '../../user/user.pipe';
-import {InternalUserDTO} from './manage-users.types';
 import {InternalUser} from '@instinct-prj/interface';
 import {UserEntity} from '../../database/user/user/user.entity';
 import {HasScope} from '../../session/permission-scope.decorator';
 import {internalUserWire} from '../../database/user/user/user.wire';
 import {UserRepository} from '../../database/user/user/user.repository';
+import {InternalUserDTO, UpdateInternalUserDTO} from './manage-users.types';
 import {
   Body,
   Controller,
@@ -50,7 +50,7 @@ export class ManageUsersController {
   @HasScope('websiteManageUsers')
   async updateUser(
     @Param('userID', UserPipe) user: UserEntity,
-    @Body() userDTO: InternalUserDTO
+    @Body() userDTO: UpdateInternalUserDTO
   ): Promise<InternalUser> {
     await this.userRepo.update({id: user.id!}, userDTO);
     const updatedUser = await this.userRepo.findOneOrFail({id: user.id!});

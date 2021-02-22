@@ -40,6 +40,13 @@ export function SitePreferences() {
         />
       </FormGroup>
       <FormGroup>
+        <h4>Maintenance</h4>
+        <Toggle
+          checked={config.maintenanceEnabled}
+          onChange={e => setConfig('maintenanceEnabled', e.target.checked)}
+        />
+      </FormGroup>
+      <FormGroup>
         <h4>Beta Mode</h4>
         <Toggle
           checked={config.siteBeta}

@@ -28,6 +28,15 @@ export function GameSettings() {
           value={config.groupBadgeURL}
         />
       </FormGroup>
+      <FormGroup>
+        <h4>Rank Badge Folder</h4>
+        <Input
+          type="text"
+          name="rankBadgeURL"
+          onChange={setConfig}
+          value={config.rankBadgeURL}
+        />
+      </FormGroup>
       <Row className="mt-3">
         <div className="col-6">&nbsp;</div>
         <div className="col-6 text-right">

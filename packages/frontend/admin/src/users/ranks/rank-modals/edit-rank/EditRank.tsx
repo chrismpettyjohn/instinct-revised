@@ -28,7 +28,7 @@ export function EditRankModal({rank, onChanges}: EditRankModalProps) {
       <div className="col-4">
         <img
           alt="rank badge"
-          src={`${config.swfBadgeURL}/${rank.badge}.gif`}
+          src={`${config.rankBadgeURL}/${rank.badge}.gif`}
           style={{marginTop: '20%'}}
         />
       </div>

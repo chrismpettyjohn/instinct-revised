@@ -21,7 +21,7 @@ export function GuestLayout({
                   <img
                     className="header-logo"
                     src="/img/logo/regular.gif"
-                    style={{width: '100%'}}
+                    style={{width: 400}}
                   />
                   <Card>
                     {children}

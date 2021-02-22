@@ -29,6 +29,9 @@ export class ConfigEntity {
   @Column({name: 'group_badge_url'})
   groupBadgeURL!: string;
 
+  @Column({name: 'rank_badge_url'})
+  rankBadgeURL!: string;
+
   @Column({name: 'sendgrid_api_key'})
   sendGridAPIKey!: string;
 
@@ -55,4 +58,7 @@ export class ConfigEntity {
 
   @Column({name: 'discord_url'})
   discordURL!: string;
+
+  @Column({name: 'maintenance_enabled', type: 'tinyint'})
+  maintenanceEnabled!: 0 | 1;
 }
