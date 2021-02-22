@@ -27,7 +27,6 @@ export class HealthController {
         .query('SELECT COUNT(*) AS "active_rooms" FROM rooms WHERE users > 0'),
     ]);
 
-    console.log(health);
     return {
       maintenanceMode: config.maintenanceEnabled === 1,
       usersOnline: Number(health[0][0].online_users),

@@ -46,13 +46,10 @@
   display: block;
   background: #000B13;
   border-radius: 10px;
-  width: 230px;
-  height: 70px;
   padding: 0 10px;
   margin-left: -5px;
 
   .author-details {
-    margin-left: -15px;
     margin-top: 5px;
 
     .author-name {
@@ -65,7 +62,6 @@
 
     .author-function {
       font-size: 14px;
-      margin-top: -3px;
     }
 
   }

@@ -23,6 +23,8 @@ import {
   ArticleEntity,
   ArticleCategoryEntity,
   ArticleRepository,
+  ArticleCommentEntity,
+  ArticleCommentRepository,
 } from './article';
 
 export const databaseEntities: Function[] = [
@@ -38,6 +40,7 @@ export const databaseEntities: Function[] = [
   UserBadgesEntity,
   EmulatorTextsEntity,
   UserGuestbookEntity,
+  ArticleCommentEntity,
   ArticleCategoryEntity,
   EmulatorSettingsEntity,
   UserForgotPasswordEntity,
@@ -55,6 +58,7 @@ export const databaseRepositories: Provider[] = [
   BetaCodeRepository,
   EmulatorTextsRepository,
   UserGuestbookRepository,
+  ArticleCommentRepository,
   ArticleCategoryRepository,
   EmulatorSettingsRepository,
   UserForgotPasswordRepository,

@@ -1,4 +1,5 @@
 import {UserEntity} from '../user/user/user.entity';
+import {ArticleCommentEntity} from './article-comment.entity';
 import {ArticleCategoryEntity} from './article-category.entity';
 import {
   Column,
@@ -6,6 +7,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -45,4 +47,10 @@ export class ArticleEntity {
   @ManyToOne(() => UserEntity)
   @JoinColumn({name: 'user_id'})
   author?: UserEntity;
+
+  @OneToMany(
+    () => ArticleCommentEntity,
+    articleComment => articleComment.article
+  )
+  comments?: ArticleCommentEntity[];
 }

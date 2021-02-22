@@ -14,6 +14,9 @@ export class ArticleRepository {
     'author',
     'author.rank',
     'category',
+    'comments',
+    'comments.user',
+    'comments.user.rank',
   ];
 
   async create(article: ArticleEntity): Promise<ArticleEntity> {

@@ -9,6 +9,7 @@ export function Avatar({
   headDirection,
   headOnly,
   size,
+  style = {},
   look,
   onClick,
 }: AvatarProps) {
@@ -48,6 +49,7 @@ export function Avatar({
       src={source}
       className={className}
       onClick={onClick}
+      style={style}
     />
   );
 }

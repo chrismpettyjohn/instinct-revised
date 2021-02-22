@@ -3,6 +3,7 @@ import {
   ArticleCategory,
   exampleArticleCategory,
 } from '../article/ArticleCategory';
+import {ArticleComment, exampleArticleComment} from './ArticleComment';
 
 export interface Article {
   id: number;
@@ -14,6 +15,7 @@ export interface Article {
   thumbnailImage: string;
   author: User;
   category: ArticleCategory;
+  comments: ArticleComment[];
 }
 
 export const exampleArticle: Article = {
@@ -26,4 +28,5 @@ export const exampleArticle: Article = {
   thumbnailImage: '/img/article-1.png',
   author: exampleUser,
   category: exampleArticleCategory,
+  comments: [exampleArticleComment],
 };
