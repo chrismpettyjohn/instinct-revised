@@ -7,14 +7,10 @@ import {DeleteComment} from './delete-comment/DeleteComment';
 import {CreateCommentModal} from '../create-comment-modal/CreateCommentModal';
 
 export function ViewComments({article, onChange}: ViewCommentProps) {
-  if (article === undefined) {
-    return null;
-  }
-
   return (
     <Card header="Comments">
-      {article.comments.length === 0 && <p>There are no comments</p>}
-      {article.comments.map(_ => (
+      {article?.comments?.length === 0 && <p>There are no comments</p>}
+      {article?.comments?.map(_ => (
         <CommentAuthor user={_.author}>
           <div>{_.content}</div>
           <small>Posted {Moment.unix(_.timestamp).format('MM/DD/YYYY (hh:mmA)')}</small>
