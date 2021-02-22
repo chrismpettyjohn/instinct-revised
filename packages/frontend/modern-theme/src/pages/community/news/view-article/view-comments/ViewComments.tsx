@@ -3,6 +3,7 @@ import Moment from 'moment';
 import {ViewCommentProps} from './ViewComments.types';
 import {Card, configContext} from '@instinct-prj/frontend';
 import {CommentAuthor} from './comment-author/CommentAuthor';
+import {CreateCommentModal} from '../create-comment-modal/CreateCommentModal';
 
 export function ViewComments({article}: ViewCommentProps) {
   if (article === undefined) {
@@ -18,6 +19,9 @@ export function ViewComments({article}: ViewCommentProps) {
           <small>Posted {Moment.unix(_.timestamp).format()}</small>
         </CommentAuthor>
       ))}
+      <div className="mt-4">
+        <CreateCommentModal article={article} />
+      </div>
     </Card>
   );
 }
