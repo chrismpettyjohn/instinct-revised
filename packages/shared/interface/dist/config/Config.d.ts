@@ -4,22 +4,15 @@ export interface Config {
     siteBeta: boolean;
     emulatorIP: string;
     emulatorPort: string;
-    swfAdminHabbo: string;
-    swfHabbo: string;
-    swfExternalVariables: string;
-    swfExternalTexts: string;
-    swfProductData: string;
-    swfFurniData: string;
-    swfFigureData: string;
-    swfBaseURL: string;
-    swfBadgeURL: string;
-    swfOverrideVariables: string;
-    swfOverrideTexts: string;
+    nitroURL: string;
     loadingMessage: string;
+    rankBadgeURL: string;
     groupBadgeURL: string;
     googleRecaptchaClientKey: string;
     websocketEnabled: boolean;
     websocketIP: string;
     websocketPort: string;
+    discordURL: string;
+    maintenanceEnabled: boolean;
 }
 export declare const defaultConfig: Config;

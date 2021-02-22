@@ -15,5 +15,6 @@ export interface RankDTO {
     websiteManageBetaCodes: boolean;
     websiteManageGuestbook: boolean;
     websiteManageEmulator: boolean;
+    websiteManageComments: boolean;
 }
 export declare function rankWireToRankDTO(rankWire: Rank): RankDTO;

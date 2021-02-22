@@ -38,49 +38,9 @@ __decorate([
     __metadata("design:type", String)
 ], ConfigEntity.prototype, "emulatorPort", void 0);
 __decorate([
-    typeorm_1.Column({ name: 'swf_admin_habbo' }),
+    typeorm_1.Column({ name: 'nitro_url' }),
     __metadata("design:type", String)
-], ConfigEntity.prototype, "swfAdminHabbo", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_habbo' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfHabbo", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_external_variables' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfExternalVariables", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_external_texts' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfExternalTexts", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_productdata' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfProductData", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_furnidata' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfFurniData", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_figuredata' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfFigureData", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_base_url' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfBaseURL", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_badge_url' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfBadgeURL", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_override_variables' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfOverrideVariables", void 0);
-__decorate([
-    typeorm_1.Column({ name: 'swf_override_texts' }),
-    __metadata("design:type", String)
-], ConfigEntity.prototype, "swfOverrideTexts", void 0);
+], ConfigEntity.prototype, "nitroURL", void 0);
 __decorate([
     typeorm_1.Column({ name: 'loading_message' }),
     __metadata("design:type", String)
@@ -89,6 +49,10 @@ __decorate([
     typeorm_1.Column({ name: 'group_badge_url' }),
     __metadata("design:type", String)
 ], ConfigEntity.prototype, "groupBadgeURL", void 0);
+__decorate([
+    typeorm_1.Column({ name: 'rank_badge_url' }),
+    __metadata("design:type", String)
+], ConfigEntity.prototype, "rankBadgeURL", void 0);
 __decorate([
     typeorm_1.Column({ name: 'sendgrid_api_key' }),
     __metadata("design:type", String)
@@ -121,6 +85,14 @@ __decorate([
     typeorm_1.Column({ name: 'websocket_port' }),
     __metadata("design:type", String)
 ], ConfigEntity.prototype, "websocketPort", void 0);
+__decorate([
+    typeorm_1.Column({ name: 'discord_url' }),
+    __metadata("design:type", String)
+], ConfigEntity.prototype, "discordURL", void 0);
+__decorate([
+    typeorm_1.Column({ name: 'maintenance_enabled', type: 'tinyint' }),
+    __metadata("design:type", Number)
+], ConfigEntity.prototype, "maintenanceEnabled", void 0);
 ConfigEntity = __decorate([
     typeorm_1.Entity('instinct_config')
 ], ConfigEntity);

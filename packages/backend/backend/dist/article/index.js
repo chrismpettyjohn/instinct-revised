@@ -14,6 +14,8 @@ __exportStar(require("./article.controller"), exports);
 __exportStar(require("./article.dto"), exports);
 __exportStar(require("./article.module"), exports);
 __exportStar(require("./article.pipe"), exports);
+__exportStar(require("./article-comment.controller"), exports);
+__exportStar(require("./article-comment.dto"), exports);
 __exportStar(require("./category.controller"), exports);
 __exportStar(require("./category.dto"), exports);
 __exportStar(require("./category.pipe"), exports);

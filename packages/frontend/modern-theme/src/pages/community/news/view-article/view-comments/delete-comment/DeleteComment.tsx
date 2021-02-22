@@ -17,7 +17,7 @@ export function DeleteComment({comment, onDelete}: DeleteCommentProps) {
   }
 
   return (
-    <PermissionGuard permission="websiteManageComments">
+    <PermissionGuard permission="websiteManageComments" redirect={false}>
       <div
         className="text-danger"
         onClick={onSubmit}

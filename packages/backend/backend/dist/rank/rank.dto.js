@@ -75,4 +75,8 @@ __decorate([
     class_validator_1.IsBoolean(),
     __metadata("design:type", Boolean)
 ], RankDTOClass.prototype, "websiteManageEmulator", void 0);
+__decorate([
+    class_validator_1.IsBoolean(),
+    __metadata("design:type", Boolean)
+], RankDTOClass.prototype, "websiteManageComments", void 0);
 exports.RankDTOClass = RankDTOClass;

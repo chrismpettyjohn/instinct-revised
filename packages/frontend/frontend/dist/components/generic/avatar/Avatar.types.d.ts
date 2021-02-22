@@ -8,4 +8,5 @@ export interface AvatarProps {
     headOnly?: boolean;
     size?: 'l' | 's' | 'n';
     onClick?: () => void;
+    style?: object;
 }

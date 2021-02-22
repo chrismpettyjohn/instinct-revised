@@ -51,5 +51,8 @@ class BaseRepository {
             this.eventEmitter.emit('OBJECT_DELETED', conditions);
         });
     }
+    getInstance() {
+        return this.repo;
+    }
 }
 exports.BaseRepository = BaseRepository;

@@ -45,7 +45,7 @@ let ConfigController = class ConfigController {
     }
     updateConfig(configDTO) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.configRepo.update({}, Object.assign(Object.assign({}, configDTO), { siteBeta: configDTO.siteBeta ? 1 : 0, websocketEnabled: configDTO.websocketEnabled ? 1 : 0 }));
+            yield this.configRepo.update({}, Object.assign(Object.assign({}, configDTO), { siteBeta: configDTO.siteBeta ? 1 : 0, websocketEnabled: configDTO.websocketEnabled ? 1 : 0, maintenanceEnabled: configDTO.maintenanceEnabled ? 1 : 0 }));
             const updatedConfig = yield this.configRepo.findOneOrFail();
             return config_wire_1.configWire(updatedConfig);
         });

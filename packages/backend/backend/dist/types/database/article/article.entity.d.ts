@@ -1,4 +1,5 @@
 import { UserEntity } from '../user/user/user.entity';
+import { ArticleCommentEntity } from './article-comment.entity';
 import { ArticleCategoryEntity } from './article-category.entity';
 export declare class ArticleEntity {
     id?: number;
@@ -12,4 +13,5 @@ export declare class ArticleEntity {
     timestamp: number;
     userID: number;
     author?: UserEntity;
+    comments?: ArticleCommentEntity[];
 }

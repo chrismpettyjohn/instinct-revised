@@ -2,7 +2,6 @@ export * from './api-wrapper';
 export * from './avatar';
 export * from './button';
 export * from './card';
-export * from './client-card';
 export * from './column';
 export * from './container';
 export * from './date-picker';

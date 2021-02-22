@@ -15,4 +15,5 @@ export declare class RankDTOClass implements RankDTO {
     websiteManageBetaCodes: boolean;
     websiteManageGuestbook: boolean;
     websiteManageEmulator: boolean;
+    websiteManageComments: boolean;
 }

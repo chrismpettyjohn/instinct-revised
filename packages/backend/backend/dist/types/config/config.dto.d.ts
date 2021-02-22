@@ -5,19 +5,10 @@ export declare class UpdateConfigDTO implements ConfigDTO {
     siteBeta: boolean;
     emulatorIP: string;
     emulatorPort: string;
-    swfAdminHabbo: string;
-    swfHabbo: string;
-    swfExternalVariables: string;
-    swfExternalTexts: string;
-    swfProductData: string;
-    swfFurniData: string;
-    swfFigureData: string;
-    swfBaseURL: string;
-    swfBadgeURL: string;
-    swfOverrideVariables: string;
-    swfOverrideTexts: string;
+    nitroURL: string;
     loadingMessage: string;
     groupBadgeURL: string;
+    rankBadgeURL: string;
     sendGridAPIKey: string;
     sendGridAPISender: string;
     sendGridForgotPasswordTemplate: string;
@@ -25,4 +16,6 @@ export declare class UpdateConfigDTO implements ConfigDTO {
     websocketEnabled: boolean;
     websocketIP: string;
     websocketPort: string;
+    discordURL: string;
+    maintenanceEnabled: boolean;
 }

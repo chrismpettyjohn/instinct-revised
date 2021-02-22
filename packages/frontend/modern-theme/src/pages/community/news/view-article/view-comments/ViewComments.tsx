@@ -11,9 +11,11 @@ export function ViewComments({article, onChange}: ViewCommentProps) {
     <Card header="Comments">
       {article?.comments?.length === 0 && <p>There are no comments</p>}
       {article?.comments?.map(_ => (
-        <CommentAuthor user={_.author}>
+        <CommentAuthor key={`comment_${_.id}`} user={_.author}>
           <div>{_.content}</div>
-          <small>Posted {Moment.unix(_.timestamp).format('MM/DD/YYYY (hh:mmA)')}</small>
+          <small>
+            Posted {Moment.unix(_.timestamp).format('MM/DD/YYYY (hh:mmA)')}
+          </small>
           <DeleteComment comment={_} onDelete={onChange} />
         </CommentAuthor>
       ))}

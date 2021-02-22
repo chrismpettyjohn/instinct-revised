@@ -79,6 +79,10 @@ __decorate([
     typeorm_1.Column({ name: 'website_manage_emulator', type: 'enum', default: '0' }),
     __metadata("design:type", String)
 ], RankEntity.prototype, "websiteManageEmulator", void 0);
+__decorate([
+    typeorm_1.Column({ name: 'website_manage_comments', type: 'enum', default: '0' }),
+    __metadata("design:type", String)
+], RankEntity.prototype, "websiteManageComments", void 0);
 RankEntity = __decorate([
     typeorm_1.Entity('permissions')
 ], RankEntity);

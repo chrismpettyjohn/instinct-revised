@@ -13,4 +13,5 @@ export declare abstract class BaseRepository<Entity> {
     findOneOrFail(where?: FindConditions<Entity>, order?: OrderBy<Entity>): Promise<Entity>;
     update(conditions: FindConditions<Entity>, changes: Partial<Entity>): Promise<void>;
     delete(conditions: FindConditions<Entity>): Promise<void>;
+    getInstance(): Repository<Entity>;
 }

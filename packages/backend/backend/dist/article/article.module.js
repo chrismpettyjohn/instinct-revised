@@ -14,14 +14,20 @@ const database_1 = require("../database");
 const category_pipe_1 = require("./category.pipe");
 const article_controller_1 = require("./article.controller");
 const category_controller_1 = require("./category.controller");
+const article_comment_controller_1 = require("./article-comment.controller");
+const article_comment_pipe_1 = require("./article-comment.pipe");
 let ArticleModule = class ArticleModule {
 };
 ArticleModule = __decorate([
     common_1.Module({
         imports: [session_1.SessionModule, database_1.DatabaseModule],
-        controllers: [article_controller_1.ArticleController, category_controller_1.ArticleCategoryController],
-        providers: [article_pipe_1.ArticlePipe, category_pipe_1.CategoryPipe],
-        exports: [article_pipe_1.ArticlePipe, category_pipe_1.CategoryPipe],
+        controllers: [
+            article_controller_1.ArticleController,
+            category_controller_1.ArticleCategoryController,
+            article_comment_controller_1.ArticleCommentController,
+        ],
+        providers: [article_pipe_1.ArticlePipe, category_pipe_1.CategoryPipe, article_comment_pipe_1.ArticleCommentPipe],
+        exports: [article_pipe_1.ArticlePipe, category_pipe_1.CategoryPipe, article_comment_pipe_1.ArticleCommentPipe],
     })
 ], ArticleModule);
 exports.ArticleModule = ArticleModule;

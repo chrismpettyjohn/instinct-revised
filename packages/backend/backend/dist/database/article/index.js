@@ -16,3 +16,5 @@ __exportStar(require("./article.repository"), exports);
 __exportStar(require("./article-category.wire"), exports);
 __exportStar(require("./article-category.entity"), exports);
 __exportStar(require("./article-category.repository"), exports);
+__exportStar(require("./article-comment.entity"), exports);
+__exportStar(require("./article-comment.repository"), exports);

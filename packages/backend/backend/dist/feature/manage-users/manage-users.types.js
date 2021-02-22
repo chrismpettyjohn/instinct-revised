@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InternalUserDTO = void 0;
+exports.UpdateInternalUserDTO = exports.InternalUserDTO = void 0;
 const rank_constraint_1 = require("../../rank/rank.constraint");
 const class_validator_1 = require("class-validator");
 class InternalUserDTO {
@@ -70,3 +70,73 @@ __decorate([
     __metadata("design:type", Number)
 ], InternalUserDTO.prototype, "homeRoom", void 0);
 exports.InternalUserDTO = InternalUserDTO;
+class UpdateInternalUserDTO {
+}
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateInternalUserDTO.prototype, "username", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateInternalUserDTO.prototype, "password", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateInternalUserDTO.prototype, "email", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateInternalUserDTO.prototype, "motto", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], UpdateInternalUserDTO.prototype, "credits", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], UpdateInternalUserDTO.prototype, "pixels", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], UpdateInternalUserDTO.prototype, "points", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateInternalUserDTO.prototype, "figure", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], UpdateInternalUserDTO.prototype, "userOfTheWeek", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    rank_constraint_1.ExistingRank(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], UpdateInternalUserDTO.prototype, "rankID", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateInternalUserDTO.prototype, "favoriteYoutubeVideo", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], UpdateInternalUserDTO.prototype, "homeRoom", void 0);
+exports.UpdateInternalUserDTO = UpdateInternalUserDTO;

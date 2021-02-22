@@ -23,6 +23,7 @@ function rankWire(rankEntity) {
             websiteManageBetaCodes: rank_types_1.permissionStatusToBoolean(rankEntity.websiteManageBetaCodes),
             websiteManageGuestbook: rank_types_1.permissionStatusToBoolean(rankEntity.websiteManageGuestbook),
             websiteManageEmulator: rank_types_1.permissionStatusToBoolean(rankEntity.websiteManageEmulator),
+            websiteManageComments: rank_types_1.permissionStatusToBoolean(rankEntity.websiteManageComments),
         },
     };
 }
@@ -43,6 +44,7 @@ function rankDataTransferObjectToEntity(rankDTO) {
         websiteManageBetaCodes: rank_types_1.booleanToPermissionStatus(rankDTO.websiteManageBetaCodes),
         websiteManageGuestbook: rank_types_1.booleanToPermissionStatus(rankDTO.websiteManageGuestbook),
         websiteManageEmulator: rank_types_1.booleanToPermissionStatus(rankDTO.websiteManageEmulator),
+        websiteManageComments: rank_types_1.booleanToPermissionStatus(rankDTO.websiteManageComments),
     };
 }
 exports.rankDataTransferObjectToEntity = rankDataTransferObjectToEntity;

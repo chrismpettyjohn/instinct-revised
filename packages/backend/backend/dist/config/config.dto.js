@@ -44,67 +44,7 @@ __decorate([
     class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfAdminHabbo", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfHabbo", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfExternalVariables", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfExternalTexts", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfProductData", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfFurniData", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfFigureData", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfBaseURL", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfBadgeURL", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfOverrideVariables", void 0);
-__decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsOptional(),
-    __metadata("design:type", String)
-], UpdateConfigDTO.prototype, "swfOverrideTexts", void 0);
+], UpdateConfigDTO.prototype, "nitroURL", void 0);
 __decorate([
     class_validator_1.IsString(),
     class_validator_1.IsNotEmpty(),
@@ -117,6 +57,12 @@ __decorate([
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], UpdateConfigDTO.prototype, "groupBadgeURL", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateConfigDTO.prototype, "rankBadgeURL", void 0);
 __decorate([
     class_validator_1.IsString(),
     class_validator_1.IsNotEmpty(),
@@ -155,4 +101,14 @@ __decorate([
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], UpdateConfigDTO.prototype, "websocketPort", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", String)
+], UpdateConfigDTO.prototype, "discordURL", void 0);
+__decorate([
+    class_validator_1.IsBoolean(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Boolean)
+], UpdateConfigDTO.prototype, "maintenanceEnabled", void 0);
 exports.UpdateConfigDTO = UpdateConfigDTO;

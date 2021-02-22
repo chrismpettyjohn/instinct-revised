@@ -10,5 +10,6 @@ export interface Permissions {
     websiteManageBetaCodes: boolean;
     websiteManageGuestbook: boolean;
     websiteManageEmulator: boolean;
+    websiteManageComments: boolean;
 }
 export declare const examplePermissions: Permissions;

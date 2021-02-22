@@ -33,6 +33,9 @@ let ArticleRepository = class ArticleRepository {
             'author',
             'author.rank',
             'category',
+            'comments',
+            'comments.user',
+            'comments.user.rank',
         ];
     }
     create(article) {

@@ -27,11 +27,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ManageUsersController = void 0;
 const moment_1 = __importDefault(require("moment"));
 const user_pipe_1 = require("../../user/user.pipe");
-const manage_users_types_1 = require("./manage-users.types");
 const user_entity_1 = require("../../database/user/user/user.entity");
 const permission_scope_decorator_1 = require("../../session/permission-scope.decorator");
 const user_wire_1 = require("../../database/user/user/user.wire");
 const user_repository_1 = require("../../database/user/user/user.repository");
+const manage_users_types_1 = require("./manage-users.types");
 const common_1 = require("@nestjs/common");
 let ManageUsersController = class ManageUsersController {
     constructor(userRepo) {
@@ -85,7 +85,7 @@ __decorate([
     __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_entity_1.UserEntity,
-        manage_users_types_1.InternalUserDTO]),
+        manage_users_types_1.UpdateInternalUserDTO]),
     __metadata("design:returntype", Promise)
 ], ManageUsersController.prototype, "updateUser", null);
 __decorate([

@@ -15,7 +15,7 @@ export interface User {
     rank?: Omit<Rank, 'users'>;
 }
 export declare const exampleUser: User;
-export interface InternalUser extends Omit<User, 'joinDate' | 'lastLoginDate' | 'rank'> {
+export interface InternalUser extends Omit<User, 'joinDate' | 'lastLoginDate' | 'rank' | 'online'> {
     email: string;
     rankID: number;
 }
@@ -23,3 +23,4 @@ export interface InternalUserDTO extends Partial<Omit<InternalUser, 'userOfTheWe
     userOfTheWeek: number;
     password: string;
 }
+export declare type UpdateInternalUserDTO = Partial<InternalUserDTO>;

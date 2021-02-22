@@ -5,19 +5,10 @@ export declare class ConfigEntity {
     siteBeta: number;
     emulatorIP: string;
     emulatorPort: string;
-    swfAdminHabbo: string;
-    swfHabbo: string;
-    swfExternalVariables: string;
-    swfExternalTexts: string;
-    swfProductData: string;
-    swfFurniData: string;
-    swfFigureData: string;
-    swfBaseURL: string;
-    swfBadgeURL: string;
-    swfOverrideVariables: string;
-    swfOverrideTexts: string;
+    nitroURL: string;
     loadingMessage: string;
     groupBadgeURL: string;
+    rankBadgeURL: string;
     sendGridAPIKey: string;
     sendGridAPISender: string;
     sendGridForgotPasswordTemplate: string;
@@ -26,4 +17,6 @@ export declare class ConfigEntity {
     websocketEnabled: number;
     websocketIP: string;
     websocketPort: string;
+    discordURL: string;
+    maintenanceEnabled: 0 | 1;
 }

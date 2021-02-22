@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArticleEntity = void 0;
 const user_entity_1 = require("../user/user/user.entity");
+const article_comment_entity_1 = require("./article-comment.entity");
 const article_category_entity_1 = require("./article-category.entity");
 const typeorm_1 = require("typeorm");
 let ArticleEntity = class ArticleEntity {
@@ -61,6 +62,10 @@ __decorate([
     typeorm_1.JoinColumn({ name: 'user_id' }),
     __metadata("design:type", user_entity_1.UserEntity)
 ], ArticleEntity.prototype, "author", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => article_comment_entity_1.ArticleCommentEntity, articleComment => articleComment.article),
+    __metadata("design:type", Array)
+], ArticleEntity.prototype, "comments", void 0);
 ArticleEntity = __decorate([
     typeorm_1.Entity('instinct_articles')
 ], ArticleEntity);

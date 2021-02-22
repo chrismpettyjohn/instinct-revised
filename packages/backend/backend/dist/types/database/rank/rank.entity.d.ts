@@ -17,4 +17,5 @@ export declare class RankEntity {
     websiteManageBetaCodes: PermissionStatus;
     websiteManageGuestbook: PermissionStatus;
     websiteManageEmulator: PermissionStatus;
+    websiteManageComments: PermissionStatus;
 }

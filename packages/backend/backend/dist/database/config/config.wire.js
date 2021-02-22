@@ -8,27 +8,20 @@ function configWire(configEntity) {
         siteBeta: configEntity.siteBeta === 1,
         emulatorIP: configEntity.emulatorIP,
         emulatorPort: configEntity.emulatorPort,
-        swfAdminHabbo: configEntity.swfAdminHabbo,
-        swfHabbo: configEntity.swfHabbo,
-        swfExternalVariables: configEntity.swfExternalVariables,
-        swfExternalTexts: configEntity.swfExternalTexts,
-        swfProductData: configEntity.swfProductData,
-        swfFurniData: configEntity.swfFurniData,
-        swfFigureData: configEntity.swfFigureData,
-        swfBaseURL: configEntity.swfBaseURL,
-        swfBadgeURL: configEntity.swfBadgeURL,
-        swfOverrideVariables: configEntity.swfOverrideVariables,
-        swfOverrideTexts: configEntity.swfOverrideTexts,
+        nitroURL: configEntity.nitroURL,
         loadingMessage: configEntity.loadingMessage,
         groupBadgeURL: configEntity.groupBadgeURL,
         googleRecaptchaClientKey: configEntity.googleRecaptchaClientKey,
         websocketEnabled: configEntity.websocketEnabled === 1,
         websocketIP: configEntity.websocketIP,
         websocketPort: configEntity.websocketPort,
+        discordURL: configEntity.discordURL,
+        rankBadgeURL: configEntity.rankBadgeURL,
+        maintenanceEnabled: configEntity.maintenanceEnabled === 1,
     };
 }
 exports.configWire = configWire;
 function configDTOWire(configEntity) {
-    return Object.assign(Object.assign({}, configWire(configEntity)), { siteBeta: configEntity.siteBeta === 1, sendGridAPIKey: configEntity.sendGridAPIKey, sendGridAPISender: configEntity.sendGridAPISender, sendGridForgotPasswordTemplate: configEntity.sendGridForgotPasswordTemplate, googleRecaptchaClientKey: configEntity.googleRecaptchaClientKey });
+    return Object.assign(Object.assign({}, configWire(configEntity)), { siteBeta: configEntity.siteBeta === 1, sendGridAPIKey: configEntity.sendGridAPIKey, sendGridAPISender: configEntity.sendGridAPISender, sendGridForgotPasswordTemplate: configEntity.sendGridForgotPasswordTemplate, googleRecaptchaClientKey: configEntity.googleRecaptchaClientKey, maintenanceEnabled: configEntity.maintenanceEnabled === 1 });
 }
 exports.configDTOWire = configDTOWire;
