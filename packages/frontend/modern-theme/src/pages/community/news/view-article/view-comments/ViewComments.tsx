@@ -20,7 +20,7 @@ export function ViewComments({article, onChange}: ViewCommentProps) {
         </CommentAuthor>
       ))}
       <div className="mt-4">
-        <CreateCommentModal article={article} onCreation={onChange} />
+        {article && <CreateCommentModal article={article} onCreation={onChange} />}
       </div>
     </Card>
   );
