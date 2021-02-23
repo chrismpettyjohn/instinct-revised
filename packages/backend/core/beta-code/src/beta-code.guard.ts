@@ -1,4 +1,4 @@
-import {RequestWithSession} from '@instinct-prj/core-api';
+import {RequestWithSession} from '@instinct-prj/session-api';
 import {CanActivate, ExecutionContext, Injectable} from '@nestjs/common';
 import {
   BetaCodeRepository,

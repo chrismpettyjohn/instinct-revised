@@ -4,14 +4,12 @@ import {UserBanPipe} from './ban.pipe';
 import {userConstraints} from './constraint';
 import {UserController} from './user.controller';
 import {UserBanController} from './ban.controller';
+import {CommonModule} from '@instinct-prj/common-api';
+import {GoogleModule} from '@instinct-prj/google-api';
+import {DatabaseModule} from '@instinct-prj/database-api';
+import {BetaCodeModule} from '@instinct-prj/beta-code-api';
 import {UserLeaderBoardService} from './leaderboard.service';
 import {UserLeaderBoardController} from './leaderboard.controller';
-import {
-  DatabaseModule,
-  BetaCodeModule,
-  CommonModule,
-  GoogleModule,
-} from '@instinct-prj/core-api';
 
 @Module({
   imports: [CommonModule, DatabaseModule, GoogleModule, BetaCodeModule],
