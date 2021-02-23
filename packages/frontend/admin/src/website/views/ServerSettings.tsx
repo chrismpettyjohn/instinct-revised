@@ -1,7 +1,7 @@
 import Toggle from 'react-toggle';
 import {FormGroup} from 'reactstrap';
 import React, {useContext} from 'react';
-import {Form, Input, Row} from '@instinct-web/core';
+import {Form, Input} from '@instinct-web/core';
 import {websiteSettingsContext} from '../context/WebsiteSettings';
 
 export function ServerSettings() {

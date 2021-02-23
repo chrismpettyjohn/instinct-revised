@@ -1,8 +1,6 @@
 import React from 'react';
 import './UserProfile.scss';
 import {Rooms} from './rooms';
-import {Badges} from './badges';
-import {Groups} from './groups';
 import {useRoute} from 'wouter';
 import {Friends} from './friends';
 import {UserContainer} from './user-container';
@@ -32,9 +30,7 @@ export function UserProfile() {
             <FavoriteVideo profile={profile} />
           </Column>
           <Column side="left">
-            <Badges profile={profile} />
             <Friends profile={profile} />
-            <Groups profile={profile} />
             <Rooms profile={profile} />
           </Column>
         </div>

@@ -2,7 +2,7 @@ import Toggle from 'react-toggle';
 import React, {useContext, useState} from 'react';
 import {Permissions, RankDTO} from '@instinct-prj/interface';
 import {Modal, ModalBody, ModalHeader} from 'reactstrap';
-import {configContext, Form, Input, Row} from '@instinct-web/core';
+import {configContext, Form, Input} from '@instinct-web/core';
 import {
   defaultRankEditorState,
   RankEditorState,
