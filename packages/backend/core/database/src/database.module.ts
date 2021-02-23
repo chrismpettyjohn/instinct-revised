@@ -7,7 +7,7 @@ import {
   databaseName,
   databasePass,
   databaseUser,
-} from '@instinct-prj/config-api';
+} from '@instinct-prj/common-api';
 
 @Module({
   imports: [

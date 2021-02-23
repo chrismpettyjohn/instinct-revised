@@ -8,16 +8,15 @@ import {SessionController} from './session.controller';
 import {AccountBannedGuard} from './account-ban.guard';
 import {DatabaseModule} from '@instinct-prj/database-api';
 import {BearerTokenService} from './bearer-token.service';
-import {BetaCodeModule} from '@instinct-prj/beta-code-api';
 import {BearerTokenStrategy} from './bearer-token.strategy';
-import {jwtExpires, jwtSecret} from '@instinct-prj/config-api';
+import {jwtExpires, jwtSecret} from '@instinct-prj/common-api';
+import { BetaModeGuard } from './beta-code.guard';
 
 @Module({
   imports: [
     UserModule,
     CommonModule,
     DatabaseModule,
-    BetaCodeModule,
     PassportModule,
     JwtModule.register({
       secret: jwtSecret,
@@ -32,12 +31,14 @@ import {jwtExpires, jwtSecret} from '@instinct-prj/config-api';
     BearerTokenService,
     BearerTokenStrategy,
     AccountBannedGuard,
+    BetaModeGuard,
   ],
   exports: [
     SessionService,
     BearerTokenService,
     BearerTokenStrategy,
     AccountBannedGuard,
+    BetaModeGuard,
   ],
 })
 export class SessionModule {

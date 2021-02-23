@@ -1,5 +1,6 @@
 export * from './bearer-token.service';
 export * from './bearer-token.strategy';
+export * from './beta-code.guard';
 export * from './get-session.decorator';
 export * from './has-session.decorator';
 export * from './permission-scope.decorator';

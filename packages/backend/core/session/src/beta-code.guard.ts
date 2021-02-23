@@ -30,8 +30,8 @@ export class BetaModeGuard implements CanActivate {
 
     const betaCode = request.user?.betaCode
       ? await this.betaCodeRepo.findOne({
-          betaCode: request.user!.betaCode!.betaCode,
-        })
+        betaCode: request.user!.betaCode!.betaCode,
+      })
       : undefined;
 
     return !!betaCode;
