@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import cors from 'cors';
 import {NestFactory} from '@nestjs/core';
 import {useContainer} from 'class-validator';

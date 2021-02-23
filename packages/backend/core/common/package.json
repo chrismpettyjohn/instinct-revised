@@ -12,7 +12,8 @@
     "compile": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
     "@nestjs/common": "^7.6.12",
