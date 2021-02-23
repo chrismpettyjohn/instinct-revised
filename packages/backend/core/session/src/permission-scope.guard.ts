@@ -2,7 +2,7 @@ import {Observable} from 'rxjs';
 import {Reflector} from '@nestjs/core';
 import {RequestWithSession} from './session.type';
 import {Permissions} from '@instinct-prj/interface';
-import {rankWire} from '@instinct-prj/database-api';
+import {rankWire} from '@instinct-api/database';
 import {
   Injectable,
   CanActivate,

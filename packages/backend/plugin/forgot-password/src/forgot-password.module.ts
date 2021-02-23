@@ -1,8 +1,8 @@
 import {Module} from '@nestjs/common';
-import {UserModule} from '@instinct-prj/user-api';
-import {EmailModule} from '@instinct-prj/email-api';
-import {CommonModule} from '@instinct-prj/common-api';
-import {DatabaseModule} from '@instinct-prj/database-api';
+import {UserModule} from '@instinct-api/users';
+import {EmailModule} from '@instinct-api/emails';
+import {CommonModule} from '@instinct-api/common';
+import {DatabaseModule} from '@instinct-api/database';
 import {ForgotPasswordService} from './forgot-password.service';
 import {ForgotPasswordController} from './forgot-password.controller';
 

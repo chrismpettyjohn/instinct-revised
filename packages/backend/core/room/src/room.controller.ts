@@ -8,7 +8,7 @@ import {
   RoomEntity,
   RoomRepository,
   roomWire,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Controller('rooms')
 export class RoomController {

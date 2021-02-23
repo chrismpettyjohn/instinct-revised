@@ -1,18 +1,18 @@
 import {Module} from '@nestjs/common';
-import {UserModule} from '@instinct-prj/user-api';
-import {RankModule} from '@instinct-prj/rank-api';
-import {EmailModule} from '@instinct-prj/email-api';
-import {GroupModule} from '@instinct-prj/group-api';
-import {PhotoModule} from '@instinct-prj/photo-api';
-import {ConfigModule} from '@instinct-prj/config-api';
-import {CommonModule} from '@instinct-prj/common-api';
-import {GoogleModule} from '@instinct-prj/google-api';
-import {HealthModule} from '@instinct-prj/health-api';
-import {SessionModule} from '@instinct-prj/session-api';
-import {ArticleModule} from '@instinct-prj/article-api';
-import {EmulatorModule} from '@instinct-prj/emulator-api';
-import {DatabaseModule} from '@instinct-prj/database-api';
-import {BetaCodeModule} from '@instinct-prj/beta-code-api';
+import {UserModule} from '@instinct-api/users';
+import {RankModule} from '@instinct-api/ranks';
+import {EmailModule} from '@instinct-api/emails';
+import {GroupModule} from '@instinct-api/groups';
+import {PhotoModule} from '@instinct-api/photos';
+import {ConfigModule} from '@instinct-api/config';
+import {CommonModule} from '@instinct-api/common';
+import {GoogleModule} from '@instinct-api/google';
+import {HealthModule} from '@instinct-api/health';
+import {SessionModule} from '@instinct-api/session';
+import {ArticleModule} from '@instinct-api/articles';
+import {EmulatorModule} from '@instinct-api/emulator';
+import {DatabaseModule} from '@instinct-api/database';
+import {BetaCodeModule} from '@instinct-api/beta-codes';
 
 @Module({
   imports: [

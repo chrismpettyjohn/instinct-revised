@@ -2,7 +2,7 @@ import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 import {
   UserGuestbookEntity,
   UserGuestbookRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Injectable()
 export class UserGuestbookPipe implements PipeTransform {

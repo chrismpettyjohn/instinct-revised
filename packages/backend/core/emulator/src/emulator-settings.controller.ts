@@ -1,10 +1,10 @@
-import {HasScope} from '@instinct-prj/session-api';
+import {HasScope} from '@instinct-api/session';
 import {Body, Controller, Get, Patch} from '@nestjs/common';
 import {EmulatorSettingsDTO} from '@instinct-prj/interface';
 import {
   emulatorSettingsWire,
   EmulatorSettingsRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Controller('emulator/settings')
 export class EmulatorSettingsController {

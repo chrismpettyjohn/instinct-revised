@@ -1,13 +1,13 @@
 import Moment from 'moment';
-import {UserPipe} from '@instinct-prj/user-api';
-import {HasScope} from '@instinct-prj/session-api';
+import {UserPipe} from '@instinct-api/users';
+import {HasScope} from '@instinct-api/session';
 import {InternalUser} from '@instinct-prj/interface';
 import {InternalUserDTO, UpdateInternalUserDTO} from './manage-users.types';
 import {
   UserEntity,
   UserRepository,
   internalUserWire,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   Body,
   Controller,

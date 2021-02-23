@@ -4,7 +4,7 @@ import {
   BetaCodeRepository,
   ConfigRepository,
   PermissionStatus,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Injectable()
 export class BetaModeGuard implements CanActivate {

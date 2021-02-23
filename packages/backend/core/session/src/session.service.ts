@@ -1,7 +1,7 @@
-import {HashService} from '@instinct-prj/common-api';
+import {HashService} from '@instinct-api/common';
 import {BearerTokenService} from './bearer-token.service';
 import {BadRequestException, Injectable} from '@nestjs/common';
-import {UserEntity, UserRepository} from '@instinct-prj/database-api';
+import {UserEntity, UserRepository} from '@instinct-api/database';
 
 @Injectable()
 export class SessionService {

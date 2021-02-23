@@ -3,7 +3,7 @@ import {
   BetaCodeEntity,
   BetaCodeRepository,
   ConfigRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   registerDecorator,
   ValidationOptions,

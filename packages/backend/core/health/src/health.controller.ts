@@ -4,7 +4,7 @@ import {
   ConfigRepository,
   RoomRepository,
   UserRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Controller('health')
 export class HealthController {

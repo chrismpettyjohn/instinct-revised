@@ -1,7 +1,7 @@
 import {Repository} from 'typeorm';
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {GroupEntity} from '@instinct-prj/database-api';
+import {GroupEntity} from '@instinct-api/database';
 
 @Injectable()
 export class GroupService {

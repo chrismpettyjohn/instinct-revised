@@ -2,7 +2,7 @@ import {RoomPipe} from './room.pipe';
 import {Module} from '@nestjs/common';
 import {RoomService} from './room.service';
 import {RoomController} from './room.controller';
-import {DatabaseModule} from '@instinct-prj/database-api';
+import {DatabaseModule} from '@instinct-api/database';
 
 @Module({
   imports: [DatabaseModule],

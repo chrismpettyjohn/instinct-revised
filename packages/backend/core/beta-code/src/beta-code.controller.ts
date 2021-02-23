@@ -1,9 +1,9 @@
 // @ts-ignore - no types
 import {v4 as uuid} from 'uuid';
 import {BetaCode} from '@instinct-prj/interface';
-import {HasScope} from '@instinct-prj/session-api';
+import {HasScope} from '@instinct-api/session';
 import {Controller, Get, Delete, Param, Post} from '@nestjs/common';
-import {BetaCodeRepository, betaCodeWire} from '@instinct-prj/database-api';
+import {BetaCodeRepository, betaCodeWire} from '@instinct-api/database';
 
 @Controller('beta-codes')
 export class BetaCodeController {

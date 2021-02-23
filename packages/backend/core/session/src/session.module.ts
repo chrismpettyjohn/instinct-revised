@@ -3,14 +3,14 @@ import {Module} from '@nestjs/common';
 import {BetaModeGuard} from './beta-code.guard';
 import {PassportModule} from '@nestjs/passport';
 import {SessionService} from './session.service';
-import {CommonModule} from '@instinct-prj/common-api';
+import {CommonModule} from '@instinct-api/common';
 import {SessionController} from './session.controller';
 import {AccountBannedGuard} from './account-ban.guard';
-import {DatabaseModule} from '@instinct-prj/database-api';
+import {DatabaseModule} from '@instinct-api/database';
 import {BearerTokenService} from './bearer-token.service';
 import {BearerTokenStrategy} from './bearer-token.strategy';
 import {ValidatorModule} from '@instinct-prj/validator-api';
-import {jwtExpires, jwtSecret} from '@instinct-prj/common-api';
+import {jwtExpires, jwtSecret} from '@instinct-api/common';
 
 @Module({
   imports: [

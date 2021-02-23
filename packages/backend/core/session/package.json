@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/session-api",
+  "name": "@instinct-api/session",
   "version": "1.9.0",
   "main": "dist/index.js",
   "types": "dist/types",
@@ -27,8 +27,8 @@
     "express": "^4.17.1",
     "class-validator": "^0.13.1",
     "@instinct-prj/interface": "^1.9.0",
-    "@instinct-prj/common-api": "^1.9.0",
-    "@instinct-prj/database-api": "^1.9.0",
+    "@instinct-api/common": "^1.9.0",
+    "@instinct-api/database": "^1.9.0",
     "@instinct-prj/validator-api": "^1.9.0"
   },
   "peerDependencies": {
@@ -39,8 +39,8 @@
     "express": "^4.17.1",
     "class-validator": "^0.13.1",
     "@instinct-prj/interface": "^1.9.0",
-    "@instinct-prj/common-api": "^1.9.0",
-    "@instinct-prj/database-api": "^1.9.0",
+    "@instinct-api/common": "^1.9.0",
+    "@instinct-api/database": "^1.9.0",
     "@instinct-prj/validator-api": "^1.9.0"
   },
   "gitHead": "66b61bc221ace5230cd659bc3631eb6331da51e6"

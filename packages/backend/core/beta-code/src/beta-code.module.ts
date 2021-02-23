@@ -1,7 +1,7 @@
 import {Module} from '@nestjs/common';
-import {SessionModule} from '@instinct-prj/session-api';
+import {SessionModule} from '@instinct-api/session';
 import {BetaCodeController} from './beta-code.controller';
-import {DatabaseModule} from '@instinct-prj/database-api';
+import {DatabaseModule} from '@instinct-api/database';
 
 @Module({
   imports: [DatabaseModule, SessionModule],

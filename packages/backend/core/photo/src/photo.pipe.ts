@@ -1,5 +1,5 @@
 import {PhotoService} from './photo.service';
-import {PhotoEntity} from '@instinct-prj/database-api';
+import {PhotoEntity} from '@instinct-api/database';
 import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 
 @Injectable()

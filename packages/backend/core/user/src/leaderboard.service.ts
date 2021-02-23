@@ -1,6 +1,6 @@
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {UserEntity} from '@instinct-prj/database-api';
+import {UserEntity} from '@instinct-api/database';
 import {Repository, SelectQueryBuilder} from 'typeorm';
 
 @Injectable()

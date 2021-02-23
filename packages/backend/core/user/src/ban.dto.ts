@@ -1,5 +1,5 @@
 import {UserBanDTO} from '@instinct-prj/interface';
-import {UserBanEntity} from '@instinct-prj/database-api';
+import {UserBanEntity} from '@instinct-api/database';
 import {IsNotEmpty, IsNumber, IsString} from 'class-validator';
 
 export class UserBanDTOClass implements UserBanDTO {

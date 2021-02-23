@@ -1,7 +1,7 @@
 import {AxiosResponse} from 'axios';
 import {Injectable} from '@nestjs/common';
 import {googleRecaptchaAPI} from './recaptcha.axios';
-import {ConfigRepository} from '@instinct-prj/database-api';
+import {ConfigRepository} from '@instinct-api/database';
 
 @Injectable()
 export class GoogleRecaptchaService {

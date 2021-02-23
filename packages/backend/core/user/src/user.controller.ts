@@ -11,7 +11,7 @@ import {
   userWire,
   ConfigRepository,
   BetaCodeRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   maxAccountsPerIP,
   defaultUserCredits,
@@ -21,7 +21,7 @@ import {
   defaultUserPixels,
   defaultUserPoints,
   defaultUserRank,
-} from '@instinct-prj/common-api';
+} from '@instinct-api/common';
 import {
   Body,
   Controller,

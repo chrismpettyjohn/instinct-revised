@@ -1,12 +1,12 @@
 import {UserBan, UserBanDTO} from '@instinct-prj/interface';
-import {GetSession, HasScope} from '@instinct-prj/session-api';
+import {GetSession, HasScope} from '@instinct-api/session';
 import {userBanDataTransferObjectToEntity, UserBanDTOClass} from './ban.dto';
 import {
   UserBanRepository,
   UserEntity,
   UserRepository,
   userBanWire,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   Body,
   Controller,

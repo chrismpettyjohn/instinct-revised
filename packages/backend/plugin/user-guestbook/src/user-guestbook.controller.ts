@@ -1,16 +1,16 @@
 import Moment from 'moment';
-import {UserPipe} from '@instinct-prj/user-api';
+import {UserPipe} from '@instinct-api/users';
 import {UserGuestbookPipe} from './user-guestbook.pipe';
 import {UserGuestbookPost} from '@instinct-prj/interface';
 import {UserGuestbookPostDTO} from './user-guestbook.dto';
-import {GetSession, HasSession} from '@instinct-prj/session-api';
+import {GetSession, HasSession} from '@instinct-api/session';
 import {
   userGuestbookWire,
   UserGuestbookEntity,
   UserGuestbookRepository,
   PermissionStatus,
   UserEntity,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   Body,
   Controller,

@@ -1,14 +1,14 @@
 import Moment from 'moment';
 import {ArticlePipe} from './article.pipe';
 import {Article} from '@instinct-prj/interface';
-import {GetSession, HasScope} from '@instinct-prj/session-api';
+import {GetSession, HasScope} from '@instinct-api/session';
 import {CreateArticleDTO, UpdateArticleDTO} from './article.dto';
 import {
   UserEntity,
   ArticleEntity,
   ArticleRepository,
   articleWire,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   Body,
   Controller,

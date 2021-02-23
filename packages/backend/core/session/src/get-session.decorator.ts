@@ -1,5 +1,5 @@
 import {RequestWithSession} from './session.type';
-import {UserEntity} from '@instinct-prj/database-api';
+import {UserEntity} from '@instinct-api/database';
 import {createParamDecorator, ExecutionContext} from '@nestjs/common';
 
 // tslint:disable-next-line:variable-name - In Typescript decorators start with a capital letter

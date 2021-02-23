@@ -1,4 +1,4 @@
-import {RankEntity, RankRepository} from '@instinct-prj/database-api';
+import {RankEntity, RankRepository} from '@instinct-api/database';
 import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 
 @Injectable()

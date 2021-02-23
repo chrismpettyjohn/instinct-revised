@@ -1,13 +1,13 @@
 import {Module} from '@nestjs/common';
 import {TypeOrmModule} from '@nestjs/typeorm';
-import {CommonModule} from '@instinct-prj/common-api';
+import {CommonModule} from '@instinct-api/common';
 import {databaseEntities, databaseRepositories} from './database.meta';
 import {
   databaseHost,
   databaseName,
   databasePass,
   databaseUser,
-} from '@instinct-prj/common-api';
+} from '@instinct-api/common';
 
 @Module({
   imports: [

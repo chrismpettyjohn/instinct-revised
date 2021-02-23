@@ -4,7 +4,7 @@ import {UserEntity} from './user.entity';
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import {BaseRepository} from '../../base.repository';
-import {HashService} from '@instinct-prj/common-api';
+import {HashService} from '@instinct-api/common';
 
 @Injectable()
 export class UserRepository extends BaseRepository<UserEntity> {

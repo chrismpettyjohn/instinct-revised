@@ -1,5 +1,5 @@
 import {Module} from '@nestjs/common';
-import {DatabaseModule} from '@instinct-prj/database-api';
+import {DatabaseModule} from '@instinct-api/database';
 import {BetaCodeConstraint} from './beta-code.constraint';
 import {UserExistsConstraint} from './user-exists.constraint';
 import {UniqueEmailConstraint} from './unique-email.constraint';

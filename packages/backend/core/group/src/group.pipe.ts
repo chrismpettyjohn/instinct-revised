@@ -1,5 +1,5 @@
 import {GroupService} from './group.service';
-import {GroupEntity} from '@instinct-prj/database-api';
+import {GroupEntity} from '@instinct-api/database';
 import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 
 @Injectable()

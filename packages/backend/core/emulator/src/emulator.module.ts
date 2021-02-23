@@ -1,6 +1,6 @@
 import {Module} from '@nestjs/common';
-import {SessionModule} from '@instinct-prj/session-api';
-import {DatabaseModule} from '@instinct-prj/database-api';
+import {SessionModule} from '@instinct-api/session';
+import {DatabaseModule} from '@instinct-api/database';
 import {EmulatorTextsController} from './emulator-texts.controller';
 import {EmulatorSettingsController} from './emulator-settings.controller';
 

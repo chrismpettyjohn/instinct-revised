@@ -1,5 +1,5 @@
 import {UserDTO} from '@instinct-prj/interface';
-import {ValidRecaptcha} from '@instinct-prj/google-api';
+import {ValidRecaptcha} from '@instinct-api/google';
 import {IsEmail, IsNotEmpty, IsString} from 'class-validator';
 import {
   UniqueUsername,

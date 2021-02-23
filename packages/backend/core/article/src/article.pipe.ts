@@ -1,4 +1,4 @@
-import {ArticleEntity, ArticleRepository} from '@instinct-prj/database-api';
+import {ArticleEntity, ArticleRepository} from '@instinct-api/database';
 import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 
 @Injectable()

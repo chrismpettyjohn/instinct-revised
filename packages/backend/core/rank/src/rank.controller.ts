@@ -1,13 +1,13 @@
 import {RankPipe} from './rank.pipe';
 import {RankDTOClass} from './rank.dto';
 import {Rank} from '@instinct-prj/interface';
-import {HasScope} from '@instinct-prj/session-api';
+import {HasScope} from '@instinct-api/session';
 import {
   RankRepository,
   RankEntity,
   rankWire,
   rankDataTransferObjectToEntity,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   Body,
   Controller,

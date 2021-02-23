@@ -1,12 +1,12 @@
 import {CategoryPipe} from './category.pipe';
 import {ArticleCategoryDTO} from './category.dto';
-import {HasScope} from '@instinct-prj/session-api';
+import {HasScope} from '@instinct-api/session';
 import {ArticleCategory} from '@instinct-prj/interface';
 import {
   ArticleCategoryEntity,
   articleCategoryWire,
   ArticleCategoryRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 import {
   Body,
   Controller,

@@ -1,7 +1,7 @@
 import {User} from '@instinct-prj/interface';
 import {Controller, Get} from '@nestjs/common';
 import {UserLeaderBoardService} from './leaderboard.service';
-import {UserEntity, userWire} from '@instinct-prj/database-api';
+import {UserEntity, userWire} from '@instinct-api/database';
 
 @Controller('users/leaderboard')
 export class UserLeaderBoardController {

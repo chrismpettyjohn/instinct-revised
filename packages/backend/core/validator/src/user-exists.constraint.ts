@@ -1,5 +1,5 @@
 import {Injectable} from '@nestjs/common';
-import {UserRepository} from '@instinct-prj/database-api';
+import {UserRepository} from '@instinct-api/database';
 import {
   registerDecorator,
   ValidationOptions,

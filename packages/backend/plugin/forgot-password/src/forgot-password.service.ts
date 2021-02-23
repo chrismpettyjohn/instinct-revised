@@ -1,7 +1,7 @@
 import Moment from 'moment';
 import randomString from 'crypto-random-string';
-import {EmailService} from '@instinct-prj/email-api';
-import {HashService} from '@instinct-prj/common-api';
+import {EmailService} from '@instinct-api/emails';
+import {HashService} from '@instinct-api/common';
 import {BadRequestException, Injectable} from '@nestjs/common';
 import {ForgotPasswordEmailTemplate} from './forgot-password.types';
 import {
@@ -9,7 +9,7 @@ import {
   UserEntity,
   UserRepository,
   UserForgotPasswordRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Injectable()
 export class ForgotPasswordService {

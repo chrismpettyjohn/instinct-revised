@@ -1,5 +1,5 @@
 import {Request} from 'express';
-import {UserEntity} from '@instinct-prj/database-api';
+import {UserEntity} from '@instinct-api/database';
 
 export interface RequestWithSession extends Request {
   user: UserEntity;

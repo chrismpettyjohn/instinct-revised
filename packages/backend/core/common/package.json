@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/common-api",
+  "name": "@instinct-api/common",
   "version": "1.9.0",
   "main": "dist/index.js",
   "types": "dist/types",

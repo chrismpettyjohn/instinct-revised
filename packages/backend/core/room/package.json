@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/room-api",
+  "name": "@instinct-api/rooms",
   "version": "1.9.0",
   "main": "dist/index.js",
   "types": "dist/types",
@@ -19,8 +19,8 @@
     "@nestjs/typeorm": "^7.1.5",
     "typeorm": "^0.2.31",
     "@instinct-prj/interface": "^1.9.0",
-    "@instinct-prj/database-api": "^1.9.0",
-    "@instinct-prj/session-api": "^1.9.0"
+    "@instinct-api/database": "^1.9.0",
+    "@instinct-api/session": "^1.9.0"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.6.12",
@@ -30,7 +30,7 @@
     "@nestjs/typeorm": "^7.1.5",
     "typeorm": "^0.2.31",
     "@instinct-prj/interface": "^1.9.0",
-    "@instinct-prj/database-api": "^1.9.0"
+    "@instinct-api/database": "^1.9.0"
   },
   "gitHead": "66b61bc221ace5230cd659bc3631eb6331da51e6"
 }

@@ -1,7 +1,7 @@
 import {Repository} from 'typeorm';
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {RoomEntity} from '@instinct-prj/database-api';
+import {RoomEntity} from '@instinct-api/database';
 
 @Injectable()
 export class RoomService {

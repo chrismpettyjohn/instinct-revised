@@ -1,7 +1,7 @@
 import {PhotoService} from './photo.service';
 import {Photo} from '@instinct-prj/interface';
 import {Controller, Get, Param} from '@nestjs/common';
-import {PhotoEntity, photoWire} from '@instinct-prj/database-api';
+import {PhotoEntity, photoWire} from '@instinct-api/database';
 
 @Controller('photos')
 export class PhotoController {

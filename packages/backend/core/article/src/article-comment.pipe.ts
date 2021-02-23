@@ -2,7 +2,7 @@ import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 import {
   ArticleCommentEntity,
   ArticleCommentRepository,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Injectable()
 export class ArticleCommentPipe implements PipeTransform {

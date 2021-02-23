@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/google-api",
+  "name": "@instinct-api/google",
   "version": "1.9.0",
   "main": "dist/index.js",
   "types": "dist/types",
@@ -18,7 +18,7 @@
     "typescript": "~4.1.5",
     "axios": "^0.21.1",
     "class-validator": "^0.13.1",
-    "@instinct-prj/database-api": "^1.9.0",
+    "@instinct-api/database": "^1.9.0",
     "@instinct-prj/interface": "^1.9.0"
   },
   "peerDependencies": {
@@ -27,7 +27,7 @@
     "typescript": "~4.1.5",
     "axios": "^0.21.1",
     "class-validator": "^0.13.1",
-    "@instinct-prj/database-api": "^1.9.0",
+    "@instinct-api/database": "^1.9.0",
     "@instinct-prj/interface": "^1.9.0"
   },
   "gitHead": "66b61bc221ace5230cd659bc3631eb6331da51e6"

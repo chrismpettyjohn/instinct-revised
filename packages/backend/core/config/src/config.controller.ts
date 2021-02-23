@@ -1,12 +1,12 @@
 import {UpdateConfigDTO} from './config.dto';
-import {HasScope} from '@instinct-prj/session-api';
+import {HasScope} from '@instinct-api/session';
 import {Config, ConfigDTO} from '@instinct-prj/interface';
 import {Body, Controller, Get, Post} from '@nestjs/common';
 import {
   ConfigRepository,
   configDTOWire,
   configWire,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Controller('config')
 export class ConfigController {

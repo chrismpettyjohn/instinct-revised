@@ -1,7 +1,7 @@
 import {ArticlePipe} from './article.pipe';
 import {ArticleCommentDTO} from './article-comment.dto';
 import {ArticleCommentPipe} from './article-comment.pipe';
-import {HasSession, GetSession} from '@instinct-prj/session-api';
+import {HasSession, GetSession} from '@instinct-api/session';
 import {Body, Controller, Delete, Param, Post} from '@nestjs/common';
 import {
   UserEntity,
@@ -9,7 +9,7 @@ import {
   ArticleCommentRepository,
   ArticleEntity,
   articleCommentWire,
-} from '@instinct-prj/database-api';
+} from '@instinct-api/database';
 
 @Controller('articles/:articleID/comments')
 @HasSession()
