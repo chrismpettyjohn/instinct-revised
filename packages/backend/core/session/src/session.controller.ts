@@ -2,7 +2,7 @@ import {User} from '@instinct-prj/interface';
 import {SessionService} from './session.service';
 import {HasSession} from './has-session.decorator';
 import {GetSession} from './get-session.decorator';
-import {HashService} from '@instinct-prj/core-api';
+import {HashService} from '@instinct-prj/common-api';
 import {UserEntity, UserRepository, userWire} from '@instinct-prj/database-api';
 import {BadRequestException, Body, Controller, Get, Post} from '@nestjs/common';
 import {

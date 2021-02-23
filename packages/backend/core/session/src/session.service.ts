@@ -1,4 +1,4 @@
-import {HashService} from '@instinct-prj/core-api';
+import {HashService} from '@instinct-prj/common-api';
 import {BearerTokenService} from './bearer-token.service';
 import {BadRequestException, Injectable} from '@nestjs/common';
 import {UserEntity, UserRepository} from '@instinct-prj/database-api';
