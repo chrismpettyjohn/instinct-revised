@@ -1,4 +1,4 @@
-import {UserEntity, UserRepository} from '../database/user';
+import {UserEntity, UserRepository} from '@instinct-prj/database-api';
 import {PipeTransform, Injectable, NotFoundException} from '@nestjs/common';
 
 @Injectable()
