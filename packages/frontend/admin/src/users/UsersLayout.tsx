@@ -1,12 +1,8 @@
 import React from 'react';
 import {Link, useLocation} from 'wouter';
-import {AdminLayout, AdminLayoutProps} from '../components/admin-layout';
-import {
-  Card,
-  Icon,
-  Jumbotron,
-  PermissionGuard,
-} from '@instinct-web/core';
+import {AdminLayout} from '../components/admin-layout/AdminLayout';
+import {AdminLayoutProps} from '../components/admin-layout/AdminLayout.types';
+import {Card, Icon, Jumbotron, PermissionGuard} from '@instinct-web/core';
 
 export function UsersLayout({children, permission}: AdminLayoutProps) {
   const [location] = useLocation();

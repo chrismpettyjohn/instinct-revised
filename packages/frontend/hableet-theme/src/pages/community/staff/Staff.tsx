@@ -1,8 +1,8 @@
 import React from 'react';
+import {UserLayout} from '../../../components/layout/user';
 import {
   Card,
   UserContainer,
-  UserLayout,
   setURL,
   Skeleton,
   MiniJumbotron,

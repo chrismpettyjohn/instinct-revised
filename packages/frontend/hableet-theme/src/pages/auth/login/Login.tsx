@@ -1,6 +1,7 @@
 import './Login.scss';
 import {FormGroup} from 'reactstrap';
 import {Link, useLocation} from 'wouter';
+import {GuestLayout} from '../../../components/layout/guest';
 import React, {useContext, useState} from 'react';
 import {defaultLoginState, LoginState} from './Login.types';
 import {
@@ -8,7 +9,6 @@ import {
   Form,
   Icon,
   Input,
-  GuestLayout,
   sessionContext,
   sessionService,
   setURL,

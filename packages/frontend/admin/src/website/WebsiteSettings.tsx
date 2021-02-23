@@ -1,15 +1,10 @@
 import React from 'react';
 import {GameSettings} from './views/GameSettings';
 import {ServerSettings} from './views/ServerSettings';
-import {AdminLayout} from '../components/admin-layout';
 import {SitePreferences} from './views/SitePreferences';
+import {AdminLayout} from '../components/admin-layout/AdminLayout';
 import {WebsiteSettingsProvider} from './context/WebsiteSettings.provider';
-import {
-  Icon,
-  Jumbotron,
-  NavTabs,
-  setURL,
-} from '@instinct-web/core';
+import {Icon, Jumbotron, NavTabs, setURL} from '@instinct-web/core';
 import {GoogleSettings} from './views/GoogleSettings';
 import {MailSettings} from './views/MailSettings';
 

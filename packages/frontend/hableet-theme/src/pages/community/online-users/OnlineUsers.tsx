@@ -1,12 +1,12 @@
 import './OnlineUsers.scss';
 import {User} from '@instinct-prj/interface';
+import {UserLayout} from '../../../components/layout/user';
 import React, {useEffect, useState} from 'react';
 import {
   Card,
   Column,
   Jumbotron,
   UserContainer,
-  UserLayout,
   setURL,
   userService,
   UserContainerSkeleton,

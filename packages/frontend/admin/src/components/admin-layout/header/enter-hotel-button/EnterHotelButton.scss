@@ -1,0 +1,11 @@
+.enter-hotel-button {
+  background: #001726;
+  border: 1px solid #1b77c6;
+  color: white;
+
+  &:hover {
+    background: #001726 !important;
+    border-color: lighten(#1b77c6, 30%);
+    text-decoration: none;
+  }
+}

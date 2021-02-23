@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col} from 'reactstrap';
-import {AdminLayout, Card, Jumbotron, setURL} from '@instinct-web/core';
+import {Card, Jumbotron, setURL} from '@instinct-web/core';
+import {AdminLayout} from '../components/admin-layout/AdminLayout';
 
 setURL('admin', <Dashboard />);
 

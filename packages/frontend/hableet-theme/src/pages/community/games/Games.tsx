@@ -2,7 +2,8 @@ import React from 'react';
 import {TopPixels} from './top-pixels';
 import {TopPoints} from './top-points';
 import {TopCredits} from './top-credits';
-import {MiniJumbotron, UserLayout, setURL} from '@instinct-web/core';
+import {UserLayout} from '../../../components/layout/user';
+import {MiniJumbotron, setURL} from '@instinct-web/core';
 
 setURL('community/games', <Games />);
 

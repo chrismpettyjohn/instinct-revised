@@ -1,22 +1,18 @@
 import {Link} from 'wouter';
 import {FormGroup} from 'reactstrap';
 import React, {useState} from 'react';
+import {GuestLayout} from '../../../components/layout/guest';
 import {
-  defaultForgotPasswordModalState,
-  ForgotPasswordModalState,
-  Form,
-  Icon,
-  GuestLayout,
-  Input,
-  sessionService,
-  setURL,
-} from '@instinct-web/core';
+  ForgotPasswordState,
+  defaultForgotPasswordState,
+} from './ForgotPassword.types';
+import {Form, Icon, Input, sessionService, setURL} from '@instinct-web/core';
 
 setURL('forgot-password', <ForgotPassword />);
 
 export function ForgotPassword() {
-  const [state, setState] = useState<ForgotPasswordModalState>(
-    defaultForgotPasswordModalState
+  const [state, setState] = useState<ForgotPasswordState>(
+    defaultForgotPasswordState
   );
 
   async function onSubmit() {

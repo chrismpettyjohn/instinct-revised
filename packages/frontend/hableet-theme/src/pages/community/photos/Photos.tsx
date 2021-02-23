@@ -1,15 +1,10 @@
 import {Photo} from '@instinct-prj/interface';
 import {photoService} from '@instinct-web/core';
 import React, {useEffect, useState} from 'react';
-import {defaultPhotosState, PhotosState} from './';
-import {
-  Card,
-  Jumbotron,
-  Loading,
-  UserLayout,
-  setURL,
-  PhotoContainer,
-} from '@instinct-web/core';
+import {UserLayout} from '../../../components/layout/user';
+import {PhotoContainer} from './photo-container/PhotoContainer';
+import {defaultPhotosState, PhotosState} from './PhotosInterface';
+import {Card, Jumbotron, Loading, setURL} from '@instinct-web/core';
 
 setURL('community/photos', <Photos />);
 

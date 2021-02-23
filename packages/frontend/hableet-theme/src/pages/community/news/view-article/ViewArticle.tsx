@@ -1,16 +1,11 @@
 import './ViewArticle.scss';
 import React, {useState} from 'react';
 import {Link, useRoute} from 'wouter';
+import {UserLayout} from '../../../../components/layout/user';
 import {RecentNews} from './recent-news/RecentNews';
 import {ArticleBody} from './article-body/ArticleBody';
 import {ArticleHeader} from './article-header/ArticleHeader';
-import {
-  Loading,
-  setURL,
-  useFetchArticleByID,
-  UserLayout,
-  Icon,
-} from '@instinct-web/core';
+import {Loading, setURL, useFetchArticleByID, Icon} from '@instinct-web/core';
 import {ViewComments} from './view-comments/ViewComments';
 
 setURL('community/news/:articleID', <ViewArticle />);

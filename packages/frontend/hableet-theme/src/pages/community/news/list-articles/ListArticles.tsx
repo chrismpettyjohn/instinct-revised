@@ -4,6 +4,7 @@ import {Link} from 'wouter';
 import {uniqBy} from 'lodash';
 import {Article} from '@instinct-prj/interface';
 import React, {useContext, useState} from 'react';
+import {UserLayout} from '../../../../components/layout/user';
 import {
   Card,
   configContext,
@@ -11,7 +12,6 @@ import {
   setURL,
   useFetchAllArticles,
   Icon,
-  UserLayout,
 } from '@instinct-web/core';
 
 type NewsFilter = (article: Article) => boolean;
