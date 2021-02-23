@@ -19,9 +19,9 @@
       "@instinct-prj/emulator-api":  ["packages/backend/core/emulator/src"],
       "@instinct-prj/database-api":  ["packages/backend/core/database/src"],
       "@instinct-prj/beta-code-api":  ["packages/backend/core/beta-code/src"],
-      "@instinct-prj/mnage-users-plugin-api":  ["packages/backend/plugin/manage-users/src"],
-      "@instinct-prj/user-guestbook-plugin-api":  ["packages/backend/plugin/user-guestbook/src"],
-      "@instinct-prj/forgot-password-plugin-api":  ["packages/backend/plugin/forgot-password/src"],
+      "@instinct-prj/manage-users-api-plugin":  ["packages/backend/plugin/manage-users/src"],
+      "@instinct-prj/user-guestbook-api-plugin":  ["packages/backend/plugin/user-guestbook/src"],
+      "@instinct-prj/forgot-password-api-plugin":  ["packages/backend/plugin/forgot-password/src"],
       "@instinct-prj/interface": ["packages/shared/interface/src"],
       "@instinct-prj/frontend": ["packages/frontend/frontend/src"],
       "@instinct-prj/modern-theme": ["packages/frontend/modern-theme/src"]

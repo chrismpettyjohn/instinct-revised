@@ -1,7 +1,7 @@
 // @ts-ignore - no types
 import {v4 as uuid} from 'uuid';
 import {BetaCode} from '@instinct-prj/interface';
-import {HasScope} from '@instinct-prj/core-api';
+import {HasScope} from '@instinct-prj/session-api';
 import {Controller, Get, Delete, Param, Post} from '@nestjs/common';
 import {BetaCodeRepository, betaCodeWire} from '@instinct-prj/database-api';
 

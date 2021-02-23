@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/user-guestbook-plugin-api",
+  "name": "@instinct-prj/user-guestbook-api-plugin",
   "version": "1.9.0",
   "main": "dist/index.js",
   "types": "dist/types",

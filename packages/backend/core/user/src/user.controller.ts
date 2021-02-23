@@ -21,7 +21,7 @@ import {
   defaultUserPixels,
   defaultUserPoints,
   defaultUserRank,
-} from '@instinct-prj/core-api';
+} from '@instinct-prj/config-api';
 import {
   Body,
   Controller,

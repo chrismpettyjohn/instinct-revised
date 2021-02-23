@@ -1,10 +1,10 @@
 import Random from 'randomstring';
 import {Repository} from 'typeorm';
-import {HashService} from '../../../common';
 import {UserEntity} from './user.entity';
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import {BaseRepository} from '../../base.repository';
+import {HashService} from '@instinct-prj/common-api';
 
 @Injectable()
 export class UserRepository extends BaseRepository<UserEntity> {

@@ -1,7 +1,7 @@
 import {Injectable} from '@nestjs/common';
-import {jwtSecret} from '@instinct-prj/core-api';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
+import {jwtSecret} from '@instinct-prj/config-api';
 import {UserEntity, UserRepository} from '@instinct-prj/database-api';
 
 @Injectable()
