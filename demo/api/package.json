@@ -5,7 +5,6 @@
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
   },
   "dependencies": {
-    "@instinct-prj/api": "^1.9.0",
     "@instinct-prj/interface": "^1.9.0",
     "@instinct-api/articles": "^1.9.0",
     "@instinct-api/beta-codes": "^1.9.0",

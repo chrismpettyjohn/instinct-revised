@@ -4,7 +4,9 @@
     "baseUrl": ".",
     "paths": {
       "@instinct-prj/admin": ["packages/frontend/admin/src"],
-      "@instinct-prj/api":  ["packages/backend/api/src"],
+      "@instinct-prj/interface": ["packages/shared/interface/src"],
+      "@instinct-prj/frontend": ["packages/frontend/frontend/src"],
+      "@instinct-prj/modern-theme": ["packages/frontend/modern-theme/src"]
       "@instinct-api/users":  ["packages/backend/core/user/src"],
       "@instinct-api/emails":  ["packages/backend/core/email/src"],
       "@instinct-api/ranks":  ["packages/backend/core/rank/src"],
@@ -15,7 +17,7 @@
       "@instinct-api/common":  ["packages/backend/core/common/src"],
       "@instinct-api/google":  ["packages/backend/core/google/src"],
       "@instinct-api/articles":  ["packages/backend/core/article/src"],
-      "@instinct-prj/validator-api":  ["packages/backend/core/validator/src"],
+      "@instinct-api/validator":  ["packages/backend/core/validator/src"],
       "@instinct-api/session":  ["packages/backend/core/session/src"],
       "@instinct-api/emulator":  ["packages/backend/core/emulator/src"],
       "@instinct-api/database":  ["packages/backend/core/database/src"],
@@ -23,9 +25,6 @@
       "@instinct-plugin/manage-users-api":  ["packages/backend/plugin/manage-users/src"],
       "@instinct-plugin/user-guestbook-api":  ["packages/backend/plugin/user-guestbook/src"],
       "@instinct-plugin/forgot-password-api":  ["packages/backend/plugin/forgot-password/src"],
-      "@instinct-prj/interface": ["packages/shared/interface/src"],
-      "@instinct-prj/frontend": ["packages/frontend/frontend/src"],
-      "@instinct-prj/modern-theme": ["packages/frontend/modern-theme/src"]
     },
     "noEmit": true
   },

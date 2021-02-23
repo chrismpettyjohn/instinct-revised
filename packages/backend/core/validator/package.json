@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/validator-api",
+  "name": "@instinct-api/validator",
   "version": "1.9.0",
   "main": "dist/index.js",
   "types": "dist/types",

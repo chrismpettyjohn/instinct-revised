@@ -9,7 +9,7 @@ import {AccountBannedGuard} from './account-ban.guard';
 import {DatabaseModule} from '@instinct-api/database';
 import {BearerTokenService} from './bearer-token.service';
 import {BearerTokenStrategy} from './bearer-token.strategy';
-import {ValidatorModule} from '@instinct-prj/validator-api';
+import {ValidatorModule} from '@instinct-api/validator';
 import {jwtExpires, jwtSecret} from '@instinct-api/common';
 
 @Module({

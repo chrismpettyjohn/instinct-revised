@@ -1,4 +1,4 @@
-import {ExistingRank} from '@instinct-prj/validator-api';
+import {ExistingRank} from '@instinct-api/validator';
 import {IsString, IsNotEmpty, IsNumber, IsOptional} from 'class-validator';
 import {InternalUserDTO as InternalUserDTOI} from '@instinct-prj/interface';
 

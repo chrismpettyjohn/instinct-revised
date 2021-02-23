@@ -5,7 +5,7 @@ import {
   UniqueUsername,
   UniqueEmail,
   ValidBetaCode,
-} from '@instinct-prj/validator-api';
+} from '@instinct-api/validator';
 
 export class UserDTOClass implements UserDTO {
   @IsString()

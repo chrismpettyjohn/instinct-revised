@@ -7,7 +7,7 @@ import {CommonModule} from '@instinct-api/common';
 import {GoogleModule} from '@instinct-api/google';
 import {DatabaseModule} from '@instinct-api/database';
 import {UserLeaderBoardService} from './leaderboard.service';
-import {ValidatorModule} from '@instinct-prj/validator-api';
+import {ValidatorModule} from '@instinct-api/validator';
 import {UserLeaderBoardController} from './leaderboard.controller';
 
 @Module({

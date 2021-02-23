@@ -2,7 +2,7 @@ import {Module} from '@nestjs/common';
 import {UserModule} from '@instinct-api/users';
 import {SessionModule} from '@instinct-api/session';
 import {DatabaseModule} from '@instinct-api/database';
-import {ValidatorModule} from '@instinct-prj/validator-api';
+import {ValidatorModule} from '@instinct-api/validator';
 import {ManageUsersController} from './manage-users.controller';
 
 @Module({
