@@ -1,0 +1,12 @@
+.w-md-editor .language-javascript .punctuation {
+  color: #000;
+}
+.w-md-editor .language-javascript .function {
+  color: #6f42c1;
+}
+.w-md-editor .language-javascript .string {
+  color: #032f62;
+}
+.w-md-editor .language-javascript .keyword {
+  color: #d73a49;
+}
