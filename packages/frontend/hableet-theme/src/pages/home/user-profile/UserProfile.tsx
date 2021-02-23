@@ -6,12 +6,12 @@ import {Groups} from './groups';
 import {useRoute} from 'wouter';
 import {Friends} from './friends';
 import {UserContainer} from './user-container';
+import {UserLayout} from '../../../components/layout/user';
 import {FavoriteVideo} from './favorite-video/FavoriteVideo';
 import {
   Column,
   Loading,
   Jumbotron,
-  UserLayout,
   setURL,
   useFetchUserByUsername,
 } from '@instinct-web/core';

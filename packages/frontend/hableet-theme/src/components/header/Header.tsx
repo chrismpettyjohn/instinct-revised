@@ -1,8 +1,10 @@
-import React from 'react';
 import {Link} from 'wouter';
-import {HeaderProps} from './Header.types';
+import React, {useContext} from 'react';
+import {healthContext, Icon} from '@instinct-web/core';
+import {EnterHotelButton} from './enter-hotel-button/EnterHotelButton';
 
-export function Header({children}: HeaderProps) {
+export function Header() {
+  const {health} = useContext(healthContext);
   return (
     <header
       id="header"
@@ -20,7 +22,19 @@ export function Header({children}: HeaderProps) {
         </div>
         <div className="col-6 text-right">
           <div id="account-buttons" className="account-buttons">
-            {children}
+            <EnterHotelButton />
+            <div
+              className="rounded-button"
+              style={{
+                background: '#001726',
+                border: 'none',
+                boxShadow: '2px 2px #0F416C',
+                color: 'white',
+              }}
+            >
+              {health.usersOnline}
+              <Icon className="ml-2" type="user" />
+            </div>
           </div>
         </div>
       </div>

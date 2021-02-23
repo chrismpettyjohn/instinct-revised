@@ -1,6 +1,7 @@
 import React from 'react';
+import {setURL} from '@instinct-web/core';
 import {HomePage} from './home-page/HomePage';
-import {UserLayout, setURL} from '@instinct-web/core';
+import {UserLayout} from '../../../components/layout/user';
 
 setURL('me', <Home />);
 

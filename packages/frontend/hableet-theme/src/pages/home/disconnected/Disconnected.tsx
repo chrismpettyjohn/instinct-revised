@@ -1,8 +1,7 @@
 import React from 'react';
 import './Disconnected.scss';
 import {useLocation} from 'wouter';
-import {Button} from '@instinct-web/core';
-import {UserGuard, setURL} from '@instinct-web/core';
+import {setURL, UserGuard} from '@instinct-web/core';
 
 setURL('disconnected', <Disconnected />);
 
@@ -13,9 +12,9 @@ export function Disconnected() {
     <UserGuard>
       <div className="disconnected">
         <p>You been disconnected</p>
-        <Button color="info" onClick={() => setLocation('play')}>
+        <button className="btn btn-info" onClick={() => setLocation('play')}>
           Try Again
-        </Button>
+        </button>
       </div>
     </UserGuard>
   );

@@ -1,15 +1,9 @@
 import React from 'react';
 import {EmailPreferences} from './tabs/email';
-import {SecurityPreferences} from './tabs/security';
 import {ProfilePreferences} from './tabs/profile';
-import {
-  Jumbotron,
-  Loading,
-  UserLayout,
-  setURL,
-  NavTabs,
-  Icon,
-} from '@instinct-web/core';
+import {SecurityPreferences} from './tabs/security';
+import {UserLayout} from '../../../components/layout/user';
+import {Jumbotron, Loading, setURL, NavTabs, Icon} from '@instinct-web/core';
 setURL('preferences', <PreferencesPage />);
 
 export function PreferencesPage() {

@@ -1,13 +1,9 @@
 import {Link} from 'wouter';
 import {HomePage} from './home-page/HomePage';
 import React, {useContext, useState} from 'react';
+import {UserLayout} from '../../../components/layout/user';
 import {Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
-import {
-  configContext,
-  sessionContext,
-  setURL,
-  UserLayout,
-} from '@instinct-web/core';
+import {configContext, sessionContext, setURL} from '@instinct-web/core';
 
 setURL('welcome', <Welcome />);
 
