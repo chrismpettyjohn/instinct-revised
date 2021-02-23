@@ -11,6 +11,9 @@
     "clean": "rimraf -rf ./dist && rimraf -rf ./build",
     "compile": "tsc -p tsconfig.build.json"
   },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "@nestjs/common": "^7.6.12",
     "@nestjs/core": "^7.6.12",
