@@ -13,7 +13,7 @@ export function Header({children}: HeaderProps) {
           <Link to="/">
             <img
               className="header-logo"
-              src="/img/logo/regular.gif"
+              src="/img/logo/regular.png"
               style={{width: 300}}
             />
           </Link>
