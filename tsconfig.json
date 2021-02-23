@@ -9,6 +9,7 @@
       "@instinct-theme/hableet": ["packages/frontend/hableet-theme/src"],
       "@instinct-api/users":  ["packages/backend/core/user/src"],
       "@instinct-api/emails":  ["packages/backend/core/email/src"],
+      "@instinct-api/health":  ["packages/backend/core/health/src"],
       "@instinct-api/ranks":  ["packages/backend/core/rank/src"],
       "@instinct-api/rooms":  ["packages/backend/core/room/src"],
       "@instinct-api/photos":  ["packages/backend/core/photo/src"],
