@@ -18,7 +18,7 @@ import {
   manageUsersService,
   useFetchAllRanks,
   Select,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 
 export function EditUserModal({user, onUpdated}: EditUserModalProps) {
   const ranks = useFetchAllRanks();

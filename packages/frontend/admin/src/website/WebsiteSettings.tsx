@@ -10,7 +10,7 @@ import {
   Jumbotron,
   NavTabs,
   setURL,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 import {GoogleSettings} from './views/GoogleSettings';
 import {MailSettings} from './views/MailSettings';
 

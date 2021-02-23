@@ -3,11 +3,7 @@ import {useRoute} from 'wouter';
 import {toast} from 'react-toastify';
 import {ArticleDTO} from '@instinct-prj/interface';
 import {NewsArticleEditor} from './editor/NewsArticleEditor';
-import {
-  articleService,
-  setURL,
-  useFetchArticleByID,
-} from '@instinct-prj/frontend';
+import {articleService, setURL, useFetchArticleByID} from '@instinct-web/core';
 
 setURL('admin/news/articles/:articleID', <EditNewsArticle />);
 

@@ -7,7 +7,7 @@ import {
   Container,
   Icon,
   Jumbotron,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 
 export function EmulatorLayout({children}: {children: Children}) {
   const [location] = useLocation();

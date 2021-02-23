@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/admin",
+  "name": "@instinct-web/admin",
   "version": "1.11.0",
   "main": "dist/index.js",
   "types": "dist/types",
@@ -13,7 +13,7 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "dependencies": {
-    "@instinct-prj/frontend": "^1.11.0",
+    "@instinct-web/core": "^1.11.0",
     "@instinct-prj/interface": "^1.9.0",
     "@uiw/react-md-editor": "^2.1.8",
     "axios": "^0.21.1",

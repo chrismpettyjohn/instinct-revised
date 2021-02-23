@@ -3,7 +3,7 @@ import {useLocation} from 'wouter';
 import {toast} from 'react-toastify';
 import {ArticleDTO} from '@instinct-prj/interface';
 import {NewsArticleEditor} from './editor/NewsArticleEditor';
-import {articleService, setURL} from '@instinct-prj/frontend';
+import {articleService, setURL} from '@instinct-web/core';
 
 setURL('admin/news/articles/create', <CreateNewsArticle />);
 

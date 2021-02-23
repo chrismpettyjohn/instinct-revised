@@ -16,7 +16,7 @@ import {
   PreviewImage,
   useFetchAllNewsCategories,
   Skeleton,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 import {
   defaultNewsArticleEditorState,
   NewsArticleEditorProps,

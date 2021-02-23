@@ -1,7 +1,7 @@
 import React from 'react';
 import {toast} from 'react-toastify';
 import {RankDTO} from '@instinct-prj/interface';
-import {Icon, rankService} from '@instinct-prj/frontend';
+import {Icon, rankService} from '@instinct-web/core';
 import {RankEditor} from '../rank-editor/RankEditor';
 
 export function CreateRankModal() {

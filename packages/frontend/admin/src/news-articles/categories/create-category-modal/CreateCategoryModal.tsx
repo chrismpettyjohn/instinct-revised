@@ -1,7 +1,7 @@
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {SketchPicker} from 'react-color';
-import {articleService, Form, Input} from '@instinct-prj/frontend';
+import {articleService, Form, Input} from '@instinct-web/core';
 import {CreateCategoryModalProps} from './CreateCategoryModal.types';
 import {
   FormGroup,

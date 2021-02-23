@@ -6,7 +6,7 @@ import {
   Icon,
   setURL,
   useFetchBetaCodes,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 
 setURL('admin/users/beta-codes', <BetaCodes />);
 

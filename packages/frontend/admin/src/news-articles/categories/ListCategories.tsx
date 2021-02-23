@@ -2,7 +2,7 @@ import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {NewsArticleLayout} from '../NewsArticlesLayout';
 import {CreateCategoryModal} from './create-category-modal';
-import {APIWrapper, articleService, setURL} from '@instinct-prj/frontend';
+import {APIWrapper, articleService, setURL} from '@instinct-web/core';
 
 setURL('admin/news/categories', <ListCategories />);
 

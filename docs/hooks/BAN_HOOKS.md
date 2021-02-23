@@ -7,7 +7,7 @@ This hook will return an array of all bans or undefined while waiting on the bac
 ```
 import React from 'react';
 import { UserBan } from 'instinct-interface';
-import { useFetchAllBans } from '@instinct-prj/frontend';
+import { useFetchAllBans } from '@instinct-web/core';
 
 export function ListBans() {
   const bans: UserBan[] | undefined  = useFetchAllBans();
@@ -38,7 +38,7 @@ This hook will return a news article or return undefined while waiting on the ba
 import React from 'react';
 import { useRoute } from 'wouter';
 import { UserBan } from 'instinct-interface';
-import { useFetchBanByID, setURL } from '@instinct-prj/frontend';
+import { useFetchBanByID, setURL } from '@instinct-web/core';
 
 setURL('bans/:banID', <ViewBans/>);
 

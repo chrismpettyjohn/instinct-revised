@@ -8,7 +8,7 @@ import {
   Icon,
   manageUsersService,
   setURL,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 
 setURL('admin/users', <ListUsers />);
 

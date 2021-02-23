@@ -3,7 +3,7 @@ import React from 'react';
 import {toast} from 'react-toastify';
 import {BanEditor} from '../../ban-editor';
 import {UserBanDTO} from '@instinct-prj/interface';
-import {Avatar, banService} from '@instinct-prj/frontend';
+import {Avatar, banService} from '@instinct-web/core';
 import {DeleteBanModal} from '../delete-ban/DeleteBan';
 import {EditBanModalProps} from './EditBanModal.types';
 

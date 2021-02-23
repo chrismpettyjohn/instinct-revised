@@ -3,7 +3,7 @@ import './ListNewsArticles.scss';
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {NewsArticleLayout} from '../NewsArticlesLayout';
-import {APIWrapper, articleService, Icon, setURL} from '@instinct-prj/frontend';
+import {APIWrapper, articleService, Icon, setURL} from '@instinct-web/core';
 
 setURL('admin/news/articles', <ListNewsArticles />);
 

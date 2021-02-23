@@ -8,7 +8,7 @@ import {
   Icon,
   Jumbotron,
   PermissionGuard,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 
 export function UsersLayout({children, permission}: AdminLayoutProps) {
   const [location] = useLocation();

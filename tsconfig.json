@@ -3,10 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@instinct-prj/admin": ["packages/frontend/admin/src"],
+      "@instinct-web/admin": ["packages/frontend/admin/src"],
       "@instinct-prj/interface": ["packages/shared/interface/src"],
-      "@instinct-prj/frontend": ["packages/frontend/frontend/src"],
-      "@instinct-prj/modern-theme": ["packages/frontend/modern-theme/src"]
+      "@instinct-web/core": ["packages/frontend/core/src"],
+      "@instinct-theme/hableet": ["packages/frontend/hableet-theme/src"],
       "@instinct-api/users":  ["packages/backend/core/user/src"],
       "@instinct-api/emails":  ["packages/backend/core/email/src"],
       "@instinct-api/ranks":  ["packages/backend/core/rank/src"],

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {UsersLayout} from '../UsersLayout';
 import {EditRankModal} from './rank-modals';
-import {APIWrapper, rankService, setURL} from '@instinct-prj/frontend';
+import {APIWrapper, rankService, setURL} from '@instinct-web/core';
 
 setURL('admin/users/ranks', <ListRanks />);
 

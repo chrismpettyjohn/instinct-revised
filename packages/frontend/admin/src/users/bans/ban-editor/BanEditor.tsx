@@ -8,7 +8,7 @@ import {
   sessionContext,
   userService,
   DatePicker,
-} from '@instinct-prj/frontend';
+} from '@instinct-web/core';
 import {
   BanEditorProps,
   BanEditorState,

@@ -1,7 +1,7 @@
 import React from 'react';
 import {toast} from 'react-toastify';
 import {BanEditor} from '../../ban-editor';
-import {banService} from '@instinct-prj/frontend';
+import {banService} from '@instinct-web/core';
 import {UserBanDTO} from '@instinct-prj/interface';
 
 export function CreateBanModal() {

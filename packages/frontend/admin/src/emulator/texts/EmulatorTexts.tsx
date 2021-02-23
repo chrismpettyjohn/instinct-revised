@@ -3,13 +3,7 @@ import {toast} from 'react-toastify';
 import React, {useEffect, useState} from 'react';
 import {EmulatorLayout} from '../EmulatorLayout';
 import {EmulatorTexts as EmulatorTextsI} from '@instinct-prj/interface';
-import {
-  emulatorService,
-  Form,
-  Icon,
-  Input,
-  setURL,
-} from '@instinct-prj/frontend';
+import {emulatorService, Form, Icon, Input, setURL} from '@instinct-web/core';
 
 setURL('admin/emulator/texts', <EmulatorTexts />);
 

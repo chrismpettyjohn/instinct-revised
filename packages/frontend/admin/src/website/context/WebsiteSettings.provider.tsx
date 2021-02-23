@@ -1,7 +1,7 @@
 import {toast} from 'react-toastify';
 import {websiteSettingsContext} from './WebsiteSettings';
 import React, {ReactElement, useEffect, useState} from 'react';
-import {configService, useFetchFullConfig} from '@instinct-prj/frontend';
+import {configService, useFetchFullConfig} from '@instinct-web/core';
 import {
   defaultWebsiteSettingsContextState,
   WebsiteSettingsContextState,
