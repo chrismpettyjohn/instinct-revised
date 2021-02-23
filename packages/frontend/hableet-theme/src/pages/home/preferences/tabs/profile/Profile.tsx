@@ -7,7 +7,6 @@ import {
   Form,
   Icon,
   Input,
-  Row,
   sessionContext,
   sessionService,
 } from '@instinct-web/core';
@@ -66,7 +65,7 @@ export function ProfilePreferences() {
       )}
       <div>
         <h4 className="form-subcategory">Youtube Video</h4>
-        <Row>
+        <div className="row">
           <div className="column-2">
             <Input
               type="text"
@@ -75,7 +74,7 @@ export function ProfilePreferences() {
               onChange={updateField}
             />
           </div>
-        </Row>
+        </div>
       </div>
 
       <div className="submit-button">

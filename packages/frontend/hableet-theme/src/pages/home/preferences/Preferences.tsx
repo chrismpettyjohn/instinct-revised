@@ -3,10 +3,8 @@ import {EmailPreferences} from './tabs/email';
 import {SecurityPreferences} from './tabs/security';
 import {ProfilePreferences} from './tabs/profile';
 import {
-  Container,
   Jumbotron,
   Loading,
-  Row,
   UserLayout,
   setURL,
   NavTabs,
@@ -24,8 +22,8 @@ export function PreferencesPage() {
             from your personal portal.
           </p>
         </Jumbotron>
-        <Container>
-          <Row>
+        <div className="page-content">
+          <div className="row">
             <NavTabs
               tabs={[
                 {
@@ -42,8 +40,8 @@ export function PreferencesPage() {
                 },
               ]}
             />
-          </Row>
-        </Container>
+          </div>
+        </div>
       </Loading>
     </UserLayout>
   );

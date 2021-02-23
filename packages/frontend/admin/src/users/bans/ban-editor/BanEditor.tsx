@@ -4,7 +4,6 @@ import React, {useContext, useEffect, useState} from 'react';
 import {
   Avatar,
   Form,
-  Row,
   sessionContext,
   userService,
   DatePicker,
@@ -151,7 +150,7 @@ export function BanEditor({
               />
             </div>
 
-            <Row className="mt-3">
+            <div className="row mt-3">
               <div className="col-6">&nbsp; </div>
               <div className="col-6 text-right">
                 <button
@@ -165,7 +164,7 @@ export function BanEditor({
                   )}
                 </button>
               </div>
-            </Row>
+            </div>
           </Form>
         </ModalBody>
       </Modal>

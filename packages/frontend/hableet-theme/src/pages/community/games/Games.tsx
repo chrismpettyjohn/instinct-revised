@@ -2,29 +2,23 @@ import React from 'react';
 import {TopPixels} from './top-pixels';
 import {TopPoints} from './top-points';
 import {TopCredits} from './top-credits';
-import {
-  Container,
-  MiniJumbotron,
-  Row,
-  UserLayout,
-  setURL,
-} from '@instinct-web/core';
+import {MiniJumbotron, UserLayout, setURL} from '@instinct-web/core';
 
 setURL('community/games', <Games />);
 
 export function Games() {
   return (
     <UserLayout section="games_ranking">
-      <Container>
-        <Row>
+      <div className="page-content">
+        <div className="row">
           <div className="col-12">
             <MiniJumbotron>
               <h1>High Scores</h1>
               <p>Can you make it to the top?</p>
             </MiniJumbotron>
           </div>
-        </Row>
-        <Row>
+        </div>
+        <div className="row">
           <div className="col-4">
             <TopCredits />
           </div>
@@ -34,8 +28,8 @@ export function Games() {
           <div className="col-4">
             <TopPoints />
           </div>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </UserLayout>
   );
 }

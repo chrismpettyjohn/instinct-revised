@@ -1,13 +1,6 @@
 import React from 'react';
 import {Col} from 'reactstrap';
-import {
-  AdminLayout,
-  Card,
-  Container,
-  Jumbotron,
-  Row,
-  setURL,
-} from '@instinct-web/core';
+import {AdminLayout, Card, Jumbotron, setURL} from '@instinct-web/core';
 
 setURL('admin', <Dashboard />);
 
@@ -17,8 +10,8 @@ export function Dashboard() {
       <Jumbotron style={{background: '#263238'}} title="Admin Panel">
         <p>Welcome to the admin panel</p>
       </Jumbotron>
-      <Container>
-        <Row>
+      <div className="page-content">
+        <div className="row">
           <Col xs={6}>
             <Card header="Hotel Statistics">
               <p>Coming soon</p>
@@ -39,8 +32,8 @@ export function Dashboard() {
               <p>Coming soon</p>
             </Card>
           </Col>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </AdminLayout>
   );
 }

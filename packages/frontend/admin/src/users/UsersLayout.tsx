@@ -4,7 +4,6 @@ import {
   AdminLayout,
   AdminLayoutProps,
   Card,
-  Container,
   Icon,
   Jumbotron,
   PermissionGuard,
@@ -82,9 +81,9 @@ export function UsersLayout({children, permission}: AdminLayoutProps) {
           etc.
         </p>
       </Jumbotron>
-      <Container>
+      <div className="page-content">
         <Card header={getHeader()}>{children}</Card>
-      </Container>
+      </div>
     </AdminLayout>
   );
 }

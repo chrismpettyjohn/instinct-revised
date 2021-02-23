@@ -1,13 +1,6 @@
 import React from 'react';
 import {Link, useLocation} from 'wouter';
-import {
-  AdminLayout,
-  Card,
-  Children,
-  Container,
-  Icon,
-  Jumbotron,
-} from '@instinct-web/core';
+import {AdminLayout, Card, Children, Icon, Jumbotron} from '@instinct-web/core';
 
 export function EmulatorLayout({children}: {children: Children}) {
   const [location] = useLocation();
@@ -51,9 +44,9 @@ export function EmulatorLayout({children}: {children: Children}) {
           etc.
         </p>
       </Jumbotron>
-      <Container>
+      <div className="page-content">
         <Card header={getHeader()}>{children}</Card>
-      </Container>
+      </div>
     </AdminLayout>
   );
 }

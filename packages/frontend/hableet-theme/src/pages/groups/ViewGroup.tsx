@@ -4,7 +4,6 @@ import {Group} from '@instinct-prj/interface';
 import {
   Card,
   Column,
-  Container,
   Jumbotron,
   setURL,
   useFetchGroupByID,
@@ -21,7 +20,7 @@ export function ViewGroup() {
   return (
     <UserLayout>
       <Jumbotron title={group?.name} />
-      <Container>
+      <div className="page-content">
         <Column side="left">
           <Card header="Description">
             <p>{group?.desc}</p>
@@ -35,7 +34,7 @@ export function ViewGroup() {
             {group?.user && <UserContainer user={group?.user} />}
           </Card>
         </Column>
-      </Container>
+      </div>
     </UserLayout>
   );
 }

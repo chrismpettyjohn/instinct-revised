@@ -6,14 +6,11 @@ import {
   defaultForgotPasswordState,
 } from './RedeemForgotPassword.types';
 import {
-  Button,
   Card,
-  Container,
   Form,
   GuestLayout,
   Icon,
   Input,
-  Row,
   sessionService,
   setURL,
 } from '@instinct-web/core';
@@ -65,24 +62,24 @@ export function RedeemForgotPassword() {
   if (state.showCompletion) {
     return (
       <GuestLayout>
-        <Container>
+        <div className="page-content">
           <Card header="Password Reset">
             <div className="text-center">
               <i className="fa fa-thumbs-up fa-3x" />
               <p>Your password has been reset</p>
               <Link to="/login">
-                <Button>Login</Button>
+                <button className="btn btn-light">Login</button>
               </Link>
             </div>
           </Card>
-        </Container>
+        </div>
       </GuestLayout>
     );
   }
 
   return (
     <GuestLayout>
-      <Container>
+      <div className="page-content">
         <Card header="Password Reset">
           {!params.token && (
             <div className="text-center">
@@ -99,7 +96,7 @@ export function RedeemForgotPassword() {
               )}
               <div className="mt-5">
                 <h4 className="form-subcategory">New Password</h4>
-                <Row>
+                <div className="row">
                   <div className="column-2">
                     <Input
                       type="password"
@@ -109,12 +106,12 @@ export function RedeemForgotPassword() {
                       onChange={updateField}
                     />
                   </div>
-                </Row>
+                </div>
               </div>
 
               <div className="mt-3">
                 <h4 className="form-subcategory">New Password Again</h4>
-                <Row>
+                <div className="row">
                   <div className="column-2">
                     <Input
                       type="password"
@@ -124,7 +121,7 @@ export function RedeemForgotPassword() {
                       onChange={updateField}
                     />
                   </div>
-                </Row>
+                </div>
               </div>
 
               <div className="form-help">
@@ -149,7 +146,7 @@ export function RedeemForgotPassword() {
             </Form>
           )}
         </Card>
-      </Container>
+      </div>
     </GuestLayout>
   );
 }

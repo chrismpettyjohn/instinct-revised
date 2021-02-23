@@ -3,7 +3,6 @@ import {Group} from '@instinct-prj/interface';
 import {
   Card,
   Column,
-  Container,
   Jumbotron,
   setURL,
   useFetchPopularGroups,
@@ -18,7 +17,7 @@ export function PopularGroups() {
   return (
     <UserLayout>
       <Jumbotron title="Popular Groups" />
-      <Container>
+      <div className="page-content">
         <Column side="left">
           <Card>
             {popularGroups?.length === 0 && (
@@ -32,7 +31,7 @@ export function PopularGroups() {
             ))}
           </Card>
         </Column>
-      </Container>
+      </div>
     </UserLayout>
   );
 }

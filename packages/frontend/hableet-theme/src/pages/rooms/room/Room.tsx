@@ -4,7 +4,6 @@ import React, {useContext} from 'react';
 import {
   Card,
   Column,
-  Container,
   Jumbotron,
   Loading,
   clientService,
@@ -38,7 +37,7 @@ export function RoomPage() {
         </Link>
       </Jumbotron>
       <Loading isLoading={room === undefined}>
-        <Container>
+        <div className="page-content">
           <Column side="left">
             <Card header="Room Information">
               <ul>
@@ -67,7 +66,7 @@ export function RoomPage() {
               )}
             </Card>
           </Column>
-        </Container>
+        </div>
       </Loading>
     </UserLayout>
   );

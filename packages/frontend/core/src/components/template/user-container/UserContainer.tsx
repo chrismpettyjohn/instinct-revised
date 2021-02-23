@@ -1,13 +1,13 @@
+import {Link} from 'wouter';
 import React from 'react';
 import './UserContainer.scss';
 import {UserContainerProps} from './';
-import {UserModal} from '../user-modal';
 import {Avatar} from '../../generic/avatar';
 
 export function UserContainer({user}: UserContainerProps) {
   return (
     <div className="member-container">
-      <UserModal user={user}>
+      <Link href={`/profile/${user.username}`}>
         <div className="member-content flex-container flex-vertical-center">
           <div
             className="member-avatar flex-container flex-vertical-center flex-horizontal-center"
@@ -26,7 +26,7 @@ export function UserContainer({user}: UserContainerProps) {
             />
           </div>
         </div>
-      </UserModal>
+      </Link>
     </div>
   );
 }

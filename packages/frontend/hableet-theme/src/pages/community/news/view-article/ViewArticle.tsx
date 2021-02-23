@@ -4,7 +4,6 @@ import {Link, useRoute} from 'wouter';
 import {ArticleBody} from './article-body/ArticleBody';
 import {ArticleHeader} from './article-header/ArticleHeader';
 import {
-  Container,
   Loading,
   RecentNews,
   setURL,
@@ -26,7 +25,7 @@ export function ViewArticle() {
   return (
     <UserLayout section="article">
       <Loading isLoading={false}>
-        <Container>
+        <div className="page-content">
           <div className="row">
             <div className="col-12">
               <Link to="/community/news">
@@ -53,7 +52,7 @@ export function ViewArticle() {
               <RecentNews />
             </div>
           </div>
-        </Container>
+        </div>
       </Loading>
     </UserLayout>
   );

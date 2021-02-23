@@ -1,13 +1,6 @@
 import React from 'react';
 import {Link, useLocation} from 'wouter';
-import {
-  AdminLayout,
-  Card,
-  Children,
-  Container,
-  Icon,
-  Jumbotron,
-} from '@instinct-web/core';
+import {AdminLayout, Card, Children, Icon, Jumbotron} from '@instinct-web/core';
 
 export function NewsArticleLayout({children}: {children: Children}) {
   const [location] = useLocation();
@@ -48,9 +41,9 @@ export function NewsArticleLayout({children}: {children: Children}) {
       <Jumbotron style={{background: '#263238'}} title="Hotel ListArticles">
         <p>Manage your hotel's articles.</p>
       </Jumbotron>
-      <Container>
+      <div className="page-content">
         <Card header={getHeader()}>{children}</Card>
-      </Container>
+      </div>
     </AdminLayout>
   );
 }

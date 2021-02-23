@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Form, Icon, Input, Row, sessionService} from '@instinct-web/core';
+import {Form, Icon, Input, sessionService} from '@instinct-web/core';
 import {
   EmailPreferencesState,
   defaultEmailPreferencesState,
@@ -61,7 +61,7 @@ export function EmailPreferences() {
       )}
       <div>
         <h4 className="form-subcategory">Current Password</h4>
-        <Row>
+        <div className="row">
           <div className="column-2">
             <Input
               type="password"
@@ -71,11 +71,11 @@ export function EmailPreferences() {
               onChange={updateField}
             />
           </div>
-        </Row>
+        </div>
       </div>
       <div className="mt-5">
         <h4 className="form-subcategory">New email</h4>
-        <Row>
+        <div className="row">
           <div className="column-2">
             <Input
               type="text"
@@ -85,7 +85,7 @@ export function EmailPreferences() {
               onChange={updateField}
             />
           </div>
-        </Row>
+        </div>
       </div>
       <div className="submit-button">
         <button

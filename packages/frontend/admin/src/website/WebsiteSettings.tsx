@@ -5,7 +5,6 @@ import {SitePreferences} from './views/SitePreferences';
 import {WebsiteSettingsProvider} from './context/WebsiteSettings.provider';
 import {
   AdminLayout,
-  Container,
   Icon,
   Jumbotron,
   NavTabs,
@@ -25,7 +24,7 @@ export function WebsiteSettings() {
           etc.
         </p>
       </Jumbotron>
-      <Container>
+      <div className="page-content">
         <WebsiteSettingsProvider>
           <NavTabs
             tabs={[
@@ -52,7 +51,7 @@ export function WebsiteSettings() {
             ]}
           />
         </WebsiteSettingsProvider>
-      </Container>
+      </div>
     </AdminLayout>
   );
 }

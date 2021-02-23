@@ -3,10 +3,8 @@ import {User} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
 import {
   Card,
-  Container,
   Column,
   Jumbotron,
-  Row,
   UserContainer,
   UserLayout,
   setURL,
@@ -32,8 +30,8 @@ export function OnlineUsers() {
       <Jumbotron title="Come join the party!">
         <p>Take a sneak peak at who's already online</p>
       </Jumbotron>
-      <Container>
-        <Row>
+      <div className="page-content">
+        <div className="row">
           <Column side="left">
             <Card>
               <div className="members-container">
@@ -53,8 +51,8 @@ export function OnlineUsers() {
               </div>
             </Card>
           </Column>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </UserLayout>
   );
 }

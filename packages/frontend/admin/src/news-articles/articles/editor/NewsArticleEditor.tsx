@@ -6,12 +6,10 @@ import {Article} from '@instinct-prj/interface';
 import {
   AdminLayout,
   Card,
-  Container,
   Form,
   Icon,
   Input,
   Jumbotron,
-  Row,
   Select,
   PreviewImage,
   useFetchAllNewsCategories,
@@ -97,7 +95,7 @@ export function NewsArticleEditor({
       >
         <p>{state.article.description}</p>
       </Jumbotron>
-      <Container>
+      <div className="page-content">
         <Link to="/admin/news/articles">
           <Icon className="text-white fa-2x" type="arrow-left" />
         </Link>
@@ -177,7 +175,7 @@ export function NewsArticleEditor({
                 onChange={(content: any) => editArticle({content})}
               />
             </div>
-            <Row className="mt-3">
+            <div className="row mt-3">
               <div className="col-6">&nbsp;</div>
               <div className="col-6 text-right">
                 <button
@@ -191,10 +189,10 @@ export function NewsArticleEditor({
                   )}
                 </button>
               </div>
-            </Row>
+            </div>
           </Form>
         </Card>
-      </Container>
+      </div>
     </AdminLayout>
   );
 }

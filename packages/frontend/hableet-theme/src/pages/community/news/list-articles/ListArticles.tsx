@@ -9,8 +9,6 @@ import {
   configContext,
   MiniJumbotron,
   setURL,
-  Row,
-  Container,
   useFetchAllArticles,
   Icon,
   UserLayout,
@@ -59,16 +57,16 @@ export function ListArticles() {
 
   return (
     <UserLayout>
-      <Container>
-        <Row>
+      <div className="page-content">
+        <div className="row">
           <div className="col-12">
             <MiniJumbotron>
               <h1>{config.siteName} News</h1>
               <p>Check out the latest updates, events and announcements.</p>
             </MiniJumbotron>
           </div>
-        </Row>
-        <Row>
+        </div>
+        <div className="row">
           <div className="col-12">
             <MiniJumbotron>
               <div className="row">
@@ -98,7 +96,7 @@ export function ListArticles() {
               </div>
             </MiniJumbotron>
           </div>
-        </Row>
+        </div>
         <div className="hotel-news row">
           {filteredArticles?.map(_ => (
             <div className="col-6 mb-4" key={_.id}>
@@ -149,7 +147,7 @@ export function ListArticles() {
             </div>
           )}
         </div>
-      </Container>
+      </div>
     </UserLayout>
   );
 }

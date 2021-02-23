@@ -53,14 +53,14 @@ export function SitePreferences() {
           onChange={e => setConfig('siteBeta', e.target.checked)}
         />
       </FormGroup>
-      <Row className="mt-3">
+      <div className="row mt-3">
         <div className="col-6">&nbsp;</div>
         <div className="col-6 text-right">
           <button className="btn btn-primary" disabled={showSpinner}>
             {showSpinner ? <i className="fa fa-spinner fa-spin" /> : 'Save'}
           </button>
         </div>
-      </Row>
+      </div>
     </Form>
   );
 }

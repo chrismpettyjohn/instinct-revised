@@ -149,7 +149,7 @@ export function RankEditor({
                 ))}
               </div>
             </div>
-            <Row className="mt-3">
+            <div className="row mt-3">
               <div className="col-6">&nbsp; </div>
               <div className="col-6 text-right">
                 <button
@@ -163,7 +163,7 @@ export function RankEditor({
                   )}
                 </button>
               </div>
-            </Row>
+            </div>
           </Form>
         </ModalBody>
       </Modal>

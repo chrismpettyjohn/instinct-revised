@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Card,
-  Container,
-  Row,
   UserContainer,
   UserLayout,
   setURL,
@@ -18,8 +16,8 @@ export function Staff() {
 
   return (
     <UserLayout section="community_team">
-      <Container>
-        <Row>
+      <div className="page-content">
+        <div className="row">
           <div className="col-12">
             <MiniJumbotron>
               <div className="row">
@@ -40,8 +38,8 @@ export function Staff() {
               </div>
             </MiniJumbotron>
           </div>
-        </Row>
-        <Row>
+        </div>
+        <div className="row">
           {staff !== undefined ? (
             staff!.map(rank => (
               <div className="col-6" key={rank.id} style={{marginBottom: 20}}>
@@ -72,8 +70,8 @@ export function Staff() {
               </Card>
             </div>
           )}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </UserLayout>
   );
 }

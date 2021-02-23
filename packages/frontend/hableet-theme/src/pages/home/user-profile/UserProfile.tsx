@@ -8,7 +8,6 @@ import {Friends} from './friends';
 import {UserContainer} from './user-container';
 import {FavoriteVideo} from './favorite-video/FavoriteVideo';
 import {
-  Container,
   Column,
   Loading,
   Jumbotron,
@@ -27,7 +26,7 @@ export function UserProfile() {
     <UserLayout section="profile">
       <Loading isLoading={profile === undefined}>
         <Jumbotron title={`The profile of ${profile?.user.username}`} />
-        <Container>
+        <div className="page-content">
           <Column side="right">
             <UserContainer profile={profile} />
             <FavoriteVideo profile={profile} />
@@ -38,7 +37,7 @@ export function UserProfile() {
             <Groups profile={profile} />
             <Rooms profile={profile} />
           </Column>
-        </Container>
+        </div>
       </Loading>
     </UserLayout>
   );

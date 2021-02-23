@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Column,
-  Container,
   Jumbotron,
   UserLayout,
   PopularRooms as PopularRoomsWidget,
@@ -14,11 +13,11 @@ export function PopularRooms() {
   return (
     <UserLayout section="community_rooms">
       <Jumbotron title="Popular Rooms" />
-      <Container>
+      <div className="page-content">
         <Column side="left">
           <PopularRoomsWidget />
         </Column>
-      </Container>
+      </div>
     </UserLayout>
   );
 }

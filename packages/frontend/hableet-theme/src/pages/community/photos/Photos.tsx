@@ -4,9 +4,7 @@ import React, {useEffect, useState} from 'react';
 import {defaultPhotosState, PhotosState} from './';
 import {
   Card,
-  Container,
   Jumbotron,
-  Row,
   Loading,
   UserLayout,
   setURL,
@@ -34,7 +32,7 @@ export function Photos() {
       <Jumbotron title="The best moments in the Hotel">
         <p>All the latest photos from the community.</p>
       </Jumbotron>
-      <Container>
+      <div className="page-content">
         <Loading isLoading={state.showSpinner}>
           {state.photos.length === 0 && (
             <Card>
@@ -45,7 +43,7 @@ export function Photos() {
               </p>
             </Card>
           )}
-          <Row>
+          <div className="row">
             <div className="photos-container">
               <div className="photo-container">
                 {state.photos.map(photo => (
@@ -53,9 +51,9 @@ export function Photos() {
                 ))}
               </div>
             </div>
-          </Row>
+          </div>
         </Loading>
-      </Container>
+      </div>
     </UserLayout>
   );
 }
