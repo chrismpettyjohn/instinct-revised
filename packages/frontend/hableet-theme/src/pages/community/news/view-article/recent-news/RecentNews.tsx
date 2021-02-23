@@ -3,7 +3,8 @@ import Moment from 'moment';
 import {Link} from 'wouter';
 import {Article} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
-import {articleService, Card, Loading} from '@instinct-web/core';
+import {Card} from '../../../../../components/card/Card';
+import {articleService, Loading} from '@instinct-web/core';
 import {defaultRecentNewsState, RecentNewsState} from './RecentNews.types';
 
 export function RecentNews() {

@@ -1,12 +1,14 @@
 import React from 'react';
+import {Icon, setURL} from '@instinct-web/core';
+import {MailSettings} from './views/MailSettings';
 import {GameSettings} from './views/GameSettings';
 import {ServerSettings} from './views/ServerSettings';
+import {GoogleSettings} from './views/GoogleSettings';
+import {NavTabs} from '../components/nav-tabs/NavTabs';
 import {SitePreferences} from './views/SitePreferences';
+import {Jumbotron} from '../components/jumbotron/Jumbotron';
 import {AdminLayout} from '../components/admin-layout/AdminLayout';
 import {WebsiteSettingsProvider} from './context/WebsiteSettings.provider';
-import {Icon, Jumbotron, NavTabs, setURL} from '@instinct-web/core';
-import {GoogleSettings} from './views/GoogleSettings';
-import {MailSettings} from './views/MailSettings';
 
 setURL('admin/website', <WebsiteSettings />);
 

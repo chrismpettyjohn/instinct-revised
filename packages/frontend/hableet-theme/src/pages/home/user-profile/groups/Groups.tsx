@@ -1,8 +1,8 @@
 import React from 'react';
 import {take} from 'lodash';
-import {Card} from '@instinct-web/core';
 import {UserProfileWidgetProps} from '../';
 import {GroupContainer} from './group-container';
+import {Card} from '../../../../components/card/Card';
 
 export function Groups({profile}: UserProfileWidgetProps) {
   return (

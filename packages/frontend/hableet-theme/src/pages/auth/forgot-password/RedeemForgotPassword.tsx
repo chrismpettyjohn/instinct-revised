@@ -1,19 +1,13 @@
 import {Link} from 'wouter';
 import {parse} from 'query-string';
 import React, {useState} from 'react';
+import {Card} from '../../../components/card/Card';
+import {GuestLayout} from '../../../components/layout/guest';
 import {
   RedeemForgotPasswordState,
   defaultForgotPasswordState,
 } from './RedeemForgotPassword.types';
-import {
-  Card,
-  Form,
-  GuestLayout,
-  Icon,
-  Input,
-  sessionService,
-  setURL,
-} from '@instinct-web/core';
+import {Form, Icon, Input, sessionService, setURL} from '@instinct-web/core';
 
 setURL('forgot-password/redeem', <RedeemForgotPassword />);
 

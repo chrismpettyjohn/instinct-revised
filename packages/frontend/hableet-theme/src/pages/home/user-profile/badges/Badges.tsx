@@ -1,7 +1,7 @@
 import React from 'react';
 import {take} from 'lodash';
 import {UserProfileWidgetProps} from '../';
-import {Badge, Card} from '@instinct-web/core';
+import {Card} from '../../../../components/card/Card';
 
 export function Badges({profile}: UserProfileWidgetProps) {
   return (
@@ -12,7 +12,7 @@ export function Badges({profile}: UserProfileWidgetProps) {
         )}
         {take(profile?.badges, 5).map(badge => (
           <div className="item-container" key={badge.id}>
-            <Badge badge={badge} />
+            {badge.code}
           </div>
         ))}
       </div>

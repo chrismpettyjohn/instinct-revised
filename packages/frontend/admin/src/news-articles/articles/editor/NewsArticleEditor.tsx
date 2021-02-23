@@ -3,15 +3,15 @@ import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import {Article} from '@instinct-prj/interface';
+import {Card} from '../../../components/card/Card';
+import {Jumbotron} from '../../../components/jumbotron/Jumbotron';
+import {AdminLayout} from '../../../components/admin-layout/AdminLayout';
+import {PreviewImage} from '../../../components/preview-image/PreviewImage';
 import {
-  AdminLayout,
-  Card,
   Form,
   Icon,
   Input,
-  Jumbotron,
   Select,
-  PreviewImage,
   useFetchAllNewsCategories,
   Skeleton,
 } from '@instinct-web/core';

@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link, useLocation} from 'wouter';
+import {Card} from '../components/card/Card';
+import {Children, Icon} from '@instinct-web/core';
+import {Jumbotron} from '../components/jumbotron/Jumbotron';
 import {AdminLayout} from '../components/admin-layout/AdminLayout';
-import {Card, Children, Icon, Jumbotron} from '@instinct-web/core';
 
 export function EmulatorLayout({children}: {children: Children}) {
   const [location] = useLocation();

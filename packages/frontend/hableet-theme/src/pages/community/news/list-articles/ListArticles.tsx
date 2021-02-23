@@ -4,11 +4,11 @@ import {Link} from 'wouter';
 import {uniqBy} from 'lodash';
 import {Article} from '@instinct-prj/interface';
 import React, {useContext, useState} from 'react';
+import {Card} from '../../../../components/card/Card';
 import {UserLayout} from '../../../../components/layout/user';
+import {MiniJumbotron} from '../../../../components/mini-jumbotron/MiniJumbotron';
 import {
-  Card,
   configContext,
-  MiniJumbotron,
   setURL,
   useFetchAllArticles,
   Icon,

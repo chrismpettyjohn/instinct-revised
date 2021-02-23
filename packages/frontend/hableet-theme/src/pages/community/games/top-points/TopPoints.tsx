@@ -1,8 +1,9 @@
 import {Link} from 'wouter';
 import {User} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
+import {Card} from '../../../../components/card/Card';
+import {Avatar, Icon, userService} from '@instinct-web/core';
 import {GamesCardState, defaultGamesCardState} from '../Games.types';
-import {Avatar, Card, Icon, userService} from '@instinct-web/core';
 
 export function TopPoints() {
   const [state, setState] = useState<GamesCardState>(defaultGamesCardState);

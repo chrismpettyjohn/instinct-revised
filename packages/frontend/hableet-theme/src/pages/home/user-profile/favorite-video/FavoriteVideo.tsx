@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card} from '@instinct-web/core';
+import {Card} from '../../../../components/card/Card';
 import {UserProfileWidgetProps} from '../UserProfile.types';
 
 export function FavoriteVideo({profile}: UserProfileWidgetProps) {

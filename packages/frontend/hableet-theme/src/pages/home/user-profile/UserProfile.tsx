@@ -8,10 +8,10 @@ import {Friends} from './friends';
 import {UserContainer} from './user-container';
 import {UserLayout} from '../../../components/layout/user';
 import {FavoriteVideo} from './favorite-video/FavoriteVideo';
+import {Jumbotron} from '../../../components/jumbotron/Jumbotron';
 import {
   Column,
   Loading,
-  Jumbotron,
   setURL,
   useFetchUserByUsername,
 } from '@instinct-web/core';

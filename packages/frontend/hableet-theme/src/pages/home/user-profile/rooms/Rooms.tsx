@@ -1,7 +1,7 @@
 import React from 'react';
-import {Card} from '@instinct-web/core';
 import {UserProfileWidgetProps} from '../';
 import {RoomContainer} from './room-container';
+import {Card} from '../../../../components/card/Card';
 
 export function Rooms({profile}: UserProfileWidgetProps) {
   return (

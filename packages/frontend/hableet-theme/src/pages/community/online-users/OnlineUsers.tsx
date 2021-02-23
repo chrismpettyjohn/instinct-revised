@@ -1,11 +1,11 @@
 import './OnlineUsers.scss';
 import {User} from '@instinct-prj/interface';
-import {UserLayout} from '../../../components/layout/user';
 import React, {useEffect, useState} from 'react';
+import {Card} from '../../../components/card/Card';
+import {UserLayout} from '../../../components/layout/user';
+import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 import {
-  Card,
   Column,
-  Jumbotron,
   UserContainer,
   setURL,
   userService,
@@ -27,9 +27,10 @@ export function OnlineUsers() {
 
   return (
     <UserLayout section="online">
-      <Jumbotron title="Come join the party!">
+      <MiniJumbotron>
+        <h1>Come join the party</h1>
         <p>Take a sneak peak at who's already online</p>
-      </Jumbotron>
+      </MiniJumbotron>
       <div className="page-content">
         <div className="row">
           <Column side="left">

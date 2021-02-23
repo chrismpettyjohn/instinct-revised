@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import {Skeleton} from '@instinct-web/core';
 import {ArticleBodyProps} from './ArticleBody.types';
-import {Card, Skeleton} from '@instinct-web/core';
+import {Card} from '../../../../../components/card/Card';
 import {CommentAuthor} from '../view-comments/comment-author/CommentAuthor';
 
 export function ArticleBody({article}: ArticleBodyProps) {

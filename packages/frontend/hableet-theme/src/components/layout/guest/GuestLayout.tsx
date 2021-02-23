@@ -1,7 +1,9 @@
 import React from 'react';
 import './GuestLayout.scss';
+import {Card} from '../../card/Card';
+import {Footer} from '../../footer/Footer';
+import {GuestGuard} from '@instinct-web/core';
 import {GuestLayoutProps} from './GuestLayout.types';
-import {Card, Footer, GuestGuard} from '@instinct-web/core';
 
 export function GuestLayout({
   children,

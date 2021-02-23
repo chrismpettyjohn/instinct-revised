@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
-import {Card, configContext, Icon} from '@instinct-web/core';
+import {configContext, Icon} from '@instinct-web/core';
+import {Card} from '../../../../../components/card/Card';
 
 export function SocialMedia() {
   const {config} = useContext(configContext);
