@@ -1,6 +1,6 @@
 {
   "name": "@instinct-web/core",
-  "version": "1.11.0",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -13,7 +13,7 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "dependencies": {
-    "@instinct-prj/interface": "^1.9.0",
+    "@instinct-prj/interface": "^2.0.0",
     "axios": "^0.21.1",
     "events": "^3.2.0",
     "lodash": "^4.17.21",

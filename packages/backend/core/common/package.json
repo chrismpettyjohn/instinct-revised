@@ -1,6 +1,6 @@
 {
   "name": "@instinct-api/common",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -12,21 +12,21 @@
     "compile": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
+    "@instinct-prj/interface": "^2.0.0",
     "@nestjs/common": "^7.6.12",
     "@nestjs/core": "^7.6.12",
-    "typescript": "~4.1.5",
-    "@instinct-prj/interface": "^1.9.0",
-    "@types/bcryptjs": "^2.4.2"
+    "@types/bcryptjs": "^2.4.2",
+    "typescript": "~4.1.5"
   },
   "peerDependencies": {
+    "@instinct-prj/interface": "^1.9.0",
     "@nestjs/common": "^7.6.12",
     "@nestjs/core": "^7.6.12",
-    "typescript": "~4.1.5",
-    "@instinct-prj/interface": "^1.9.0"
+    "typescript": "~4.1.5"
   },
   "gitHead": "66b61bc221ace5230cd659bc3631eb6331da51e6"
 }
