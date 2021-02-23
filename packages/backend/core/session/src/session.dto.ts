@@ -1,5 +1,5 @@
 import {IsEmail, IsNotEmpty, IsString} from 'class-validator';
-import {UserExists, UniqueEmail} from '@instinct-prj/user-api';
+import {UserExists, UniqueEmail} from '@instinct-prj/validator-api';
 
 export class NewSessionDTO {
   @IsString()

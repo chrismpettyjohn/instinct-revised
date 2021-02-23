@@ -1,4 +1,3 @@
-export * from './constraint';
 export * from './leaderboard.controller';
 export * from './leaderboard.service';
 export * from './user.controller';

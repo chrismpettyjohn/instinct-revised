@@ -1,4 +1,4 @@
-import {RequestWithSession} from '@instinct-prj/session-api';
+import {RequestWithSession} from './session.type';
 import {CanActivate, ExecutionContext, Injectable} from '@nestjs/common';
 import {
   BetaCodeRepository,
@@ -30,8 +30,8 @@ export class BetaModeGuard implements CanActivate {
 
     const betaCode = request.user?.betaCode
       ? await this.betaCodeRepo.findOne({
-        betaCode: request.user!.betaCode!.betaCode,
-      })
+          betaCode: request.user!.betaCode!.betaCode,
+        })
       : undefined;
 
     return !!betaCode;

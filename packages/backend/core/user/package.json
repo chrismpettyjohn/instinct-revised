@@ -56,7 +56,8 @@
     "@instinct-prj/common-api": "^1.9.0",
     "@instinct-prj/google-api": "^1.9.0",
     "@instinct-prj/session-api": "^1.9.0",
-    "@instinct-prj/database-api": "^1.9.0"
+    "@instinct-prj/database-api": "^1.9.0",
+    "@instinct-prj/validator-api": "^1.9.0"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.6.12",
@@ -66,7 +67,8 @@
     "@instinct-prj/common-api": "^1.9.0",
     "@instinct-prj/google-api": "^1.9.0",
     "@instinct-prj/session-api": "^1.9.0",
-    "@instinct-prj/database-api": "^1.9.0"
+    "@instinct-prj/database-api": "^1.9.0",
+    "@instinct-prj/validator-api": "^1.9.0"
   },
   "gitHead": "66b61bc221ace5230cd659bc3631eb6331da51e6"
 }

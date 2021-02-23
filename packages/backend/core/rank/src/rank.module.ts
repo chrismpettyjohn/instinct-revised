@@ -1,13 +1,13 @@
 import {RankPipe} from './rank.pipe';
 import {Module} from '@nestjs/common';
-import {RankConstraint} from './rank.constraint';
 import {RankController} from './rank.controller';
 import {DatabaseModule} from '@instinct-prj/database-api';
+import {ValidatorModule} from '@instinct-prj/validator-api';
 
 @Module({
-  imports: [DatabaseModule],
+  imports: [DatabaseModule, ValidatorModule],
   controllers: [RankController],
-  providers: [RankPipe, RankConstraint],
-  exports: [RankPipe, RankConstraint],
+  providers: [RankPipe],
+  exports: [RankPipe],
 })
 export class RankModule {}

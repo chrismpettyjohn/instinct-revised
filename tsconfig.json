@@ -15,6 +15,7 @@
       "@instinct-prj/common-api":  ["packages/backend/core/common/src"],
       "@instinct-prj/google-api":  ["packages/backend/core/google/src"],
       "@instinct-prj/article-api":  ["packages/backend/core/article/src"],
+      "@instinct-prj/validator-api":  ["packages/backend/core/validator/src"],
       "@instinct-prj/session-api":  ["packages/backend/core/session/src"],
       "@instinct-prj/emulator-api":  ["packages/backend/core/emulator/src"],
       "@instinct-prj/database-api":  ["packages/backend/core/database/src"],

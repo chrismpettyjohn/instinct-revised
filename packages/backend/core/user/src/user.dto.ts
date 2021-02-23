@@ -1,9 +1,11 @@
 import {UserDTO} from '@instinct-prj/interface';
-import {UniqueEmail} from './constraint/unique-email';
 import {ValidRecaptcha} from '@instinct-prj/google-api';
-import {ValidBetaCode} from '@instinct-prj/beta-code-api';
-import {UniqueUsername} from './constraint/unique-username';
 import {IsEmail, IsNotEmpty, IsString} from 'class-validator';
+import {
+  UniqueUsername,
+  UniqueEmail,
+  ValidBetaCode,
+} from '@instinct-prj/validator-api';
 
 export class UserDTOClass implements UserDTO {
   @IsString()

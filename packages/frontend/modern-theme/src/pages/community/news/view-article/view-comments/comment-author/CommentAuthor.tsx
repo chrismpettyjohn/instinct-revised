@@ -6,7 +6,7 @@ import {Avatar, configContext} from '@instinct-prj/frontend';
 export function CommentAuthor({children, user}: CommentAuthorProps) {
   const {config} = useContext(configContext);
   return (
-    <div className="article-author mt-3 w-100" key={`comment_${_.id}`}>
+    <div className="article-author mt-3 w-100">
       <div className="d-flex">
         <div style={{width: 54}}>
           <Link href={`/profile/${user.username}`}>

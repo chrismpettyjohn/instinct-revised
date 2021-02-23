@@ -9,7 +9,7 @@ import {
 
 @ValidatorConstraint({async: true})
 @Injectable()
-export class RankConstraint implements ValidatorConstraintInterface {
+export class ExistingRankConstraint implements ValidatorConstraintInterface {
   constructor(private readonly rankRepo: RankRepository) {}
 
   async validate(rankID: number): Promise<boolean> {
@@ -29,7 +29,7 @@ export function ExistingRank(validationOptions?: ValidationOptions) {
       propertyName,
       options: validationOptions,
       constraints: [],
-      validator: RankConstraint,
+      validator: ExistingRankConstraint,
     });
   };
 }
