@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/web-demo",
+  "name": "@instinct-client/nex-web",
   "version": "0.0.1",
   "scripts": {
     "start": "PORT=3001 react-app-rewired start",

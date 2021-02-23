@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-prj/rp-api-demo",
+  "name": "@instinct-client/nex-api",
   "version": "1.11.0",
   "scripts": {
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"

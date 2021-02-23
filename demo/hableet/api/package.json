@@ -1,0 +1,42 @@
+{
+  "name": "@instinct-client/hableet-api",
+  "version": "1.11.0",
+  "scripts": {
+    "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
+  },
+  "dependencies": {
+    "@instinct-prj/interface": "^1.9.0",
+    "@instinct-api/articles": "^1.9.0",
+    "@instinct-api/beta-codes": "^1.9.0",
+    "@instinct-api/common": "^1.9.0",
+    "@instinct-api/config": "^1.9.0",
+    "@instinct-api/database": "^1.9.0",
+    "@instinct-api/emails": "^1.9.0",
+    "@instinct-api/emulator": "^1.9.0",
+    "@instinct-api/google": "^1.9.0",
+    "@instinct-api/groups": "^1.9.0",
+    "@instinct-api/health": "^1.9.0",
+    "@instinct-api/photos": "^1.9.0",
+    "@instinct-api/ranks": "^1.9.0",
+    "@instinct-api/rooms": "^1.9.0",
+    "@instinct-api/session": "^1.9.0",
+    "@instinct-api/users": "^1.9.0",
+    "@instinct-plugin/forgot-password-api": "^1.9.0",
+    "@instinct-plugin/manage-users-api": "^1.9.0",
+    "@instinct-plugin/user-guestbook-api": "^1.9.0",
+    "@nestjs/common": "^7.6.12",
+    "@nestjs/core": "^7.6.12",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typeorm": "^0.2.31",
+    "typescript": "^4.1.5",
+    "cors": "^2.8.5",
+    "class-validator": "^0.13.1",
+    "class-transformer": "^0.4.0",
+    "@nestjs/platform-express":"^7.6.13"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10"
+  },
+  "gitHead": "66b61bc221ace5230cd659bc3631eb6331da51e6"
+}
