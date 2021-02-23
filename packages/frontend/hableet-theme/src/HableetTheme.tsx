@@ -2,7 +2,7 @@ import '@instinct-web/core';
 import React, {useEffect, useState} from 'react';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';
 
-export function ModernTheme() {
+export function HableetTheme() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
