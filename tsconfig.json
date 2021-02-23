@@ -24,7 +24,7 @@
       "@instinct-api/beta-codes":  ["packages/backend/core/beta-code/src"],
       "@instinct-plugin/manage-users-api":  ["packages/backend/plugin/manage-users/src"],
       "@instinct-plugin/user-guestbook-api":  ["packages/backend/plugin/user-guestbook/src"],
-      "@instinct-plugin/forgot-password-api":  ["packages/backend/plugin/forgot-password/src"],
+      "@instinct-plugin/forgot-password-api":  ["packages/backend/plugin/forgot-password/src"]
     },
     "noEmit": true
   },
