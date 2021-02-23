@@ -41,7 +41,7 @@ export function NewsArticleLayout({children}: {children: Children}) {
 
   return (
     <AdminLayout permission="websiteManageNews">
-      <Jumbotron style={{background: '#263238'}} title="Hotel ListArticles">
+      <Jumbotron style={{background: '#263238'}} title="Hotel News">
         <p>Manage your hotel's articles.</p>
       </Jumbotron>
       <div className="page-content">

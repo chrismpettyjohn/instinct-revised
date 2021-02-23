@@ -1,5 +1,7 @@
 import React, {useContext} from 'react';
-import {UserDropdown, NavBarLink, sessionContext} from '@instinct-web/core';
+import {sessionContext} from '@instinct-web/core';
+import {NavBarLink} from './navbar-link/NavBarLink';
+import {UserDropdown} from './user-dropdown/UserDropdown';
 
 export function NavBar() {
   const {user} = useContext(sessionContext);

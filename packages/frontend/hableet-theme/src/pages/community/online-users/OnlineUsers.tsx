@@ -27,11 +27,13 @@ export function OnlineUsers() {
 
   return (
     <UserLayout section="online">
-      <MiniJumbotron>
-        <h1>Come join the party</h1>
-        <p>Take a sneak peak at who's already online</p>
-      </MiniJumbotron>
       <div className="page-content">
+        <div className="row">
+          <MiniJumbotron>
+            <h1>Come join the party</h1>
+            <p>Take a sneak peak at who's already online</p>
+          </MiniJumbotron>
+        </div>
         <div className="row">
           <Column side="left">
             <Card>
