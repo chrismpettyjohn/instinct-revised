@@ -1,6 +1,7 @@
 import Moment from 'moment';
 import {UserPipe} from '@instinct-api/users';
 import {HasScope} from '@instinct-api/session';
+import {HashService} from '@instinct-api/common';
 import {InternalUser} from '@instinct-prj/interface';
 import {InternalUserDTO, UpdateInternalUserDTO} from './manage-users.types';
 import {
@@ -20,7 +21,10 @@ import {
 
 @Controller('admin/users')
 export class ManageUsersController {
-  constructor(private readonly userRepo: UserRepository) {}
+  constructor(
+    private readonly userRepo: UserRepository,
+    private readonly hashService: HashService
+  ) {}
 
   @Get()
   @HasScope('websiteManageUsers')
@@ -54,6 +58,9 @@ export class ManageUsersController {
     @Param('userID', UserPipe) user: UserEntity,
     @Body() userDTO: UpdateInternalUserDTO
   ): Promise<InternalUser> {
+    if (userDTO.password) {
+      userDTO.password = this.hashService.generate(userDTO.password);
+    }
     await this.userRepo.update({id: user.id!}, userDTO);
     const updatedUser = await this.userRepo.findOneOrFail({id: user.id!});
     return internalUserWire(updatedUser);

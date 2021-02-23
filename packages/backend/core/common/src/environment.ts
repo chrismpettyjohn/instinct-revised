@@ -17,6 +17,8 @@ export const databaseName: string = getEnvOrFail('DATABASE_NAME');
 // Authentication
 export const jwtSecret: string = getEnvOrFail('JWT_SECRET');
 export const jwtExpires = Number(getEnvOrFail('JWT_EXPIRES'));
+export const passwordHash: 'md5' | 'bcrypt' =
+  getEnvOrFail('PASSWORD_HASH') === 'md5' ? 'md5' : 'bcrypt';
 
 // Defaults - User
 export const defaultUserRank = Number(getEnvOrFail('DEFAULT_USER_RANK'));

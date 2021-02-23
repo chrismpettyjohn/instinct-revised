@@ -1,5 +1,4 @@
 import React from 'react';
-import './GuestLayout.scss';
 import {Card} from '../../card/Card';
 import {Footer} from '../../footer/Footer';
 import {GuestGuard} from '@instinct-web/core';
@@ -23,7 +22,7 @@ export function GuestLayout({
                     src="/img/logo/regular.png"
                     style={{width: 400}}
                   />
-                  <Card>
+                  <Card style={{minWidth: 450}}>
                     {children}
                     <br />
                     <br />
