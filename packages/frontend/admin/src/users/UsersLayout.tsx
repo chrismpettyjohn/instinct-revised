@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link, useLocation} from 'wouter';
+import {AdminLayout, AdminLayoutProps} from '../components/admin-layout';
 import {
-  AdminLayout,
-  AdminLayoutProps,
   Card,
   Icon,
   Jumbotron,

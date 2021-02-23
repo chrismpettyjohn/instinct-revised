@@ -1,7 +1,9 @@
 import React from 'react';
+import {Column} from '@instinct-web/core';
+import {MyProfile} from './my-profile/MyProfile';
 import {NewsSlider} from './news-slider/NewsSlider';
 import {SocialMedia} from './social-media/SocialMedia';
-import {Column, MyProfile, UserOfTheWeek} from '@instinct-web/core';
+import {UserOfTheWeek} from './user-of-the-week/UserOfTheWeek';
 
 export function HomePage() {
   return (

@@ -1,12 +1,10 @@
 import './RecentNews.scss';
 import Moment from 'moment';
 import {Link} from 'wouter';
-import {Card} from '../../generic/card';
 import {Article} from '@instinct-prj/interface';
-import {Loading} from '../../generic/loading';
 import React, {useEffect, useState} from 'react';
-import {articleService} from '../../../services/article';
-import {defaultRecentNewsState, RecentNewsState} from './';
+import {articleService, Card, Loading} from '@instinct-web/core';
+import {defaultRecentNewsState, RecentNewsState} from './RecentNews.types';
 
 export function RecentNews() {
   const [state, setState] = useState<RecentNewsState>(defaultRecentNewsState);

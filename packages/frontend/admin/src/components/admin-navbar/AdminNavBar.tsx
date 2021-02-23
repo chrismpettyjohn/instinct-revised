@@ -1,7 +1,5 @@
 import React from 'react';
-import {PermissionGuard} from '../../guard/permission';
-import {NavBarLink} from '../../generic/navbar/navbar-link';
-import {UserDropdown} from '../../generic/navbar/user-dropdown';
+import {UserDropdown, NavBarLink, PermissionGuard} from '@instinct-web/core';
 
 export function AdminNavBar() {
   return (

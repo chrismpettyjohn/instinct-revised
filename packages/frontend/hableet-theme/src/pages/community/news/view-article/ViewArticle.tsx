@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
 import './ViewArticle.scss';
+import React, {useState} from 'react';
 import {Link, useRoute} from 'wouter';
+import {RecentNews} from './recent-news/RecentNews';
 import {ArticleBody} from './article-body/ArticleBody';
 import {ArticleHeader} from './article-header/ArticleHeader';
 import {
   Loading,
-  RecentNews,
   setURL,
   useFetchArticleByID,
   UserLayout,

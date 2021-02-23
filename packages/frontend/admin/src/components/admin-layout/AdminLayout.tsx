@@ -1,11 +1,7 @@
 import {AdminLayoutProps} from './';
 import React, {useContext} from 'react';
-import {Icon} from '../../generic/icon';
-import {Footer} from '../../template/footer';
-import {healthContext} from '../../../context/health';
-import {PermissionGuard} from '../../guard/permission';
-import {AdminNavBar} from '../../template/admin-navbar';
-import {EnterHotelButton, Header} from '../../template/header';
+import {AdminNavBar} from '../admin-navbar/AdminNavBar';
+import {Icon, Footer, healthContext, PermissionGuard, EnterHotelButton, Header} from '@instinct-web/core';
 
 export function AdminLayout({children, permission}: AdminLayoutProps) {
   const {health} = useContext(healthContext);

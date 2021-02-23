@@ -1,10 +1,10 @@
 import React from 'react';
 import {GameSettings} from './views/GameSettings';
 import {ServerSettings} from './views/ServerSettings';
+import {AdminLayout} from '../components/admin-layout';
 import {SitePreferences} from './views/SitePreferences';
 import {WebsiteSettingsProvider} from './context/WebsiteSettings.provider';
 import {
-  AdminLayout,
   Icon,
   Jumbotron,
   NavTabs,
