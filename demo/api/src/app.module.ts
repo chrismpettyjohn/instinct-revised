@@ -1,26 +1,15 @@
 import {Module} from '@nestjs/common';
-import {TypeOrmModule} from '@nestjs/typeorm';
-import {InstinctModule} from '@instinct-prj/backend';
-import {
-  databaseEntities,
-  databaseHost,
-  databaseName,
-  databasePass,
-  databaseUser,
-} from '@instinct-prj/backend';
+import {InstinctAPIModule} from '@instinct-prj/api';
+import {ManageUsersModule} from '@instinct-prj/mnage-users-plugin-api';
+import {ForgotPasswordModule} from '@instinct-prj/forgot-password-plugin-api';
+import {UserGuestbookModule} from '../../../packages/backend/plugin/user-guestbook/src/user-guestbook.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: databaseHost,
-      username: databaseUser,
-      password: databasePass,
-      database: databaseName,
-      entities: [...databaseEntities],
-      synchronize: false,
-    }),
-    InstinctModule,
+    InstinctAPIModule,
+    ManageUsersModule,
+    UserGuestbookModule,
+    ForgotPasswordModule,
   ],
 })
 export class InstinctRoleplayAppModule {}

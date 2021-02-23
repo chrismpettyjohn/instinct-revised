@@ -5,7 +5,9 @@
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
   },
   "dependencies": {
-    "@instinct-prj/backend": "^1.9.0",
+    "@instinct-prj/forgot-password-api-plugin": "^1.9.0",
+    "@instinct-prj/manage-users-api-plugin": "^1.9.0",
+    "@instinct-prj/user-guestbook-api-plugin": "^1.9.0",
     "@nestjs/common": "^7.6.12",
     "@nestjs/core": "^7.6.12",
     "@nestjs/platform-express": "^7.6.12",
