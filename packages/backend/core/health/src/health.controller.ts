@@ -23,7 +23,9 @@ export class HealthController {
     ] = await Promise.all([
       this.userRepo
         .getInstance()
-        .query('SELECT COUNT(*) AS "online_users" FROM users WHERE online = 1'),
+        .query(
+          'SELECT COUNT(*) AS "online_users" FROM users WHERE online = \'1\''
+        ),
       this.roomRepo
         .getInstance()
         .query('SELECT COUNT(*) AS "active_rooms" FROM rooms WHERE users > 0'),

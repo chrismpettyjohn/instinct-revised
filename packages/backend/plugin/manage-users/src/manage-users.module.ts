@@ -7,7 +7,13 @@ import {ValidatorModule} from '@instinct-api/validator';
 import {ManageUsersController} from './manage-users.controller';
 
 @Module({
-  imports: [DatabaseModule, UserModule, CommonModule, ValidatorModule, SessionModule],
+  imports: [
+    DatabaseModule,
+    UserModule,
+    CommonModule,
+    ValidatorModule,
+    SessionModule,
+  ],
   controllers: [ManageUsersController],
 })
 export class ManageUsersModule {}
