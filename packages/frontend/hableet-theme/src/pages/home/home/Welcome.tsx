@@ -43,14 +43,6 @@ export function Welcome() {
                 Announcements
               </button>
             </Link>
-            <Link to="/community/rules">
-              <button
-                className="btn btn-block"
-                style={{background: '#000B13', color: 'white'}}
-              >
-                {config.siteName} Rules
-              </button>
-            </Link>
             <Link to="/play">
               <button
                 className="btn btn-block btn-primary"
