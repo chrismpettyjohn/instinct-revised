@@ -4,7 +4,6 @@ export interface Config {
   siteBeta: boolean;
   emulatorIP: string;
   emulatorPort: string;
-  swfAdminHabbo: string;
   swfHabbo: string;
   swfExternalVariables: string;
   swfExternalTexts: string;
@@ -13,6 +12,7 @@ export interface Config {
   swfFigureData: string;
   swfBaseURL: string;
   swfBadgeURL: string;
+  rankBadgeURL: string;
   loadingMessage: string;
   groupBadgeURL: string;
   googleRecaptchaClientKey: string;
@@ -29,7 +29,6 @@ export const defaultConfig: Config = {
   emulatorIP: '127.0.0.1',
   emulatorPort: '3002',
   siteLink: 'http://localhost:3000',
-  swfAdminHabbo: 'http://localhost:3000/swfs/gamedata/habbo.swf',
   swfHabbo: 'http://localhost:3000/swfs/gamedata/habbo.swf',
   swfExternalVariables: 'http://localhost:3000/swfs/gamedata/variables.txt',
   swfExternalTexts: 'http://localhost:3000/swfs/gamedata/texts.txt',
@@ -38,6 +37,7 @@ export const defaultConfig: Config = {
   swfFigureData: 'http://localhost:3000/swfs/gamedata/figuredata.xml',
   swfBaseURL: 'http://localhost:3000/swfs/other/game/',
   swfBadgeURL: 'http://localhost:3000/swfs/other/images/album1584',
+  rankBadgeURL: '',
   loadingMessage: 'Please wait as I do some things',
   groupBadgeURL: 'http://localhost:3000/swfs/other/images/Badgeparts/generated',
   googleRecaptchaClientKey: '',

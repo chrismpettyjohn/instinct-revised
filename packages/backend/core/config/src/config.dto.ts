@@ -34,11 +34,6 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsString()
   @IsNotEmpty()
   @IsOptional()
-  swfAdminHabbo!: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @IsOptional()
   swfHabbo!: string;
 
   @IsString()
@@ -95,6 +90,11 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsNotEmpty()
   @IsOptional()
   groupBadgeURL!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  rankBadgeURL!: string;
 
   @IsString()
   @IsNotEmpty()

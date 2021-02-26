@@ -45,9 +45,7 @@ export function ClientContainer() {
       };
 
       Flash.embedSWF(
-        user!.rank!.permissions.websiteAdminClient
-          ? config.swfAdminHabbo
-          : config.swfHabbo,
+        config.swfHabbo,
         'client-area',
         '100%',
         '100%',

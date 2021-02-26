@@ -4,7 +4,6 @@ export interface ConfigDTO {
   siteBeta: boolean;
   emulatorIP: string;
   emulatorPort: string;
-  swfAdminHabbo: string;
   swfHabbo: string;
   swfExternalVariables: string;
   swfExternalTexts: string;
@@ -13,8 +12,7 @@ export interface ConfigDTO {
   swfFigureData: string;
   swfBaseURL: string;
   swfBadgeURL: string;
-  swfOverrideVariables: string;
-  swfOverrideTexts: string;
+  rankBadgeURL: string;
   loadingMessage: string;
   groupBadgeURL: string;
   sendGridAPIKey: string;
@@ -34,7 +32,6 @@ export const exampleConfigDTO: ConfigDTO = {
   emulatorIP: '127.0.0.1',
   emulatorPort: '3002',
   siteLink: 'http://localhost:3000',
-  swfAdminHabbo: 'http://localhost:3000/swfs/gamedata/habbo.swf',
   swfHabbo: 'http://localhost:3000/swfs/gamedata/habbo.swf',
   swfExternalVariables: 'http://localhost:3000/swfs/gamedata/variables.txt',
   swfExternalTexts: 'http://localhost:3000/swfs/gamedata/texts.txt',
@@ -43,9 +40,7 @@ export const exampleConfigDTO: ConfigDTO = {
   swfFigureData: 'http://localhost:3000/swfs/gamedata/figuredata.xml',
   swfBaseURL: 'http://localhost:3000/swfs/other/game/',
   swfBadgeURL: 'http://localhost:3000/swfs/other/images/album1584',
-  swfOverrideVariables:
-    'http://localhost:3000/swfs/gamedata/override/variables.txt',
-  swfOverrideTexts: 'http://localhost:3000/swfs/gamedata/override/texts.txt',
+  rankBadgeURL: '',
   loadingMessage: 'Please wait as I do some things',
   groupBadgeURL: 'http://localhost:3000/swfs/other/images/Badgeparts/generated',
   sendGridAPIKey: '',

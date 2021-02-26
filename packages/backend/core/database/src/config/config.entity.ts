@@ -20,9 +20,6 @@ export class ConfigEntity {
   @Column({name: 'emulator_port'})
   emulatorPort!: string;
 
-  @Column({name: 'swf_admin_habbo'})
-  swfAdminHabbo!: string;
-
   @Column({name: 'swf_habbo'})
   swfHabbo!: string;
 
@@ -47,17 +44,14 @@ export class ConfigEntity {
   @Column({name: 'swf_badge_url'})
   swfBadgeURL!: string;
 
-  @Column({name: 'swf_override_variables'})
-  swfOverrideVariables!: string;
-
-  @Column({name: 'swf_override_texts'})
-  swfOverrideTexts!: string;
-
   @Column({name: 'loading_message'})
   loadingMessage!: string;
 
   @Column({name: 'group_badge_url'})
   groupBadgeURL!: string;
+
+  @Column({name: 'rank_badge_url'})
+  rankBadgeURL!: string;
 
   @Column({name: 'sendgrid_api_key'})
   sendGridAPIKey!: string;
@@ -81,4 +75,10 @@ export class ConfigEntity {
 
   @Column({name: 'websocket_port'})
   websocketPort!: string;
+
+  @Column({name: 'nitro_url'})
+  nitroURL!: string;
+
+  @Column({name: 'maintenance_enabled', type: 'tinyint'})
+  maintenanceEnabled!: 1 | 0;
 }

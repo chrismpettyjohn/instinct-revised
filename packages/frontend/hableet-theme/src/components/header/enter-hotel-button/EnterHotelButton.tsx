@@ -1,12 +1,19 @@
-import React from 'react';
-import {Link} from 'wouter';
 import './EnterHotelButton.scss';
+import {themeContext} from '@instinct-web/core';
+import React, {useContext, useState} from 'react';
 
 export function EnterHotelButton() {
+  const {clientType} = useContext(themeContext);
+  const [isOpen, setDropdown] = useState(false);
+
+  function toggle() {
+    setDropdown(_ => !_);
+  }
+
   return (
-    <Link className="rounded-button enter-hotel-button mr-4" to="/play">
-      <img src="/img/logo/nitro.svg" width={25} />
-      Enter Hotel
-    </Link>
+    <div className="rounded-button enter-hotel-button mr-4">
+      <img src={`/img/logo/${clientType}.svg`} width={25} />
+      {clientType.toUpperCase()}
+    </div>
   );
 }
