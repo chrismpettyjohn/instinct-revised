@@ -2,7 +2,7 @@ import {Link} from 'wouter';
 import React from 'react';
 import './UserContainer.scss';
 import {UserContainerProps} from './';
-import {Avatar} from '../../generic/avatar';
+import {Avatar} from '@instinct-web/core';
 
 export function UserContainer({user}: UserContainerProps) {
   return (
@@ -21,7 +21,7 @@ export function UserContainer({user}: UserContainerProps) {
           </div>
           <div className="member-status flex-container flex-vertical-center flex-horizontal-center">
             <span
-              className={user.online ? 'status-icon online' : 'status-icon'}
+              className={user.online ? 'status-icon bg-success' : 'status-icon'}
               title={user.online ? 'Online' : 'Offline'}
             />
           </div>

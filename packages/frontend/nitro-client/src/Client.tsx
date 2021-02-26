@@ -1,9 +1,8 @@
 import './Client.scss';
 import React, {useContext} from 'react';
-import {UserGuard} from '../../guard/user';
 import {ClientActions} from './client-actions';
 import {ClientContainer} from './client-container';
-import {themeContext} from '../../../context/theme';
+import {themeContext, UserGuard} from '@instinct-web/core';
 
 export function Client() {
   const {showClient} = useContext(themeContext);

@@ -1,6 +1,5 @@
 import {Router} from '../router';
 import {DataPolling} from '../data-polling';
-import {Client} from '../../template/client';
 import {ToastContainer} from 'react-toastify';
 import {BannedGuard} from '../../guard/banned';
 import {useBanListener} from '../../../hooks/user';
@@ -49,7 +48,6 @@ export function Bootstrap() {
         <ServerMaintenanceGuard>
           <BannedGuard>
             <Router />
-            <Client />
             <DataPolling />
           </BannedGuard>
         </ServerMaintenanceGuard>

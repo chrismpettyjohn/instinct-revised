@@ -1,13 +1,9 @@
 import React from 'react';
 import {Card} from '../../../components/card/Card';
 import {UserLayout} from '../../../components/layout/user';
+import {UserContainer} from '../../../components/user-container';
 import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
-import {
-  UserContainer,
-  setURL,
-  Skeleton,
-  useFetchStaffTeam,
-} from '@instinct-web/core';
+import {setURL, Skeleton, useFetchStaffTeam} from '@instinct-web/core';
 
 setURL('community/staff', <Staff />);
 

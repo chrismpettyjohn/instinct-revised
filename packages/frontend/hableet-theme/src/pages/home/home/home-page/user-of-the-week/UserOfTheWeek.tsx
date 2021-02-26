@@ -1,10 +1,10 @@
 import React from 'react';
 import {Card} from '../../../../../components/card/Card';
+import {useFetchUserOfTheWeek} from '@instinct-web/core';
 import {
-  useFetchUserOfTheWeek,
   UserContainer,
   UserContainerSkeleton,
-} from '@instinct-web/core';
+} from '../../../../../components/user-container';
 
 export function UserOfTheWeek() {
   const users = useFetchUserOfTheWeek();

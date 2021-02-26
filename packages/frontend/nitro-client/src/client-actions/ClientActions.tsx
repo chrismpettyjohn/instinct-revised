@@ -1,9 +1,7 @@
 import './ClientActions.scss';
 import {useLocation} from 'wouter';
-import {Icon} from '../../../generic/icon';
 import React, {useContext, useState} from 'react';
-import {themeContext} from '../../../../context/theme';
-import {healthContext} from '../../../../context/health';
+import {healthContext, themeContext, Icon} from '@instinct-web/core';
 
 export function ClientActions() {
   const [location, setLocation] = useLocation();

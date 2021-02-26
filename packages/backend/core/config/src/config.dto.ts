@@ -34,7 +34,57 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsString()
   @IsNotEmpty()
   @IsOptional()
-  nitroURL!: string;
+  swfAdminHabbo!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfHabbo!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfExternalVariables!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfExternalTexts!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfProductData!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfFurniData!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfFigureData!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfBaseURL!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfBadgeURL!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfOverrideVariables!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  swfOverrideTexts!: string;
 
   @IsString()
   @IsNotEmpty()
@@ -45,11 +95,6 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsNotEmpty()
   @IsOptional()
   groupBadgeURL!: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @IsOptional()
-  rankBadgeURL!: string;
 
   @IsString()
   @IsNotEmpty()
@@ -84,7 +129,7 @@ export class UpdateConfigDTO implements ConfigDTO {
 
   @IsString()
   @IsOptional()
-  discordURL!: string;
+  nitroURL!: string;
 
   @IsBoolean()
   @IsOptional()

@@ -3,14 +3,12 @@ import {User} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
 import {Card} from '../../../components/card/Card';
 import {UserLayout} from '../../../components/layout/user';
+import {Column, setURL, userService} from '@instinct-web/core';
 import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 import {
-  Column,
   UserContainer,
-  setURL,
-  userService,
   UserContainerSkeleton,
-} from '@instinct-web/core';
+} from '../../../components/user-container';
 
 setURL('community/online', <OnlineUsers />);
 

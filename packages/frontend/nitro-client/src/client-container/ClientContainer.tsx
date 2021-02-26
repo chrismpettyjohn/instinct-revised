@@ -1,7 +1,9 @@
 import React, {useContext} from 'react';
-import {configContext} from '../../../../context/config';
-import {sessionContext} from '../../../../context/session';
-import {useRenewSessionSSO} from '../../../../hooks/session';
+import {
+  useRenewSessionSSO,
+  sessionContext,
+  configContext,
+} from '@instinct-web/core';
 
 export function ClientContainer() {
   useRenewSessionSSO();

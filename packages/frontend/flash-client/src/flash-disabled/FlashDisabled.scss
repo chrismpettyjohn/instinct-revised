@@ -1,0 +1,16 @@
+.flash-disabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 24px;
+}
+
+.enable-flash {
+  &:hover {
+    background: darken(#0C83BF, 10%) !important;
+    text-decoration: none;
+  }
+}
