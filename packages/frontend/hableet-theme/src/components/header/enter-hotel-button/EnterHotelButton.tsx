@@ -48,9 +48,6 @@ export function EnterHotelButton() {
       {isOpen && (
         <Modal isOpen style={{maxWidth: 400}} toggle={toggle}>
           <ModalBody className="p-0" style={{overflow: 'hidden'}}>
-            <ClientOption title="Nex Desktop" type="desktop">
-              <p>Desktop client for the flash client.</p>
-            </ClientOption>
             <ClientOption title="Nitro" type="nitro">
               <p>A community-built HTML5 client.</p>
             </ClientOption>
