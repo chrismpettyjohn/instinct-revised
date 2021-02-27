@@ -1,3 +1,4 @@
+import {Link} from 'wouter';
 import './EnterHotelButton.scss';
 import {Modal, ModalBody} from 'reactstrap';
 import React, {useContext, useState} from 'react';
@@ -34,12 +35,12 @@ export function EnterHotelButton() {
           <img src={`/img/logo/${clientType}.svg`} />
         </div>
         <div className="client-text">
-          <div>
+          <Link href="/play">
             Enter {config.siteName}
             <div style={{fontSize: '.6em'}}>
               {health.usersOnline} users online
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       {isOpen && (

@@ -9,7 +9,7 @@ import {
 
 export function ClientContainer() {
   useRenewSessionSSO();
-  const {user, sso} = useContext(sessionContext);
+  const {sso} = useContext(sessionContext);
   const {config} = useContext(configContext);
 
   useEffect(() => {

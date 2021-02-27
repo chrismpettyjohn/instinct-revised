@@ -1,6 +1,7 @@
 import '@instinct-web/core';
 import React, {useEffect, useState} from 'react';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';
+import {Client} from './components/client/Client';
 
 export function HableetTheme() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ export function HableetTheme() {
   return (
     <ContextProviders>
       <Bootstrap />
+      <Client />
     </ContextProviders>
   );
 }

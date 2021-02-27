@@ -1,9 +1,11 @@
 import {useContext, useEffect} from 'react';
+import {themeContext} from '../../context/theme';
 import {sessionContext} from '../../context/session';
 import {sessionService} from '../../services/session';
 
 export function useRenewSessionSSO() {
-  const {setSSO} = useContext(sessionContext);
+  const {clientType} = useContext(themeContext);
+  const {user, setSSO} = useContext(sessionContext);
   useEffect(() => {
     async function fetchSSO() {
       const sso = await sessionService.createSSO();
@@ -11,5 +13,5 @@ export function useRenewSessionSSO() {
     }
 
     fetchSSO();
-  }, []);
+  }, [clientType, user]);
 }

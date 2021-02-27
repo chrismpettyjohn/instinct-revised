@@ -5,7 +5,7 @@ import {
   configContext,
 } from '@instinct-web/core';
 
-export function ClientContainer() {
+export function NitroClient() {
   useRenewSessionSSO();
   const {sso} = useContext(sessionContext);
   const {config} = useContext(configContext);
