@@ -1,18 +1,17 @@
-import {Card} from '../../../components/card/Card';
 import React, {useContext, useEffect} from 'react';
-import {UserLayout} from '../../../components/layout/user';
+import {Card} from '../../../../components/card/Card';
+import {CopySSOModal} from './copy-sso-modal/CopySSOModal';
+import {DownloadOption} from './download-option/DownloadOption';
+import {UserLayout} from '../../../../components/layout/user';
 import {
   Column,
   configContext,
   localStorageService,
   setURL,
 } from '@instinct-web/core';
-import {DownloadOption} from './play-nitro/download-option/DownloadOption';
-import {CopySSOModal} from './play-nitro/copy-sso-modal/CopySSOModal';
+setURL('play/nitro', <PlayNitroPage />);
 
-setURL('play/launch', <LaunchClient />);
-
-export function LaunchClient() {
+export function PlayNitroPage() {
   const {config} = useContext(configContext);
 
   useEffect(() => {
