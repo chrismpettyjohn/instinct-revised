@@ -1,19 +1,79 @@
 import './EnterHotelButton.scss';
-import {themeContext} from '@instinct-web/core';
+import {Modal, ModalBody} from 'reactstrap';
 import React, {useContext, useState} from 'react';
+import {
+  ClientType,
+  configContext,
+  healthContext,
+  themeContext,
+} from '@instinct-web/core';
 
 export function EnterHotelButton() {
-  const {clientType} = useContext(themeContext);
+  const {config} = useContext(configContext);
+  const {health} = useContext(healthContext);
+  const {clientType, setStore} = useContext(themeContext);
   const [isOpen, setDropdown] = useState(false);
 
   function toggle() {
     setDropdown(_ => !_);
   }
 
+  function getStyle(type: ClientType) {
+    return type === clientType ? {background: '#001726'} : {};
+  }
+
+  function onChange(newClientType: ClientType) {
+    setStore({clientType: newClientType});
+    setDropdown(false);
+  }
+
   return (
-    <div className="rounded-button enter-hotel-button mr-4">
-      <img src={`/img/logo/${clientType}.svg`} width={25} />
-      {clientType.toUpperCase()}
+    <div style={{float: 'right'}}>
+      <div className="enter-hotel-button">
+        <div className="client-icon" onClick={toggle}>
+          <img src={`/img/logo/${clientType}.svg`} />
+        </div>
+        <div className="client-text">
+          <div>
+            Enter {config.siteName}
+            <div style={{fontSize: '.6em'}}>
+              {health.usersOnline} users online
+            </div>
+          </div>
+        </div>
+      </div>
+      {isOpen && (
+        <Modal isOpen style={{maxWidth: 400}} toggle={toggle}>
+          <ModalBody className="p-0" style={{overflow: 'hidden'}}>
+            <div
+              className="client-option row"
+              style={getStyle('flash')}
+              onClick={() => onChange('flash')}
+            >
+              <div className="col-12">
+                <div className="d-flex">
+                  <img className="mr-2" src="/img/logo/flash.svg" width={25} />
+                  <h4>Nex Desktop</h4>
+                </div>
+                <p>Desktop client for the flash client.</p>
+              </div>
+            </div>
+            <div
+              className="client-option row"
+              style={getStyle('nitro')}
+              onClick={() => onChange('nitro')}
+            >
+              <div className="col-12">
+                <div className="d-flex">
+                  <img className="mr-2" src="/img/logo/nitro.svg" width={25} />
+                  <h4>Nitro</h4>
+                </div>
+                <p>A community-built HTML5 client.</p>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+      )}
     </div>
   );
 }

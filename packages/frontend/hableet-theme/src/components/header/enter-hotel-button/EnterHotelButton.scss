@@ -1,11 +1,55 @@
 .enter-hotel-button {
-  background: #001726;
-  border: 1px solid #1b77c6;
-  color: white;
+  background-color: #001726;
+  display: flex;
+  color: var(--theme-ui-colors-white,#fff);
+  height: 80px;
+  width: fit-content;
+  transition: transform 0.15s ease-in-out 0s;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
 
-  &:hover {
-    background: #001726 !important;
-    border-color: lighten(#1b77c6, 30%);
-    text-decoration: none;
+  .client-icon {
+    background: #194C6E;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+
+    img {
+      box-sizing: border-box;
+      margin: 0px;
+      min-width: 0px;
+      max-width: 100%;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+    }
+
+  }
+
+  .client-text {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 14pt;
+    position: relative;
+  }
+
+}
+
+.client-option {
+  cursor: pointer;
+  padding: 10px;
+  &:not(:first-child) {
+    margin-top: 2%;
   }
 }
