@@ -1,31 +1,33 @@
 import {Link} from 'wouter';
 import './EnterHotelButton.scss';
 import {Modal, ModalBody} from 'reactstrap';
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {
   ClientType,
   configContext,
   healthContext,
   themeContext,
 } from '@instinct-web/core';
+import {ClientOption} from './client-option/ClientOption';
 
 export function EnterHotelButton() {
   const {config} = useContext(configContext);
   const {health} = useContext(healthContext);
-  const {clientType, setStore} = useContext(themeContext);
-  const [isOpen, setDropdown] = useState(false);
+  const {clientType} = useContext(themeContext);
+  const [isOpen, setModal] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setModal(false);
+    }
+  }, [clientType]);
 
   function toggle() {
-    setDropdown(_ => !_);
+    setModal(_ => !_);
   }
 
   function getStyle(type: ClientType) {
     return type === clientType ? {background: '#001726'} : {};
-  }
-
-  function onChange(newClientType: ClientType) {
-    setStore({clientType: newClientType});
-    setDropdown(false);
   }
 
   return (
@@ -46,32 +48,15 @@ export function EnterHotelButton() {
       {isOpen && (
         <Modal isOpen style={{maxWidth: 400}} toggle={toggle}>
           <ModalBody className="p-0" style={{overflow: 'hidden'}}>
-            <div
-              className="client-option row"
-              style={getStyle('flash')}
-              onClick={() => onChange('flash')}
-            >
-              <div className="col-12">
-                <div className="d-flex">
-                  <img className="mr-2" src="/img/logo/flash.svg" width={25} />
-                  <h4>Nex Desktop</h4>
-                </div>
-                <p>Desktop client for the flash client.</p>
-              </div>
-            </div>
-            <div
-              className="client-option row"
-              style={getStyle('nitro')}
-              onClick={() => onChange('nitro')}
-            >
-              <div className="col-12">
-                <div className="d-flex">
-                  <img className="mr-2" src="/img/logo/nitro.svg" width={25} />
-                  <h4>Nitro</h4>
-                </div>
-                <p>A community-built HTML5 client.</p>
-              </div>
-            </div>
+            <ClientOption title="Nex Desktop" type="desktop">
+              <p>Desktop client for the flash client.</p>
+            </ClientOption>
+            <ClientOption title="Nitro" type="nitro">
+              <p>A community-built HTML5 client.</p>
+            </ClientOption>
+            <ClientOption title="Adobe Flash" type="flash">
+              <p>Adobe flash for compatible browsers (Maxathon Nitro)</p>
+            </ClientOption>
           </ModalBody>
         </Modal>
       )}

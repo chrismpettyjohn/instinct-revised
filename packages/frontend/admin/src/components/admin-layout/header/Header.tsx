@@ -2,7 +2,6 @@ import {Link} from 'wouter';
 import React, {useContext} from 'react';
 import {NavBar} from './navbar/NavBar';
 import {healthContext, Icon} from '@instinct-web/core';
-import {EnterHotelButton} from './enter-hotel-button/EnterHotelButton';
 
 export function Header() {
   const {health} = useContext(healthContext);
@@ -24,7 +23,6 @@ export function Header() {
           </div>
           <div className="col-6 text-right">
             <div id="account-buttons" className="account-buttons">
-              <EnterHotelButton />
               <div
                 className="rounded-button"
                 style={{

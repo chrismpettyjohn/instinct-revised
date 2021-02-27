@@ -1,4 +1,4 @@
-export type ClientType = 'nitro' | 'flash';
+export type ClientType = 'nitro' | 'flash' | 'desktop';
 
 export interface ThemeContext {
   showClient: boolean;

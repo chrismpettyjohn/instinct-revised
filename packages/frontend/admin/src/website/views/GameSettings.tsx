@@ -82,14 +82,14 @@ export function GameSettings() {
           value={config.swfFigureData}
         />
       </FormGroup>
-      <Row className="mt-3">
+      <div className="row mt-3">
         <div className="col-6">&nbsp;</div>
         <div className="col-6 text-right">
           <button className="btn btn-primary" disabled={showSpinner}>
             {showSpinner ? <i className="fa fa-spinner fa-spin" /> : 'Save'}
           </button>
         </div>
-      </Row>
+      </div>
       <FormGroup>
         <h4>Group Badge Folder</h4>
         <Input
