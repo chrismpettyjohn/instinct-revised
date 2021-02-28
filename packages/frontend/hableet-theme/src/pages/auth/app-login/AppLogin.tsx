@@ -17,23 +17,27 @@ export function PlayAppPage() {
   const {user, setUser} = useContext(sessionContext);
   const [matched, params] = useRoute('/login/app/:sso');
 
-  console.log(matched, params?.sso);
-
   useEffect(() => {
     setStore({applicationMode: true});
     async function login() {
       try {
         const userAcc = await sessionService.attemptBearerToken(params!.sso);
         setUser(userAcc);
-        setLocation('/play/flash');
       } catch {
         setLocation('/login');
       }
     }
     if (params?.sso) {
       login();
+    } else {
+      setLocation('/login');
     }
   }, []);
+
+  if (user) {
+    setLocation('/play/flash');
+    return null;
+  }
 
   if (!user) {
     return (

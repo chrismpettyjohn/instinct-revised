@@ -9,9 +9,22 @@ export function SessionContextProvider({children}: ContextProvidersProps) {
   const [banned, setBanned] = useState(false);
   const [online, setOnline] = useState(false);
 
+  function setUserState(changes?: Partial<User>) {
+    setUser(_ => (changes ? {...user!, ...changes} : undefined));
+  }
+
   return (
     <sessionContext.Provider
-      value={{sso, setSSO, user, setUser, online, setOnline, banned, setBanned}}
+      value={{
+        sso,
+        setSSO,
+        user,
+        setUser: setUserState,
+        online,
+        setOnline,
+        banned,
+        setBanned,
+      }}
     >
       {children}
     </sessionContext.Provider>

@@ -5,6 +5,8 @@ import {Avatar, Icon, sessionContext} from '@instinct-web/core';
 export function UserDropdown() {
   const {user} = useContext(sessionContext);
 
+  console.log(user);
+
   if (user === undefined) {
     return null;
   }
@@ -35,7 +37,7 @@ export function UserDropdown() {
           <Link to={`/profile/${user.username}`}>My Profile</Link>
         </li>
         <li className="navigation-subitem">
-          <Link to="logout">Logout</Link>
+          <Link to="/logout">Logout</Link>
         </li>
       </ul>
     </>
