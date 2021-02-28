@@ -1,3 +1,4 @@
+import './app-login/AppLogin';
 import './forgot-password';
 import './landing';
 import './login';
