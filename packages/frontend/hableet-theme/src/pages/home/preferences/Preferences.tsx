@@ -5,7 +5,6 @@ import {SecurityPreferences} from './tabs/security';
 import {Loading, setURL, Icon} from '@instinct-web/core';
 import {UserLayout} from '../../../components/layout/user';
 import {NavTabs} from '../../../components/nav-tabs/NavTabs';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 
 setURL('preferences', <PreferencesPage />);
 
