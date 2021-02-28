@@ -1,5 +1,6 @@
-import {IsEmail, IsNotEmpty, IsString} from 'class-validator';
+import {IsEmail, IsNotEmpty, IsOptional, IsString} from 'class-validator';
 import {UserExists, UniqueEmail} from '@instinct-api/validator';
+import {ClientType} from '@instinct-prj/interface';
 
 export class NewSessionDTO {
   @IsString()
@@ -16,6 +17,11 @@ export class UpdatePreferencesDTO {
   @IsString()
   @IsNotEmpty()
   favoriteYoutubeVideo!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  clientType!: ClientType;
 }
 
 export class UpdatePasswordDTO {

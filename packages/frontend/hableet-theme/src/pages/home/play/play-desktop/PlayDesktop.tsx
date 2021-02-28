@@ -1,8 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import {Card} from '../../../../components/card/Card';
 import {UserLayout} from '../../../../components/layout/user';
-import {CopySSOModal} from '../play-nitro/copy-sso-modal/CopySSOModal';
-import {DownloadOption} from '../play-nitro/download-option/DownloadOption';
+import {DownloadOption} from './download-option/DownloadOption';
 import {
   Column,
   configContext,
@@ -77,14 +76,6 @@ export function PlayDesktop() {
               </p>
               <hr />
             </div>
-            <div className="mt-4">
-              <p>
-                You will be asked to paste an auth ticket when you open the{' '}
-                {config.siteName} Browser. You can generate one by clicking it
-                below.
-              </p>
-            </div>
-            <CopySSOModal />
           </Card>
         </Column>
       </div>

@@ -1,4 +1,4 @@
-import {User} from '@instinct-prj/interface';
+import {ClientType, User} from '@instinct-prj/interface';
 
 export interface SessionService {
   // Fetches user bearer token if it exists
@@ -22,6 +22,8 @@ export interface SessionService {
 
   // Removes the user's bearer token from localStorage
   logout(): void;
+
+  updateClientType(clientType: ClientType): Promise<void>;
 
   updateProfile(favoriteYoutubeVideo: string): Promise<void>;
 

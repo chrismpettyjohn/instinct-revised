@@ -16,6 +16,7 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import {ClientType} from '@instinct-prj/interface';
 
 @Entity('users')
 export class UserEntity {
@@ -100,6 +101,9 @@ export class UserEntity {
 
   @Column({name: 'user_of_the_week', type: 'tinyint'})
   userOfTheWeek!: number;
+
+  @Column({name: 'client_type'})
+  clientType!: ClientType;
 
   @OneToMany(() => PhotoEntity, photo => photo.user)
   photos?: PhotoEntity[];

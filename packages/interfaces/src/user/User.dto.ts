@@ -3,4 +3,5 @@ export interface UserDTO {
   email: string;
   password: string;
   recaptcha: string;
+  clientType: string;
 }

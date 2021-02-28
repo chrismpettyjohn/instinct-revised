@@ -24,8 +24,6 @@ class ClientServiceImplementation implements ClientService {
         'client.init.config.loaded': 100,
       };
 
-      console.log(stepToProgress);
-
       if (stepToProgress[step]) {
         const progress: number = stepToProgress[step] ?? 0;
 

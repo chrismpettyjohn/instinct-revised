@@ -1,5 +1,5 @@
 import {AxiosResponse} from 'axios';
-import {User} from '@instinct-prj/interface';
+import {ClientType, User} from '@instinct-prj/interface';
 import {SessionService} from './Session.types';
 import {backendAPI, setAPIToken} from '../../api';
 import {localStorageService} from '../../services/local-storage';
@@ -63,6 +63,10 @@ class SessionServiceImplementation implements SessionService {
   logout = () => {
     localStorageService.delete(this.localStorageKey);
   };
+
+  async updateClientType(clientType: ClientType): Promise<void> {
+    await backendAPI.post('session/settings/preferences', {clientType});
+  }
 
   async updateProfile(favoriteYoutubeVideo: string): Promise<void> {
     await backendAPI.post('session/settings/preferences', {

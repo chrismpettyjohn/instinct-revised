@@ -3,41 +3,37 @@ import './EnterHotelButton.scss';
 import {Modal, ModalBody} from 'reactstrap';
 import React, {useContext, useEffect, useState} from 'react';
 import {
-  ClientType,
   configContext,
   healthContext,
-  themeContext,
+  sessionContext,
 } from '@instinct-web/core';
 import {ClientOption} from './client-option/ClientOption';
 
 export function EnterHotelButton() {
   const {config} = useContext(configContext);
   const {health} = useContext(healthContext);
-  const {clientType} = useContext(themeContext);
+  const {user, setUser} = useContext(sessionContext);
   const [isOpen, setModal] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
       setModal(false);
     }
-  }, [clientType]);
+  }, [user?.clientType]);
 
   function toggle() {
+    if (user!.clientType === 'flash') return;
     setModal(_ => !_);
-  }
-
-  function getStyle(type: ClientType) {
-    return type === clientType ? {background: '#001726'} : {};
   }
 
   return (
     <div style={{float: 'right'}}>
       <div className="enter-hotel-button">
         <div className="client-icon" onClick={toggle}>
-          <img src={`/img/logo/${clientType}.svg`} />
+          <img src={`/img/logo/${user!.clientType}.svg`} />
         </div>
         <div className="client-text">
-          <Link href={`/play/${clientType}`}>
+          <Link href={`/play/${user!.clientType}`}>
             Enter {config.siteName}
             <div style={{fontSize: '.6em'}}>
               {health.usersOnline} users online

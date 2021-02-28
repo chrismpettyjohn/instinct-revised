@@ -6,7 +6,7 @@ export interface SessionContext {
   online: boolean;
   banned: boolean;
   setSSO: (sso: string) => void;
-  setUser: (user?: User) => void;
+  setUser: (user?: Partial<User>) => void;
   setOnline: (isOnline: boolean) => void;
   setBanned: (banned: boolean) => void;
 }
@@ -19,7 +19,7 @@ export const defaultSessionContext: SessionContext = {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   setSSO: (sso: string) => {},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setUser: (user?: User) => {},
+  setUser: (user?: Partial<User>) => {},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   setOnline: (isOnline: boolean) => {},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

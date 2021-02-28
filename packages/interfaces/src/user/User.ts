@@ -1,5 +1,7 @@
 import {Rank} from '../rank/Rank';
 
+export type ClientType = 'nitro' | 'flash' | 'desktop';
+
 export interface User {
   id: number;
   username: string;
@@ -14,6 +16,7 @@ export interface User {
   lastLoginDate: string; // ISO Date
   userOfTheWeek: boolean;
   rank?: Omit<Rank, 'users'>;
+  clientType: ClientType;
 }
 
 export const exampleUser: User = {
@@ -29,6 +32,7 @@ export const exampleUser: User = {
   joinDate: new Date().toISOString(),
   lastLoginDate: new Date().toISOString(),
   userOfTheWeek: false,
+  clientType: 'nitro',
 };
 
 export interface InternalUser

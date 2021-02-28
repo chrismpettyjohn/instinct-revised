@@ -27,7 +27,6 @@ export function ClientContainer() {
         'productdata.load.url': config.swfProductData,
         'furnidata.load.url': config.swfFurniData,
         'external.figurepartlist.txt': config.swfFigureData,
-        'external.override.variables.txt': `${config.swfBaseURL}}/override/variables.txt`,
         'flash.client.url': config.swfBaseURL,
         'client.starting.revolving': config.loadingMessage,
         'processlog.enabled': '1',

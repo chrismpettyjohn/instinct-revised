@@ -20,6 +20,7 @@ export function userWire(userEntity: UserEntity): User {
       userEntity.rank !== undefined ? rankWire(userEntity.rank!) : undefined,
     favoriteYoutubeVideo: userEntity.favoriteYoutubeVideo,
     userOfTheWeek: userEntity.userOfTheWeek === 1,
+    clientType: userEntity.clientType,
   };
 }
 
