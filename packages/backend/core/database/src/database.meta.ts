@@ -26,6 +26,13 @@ import {
   ArticleCommentEntity,
   ArticleCommentRepository,
 } from './article';
+import {ForumPostEntity} from './forum/forum-post.entity';
+import {ForumReplyEntity} from './forum/forum-reply.entity';
+import {ForumSectionEntity} from './forum/forum-section.entity';
+import {ForumReactionEntity} from './forum/forum-reaction.entity';
+import {ForumPostRepository} from './forum/forum-post.repository';
+import {ForumReplyRepository} from './forum/forum-reply.repository';
+import {ForumReactionRepository} from './forum/forum-reaction.repository';
 
 export const databaseEntities: Function[] = [
   RankEntity,
@@ -36,6 +43,10 @@ export const databaseEntities: Function[] = [
   ConfigEntity,
   UserBanEntity,
   ArticleEntity,
+  ForumPostEntity,
+  ForumReactionEntity,
+  ForumReplyEntity,
+  ForumSectionEntity,
   BetaCodeEntity,
   UserBadgesEntity,
   EmulatorTextsEntity,
@@ -52,6 +63,9 @@ export const databaseRepositories: Provider[] = [
   RoomRepository,
   GroupRepository,
   PhotoRepository,
+  ForumPostRepository,
+  ForumReactionRepository,
+  ForumReplyRepository,
   ConfigRepository,
   ArticleRepository,
   UserBanRepository,
