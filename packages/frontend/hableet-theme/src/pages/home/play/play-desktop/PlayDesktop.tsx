@@ -42,25 +42,17 @@ export function PlayDesktop() {
                   {
                     name: 'Windows 64-Bit',
                     icon: 'windows',
-                    url: '',
+                    url:
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/0.1/Nex.32.exe',
                   },
                   {
                     name: 'Windows 32-Bit',
                     icon: 'windows',
-                    url: '',
+                    url:
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/0.1/Nex.32.exe',
                   },
                 ]}
                 title="Windows Downloads"
-              />
-              <DownloadOption
-                options={[
-                  {
-                    name: 'macOS',
-                    icon: 'apples',
-                    url: '',
-                  },
-                ]}
-                title="macOS Download"
               />
             </div>
             <div className="mt-4">

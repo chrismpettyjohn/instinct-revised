@@ -2,11 +2,7 @@ import {Link} from 'wouter';
 import './EnterHotelButton.scss';
 import {Modal, ModalBody} from 'reactstrap';
 import React, {useContext, useEffect, useState} from 'react';
-import {
-  configContext,
-  healthContext,
-  sessionContext,
-} from '@instinct-web/core';
+import {configContext, healthContext, sessionContext} from '@instinct-web/core';
 import {ClientOption} from './client-option/ClientOption';
 
 export function EnterHotelButton() {

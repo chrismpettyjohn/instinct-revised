@@ -47,6 +47,7 @@ export class ManageUsersController {
       lastOnline: 0,
       gender: 'm',
       online: '0',
+      clientType: 'nitro',
     });
 
     return internalUserWire(newUser);

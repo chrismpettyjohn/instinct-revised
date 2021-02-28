@@ -1,5 +1,5 @@
-import {UserDTO} from '@instinct-prj/interface';
 import {ValidRecaptcha} from '@instinct-api/google';
+import {ClientType, UserDTO} from '@instinct-prj/interface';
 import {IsEmail, IsNotEmpty, IsString} from 'class-validator';
 import {
   UniqueUsername,
@@ -26,4 +26,8 @@ export class UserDTOClass implements UserDTO {
 
   @ValidBetaCode()
   betaCode?: string;
+
+  @IsString()
+  @IsNotEmpty()
+  clientType!: ClientType;
 }

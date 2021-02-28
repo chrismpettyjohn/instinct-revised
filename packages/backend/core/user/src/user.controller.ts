@@ -87,6 +87,7 @@ export class UserController {
       homeRoom: defaultUserHomeRoom,
       favoriteYoutubeVideo: 'GfxcnX7XWfg',
       userOfTheWeek: 0,
+      clientType: 'nitro',
     });
 
     const config = await this.configRepo.getConfig();
