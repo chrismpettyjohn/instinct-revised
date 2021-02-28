@@ -5,8 +5,6 @@ import {Avatar, Icon, sessionContext} from '@instinct-web/core';
 export function UserDropdown() {
   const {user} = useContext(sessionContext);
 
-  console.log(user);
-
   if (user === undefined) {
     return null;
   }

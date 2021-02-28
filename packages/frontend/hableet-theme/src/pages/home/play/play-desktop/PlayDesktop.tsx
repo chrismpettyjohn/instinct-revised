@@ -43,7 +43,7 @@ export function PlayDesktop() {
                     name: 'Windows 64-Bit',
                     icon: 'windows',
                     url:
-                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/0.1/Nex.32.zip',
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/v1.0/Nex.Hotel.zip',
                   },
                   {
                     name: 'Windows 32-Bit',
@@ -53,6 +53,17 @@ export function PlayDesktop() {
                   },
                 ]}
                 title="Windows Downloads"
+              />
+              <DownloadOption
+                options={[
+                  {
+                    name: 'macOS',
+                    icon: 'apple',
+                    url:
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/0.1/Nex.32.zip',
+                  },
+                ]}
+                title="macOS Downloads"
               />
             </div>
             <div className="mt-4">

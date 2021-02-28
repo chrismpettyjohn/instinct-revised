@@ -75,7 +75,6 @@ export class UserGuestbookController {
     @Param('guestbookID', UserGuestbookPipe) post: UserGuestbookEntity,
     @GetSession() user: UserEntity
   ): Promise<string> {
-    console.log(post.authorID, user.id!);
     if (
       post.authorID !== user.id! &&
       user.rank!.websiteManageGuestbook !== PermissionStatus.Enabled
