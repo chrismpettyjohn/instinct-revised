@@ -19,7 +19,7 @@ export function Client() {
         className={`hotel-container ${showClient ? 'visible' : 'not-visible'}`}
       >
         <ClientActions />
-        {user!.clientType === 'flash' ? <FlashClient /> : <NitroClient />}
+        {user?.clientType === 'flash' ? <FlashClient /> : <NitroClient />}
       </div>
     </UserGuard>
   );
