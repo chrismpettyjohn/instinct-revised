@@ -2,7 +2,6 @@ import React from 'react';
 import {Column} from '@instinct-web/core';
 import {MyProfile} from './my-profile/MyProfile';
 import {NewsSlider} from './news-slider/NewsSlider';
-import {Card} from '../../../../components/card/Card';
 import {SocialMedia} from './social-media/SocialMedia';
 import {UserOfTheWeek} from './user-of-the-week/UserOfTheWeek';
 

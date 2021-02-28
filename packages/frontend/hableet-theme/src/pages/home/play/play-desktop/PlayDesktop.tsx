@@ -43,13 +43,13 @@ export function PlayDesktop() {
                     name: 'Windows 64-Bit',
                     icon: 'windows',
                     url:
-                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/v1.0/Nex.Hotel.zip',
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/v1.0/win-64.zip',
                   },
                   {
                     name: 'Windows 32-Bit',
                     icon: 'windows',
                     url:
-                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/0.1/Nex.32.zip',
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/v1.0/win-32.zip',
                   },
                 ]}
                 title="Windows Downloads"
@@ -60,7 +60,7 @@ export function PlayDesktop() {
                     name: 'macOS',
                     icon: 'apple',
                     url:
-                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/0.1/Nex.32.zip',
+                      'https://github.com/chrismpettyjohn/nex-browser/releases/download/v1.0/macOS.zip',
                   },
                 ]}
                 title="macOS Downloads"
