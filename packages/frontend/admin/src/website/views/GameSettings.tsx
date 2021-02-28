@@ -11,6 +11,15 @@ export function GameSettings() {
     <Form className="" onSubmit={saveChanges}>
       <h2>Game Settings</h2>
       <FormGroup>
+        <h4>Loading Message</h4>
+        <Input
+          type="text"
+          name="loadingMessage"
+          onChange={setConfig}
+          value={config.loadingMessage}
+        />
+      </FormGroup>
+      <FormGroup>
         <h4>Nitro URL</h4>
         <Input
           type="text"

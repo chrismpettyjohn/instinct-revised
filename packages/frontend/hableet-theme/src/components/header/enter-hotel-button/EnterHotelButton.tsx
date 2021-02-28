@@ -51,8 +51,8 @@ export function EnterHotelButton() {
             <ClientOption title="Nitro" type="nitro">
               <p>A community-built HTML5 client.</p>
             </ClientOption>
-            <ClientOption title="Adobe Flash" type="flash">
-              <p>Adobe flash for compatible browsers (Maxathon Nitro)</p>
+            <ClientOption title="Nex Desktop" type="desktop">
+              <p>Downloadable client for the Flash lovers</p>
             </ClientOption>
           </ModalBody>
         </Modal>

@@ -1,6 +1,7 @@
 import {Card} from '../card/Card';
 import React, {useState} from 'react';
 import {NavTabsProps} from './NavTabs.types';
+
 export function NavTabs({tabs}: NavTabsProps) {
   const [active, setActive] = useState(0);
 

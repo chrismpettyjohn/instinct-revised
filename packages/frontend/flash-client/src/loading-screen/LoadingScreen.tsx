@@ -5,9 +5,11 @@ import {
   ClientEvent,
   sessionContext,
   clientContext,
+  configContext,
 } from '@instinct-web/core';
 
 export function LoadingScreen() {
+  const {config} = useContext(configContext);
   const {setOnline} = useContext(sessionContext);
   const {loadingProgress, setLoading} = useContext(clientContext);
 
@@ -26,6 +28,8 @@ export function LoadingScreen() {
     <div id="loader-wrapper">
       <div className="loader">
         <div id="loader">
+          <img src="/img/logo/regular.png" />
+          <p>{config.loadingMessage}</p>
           <div className="loading_bar">
             <div
               className="percent"

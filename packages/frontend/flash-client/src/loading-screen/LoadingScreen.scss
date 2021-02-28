@@ -7,10 +7,8 @@
   z-index: 900;
 }
 #loader {
-  background: url('/img/logo/regular.png');
-  background-size: cover;
-  height: 44px;
-  width: 330px;
+  height: 400px;
+  width:  400px;
   padding-top:65px;
   text-align: center;
   color:#fff;
@@ -31,7 +29,6 @@
   padding:2px;
   height:30px;
   z-index: 1001;
-  margin-top: 15px;
 }
 #loader_bar.percent {
   background:#b1b0b0;

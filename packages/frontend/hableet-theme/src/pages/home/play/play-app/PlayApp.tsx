@@ -16,6 +16,8 @@ export function PlayAppPage() {
   const [location, setLocation] = useLocation();
   const [matched, params] = useRoute('play/app/:sso');
 
+  console.log(matched, params);
+
   useEffect(() => {
     async function fetchUser() {
       try {

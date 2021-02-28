@@ -15,16 +15,16 @@ class ClientServiceImplementation implements ClientService {
     ): void => {
       const stepToProgress: Record<string, number> = {
         'client.init.swf.loaded': 10,
-        'client.init.core.init': 15,
-        'client.init.socket.ok': 25,
-        'client.init.handshake.start': 30,
-        'client.init.auth.ok': 50,
-        'client.init.localization.loaded': 60,
-        'client.init.core.running': 75,
-        'client.init.config.loaded': 80,
-        'client.init.room.ready': 90,
-        'client.init.room.enter': 100,
+        'client.init.core.init': 25,
+        'client.init.socket.ok': 35,
+        'client.init.handshake.start': 45,
+        'client.init.auth.ok': 55,
+        'client.init.localization.loaded': 70,
+        'client.init.core.running': 85,
+        'client.init.config.loaded': 100,
       };
+
+      console.log(stepToProgress);
 
       if (stepToProgress[step]) {
         const progress: number = stepToProgress[step] ?? 0;
