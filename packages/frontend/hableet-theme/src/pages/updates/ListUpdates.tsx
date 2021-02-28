@@ -68,6 +68,8 @@ export function ListUpdates() {
             You can now stay up to date with the latest changes by going to the
             new <b>Updates</b> page.
           </p>
+          <h5>Who's Online</h5>
+          <p>The home page now shows all of the online users.</p>
         </>
       ),
     },
