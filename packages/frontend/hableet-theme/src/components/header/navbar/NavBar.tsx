@@ -22,8 +22,7 @@ export function NavBar() {
             <NavBarLink to="/community/news">News</NavBarLink>
             <NavBarLink to="/community/staff">Staff Team</NavBarLink>
             <NavBarLink to="/community/games">High Scores</NavBarLink>
-            <NavBarLink to="/community/online">Online</NavBarLink>
-            <NavBarLink to="/forum">Forum</NavBarLink>
+            <NavBarLink to="/updates">Updates</NavBarLink>
             <li className="navigation-item navigation-right-side-item has-items">
               <UserDropdown />
             </li>

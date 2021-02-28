@@ -4,6 +4,7 @@ import {MyProfile} from './my-profile/MyProfile';
 import {NewsSlider} from './news-slider/NewsSlider';
 import {SocialMedia} from './social-media/SocialMedia';
 import {UserOfTheWeek} from './user-of-the-week/UserOfTheWeek';
+import {WhosOnline} from './whos-online/WhosOnline';
 
 export function HomePage() {
   return (
@@ -15,16 +16,7 @@ export function HomePage() {
       <Column side="right">
         <UserOfTheWeek />
         <SocialMedia />
-        <iframe
-          width="100%"
-          height={315}
-          className="mt-2"
-          src="https://www.youtube-nocookie.com/embed/28hYUZMufDg?controls=0&amp;start=18&amp"
-          style={{border: '4px solid #001726', borderRadius: 4}}
-          frameBorder={0}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        <WhosOnline />
       </Column>
     </div>
   );
