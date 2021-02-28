@@ -40,12 +40,7 @@ export class SessionController {
     @GetSession() session: UserEntity,
     @Body() preferencesDTO: UpdatePreferencesDTO
   ): Promise<string> {
-    await this.userRepo.update(
-      {id: session.id!},
-      {
-        favoriteYoutubeVideo: preferencesDTO.favoriteYoutubeVideo,
-      }
-    );
+    await this.userRepo.update({id: session.id!}, preferencesDTO);
     return 'Your preferences have been updated';
   }
 

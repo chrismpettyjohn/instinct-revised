@@ -16,12 +16,13 @@ export class NewSessionDTO {
 export class UpdatePreferencesDTO {
   @IsString()
   @IsNotEmpty()
-  favoriteYoutubeVideo!: string;
+  @IsOptional()
+  favoriteYoutubeVide?: string;
 
   @IsString()
   @IsNotEmpty()
   @IsOptional()
-  clientType!: ClientType;
+  clientType?: ClientType;
 }
 
 export class UpdatePasswordDTO {
