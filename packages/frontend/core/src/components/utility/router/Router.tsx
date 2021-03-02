@@ -9,10 +9,14 @@ export function Router() {
   try {
     return (
       <Switch>
-        {routes.map((route: RouteProps, index: number) => (
-          <Route key={index} {...route} />
-        ))}
-        <Route>{notFound ?? '404'}</Route>
+        <>
+          {routes.map((route: RouteProps, index: number) => (
+            <Route key={index} {...route} />
+          ))}
+        </>
+        <>
+          <Route>{notFound ?? '404'}</Route>
+        </>
       </Switch>
     );
   } catch {
