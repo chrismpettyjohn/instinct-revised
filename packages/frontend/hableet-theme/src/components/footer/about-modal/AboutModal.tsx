@@ -7,19 +7,27 @@ export function AboutModal({isOpen, onToggle}: AboutModalProps) {
     <Modal isOpen={isOpen} toggle={onToggle}>
       <ModalHeader>
         <img src="https://i.imgur.com/Bi8D2aL.png" />
-        Instinct
+        Instinct 2
       </ModalHeader>
       <ModalBody>
         <h5>About</h5>
         <p>
-          Instinct is a development suite that enables developers to build
-          blazing fast, secure, state of the art features.
+          Nex runs on a custom content management system exclusive to it;
+          Instinct 2.
         </p>
-        <h5>What is Jealousy?</h5>
         <p>
-          Jealousy is a CMS built with the core libraries of Instinct to ensure
-          a smooth and feature rich experience.
+          Instinct 2 is a complete overhaul over the original Instinct project.
+          It's built to withstand the tests of time with support for Nitro while
+          also allowing the more experience to enjoy using Flash through our
+          application support.
         </p>
+        <h5>Our Technology</h5>
+        <ul>
+          <li>Custom CMS written in Typescript, React and Node</li>
+          <li>PeakRP Browser for our Flash Desktop App</li>
+          <li>Nitro for our HTML5 Client</li>
+          <li>ArcturusMS for our Emulator</li>
+        </ul>
         <h5>Developed By</h5>
         <p>LeChris</p>
         <iframe

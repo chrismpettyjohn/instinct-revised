@@ -27,7 +27,10 @@ export function Footer() {
           />
         </div>
         <div className="footer-copyright">
-          <b onClick={toggleAboutModal}>Instinct</b>&nbsp;by&nbsp;<b>LeChris</b>
+          <b onClick={toggleAboutModal}>
+            Instinct<sup>2</sup>
+          </b>
+          &nbsp;by&nbsp;<b>LeChris</b>
         </div>
       </footer>
       <AboutModal isOpen={showAbout} onToggle={toggleAboutModal} />

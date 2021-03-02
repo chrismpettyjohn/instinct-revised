@@ -32,29 +32,16 @@ export function ListUpdates() {
 
   const serverUpdates: ServerUpdate[] = [
     {
-      date: 'Feb 23',
-      icon: 'vial',
+      date: 'Feb 29',
+      icon: 'bug',
       content: (
         <>
-          <h5>Nex Revamp</h5>
-          <p>
-            We launched the new and improved Nex with a custom website and the
-            latest HTML5 browser available, Nitro!
-          </p>
-        </>
-      ),
-    },
-    {
-      date: 'Feb 27',
-      icon: 'browser',
-      content: (
-        <>
-          <h5>Nex Desktop</h5>
-          <p>
-            We launched our new <b>Nex Desktop</b> app! You can use it by
-            switching your client type in the top right and following the
-            instructions on the download page.
-          </p>
+          <h5>Bug fixes</h5>
+          <ul>
+            <li>Flash client crashing in some rooms</li>
+            <li>Flash application blue screen freeze</li>
+            <li>Page title showing "Habbo"</li>
+          </ul>
         </>
       ),
     },
@@ -73,6 +60,33 @@ export function ListUpdates() {
         </>
       ),
     },
+    {
+      date: 'Feb 27',
+      icon: 'browser',
+      content: (
+        <>
+          <h5>Nex Desktop</h5>
+          <p>
+            We launched our new <b>Nex Desktop</b> app! You can use it by
+            switching your client type in the top right and following the
+            instructions on the download page.
+          </p>
+        </>
+      ),
+    },
+    {
+      date: 'Feb 23',
+      icon: 'vial',
+      content: (
+        <>
+          <h5>Nex Revamp</h5>
+          <p>
+            We launched the new and improved Nex with a custom website and the
+            latest HTML5 browser available, Nitro!
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (
@@ -81,8 +95,7 @@ export function ListUpdates() {
         <MiniJumbotron>
           <h2>Server Updates</h2>
           <p>
-            Last Updated:{' '}
-            <b>{serverUpdates[serverUpdates.length - 1]?.date ?? 'Never'}</b>
+            Last Updated: <b>{serverUpdates[0]?.date ?? 'Never'}</b>
           </p>
         </MiniJumbotron>
         <Card>

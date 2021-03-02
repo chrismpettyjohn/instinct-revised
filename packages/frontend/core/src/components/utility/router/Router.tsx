@@ -3,6 +3,7 @@ import {Switch, Route, RouteProps} from 'wouter';
 import {RenderError} from '../../generic/error';
 
 const routes: RouteProps[] = [];
+let notFound: ReactNode;
 
 export function Router() {
   try {
@@ -11,6 +12,7 @@ export function Router() {
         {routes.map((route: RouteProps, index: number) => (
           <Route key={index} {...route} />
         ))}
+        <Route>{notFound ?? '404'}</Route>
       </Switch>
     );
   } catch {
@@ -23,4 +25,8 @@ export function setURL(url: string, component: ReactNode): void {
     path: `/${url}`,
     children: <div>{component}</div>,
   });
+}
+
+export function setNotFound(component: ReactNode) {
+  notFound = component;
 }
