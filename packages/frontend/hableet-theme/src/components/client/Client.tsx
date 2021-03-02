@@ -9,6 +9,8 @@ export function Client() {
   const {user} = useContext(sessionContext);
   const {showClient} = useContext(themeContext);
 
+  console.log(user?.clientType);
+
   if (user?.clientType === 'desktop') {
     return null;
   }

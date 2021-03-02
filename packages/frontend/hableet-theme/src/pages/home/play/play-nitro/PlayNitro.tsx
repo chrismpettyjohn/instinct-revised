@@ -1,14 +1,16 @@
 import React, {useContext, useEffect} from 'react';
-import {setURL, themeContext} from '@instinct-web/core';
+import {sessionContext, setURL, themeContext} from '@instinct-web/core';
 
 setURL('play/nitro', <PlayNitroPage />);
 
 export function PlayNitroPage() {
-  const {setStore} = useContext(themeContext);
+  const {user, setUser} = useContext(sessionContext);
+  const {showClient, setStore} = useContext(themeContext);
 
   useEffect(() => {
-    setStore({showClient: true});
-  }, []);
+    if (!showClient) setStore({showClient: true});
+    if (!user?.clientType) setUser({clientType: 'nitro'});
+  }, [showClient, user?.clientType]);
 
   return null;
 }

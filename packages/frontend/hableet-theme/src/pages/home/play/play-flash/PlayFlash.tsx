@@ -1,15 +1,16 @@
-import {Redirect} from 'wouter';
 import React, {useContext, useEffect} from 'react';
-import {setURL, themeContext} from '@instinct-web/core';
+import {sessionContext, setURL, themeContext} from '@instinct-web/core';
 
 setURL('play/flash', <PlayFlashPage />);
 
 export function PlayFlashPage() {
-  const {setStore} = useContext(themeContext);
+  const {user, setUser} = useContext(sessionContext);
+  const {showClient, setStore} = useContext(themeContext);
 
   useEffect(() => {
     setStore({showClient: true});
-  }, []);
+    setUser({clientType: 'flash'});
+  }, [showClient, user?.clientType]);
 
-  return <Redirect to="/me" />;
+  return null;
 }
