@@ -1,4 +1,4 @@
-import {AxiosResponse} from 'axios';
+import Axios, {AxiosResponse} from 'axios';
 import {Injectable} from '@nestjs/common';
 import {findRetrosAPI} from './findretros.api';
 import {FindRetrosVote} from './findretros.types';
@@ -15,9 +15,6 @@ export class FindRetrosService {
       throw new Error('FindRetros voting is disabled');
     }
 
-    const response: AxiosResponse<FindRetrosVote> = await findRetrosAPI.get(
-      `validate?user=${config.findRetrosUsername}&ip=${ipAddress}`
-    );
-    return response.data === FindRetrosVote.Voted;
+    return false;
   }
 }

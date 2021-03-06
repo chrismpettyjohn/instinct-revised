@@ -3,7 +3,7 @@ import {UserEntity} from '@instinct-api/database';
 import {FindRetrosService} from './findretros.service';
 import {GetSession, HasSession} from '@instinct-api/session';
 
-@Controller('findretros')
+@Controller('session/findretros')
 @HasSession()
 export class FindRetrosController {
   constructor(private readonly findRetrosService: FindRetrosService) {}

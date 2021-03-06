@@ -97,6 +97,13 @@ class SessionServiceImplementation implements SessionService {
     await backendAPI.post(`session/forgot-password?email=${email}`);
   }
 
+  async didVoteOnFindRetros() {
+    const response: AxiosResponse<boolean> = await backendAPI.get(
+      'session/findretros'
+    );
+    return response.data;
+  }
+
   async redeemForgotPasswordToken(
     token: string,
     newPassword: string,

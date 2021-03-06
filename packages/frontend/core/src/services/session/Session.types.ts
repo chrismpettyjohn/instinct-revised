@@ -37,6 +37,8 @@ export interface SessionService {
 
   generateForgotPasswordToken(email: string): Promise<void>;
 
+  didVoteOnFindRetros(): Promise<boolean>;
+
   redeemForgotPasswordToken(
     token: string,
     password: string,

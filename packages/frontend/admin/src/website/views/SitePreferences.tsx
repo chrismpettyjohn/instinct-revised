@@ -40,6 +40,15 @@ export function SitePreferences() {
         />
       </FormGroup>
       <FormGroup>
+        <h4>FindRetros Username</h4>
+        <Input
+          type="text"
+          name="findRetrosUsername"
+          onChange={setConfig}
+          value={config.findRetrosUsername}
+        />
+      </FormGroup>
+      <FormGroup>
         <h4>Maintenance</h4>
         <Toggle
           checked={config.maintenanceEnabled}
