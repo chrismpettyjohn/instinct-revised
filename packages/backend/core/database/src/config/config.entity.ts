@@ -81,4 +81,7 @@ export class ConfigEntity {
 
   @Column({name: 'maintenance_enabled', type: 'tinyint'})
   maintenanceEnabled!: 1 | 0;
+
+  @Column({name: 'findretros_username', nullable: true})
+  findRetrosUsername?: string;
 }

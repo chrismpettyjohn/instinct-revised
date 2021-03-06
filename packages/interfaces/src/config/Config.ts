@@ -21,6 +21,7 @@ export interface Config {
   websocketPort: string;
   nitroURL: string;
   maintenanceEnabled: boolean;
+  findRetrosUsername?: string;
 }
 
 export const defaultConfig: Config = {
@@ -46,4 +47,5 @@ export const defaultConfig: Config = {
   websocketPort: '',
   nitroURL: '',
   maintenanceEnabled: false,
+  findRetrosUsername: undefined,
 };

@@ -25,6 +25,7 @@ export function configWire(configEntity: ConfigEntity): Config {
     nitroURL: configEntity.nitroURL,
     rankBadgeURL: configEntity.rankBadgeURL,
     maintenanceEnabled: configEntity.maintenanceEnabled === 1,
+    findRetrosUsername: configEntity.findRetrosUsername,
   };
 }
 
