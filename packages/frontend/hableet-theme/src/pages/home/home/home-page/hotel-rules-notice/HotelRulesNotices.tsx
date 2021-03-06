@@ -18,13 +18,13 @@ export function HotelRulesNotice() {
             If you haven't please do so to stay up to date with the latest
             guidelines to follow when playing our game.
           </p>
+          <Link href="/rules">
+            <button className="btn btn-block btn-outline-info mt-4">
+              Read The Rules
+            </button>
+          </Link>
         </div>
       </div>
-      <Link href="/rules">
-        <button className="btn btn-block btn-outline-info mt-4">
-          Read The Rules
-        </button>
-      </Link>
     </Card>
   );
 }
