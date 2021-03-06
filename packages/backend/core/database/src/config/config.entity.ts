@@ -79,6 +79,9 @@ export class ConfigEntity {
   @Column({name: 'nitro_url'})
   nitroURL!: string;
 
+  @Column({name: 'discord_url'})
+  discordURL!: string;
+
   @Column({name: 'maintenance_enabled', type: 'tinyint'})
   maintenanceEnabled!: 1 | 0;
 

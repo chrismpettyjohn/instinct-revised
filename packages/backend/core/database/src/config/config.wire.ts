@@ -22,6 +22,7 @@ export function configWire(configEntity: ConfigEntity): Config {
     websocketEnabled: configEntity.websocketEnabled === 1,
     websocketIP: configEntity.websocketIP,
     websocketPort: configEntity.websocketPort,
+    discordURL: configEntity.discordURL,
     nitroURL: configEntity.nitroURL,
     rankBadgeURL: configEntity.rankBadgeURL,
     maintenanceEnabled: configEntity.maintenanceEnabled === 1,
@@ -36,5 +37,6 @@ export function configDTOWire(configEntity: ConfigEntity): ConfigDTO {
     sendGridAPIKey: configEntity.sendGridAPIKey,
     sendGridAPISender: configEntity.sendGridAPISender,
     sendGridForgotPasswordTemplate: configEntity.sendGridForgotPasswordTemplate,
+    discordURL: configEntity.discordURL,
   };
 }

@@ -23,6 +23,7 @@ export interface ConfigDTO {
   websocketIP: string;
   websocketPort: string;
   nitroURL: string;
+  discordURL: string;
   maintenanceEnabled: boolean;
   findRetrosUsername?: string;
 }
@@ -52,6 +53,7 @@ export const exampleConfigDTO: ConfigDTO = {
   websocketIP: '',
   websocketPort: '',
   nitroURL: '',
+  discordURL: '',
   maintenanceEnabled: false,
   findRetrosUsername: '',
 };

@@ -131,6 +131,10 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsOptional()
   nitroURL!: string;
 
+  @IsString()
+  @IsOptional()
+  discordURL!: string;
+
   @IsBoolean()
   @IsOptional()
   maintenanceEnabled!: boolean;

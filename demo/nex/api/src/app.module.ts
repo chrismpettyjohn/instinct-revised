@@ -13,6 +13,7 @@ import {ArticleModule} from '@instinct-api/articles';
 import {EmulatorModule} from '@instinct-api/emulator';
 import {DatabaseModule} from '@instinct-api/database';
 import {BetaCodeModule} from '@instinct-api/beta-codes';
+import {FindRetrosModule} from '@instinct-plugin/findretros-api';
 import {ManageUsersModule} from '@instinct-plugin/manage-users-api';
 import {UserGuestbookModule} from '@instinct-plugin/user-guestbook-api';
 import {ForgotPasswordModule} from '@instinct-plugin/forgot-password-api';
@@ -33,6 +34,7 @@ import {ForgotPasswordModule} from '@instinct-plugin/forgot-password-api';
     RankModule,
     SessionModule,
     UserModule,
+    FindRetrosModule,
     ManageUsersModule,
     UserGuestbookModule,
     ForgotPasswordModule,
