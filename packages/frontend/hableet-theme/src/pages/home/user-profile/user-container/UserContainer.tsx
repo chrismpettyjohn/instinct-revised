@@ -6,20 +6,25 @@ import {DetailsContainer} from './details-container';
 
 export function UserContainer({profile}: UserProfileWidgetProps) {
   return (
-    <aside id="profile" className="default-section">
-      <div className="profile-header">
+    <aside id="profile" className="default-section p-0">
+      <div
+        className="profile-header"
+        style={{background: "url('https://i.imgur.com/dmY7Sbg.png')"}}
+      >
         <div
-          className="header-content flex-container flex-vertical-center"
+          className="header-content flex-container flex-vertical-center p-4"
           style={{backgroundColor: '#47AEE'}}
         >
-          <Avatar
-            look={profile?.user.figure || ''}
-            direction={2}
-            headDirection={2}
-            size="l"
-          />
+          <div style={{overflow: 'hidden'}}>
+            <Avatar
+              look={profile?.user.figure || ''}
+              direction={2}
+              headDirection={2}
+              style={{marginLeft: -40}}
+              size="l"
+            />
+          </div>
           <div className="header-details">
-            <div className="header-title">{profile?.user.username}</div>
             <div className="header-description" />
             <div className="profile-icon">
               <img
@@ -50,14 +55,14 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
           </div>
         </div>
       </div>
-      <div className="profile-content">
+      <div className="profile-content p-4">
         <div className="details-container">
           <Icon type="hotel" />
           Currently&nbsp;
           {profile?.user.online ? (
-            <strong className="online">online</strong>
+            <strong className="text-success">online</strong>
           ) : (
-            <strong className="offline">offline</strong>
+            <strong className="text-danger">offline</strong>
           )}
         </div>
         <DetailsContainer icon="user" header="Registered Since">

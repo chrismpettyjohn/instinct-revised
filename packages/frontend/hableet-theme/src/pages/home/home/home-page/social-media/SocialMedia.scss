@@ -1,7 +1,7 @@
 .social-media-row {
   background: #11416D;
   border-radius: 4px;
-  color: #001726;
+  color: darken(white, 10%);
   display: block;
   padding: 10px;
   text-decoration: none;
@@ -9,7 +9,7 @@
   width: 100%;
 
   &:hover {
-    color: darken(#001726, 20%);
+    color: white;
     text-decoration: none;
   }
 

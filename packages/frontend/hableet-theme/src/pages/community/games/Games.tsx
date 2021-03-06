@@ -11,7 +11,7 @@ setURL('community/games', <Games />);
 
 export function Games() {
   return (
-    <UserLayout section="games_ranking">
+    <UserLayout>
       <div className="page-content">
         <div className="row">
           <div className="col-12">

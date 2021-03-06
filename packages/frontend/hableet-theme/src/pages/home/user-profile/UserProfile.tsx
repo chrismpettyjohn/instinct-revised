@@ -6,13 +6,8 @@ import {Friends} from './friends';
 import {UserContainer} from './user-container';
 import {UserLayout} from '../../../components/layout/user';
 import {FavoriteVideo} from './favorite-video/FavoriteVideo';
-import {Jumbotron} from '../../../components/jumbotron/Jumbotron';
-import {
-  Column,
-  Loading,
-  setURL,
-  useFetchUserByUsername,
-} from '@instinct-web/core';
+import {Loading, setURL, useFetchUserByUsername} from '@instinct-web/core';
+import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 
 setURL('profile/:username', <UserProfile />);
 
@@ -21,18 +16,36 @@ export function UserProfile() {
   const profile = useFetchUserByUsername(params!.username);
 
   return (
-    <UserLayout section="profile">
+    <UserLayout>
       <Loading isLoading={profile === undefined}>
-        <Jumbotron title={`The profile of ${profile?.user.username}`} />
         <div className="page-content">
-          <Column side="right">
-            <UserContainer profile={profile} />
-            <FavoriteVideo profile={profile} />
-          </Column>
-          <Column side="left">
-            <Friends profile={profile} />
-            <Rooms profile={profile} />
-          </Column>
+          <div className="row">
+            <div className="col-12">
+              <MiniJumbotron>
+                <div className="row">
+                  <div className="col">
+                    <h1>{profile?.user?.username}'s Profile</h1>
+                    <p>{profile?.user?.motto}</p>
+                  </div>
+                  <div className="col text-right">
+                    {profile?.user?.rank?.permissions?.websiteShowStaff && (
+                      <img src="/img/staff.gif" height={100} />
+                    )}
+                  </div>
+                </div>
+              </MiniJumbotron>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-4">
+              <UserContainer profile={profile} />
+              <FavoriteVideo profile={profile} />
+            </div>
+            <div className="col">
+              <Friends profile={profile} />
+              <Rooms profile={profile} />
+            </div>
+          </div>
         </div>
       </Loading>
     </UserLayout>

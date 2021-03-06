@@ -12,7 +12,7 @@ export function Staff() {
   const staff = useFetchStaffTeam();
 
   return (
-    <UserLayout section="community_team">
+    <UserLayout>
       <div className="page-content">
         <div className="row">
           <div className="col-12">

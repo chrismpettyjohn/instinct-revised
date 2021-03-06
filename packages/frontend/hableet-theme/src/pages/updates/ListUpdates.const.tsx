@@ -13,6 +13,7 @@ export const serverUpdates: ServerUpdate[] = [
           <li>Revamped Home Page</li>
           <li>Revamped Staff Page</li>
           <li>Revamped High Scores Page</li>
+          <li>Improved User Profiles</li>
           <li>Added Hotel Rules Page</li>
         </ul>
       </>

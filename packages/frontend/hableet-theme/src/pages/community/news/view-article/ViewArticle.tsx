@@ -18,7 +18,7 @@ export function ViewArticle() {
   const article = useFetchArticleByID(params!.articleID, refresh);
 
   return (
-    <UserLayout section="article">
+    <UserLayout>
       <Loading isLoading={false}>
         <div className="page-content">
           <div className="row">
