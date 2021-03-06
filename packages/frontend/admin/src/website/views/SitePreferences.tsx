@@ -40,6 +40,15 @@ export function SitePreferences() {
         />
       </FormGroup>
       <FormGroup>
+        <h4>Twitter URL</h4>
+        <Input
+          type="text"
+          name="twitterURL"
+          onChange={setConfig}
+          value={config.twitterURL}
+        />
+      </FormGroup>
+      <FormGroup>
         <h4>FindRetros Username</h4>
         <Input
           type="text"
