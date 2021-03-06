@@ -4,6 +4,7 @@ import {Link} from 'wouter';
 import {Card} from '../../../../components/card/Card';
 import {Avatar, Icon, userService} from '@instinct-web/core';
 import {GamesCardState, defaultGamesCardState} from '../Games.types';
+import {TopUserContainer} from '../components/top-user-container/TopUserContainer';
 
 export function TopCredits() {
   const [state, setState] = useState<GamesCardState>(defaultGamesCardState);
@@ -33,23 +34,11 @@ export function TopCredits() {
   return (
     <Card header={getHeader()}>
       {state.users.map(user => (
-        <Link
-          className="top-user-container"
-          key={user.id}
-          href={`/profile/${user.username}`}
-        >
-          <div className="row">
-            <div className="col-4">
-              <Avatar look={user.figure} headOnly />
-            </div>
-            <div className="col-8 text-right">
-              <h3>{user.username}</h3>
-              <h5 style={{marginTop: -10}}>
-                <b>{user.credits}</b> Credits
-              </h5>
-            </div>
-          </div>
-        </Link>
+        <TopUserContainer
+          key={`top_credits_${user.id!}`}
+          user={user}
+          value="credits"
+        />
       ))}
     </Card>
   );

@@ -1,3 +1,4 @@
+import './Games.scss';
 import React from 'react';
 import {TopPixels} from './top-pixels';
 import {TopPoints} from './top-points';
