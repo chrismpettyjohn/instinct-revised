@@ -1,3 +1,4 @@
+import './Staff.scss';
 import React from 'react';
 import {Card} from '../../../components/card/Card';
 import {UserLayout} from '../../../components/layout/user';
@@ -38,10 +39,14 @@ export function Staff() {
         <div className="row">
           {staff !== undefined ? (
             staff!.map(rank => (
-              <div className="col-6" key={rank.id} style={{marginBottom: 20}}>
-                <Card key={rank.id} header={rank.name}>
+              <div
+                className="col-6 d-flex align-items-stretch"
+                key={rank.id}
+                style={{marginBottom: 20}}
+              >
+                <Card className="flex-fill" key={rank.id} header={rank.name}>
                   {rank.users!.map(user => (
-                    <div key={user.id} className="mt-4">
+                    <div key={user.id} className="staff-user-container">
                       <UserContainer user={user} />
                     </div>
                   ))}
