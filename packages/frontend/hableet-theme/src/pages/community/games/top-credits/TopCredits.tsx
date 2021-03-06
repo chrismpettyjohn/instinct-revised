@@ -24,9 +24,11 @@ export function TopCredits() {
     return (
       <div className="row">
         <div className="col-6">
-          <Icon type="coins" />
+          <Icon style={{color: '#E2AE1C'}} type="coins" />
         </div>
-        <div className="col-6 text-right">Credits</div>
+        <div className="col-6 text-right" style={{color: '#E2AE1C'}}>
+          Credits
+        </div>
       </div>
     );
   }

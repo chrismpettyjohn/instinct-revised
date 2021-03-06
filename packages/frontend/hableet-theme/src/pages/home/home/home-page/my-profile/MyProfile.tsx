@@ -27,7 +27,9 @@ export function MyProfile() {
                 'url(https://i.imgur.com/SPiYsru.png) no-repeat center center',
             }}
           />
-          <div style={{color: '#E2AE1D'}}>{user?.credits}</div>
+          <div style={{color: '#E2AE1D'}}>
+            {Number(user?.credits).toLocaleString()}
+          </div>
           <div
             className="icons"
             style={{
@@ -35,7 +37,9 @@ export function MyProfile() {
                 'url(https://i.imgur.com/hoTMPxK.png) no-repeat center center',
             }}
           />
-          <div style={{color: '#BA7CC2'}}>{user?.pixels}</div>
+          <div style={{color: '#BA7CC2'}}>
+            {Number(user?.pixels).toLocaleString()}
+          </div>
           <div
             className="icons"
             style={{
@@ -43,7 +47,9 @@ export function MyProfile() {
                 'url(https://i.imgur.com/wTTa30p.png) no-repeat center center',
             }}
           />
-          <div style={{color: '#BA7CC2'}}>{user?.points}</div>
+          <div style={{color: '#92C3F6'}}>
+            {Number(user?.points).toLocaleString()}
+          </div>
         </div>
       </div>
     </article>

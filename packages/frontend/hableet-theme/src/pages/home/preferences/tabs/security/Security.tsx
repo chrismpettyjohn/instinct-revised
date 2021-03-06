@@ -104,16 +104,12 @@ export function SecurityPreferences() {
           numbers and symbols for strong password protection.
         </p>
       </div>
-      <div className="submit-button">
-        <button
-          className="rounded-button grey"
-          disabled={isDisabled}
-          type="submit"
-        >
+      <div className="mt-4 text-right">
+        <button className="btn btn-primary" disabled={isDisabled} type="submit">
           {state.showSpinner ? (
             <Icon className="fa-spin" type="spinner" />
           ) : (
-            'Save'
+            'Save Changes'
           )}
         </button>
       </div>

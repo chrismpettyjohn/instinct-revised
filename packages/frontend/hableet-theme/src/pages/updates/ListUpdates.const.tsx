@@ -10,6 +10,7 @@ export const serverUpdates: ServerUpdate[] = [
         <h5>Website Improvements</h5>
         <ul>
           <li>FindRetros Voting implemented</li>
+          <li>Revamped Home Page</li>
           <li>Revamped Staff Page</li>
           <li>Revamped High Scores Page</li>
           <li>Added Hotel Rules Page</li>

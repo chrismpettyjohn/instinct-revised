@@ -10,7 +10,7 @@ setURL('preferences', <PreferencesPage />);
 
 export function PreferencesPage() {
   return (
-    <UserLayout section="settings_">
+    <UserLayout>
       <Loading isLoading={false}>
         <div className="page-content">
           <div className="row">

@@ -3,7 +3,11 @@ import {Link} from 'wouter';
 import {Avatar} from '@instinct-web/core';
 import {TopUserContainerProps} from './TopUserContainer.types';
 
-export function TopUserContainer({user, value}: TopUserContainerProps) {
+export function TopUserContainer({
+  user,
+  value,
+  altText,
+}: TopUserContainerProps) {
   return (
     <Link key={user.id} href={`/profile/${user.username}`}>
       <div className="row top-user-container">
@@ -16,7 +20,7 @@ export function TopUserContainer({user, value}: TopUserContainerProps) {
             <b className="text-primary">
               {Number(user[value]).toLocaleString()}
             </b>{' '}
-            {value}
+            {altText ?? value}
           </h5>
         </div>
       </div>

@@ -23,9 +23,11 @@ export function TopPoints() {
     return (
       <div className="row">
         <div className="col-6">
-          <Icon type="gamepad" />
+          <Icon style={{color: '#92C3F6'}} type="diamond" />
         </div>
-        <div className="col-6 text-right">Points</div>
+        <div className="col-6 text-right" style={{color: '#92C3F6'}}>
+          Diamonds
+        </div>
       </div>
     );
   }
@@ -37,6 +39,7 @@ export function TopPoints() {
           key={`top_points_${user.id!}`}
           user={user}
           value="points"
+          altText="diamonds"
         />
       ))}
     </Card>

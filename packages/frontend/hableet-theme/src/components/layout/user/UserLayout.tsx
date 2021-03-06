@@ -6,11 +6,7 @@ import {UserLayoutProps} from './UserLayout.types';
 import React, {useContext, useEffect} from 'react';
 import {sessionContext, UserGuard} from '@instinct-web/core';
 
-export function UserLayout({
-  children,
-  section = 'home',
-  style,
-}: UserLayoutProps) {
+export function UserLayout({children, style}: UserLayoutProps) {
   const [location, setLocation] = useLocation();
   const {user} = useContext(sessionContext);
 
@@ -30,7 +26,7 @@ export function UserLayout({
         <Header />
         <NavBar />
         <main>
-          <section className="page-container" data-page={section} style={style}>
+          <section className="page-container" style={style}>
             {children}
           </section>
         </main>

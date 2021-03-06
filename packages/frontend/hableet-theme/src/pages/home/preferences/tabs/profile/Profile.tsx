@@ -77,12 +77,12 @@ export function ProfilePreferences() {
         </div>
       </div>
 
-      <div className="submit-button">
-        <button className="rounded-button grey" type="submit">
+      <div className="mt-4 text-right">
+        <button className="btn btn-primary" type="submit">
           {state.showSpinner ? (
             <Icon className="fa-spin" type="spinner" />
           ) : (
-            'Save'
+            'Save Changes'
           )}
         </button>
       </div>

@@ -26,5 +26,9 @@ export function NavTabs({tabs}: NavTabsProps) {
     );
   }
 
-  return <Card header={getHeader()}>{tabs[active].children}</Card>;
+  return (
+    <Card header={getHeader()}>
+      <div className="p-4">{tabs[active].children}</div>
+    </Card>
+  );
 }
