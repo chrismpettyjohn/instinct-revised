@@ -82,6 +82,9 @@ export class ConfigEntity {
   @Column({name: 'discord_url'})
   discordURL!: string;
 
+  @Column({name: 'twitter_url'})
+  twitterURL!: string;
+
   @Column({name: 'maintenance_enabled', type: 'tinyint'})
   maintenanceEnabled!: 1 | 0;
 

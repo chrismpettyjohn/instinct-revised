@@ -23,6 +23,7 @@ export function configWire(configEntity: ConfigEntity): Config {
     websocketIP: configEntity.websocketIP,
     websocketPort: configEntity.websocketPort,
     discordURL: configEntity.discordURL,
+    twitterURL: configEntity.twitterURL,
     nitroURL: configEntity.nitroURL,
     rankBadgeURL: configEntity.rankBadgeURL,
     maintenanceEnabled: configEntity.maintenanceEnabled === 1,

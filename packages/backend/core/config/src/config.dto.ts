@@ -135,6 +135,10 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsOptional()
   discordURL!: string;
 
+  @IsString()
+  @IsOptional()
+  twitterURL!: string;
+
   @IsBoolean()
   @IsOptional()
   maintenanceEnabled!: boolean;

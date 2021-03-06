@@ -9,6 +9,9 @@ export function SocialMedia() {
       <a href={config.discordURL} target="_blank">
         <Icon className="fa-3x" family="fab" type="discord" />
       </a>
+      <a className="ml-4" href={config.twitterURL} target="_blank">
+        <Icon className="fa-3x" family="fab" type="twitter" />
+      </a>
     </Card>
   );
 }
