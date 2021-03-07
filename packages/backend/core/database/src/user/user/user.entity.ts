@@ -105,6 +105,9 @@ export class UserEntity {
   @Column({name: 'client_type'})
   clientType!: ClientType;
 
+  @Column({name: 'stripe_customer_id', nullable: true})
+  stripeCustomerID?: string;
+
   @OneToMany(() => PhotoEntity, photo => photo.user)
   photos?: PhotoEntity[];
 

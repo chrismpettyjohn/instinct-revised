@@ -34,6 +34,8 @@ import {ForumPostRepository} from './forum/forum-post.repository';
 import {ForumReplyRepository} from './forum/forum-reply.repository';
 import {ForumReactionRepository} from './forum/forum-reaction.repository';
 import {ForumSectionRepository} from './forum/forum-section.repository';
+import {ShopPackageEntity} from './web-store/package/shop-package.entity';
+import {ShopPackageRepository} from './web-store/package/shop-package.repository';
 
 export const databaseEntities: Function[] = [
   RankEntity,
@@ -56,6 +58,7 @@ export const databaseEntities: Function[] = [
   ArticleCategoryEntity,
   EmulatorSettingsEntity,
   UserForgotPasswordEntity,
+  ShopPackageEntity,
 ];
 
 export const databaseRepositories: Provider[] = [
@@ -75,6 +78,7 @@ export const databaseRepositories: Provider[] = [
   EmulatorTextsRepository,
   UserGuestbookRepository,
   ArticleCommentRepository,
+  ShopPackageRepository,
   ArticleCategoryRepository,
   EmulatorSettingsRepository,
   UserForgotPasswordRepository,

@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import {Card} from '../../components/card/Card';
-import {UserLayout} from '../../components/layout/user';
+import {Card} from '../../../components/card/Card';
+import {UserLayout} from '../../../components/layout/user';
 import {configContext, setURL} from '@instinct-web/core';
-import {MiniJumbotron} from '../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 import {ShopPackage} from './shop-package/ShopPackage';
 
 setURL('shop', <ShopHome />);
@@ -74,7 +74,7 @@ export function ShopHome() {
             </Card>
             <Card header="Security Notice">
               <p>
-                All transactions are securely process through Stripe&trade;.
+                All transactions are securely processed through Stripe&trade;.
               </p>
               <p>
                 We do not have access to your card details at any point during

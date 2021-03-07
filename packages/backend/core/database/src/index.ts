@@ -8,6 +8,7 @@ export * from './photo';
 export * from './rank';
 export * from './room';
 export * from './user';
+export * from './web-store';
 export * from './base.repository';
 export * from './base.repository.types';
 export * from './database.meta';

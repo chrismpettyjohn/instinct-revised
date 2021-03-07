@@ -24,10 +24,14 @@ export function DeleteSectionModalButton({
 
   return (
     <PermissionGuard permission="websiteManageForums">
-      <button className="btn btn-outline-danger" onClick={onToggle}>
+      <span
+        className="text-white"
+        onClick={onToggle}
+        style={{cursor: 'pointer'}}
+      >
         <Icon type={buttonIcon} />
         {buttonText}
-      </button>
+      </span>
     </PermissionGuard>
   );
 }

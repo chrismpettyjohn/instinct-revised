@@ -11,6 +11,7 @@ import {sessionContext} from '../../../context/session';
 import {sessionService} from '../../../services/session';
 import {RenderError} from '../../generic/error/RenderError';
 import React, {useContext, useEffect, useState} from 'react';
+import {StripeProvider} from '../stripe-provider/StripeProvider';
 import {ServerMaintenanceGuard} from '../../guard/server-maintenance';
 
 export function Bootstrap() {
@@ -47,8 +48,12 @@ export function Bootstrap() {
         <ToastContainer />
         <ServerMaintenanceGuard>
           <BannedGuard>
-            <Router />
-            <DataPolling />
+            <StripeProvider>
+              <>
+                <Router />
+                <DataPolling />
+              </>
+            </StripeProvider>
           </BannedGuard>
         </ServerMaintenanceGuard>
       </SkeletonTheme>
