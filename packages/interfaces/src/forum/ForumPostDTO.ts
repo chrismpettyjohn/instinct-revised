@@ -4,3 +4,8 @@ export interface NewForumPostDTO {
 }
 
 export type UpdateForumPostDTO = Partial<NewForumPostDTO>;
+
+export const exampleNewForumPostDTO: NewForumPostDTO = {
+  title: '',
+  content: '',
+};

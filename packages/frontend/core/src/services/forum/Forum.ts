@@ -41,7 +41,7 @@ class ForumServiceImplementation implements ForumService {
   }
   async createPost(sectionID: number, newPostDTO: NewForumPostDTO) {
     const newSection: AxiosResponse<ForumPost> = await backendAPI.post(
-      `forum/sections/${sectionID}`,
+      `forum/sections/${sectionID}/posts`,
       newPostDTO
     );
     return newSection.data;
