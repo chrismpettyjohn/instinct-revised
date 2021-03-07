@@ -19,6 +19,7 @@
       "@instinct-api/config":  ["packages/backend/core/config/src"],
       "@instinct-api/common":  ["packages/backend/core/common/src"],
       "@instinct-api/google":  ["packages/backend/core/google/src"],
+      "@instinct-api/forum":  ["packages/backend/core/forum/src"],
       "@instinct-api/articles":  ["packages/backend/core/article/src"],
       "@instinct-api/validator":  ["packages/backend/core/validator/src"],
       "@instinct-api/session":  ["packages/backend/core/session/src"],

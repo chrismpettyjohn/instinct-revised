@@ -33,6 +33,7 @@ import {ForumReactionEntity} from './forum/forum-reaction.entity';
 import {ForumPostRepository} from './forum/forum-post.repository';
 import {ForumReplyRepository} from './forum/forum-reply.repository';
 import {ForumReactionRepository} from './forum/forum-reaction.repository';
+import {ForumSectionRepository} from './forum/forum-section.repository';
 
 export const databaseEntities: Function[] = [
   RankEntity,
@@ -64,6 +65,7 @@ export const databaseRepositories: Provider[] = [
   GroupRepository,
   PhotoRepository,
   ForumPostRepository,
+  ForumSectionRepository,
   ForumReactionRepository,
   ForumReplyRepository,
   ConfigRepository,

@@ -18,6 +18,9 @@ export class ForumSectionEntity {
   @Column()
   title!: string;
 
+  @Column()
+  icon!: string;
+
   @Column({type: 'text'})
   description!: string;
 

@@ -10,5 +10,6 @@ export function forumSectionWire(entity: ForumSectionEntity): ForumSection {
     childSections: entity.childSections!.map(_ => forumSectionWire(_)),
     title: entity.title,
     description: entity.description,
+    icon: entity.icon,
   };
 }

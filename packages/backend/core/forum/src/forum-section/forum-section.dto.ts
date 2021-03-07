@@ -12,6 +12,10 @@ export class NewForumSectionDTO implements NewForumSectionDTOI {
   @IsString()
   @IsNotEmpty()
   description!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  icon!: string;
 }
 
 export class UpdateForumSectionDTO implements UpdateForumSectionDTOI {
@@ -24,4 +28,9 @@ export class UpdateForumSectionDTO implements UpdateForumSectionDTOI {
   @IsNotEmpty()
   @IsOptional()
   description?: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @IsOptional()
+  icon!: string;
 }

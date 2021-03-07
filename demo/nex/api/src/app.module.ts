@@ -17,6 +17,7 @@ import {FindRetrosModule} from '@instinct-plugin/findretros-api';
 import {ManageUsersModule} from '@instinct-plugin/manage-users-api';
 import {UserGuestbookModule} from '@instinct-plugin/user-guestbook-api';
 import {ForgotPasswordModule} from '@instinct-plugin/forgot-password-api';
+import {ForumModule} from '../../../../packages/backend/core/forum/src/forum.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import {ForgotPasswordModule} from '@instinct-plugin/forgot-password-api';
     BetaCodeModule,
     CommonModule,
     ConfigModule,
+    ForumModule,
     DatabaseModule,
     EmailModule,
     EmulatorModule,
