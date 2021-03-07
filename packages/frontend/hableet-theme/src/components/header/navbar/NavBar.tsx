@@ -23,8 +23,6 @@ export function NavBar() {
             <NavBarLink to="/community/staff">Staff Team</NavBarLink>
             <NavBarLink to="/community/games">High Scores</NavBarLink>
             <NavBarLink to="/updates">Updates</NavBarLink>
-            <NavBarLink to="/forum">Forum</NavBarLink>
-            <NavBarLink to="/shop">Shop</NavBarLink>
             <li className="navigation-item navigation-right-side-item has-items">
               <UserDropdown />
             </li>
@@ -34,3 +32,8 @@ export function NavBar() {
     </nav>
   );
 }
+
+/*
+            <NavBarLink to="/forum">Forum</NavBarLink>
+            <NavBarLink to="/shop">Shop</NavBarLink>
+ */
