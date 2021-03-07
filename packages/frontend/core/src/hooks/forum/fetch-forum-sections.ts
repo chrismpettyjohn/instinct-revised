@@ -7,3 +7,9 @@ export const useFetchForumSections = (section = -1, refresh = 0) =>
     () => forumService.getSections(section),
     refresh
   );
+
+export const useFetchForumSectionByID = (sectionID: number, refresh = 0) =>
+  createFetchHook<ForumSection>(
+    () => forumService.getSectionByID(sectionID),
+    sectionID + refresh
+  );

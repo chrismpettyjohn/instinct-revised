@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'wouter';
 import './ForumSection.scss';
 import {Avatar} from '@instinct-web/core';
 import {ForumSectionProps} from './ForumSection.types';
@@ -8,12 +9,16 @@ export function ForumSection({section, onChange}: ForumSectionProps) {
   return (
     <div className="forum-section">
       <div className="d-flex w-100">
-        <i
-          className={`fa fa-${section.icon} mr-4 mt-2`}
-          style={{fontSize: 24}}
-        />
+        <Link to={`/forum/sections/${section.id}`}>
+          <i
+            className={`fa fa-${section.icon} mr-4 mt-2`}
+            style={{cursor: 'pointer', fontSize: 24}}
+          />
+        </Link>
         <div>
-          <h4>{section.title}</h4>
+          <Link to={`/forum/sections/${section.id}`}>
+            <h4 style={{cursor: 'pointer'}}>{section.title}</h4>
+          </Link>
           <p>{section.description}</p>
         </div>
         <div className="latest-post">

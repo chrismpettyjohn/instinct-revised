@@ -28,7 +28,14 @@ export class ForumPostController {
   constructor(private readonly forumPostRepo: ForumPostRepository) {}
 
   @Get()
-  async getPostsForSection() {}
+  async getPostsForSection(
+    @Param('sectionID', ForumSectionPipe) forumSection: ForumSectionEntity
+  ): Promise<ForumPost[]> {
+    const forumPosts = await this.forumPostRepo.find({
+      sectionID: forumSection.id!,
+    });
+    return forumPosts.map(_ => forumPostWire(_));
+  }
 
   @Post()
   async createPost(
