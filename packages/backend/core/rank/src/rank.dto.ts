@@ -51,4 +51,7 @@ export class RankDTOClass implements RankDTO {
 
   @IsBoolean()
   websiteManageComments!: boolean;
+
+  @IsBoolean()
+  websiteManageForums!: boolean;
 }

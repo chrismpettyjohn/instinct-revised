@@ -1,10 +1,9 @@
+import React from 'react';
 import {Link} from 'wouter';
-import React, {useContext} from 'react';
+import {Avatar} from '@instinct-web/core';
 import {CommentAuthorProps} from './CommentAuthor.types';
-import {Avatar, configContext} from '@instinct-web/core';
 
 export function CommentAuthor({children, user}: CommentAuthorProps) {
-  const {config} = useContext(configContext);
   return (
     <div className="article-author mt-3 w-100">
       <div className="d-flex">
@@ -25,9 +24,11 @@ export function CommentAuthor({children, user}: CommentAuthorProps) {
           </h4>
           <div>{children}</div>
         </div>
-        <div style={{width: 50}}>
-          <img src={`${config.rankBadgeURL}/${user.rank!.badge}.gif`} />
-        </div>
+        {user.rank!.permissions.websiteShowStaff && (
+          <div style={{width: 50}}>
+            <img src="/img/staff.gif" />
+          </div>
+        )}
       </div>
     </div>
   );

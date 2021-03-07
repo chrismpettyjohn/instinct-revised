@@ -28,7 +28,7 @@ export function Staff() {
                 </div>
                 <div className="col-4 text-right">
                   <img
-                    src="https://www.habborator.org/badges/badges/ADM.gif"
+                    src="/img/staff.gif"
                     style={{marginTop: 10, height: 80}}
                   />
                 </div>

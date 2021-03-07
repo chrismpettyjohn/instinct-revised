@@ -3,6 +3,7 @@ export * from './ban';
 export * from './beta-codes';
 export * from './config';
 export * from './emulator';
+export * from './forum';
 export * from './group';
 export * from './guestbook';
 export * from './rank';

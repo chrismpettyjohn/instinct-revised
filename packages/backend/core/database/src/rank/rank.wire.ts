@@ -50,6 +50,9 @@ export function rankWire(rankEntity: RankEntity): Rank {
       websiteManageComments: permissionStatusToBoolean(
         rankEntity.websiteManageComments
       ),
+      websiteManageForums: permissionStatusToBoolean(
+        rankEntity.websiteManageForums
+      ),
     },
   };
 }
@@ -81,5 +84,6 @@ export function rankDataTransferObjectToEntity(rankDTO: RankDTO): RankEntity {
     websiteManageComments: booleanToPermissionStatus(
       rankDTO.websiteManageComments
     ),
+    websiteManageForums: booleanToPermissionStatus(rankDTO.websiteManageForums),
   };
 }
