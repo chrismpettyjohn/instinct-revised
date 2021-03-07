@@ -3,6 +3,18 @@ import {ServerUpdate} from './ListUpdates.types';
 
 export const serverUpdates: ServerUpdate[] = [
   {
+    date: 'Mar 07',
+    icon: 'fire',
+    content: (
+      <>
+        <h5>Nitro Updates</h5>
+        <ul>
+          <li>Updated to latest Nitro version for improved experience</li>
+        </ul>
+      </>
+    ),
+  },
+  {
     date: 'Mar 04',
     icon: 'sparkles',
     content: (
