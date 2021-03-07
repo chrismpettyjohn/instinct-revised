@@ -142,4 +142,12 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsBoolean()
   @IsOptional()
   maintenanceEnabled!: boolean;
+
+  @IsString()
+  @IsOptional()
+  stripePublicKey!: string;
+
+  @IsString()
+  @IsOptional()
+  stripeSecretKey!: string;
 }

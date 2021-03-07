@@ -27,6 +27,8 @@ export interface ConfigDTO {
   twitterURL: string;
   maintenanceEnabled: boolean;
   findRetrosUsername?: string;
+  stripePublicKey: string;
+  stripeSecretKey: string;
 }
 
 export const exampleConfigDTO: ConfigDTO = {
@@ -58,4 +60,6 @@ export const exampleConfigDTO: ConfigDTO = {
   twitterURL: '',
   maintenanceEnabled: false,
   findRetrosUsername: '',
+  stripePublicKey: '',
+  stripeSecretKey: '',
 };

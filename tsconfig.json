@@ -26,6 +26,7 @@
       "@instinct-api/emulator":  ["packages/backend/core/emulator/src"],
       "@instinct-api/database":  ["packages/backend/core/database/src"],
       "@instinct-api/beta-codes":  ["packages/backend/core/beta-code/src"],
+      "@instinct-plugin/web-store-api":  ["packages/backend/plugin/web-store/src"],
       "@instinct-plugin/findretros-api":  ["packages/backend/plugin/findretros/src"],
       "@instinct-plugin/manage-users-api":  ["packages/backend/plugin/manage-users/src"],
       "@instinct-plugin/user-guestbook-api":  ["packages/backend/plugin/user-guestbook/src"],

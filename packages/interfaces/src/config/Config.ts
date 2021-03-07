@@ -24,6 +24,7 @@ export interface Config {
   twitterURL: string;
   maintenanceEnabled: boolean;
   findRetrosUsername?: string;
+  stripePublicKey: string;
 }
 
 export const defaultConfig: Config = {
@@ -52,4 +53,5 @@ export const defaultConfig: Config = {
   twitterURL: '',
   maintenanceEnabled: false,
   findRetrosUsername: undefined,
+  stripePublicKey: '',
 };

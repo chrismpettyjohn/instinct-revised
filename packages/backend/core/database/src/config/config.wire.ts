@@ -28,6 +28,7 @@ export function configWire(configEntity: ConfigEntity): Config {
     rankBadgeURL: configEntity.rankBadgeURL,
     maintenanceEnabled: configEntity.maintenanceEnabled === 1,
     findRetrosUsername: configEntity.findRetrosUsername,
+    stripePublicKey: configEntity.stripePublicKey,
   };
 }
 
@@ -39,5 +40,6 @@ export function configDTOWire(configEntity: ConfigEntity): ConfigDTO {
     sendGridAPISender: configEntity.sendGridAPISender,
     sendGridForgotPasswordTemplate: configEntity.sendGridForgotPasswordTemplate,
     discordURL: configEntity.discordURL,
+    stripeSecretKey: configEntity.stripeSecretKey,
   };
 }

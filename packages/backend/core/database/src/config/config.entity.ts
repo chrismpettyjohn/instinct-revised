@@ -90,4 +90,10 @@ export class ConfigEntity {
 
   @Column({name: 'findretros_username', nullable: true})
   findRetrosUsername?: string;
+
+  @Column({name: 'stripe_public_key'})
+  stripePublicKey!: string;
+
+  @Column({name: 'stripe_secret_key'})
+  stripeSecretKey!: string;
 }
