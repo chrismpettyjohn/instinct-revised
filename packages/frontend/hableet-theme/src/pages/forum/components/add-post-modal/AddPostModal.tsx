@@ -2,8 +2,8 @@ import {useLocation} from 'wouter';
 import React, {useContext} from 'react';
 import {forumService, Icon} from '@instinct-web/core';
 import {NewForumPostDTO} from '@instinct-prj/interface';
-import {sectionContext} from '../../section-context/SectionContext';
-import {PostWizard} from '../../../components/post-wizard/PostWizard';
+import {sectionContext} from '../../forum-section/section-context/SectionContext';
+import {PostWizard} from '../post-wizard/PostWizard';
 
 export function AddPostModal() {
   const location = useLocation();

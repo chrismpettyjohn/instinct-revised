@@ -3,9 +3,9 @@ import {Link, useRoute} from 'wouter';
 import {SectionPosts} from './section-posts/SectionPosts';
 import {UserLayout} from '../../../components/layout/user';
 import {SectionHeader} from './section-header/SectionHeader';
+import {SectionChildren} from './section-children/SectionChildren';
 import {SectionContextProvider} from './section-context/SectionContextProvider';
 import {Icon, setURL, useFetchForumSectionByID} from '@instinct-web/core';
-import {SectionChildren} from './section-children/SectionChildren';
 
 setURL('forum/sections/:sectionID', <ForumSection />);
 
@@ -33,11 +33,13 @@ export function ForumSection() {
             </div>
           </div>
           <div className="row">
-            <div className="col d-flex align-items-stretch">
-              <SectionPosts />
-            </div>
-            <div className="col d-flex align-items-stretch">
+            <div className="col-12">
               <SectionChildren />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <SectionPosts />
             </div>
           </div>
         </div>
