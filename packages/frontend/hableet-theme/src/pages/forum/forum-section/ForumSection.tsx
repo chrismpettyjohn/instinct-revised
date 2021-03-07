@@ -1,16 +1,11 @@
 import React from 'react';
 import {Link, useRoute} from 'wouter';
-import {SectionTools} from './section-tools/SectionTools';
 import {SectionPosts} from './section-posts/SectionPosts';
 import {UserLayout} from '../../../components/layout/user';
 import {SectionHeader} from './section-header/SectionHeader';
 import {SectionContextProvider} from './section-context/SectionContextProvider';
-import {
-  Column,
-  Icon,
-  setURL,
-  useFetchForumSectionByID,
-} from '@instinct-web/core';
+import {Icon, setURL, useFetchForumSectionByID} from '@instinct-web/core';
+import {SectionChildren} from './section-children/SectionChildren';
 
 setURL('forum/sections/:sectionID', <ForumSection />);
 
@@ -26,19 +21,25 @@ export function ForumSection() {
     <UserLayout>
       <SectionContextProvider defaultSection={forumSection}>
         <div className="page-content">
-          <Link to="/forum">
-            <span style={{color: 'white', cursor: 'pointer', fontSize: 20}}>
-              <Icon type="caret-left" />
-              Go Back
-            </span>
-          </Link>
-          <SectionHeader />
-          <Column side="left">
-            <SectionPosts />
-          </Column>
-          <Column side="right">
-            <SectionTools />
-          </Column>
+          <div className="row">
+            <div className="col-12">
+              <Link to="/forum">
+                <span style={{color: 'white', cursor: 'pointer', fontSize: 20}}>
+                  <Icon type="caret-left" />
+                  Go Back
+                </span>
+              </Link>
+              <SectionHeader />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col d-flex align-items-stretch">
+              <SectionPosts />
+            </div>
+            <div className="col d-flex align-items-stretch">
+              <SectionChildren />
+            </div>
+          </div>
         </div>
       </SectionContextProvider>
     </UserLayout>

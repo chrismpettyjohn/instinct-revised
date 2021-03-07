@@ -8,8 +8,9 @@ export function SectionPosts() {
   const posts = useFetchForumPosts(id);
 
   return (
-    <Card header="Section Posts">
+    <Card className="w-100" header="Section Posts">
       {posts === undefined && <Icon type="spinner fa-spin" />}
+      {posts?.length === 0 && <p>There are no posts</p>}
       {posts?.map(_ => (
         <div key={`post_${_.id}`}>{_.title}</div>
       ))}

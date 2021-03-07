@@ -1,8 +1,7 @@
 import {User} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
-import {Link} from 'wouter';
+import {Icon, userService} from '@instinct-web/core';
 import {Card} from '../../../../components/card/Card';
-import {Avatar, Icon, userService} from '@instinct-web/core';
 import {GamesCardState, defaultGamesCardState} from '../Games.types';
 import {TopUserContainer} from '../components/top-user-container/TopUserContainer';
 
