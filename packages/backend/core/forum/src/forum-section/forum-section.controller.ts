@@ -33,10 +33,23 @@ export class ForumSectionController {
   @HasScope('websiteManageForums')
   async createSection(
     @GetSession() user: UserEntity,
-    @Param('sectionID', ForumSectionPipe) forumSection: ForumSectionEntity,
     @Body() forumSectionDTO: NewForumSectionDTO
   ): Promise<ForumSection> {
     const newSection = await this.forumSectionRepo.create(forumSectionDTO);
+    return forumSectionWire(newSection);
+  }
+
+  @Post(':sectionID')
+  @HasScope('websiteManageForums')
+  async createNestedSection(
+    @GetSession() user: UserEntity,
+    @Param('sectionID', ForumSectionPipe) forumSection: ForumSectionEntity,
+    @Body() forumSectionDTO: NewForumSectionDTO
+  ): Promise<ForumSection> {
+    const newSection = await this.forumSectionRepo.create({
+      ...forumSectionDTO,
+      sectionID: forumSection?.id,
+    });
     return forumSectionWire(newSection);
   }
 

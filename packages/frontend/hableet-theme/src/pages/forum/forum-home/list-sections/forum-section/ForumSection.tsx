@@ -1,9 +1,10 @@
 import React from 'react';
 import './ForumSection.scss';
-import {ForumSectionProps} from './ForumSection.types';
 import {Avatar} from '@instinct-web/core';
+import {ForumSectionProps} from './ForumSection.types';
+import {DeleteSectionModalButton} from '../delete-section-button/DeleteSectionButton';
 
-export function ForumSection({section}: ForumSectionProps) {
+export function ForumSection({section, onChange}: ForumSectionProps) {
   return (
     <div className="forum-section">
       <div className="d-flex w-100">
@@ -21,6 +22,8 @@ export function ForumSection({section}: ForumSectionProps) {
           </div>
         </div>
       </div>
+      <hr className="text-white mt-2 mb-2" />
+      <DeleteSectionModalButton sectionID={section.id} onChange={onChange} />
     </div>
   );
 }

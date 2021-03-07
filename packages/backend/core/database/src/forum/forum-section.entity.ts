@@ -24,7 +24,7 @@ export class ForumSectionEntity {
   @Column({type: 'text'})
   description!: string;
 
-  @ManyToOne(() => ForumSectionEntity)
+  @ManyToOne(() => ForumSectionEntity, forumSection => forumSection.id)
   @JoinColumn({name: 'section_id'})
   parentSection?: ForumSectionEntity;
 

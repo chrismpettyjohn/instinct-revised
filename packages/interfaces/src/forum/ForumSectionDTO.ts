@@ -5,3 +5,9 @@ export interface NewForumSectionDTO {
 }
 
 export type UpdateForumSectionDTO = Partial<NewForumSectionDTO>;
+
+export const exampleNewForumSectionDTO: NewForumSectionDTO = {
+  title: '',
+  description: '',
+  icon: '',
+};

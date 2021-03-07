@@ -11,9 +11,9 @@ import {
 } from '@instinct-prj/interface';
 
 class ForumServiceImplementation implements ForumService {
-  async createSection(newSectionDTO: NewForumSectionDTO) {
+  async createSection(newSectionDTO: NewForumSectionDTO, sectionID?: number) {
     const newSection: AxiosResponse<ForumSection> = await backendAPI.post(
-      'forum/sections',
+      `forum/sections${sectionID ? '/' + sectionID : ''}`,
       newSectionDTO
     );
     return newSection.data;
@@ -36,7 +36,7 @@ class ForumServiceImplementation implements ForumService {
   ) {
     await backendAPI.post(`forum/sections/${sectionID}`, updateSectionDTO);
   }
-  async deleteSection(sectionID) {
+  async deleteSection(sectionID: number) {
     await backendAPI.delete(`forum/sections/${sectionID}`);
   }
   async createPost(sectionID: number, newPostDTO: NewForumPostDTO) {
