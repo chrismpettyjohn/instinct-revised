@@ -3,10 +3,10 @@
 Instinct is a collection of libraries around Habbo Hotel that help ease the process of creating custom websites.  
 
 ## Getting Started
-If you'd like to start using Instinct, you can follow the tutorial [here]([/GETTING_STARTED.md])
+If you'd like to start using Instinct, you can follow the tutorial [here]([GETTING_STARTED.md])
 
 ## Production Usage
-For those who have a hotel and want to learn the best way to use it in a production environment, you can follow the guide [here](/DEPLOYMENTS.mds)
+For those who have a hotel and want to learn the best way to use it in a production environment, you can follow the guide [here](/EPLOYMENTS.mds)
 
 ### Compatibility
 As of right now, Instinct is only compatible with *ArcturusMS by Krews* and *Nitro HTML5 by Billsonnn*. 
