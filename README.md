@@ -2,6 +2,9 @@
 
 Instinct is a collection of libraries around Habbo Hotel that help ease the process of creating custom websites.  
 
+## Discord
+Join our Discord here: https://discord.gg/ZFCV5HZ4jt
+
 ## Getting Started
 If you'd like to start using Instinct, you can follow the tutorial [here](doc/GETTING_STARTED.md)
 
