@@ -47,7 +47,7 @@ Please note: If it asks you to run as `sudo` it's okay.  Some installations may 
 For the sake of the tutorial, we are going to use the CLI which is included with MariaDB.  From the same folder as
 the Full Instinct SQL, please execute the following in your terminal:
 ```bash
-mysql -u root -p > blah.sql
+mysql -u username -p database_name < instinct-base.sql
 ```
 
 ## 3. Install Dependencies
