@@ -1,0 +1,27 @@
+.top-user-container {
+  align-items: center;
+  background: #11416D !important;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  h3, h5 {
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  &:nth-child(1) {
+    border-right: 4px solid #f4c207;
+  }
+
+  &:nth-child(2) {
+    border-right: 4px solid #cccccc;
+  }
+
+  &:nth-child(3) {
+    border-right: 4px solid #C05703;
+  }
+
+}

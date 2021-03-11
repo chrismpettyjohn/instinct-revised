@@ -5,6 +5,7 @@
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
   },
   "dependencies": {
+    "@instinct-api/forum": "^2.0.0",
     "@instinct-api/articles": "^2.0.0",
     "@instinct-api/beta-codes": "^2.0.0",
     "@instinct-api/common": "^2.0.0",
@@ -21,7 +22,7 @@
     "@instinct-api/session": "^2.0.0",
     "@instinct-api/users": "^2.0.0",
     "@instinct-web/flash-client": "^2.0.0",
-    "@instinct-theme/hableet": "^2.0.0",
+    "@instinct-theme/legacy": "^2.0.0",
     "@instinct-web/admin": "^2.0.0",
     "@instinct-web/nitro-client": "^2.0.0",
     "@instinct-plugin/findretros-api": "^2.0.0",
