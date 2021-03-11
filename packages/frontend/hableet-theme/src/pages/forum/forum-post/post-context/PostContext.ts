@@ -1,5 +1,5 @@
 import {createContext} from 'react';
 import {PostContext} from './PostContext.types';
-import {exampleForumSection} from '@instinct-prj/interface';
+import {exampleForumPost} from '@instinct-prj/interface';
 
-export const postContext = createContext<PostContext>(exampleForumSection);
+export const postContext = createContext<PostContext>(exampleForumPost);
