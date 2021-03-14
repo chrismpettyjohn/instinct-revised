@@ -1,6 +1,6 @@
 import '@instinct-web/core';
 import React, {useEffect, useState} from 'react';
-import {Client} from './components/client/Client';
+import {Client} from './components/template/client/Client';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';
 
 export function ModernTheme() {

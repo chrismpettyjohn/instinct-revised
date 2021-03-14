@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card} from '../../../../components/card/Card';
+import {Card} from '../../../../components/old/card/Card';
 import {UserProfileWidgetProps} from '../UserProfile.types';
 
 export function FavoriteVideo({profile}: UserProfileWidgetProps) {

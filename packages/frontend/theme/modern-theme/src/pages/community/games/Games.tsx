@@ -5,7 +5,7 @@ import {TopPoints} from './top-points';
 import {TopCredits} from './top-credits';
 import {setURL} from '@instinct-web/core';
 import {UserLayout} from '../../../components/layout/user';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../components/old/mini-jumbotron/MiniJumbotron';
 
 setURL('community/games', <Games />);
 

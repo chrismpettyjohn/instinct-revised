@@ -1,7 +1,7 @@
 import React from 'react';
 import {UserProfileWidgetProps} from '../';
 import {RoomContainer} from './room-container';
-import {Card} from '../../../../components/card/Card';
+import {Card} from '../../../../components/old/card/Card';
 
 export function Rooms({profile}: UserProfileWidgetProps) {
   return (

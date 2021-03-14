@@ -1,8 +1,8 @@
 import React from 'react';
 import {setURL} from '@instinct-web/core';
-import {Card} from '../../../components/card/Card';
+import {Card} from '../../../components/old/card/Card';
 import {UserLayout} from '../../../components/layout/user';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../components/old/mini-jumbotron/MiniJumbotron';
 
 setURL('rules', <GameRules />);
 

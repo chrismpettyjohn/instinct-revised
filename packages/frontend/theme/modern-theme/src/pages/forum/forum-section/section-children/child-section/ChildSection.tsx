@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'wouter';
 import {Icon} from '@instinct-web/core';
 import {ChildSectionProps} from './ChildSection.types';
-import {Card} from '../../../../../components/card/Card';
+import {Card} from '../../../../../components/old/card/Card';
 
 export function ChildSection({section}: ChildSectionProps) {
   return (

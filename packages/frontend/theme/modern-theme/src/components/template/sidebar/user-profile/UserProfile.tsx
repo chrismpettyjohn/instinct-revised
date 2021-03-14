@@ -10,14 +10,14 @@ export function UserProfile() {
   }
 
   return (
-    <div style={{padding: 4}}>
+    <div style={{marginTop: '10%', padding: 4}}>
       <div style={{textAlign: 'center', width: '100%'}}>
         <img src="/img/logo/regular.png" style={{maxWidth: 300}} />
       </div>
-      <div style={{marginTop: '5%', textAlign: 'center', width: '100%'}}>
+      <div style={{marginTop: '10%', textAlign: 'center', width: '100%'}}>
         <Avatar
           style={{
-            border: '5px solid #0D47A1',
+            border: '5px solid #1E88E5',
             width: 75,
             height: 75,
             margin: '0 auto',
@@ -26,13 +26,13 @@ export function UserProfile() {
           <UserAvatar look={user.figure} />
         </Avatar>
       </div>
-      <div style={{marginTop: '5%', textAlign: 'center', width: '100%'}}>
+      <div style={{marginTop: '10%', textAlign: 'center', width: '100%'}}>
         <Typography variant="h5">{user.username}</Typography>
         <Typography className="text-grey" variant="subtitle1">
           {user.motto}
         </Typography>
       </div>
-      <Grid container style={{marginTop: '5%', textAlign: 'center'}}>
+      <Grid container style={{marginTop: '10%', textAlign: 'center'}}>
         <Grid item xs={4}>
           <Typography variant="h6">
             {Number(user.credits).toLocaleString()}

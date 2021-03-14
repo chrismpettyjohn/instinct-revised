@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {postContext} from '../post-context/PostContext';
-import {MiniJumbotron} from '../../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../../components/old/mini-jumbotron/MiniJumbotron';
 
 export function PostHeader() {
   const {title} = useContext(postContext);

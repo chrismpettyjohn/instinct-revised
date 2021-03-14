@@ -13,7 +13,7 @@ export function Sidebar() {
       }}
     >
       <UserProfile />
-      <div className="mt-4">
+      <div style={{marginTop: '10%'}}>
         <SiteNavigation />
       </div>
     </div>

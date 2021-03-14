@@ -7,7 +7,7 @@ import {UserContainer} from './user-container';
 import {UserLayout} from '../../../components/layout/user';
 import {FavoriteVideo} from './favorite-video/FavoriteVideo';
 import {Loading, setURL, useFetchUserByUsername} from '@instinct-web/core';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../components/old/mini-jumbotron/MiniJumbotron';
 
 setURL('profile/:username', <UserProfile />);
 

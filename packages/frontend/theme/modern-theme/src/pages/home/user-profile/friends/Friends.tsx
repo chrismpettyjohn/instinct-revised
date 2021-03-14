@@ -2,7 +2,7 @@ import React from 'react';
 import {take} from 'lodash';
 import {Avatar} from '@instinct-web/core';
 import {UserProfileWidgetProps} from '../';
-import {Card} from '../../../../components/card/Card';
+import {Card} from '../../../../components/old/card/Card';
 
 export function Friends({profile}: UserProfileWidgetProps) {
   return (

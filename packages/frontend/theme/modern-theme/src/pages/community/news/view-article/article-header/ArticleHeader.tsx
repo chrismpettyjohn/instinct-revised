@@ -2,7 +2,7 @@ import React from 'react';
 import Moment from 'moment';
 import {Skeleton} from '@instinct-web/core';
 import {ArticleHeaderProps} from './ArticleHeader.types';
-import {MiniJumbotron} from '../../../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../../../components/old/mini-jumbotron/MiniJumbotron';
 
 export function ArticleHeader({article}: ArticleHeaderProps) {
   return (

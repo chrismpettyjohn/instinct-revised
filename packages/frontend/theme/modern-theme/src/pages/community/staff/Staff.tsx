@@ -1,9 +1,9 @@
 import './Staff.scss';
 import React from 'react';
-import {Card} from '../../../components/card/Card';
+import {Card} from '../../../components/old/card/Card';
 import {UserLayout} from '../../../components/layout/user';
-import {UserContainer} from '../../../components/user-container';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
+import {UserContainer} from '../../../components/old/user-container';
+import {MiniJumbotron} from '../../../components/old/mini-jumbotron/MiniJumbotron';
 import {setURL, Skeleton, useFetchStaffTeam} from '@instinct-web/core';
 
 setURL('community/staff', <Staff />);

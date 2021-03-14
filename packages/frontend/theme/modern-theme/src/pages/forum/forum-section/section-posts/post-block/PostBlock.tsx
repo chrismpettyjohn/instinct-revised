@@ -3,7 +3,7 @@ import Moment from 'moment';
 import {Link} from 'wouter';
 import {Avatar} from '@instinct-web/core';
 import {PostBlockProps} from './PostBlock.types';
-import {Card} from '../../../../../components/card/Card';
+import {Card} from '../../../../../components/old/card/Card';
 
 export function PostBlock({post}: PostBlockProps) {
   return (
