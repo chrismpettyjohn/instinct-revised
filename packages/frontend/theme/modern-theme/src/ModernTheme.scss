@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
 body {
   background: #3C3F51;
   color: white;
@@ -5,4 +7,11 @@ body {
 
 .fa, .fal, .fas, .fab {
   color: white;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: -4px;
 }

@@ -32,8 +32,16 @@ export function UserLayout({children, style}: UserLayoutProps) {
             position: 'relative',
           }}
         >
-          <Header />
-          <div style={{padding: '2.5%'}}>{children}</div>
+          <div
+            style={{
+              paddingLeft: '2.5%',
+              paddingRight: '2.5%',
+              paddingTop: '1%',
+            }}
+          >
+            <Header />
+            <div style={{marginTop: '5%'}}>{children}</div>
+          </div>
           <Footer />
         </div>
       </div>
