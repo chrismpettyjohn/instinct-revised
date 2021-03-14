@@ -6,14 +6,7 @@ import {
   setURL,
   useFetchStaffTeam,
 } from '@instinct-web/core';
-import {
-  Avatar,
-  Card,
-  CardActions,
-  CardContent,
-  Grid,
-  Typography,
-} from '@material-ui/core';
+import {Avatar, Card, CardContent, Grid, Typography} from '@material-ui/core';
 
 setURL('community/staff', <Staff />);
 
@@ -27,15 +20,16 @@ export function Staff() {
         Our staff team help ensure the hotel rules are followed and provide a
         safe environment.
       </Typography>
-      <Grid container>
+      <Grid container style={{marginTop: '2.5%'}}>
         {staff?.map(_ => (
           <Grid key={`rank_${_.id}`} item xs={4}>
-            <Card style={{width: '100%'}} raised>
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  {_.name}
-                </Typography>
-                {_.users!.map(user => (
+            <Typography variant="h5">{_.name}</Typography>
+            {_.users!.map(user => (
+              <Card
+                style={{background: '#272B34', color: 'white', width: '100%'}}
+                raised
+              >
+                <CardContent>
                   <div key={`user_${user.id}`} style={{display: 'flex'}}>
                     <Avatar
                       style={{
@@ -47,10 +41,13 @@ export function Staff() {
                       <UserAvatar look={user.figure} />
                     </Avatar>
                     <div style={{marginLeft: '10%'}}>
-                      <Typography variant="h5" component="h2">
+                      <Typography variant="h6" component="h2">
                         {user.username}
                       </Typography>
-                      <Typography color="textSecondary">
+                      <Typography
+                        color="textSecondary"
+                        style={{color: user.online ? 'green' : 'red'}}
+                      >
                         {user.online ? 'Online' : 'Offline'}
                       </Typography>
                       <Typography variant="body2" component="p">
@@ -58,10 +55,9 @@ export function Staff() {
                       </Typography>
                     </div>
                   </div>
-                ))}
-              </CardContent>
-              <CardActions></CardActions>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </Grid>
         ))}
       </Grid>
