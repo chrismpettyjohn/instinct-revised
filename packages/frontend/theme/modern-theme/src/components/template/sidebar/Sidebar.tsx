@@ -15,7 +15,18 @@ export function Sidebar() {
         maxWidth: 400,
       }}
     >
-      <div style={{textAlign: 'center', width: '100%'}}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '100%',
+          marginTop: '10%',
+        }}
+      >
+        <img
+          src="https://i.imgur.com/LuTjl8B.png"
+          style={{width: 60, height: 60, marginTop: 0}}
+        />
         <span className="logo" style={{fontSize: '3em'}}>
           {config.siteName}
         </span>

@@ -22,7 +22,7 @@ export function SiteNavigation() {
         <Link to="/community/news">
           <ListItem button>
             <ListItemIcon>
-              <i className="fal fa-newspaper fa-2x" />
+              <i className="fal fa-newspaper" style={{fontSize: '1.4rem'}} />
             </ListItemIcon>
             <ListItemText>Articles</ListItemText>
           </ListItem>
@@ -30,7 +30,7 @@ export function SiteNavigation() {
         <Link to="/community/staff">
           <ListItem button>
             <ListItemIcon>
-              <i className="fal fa-id-card fa-2x" />
+              <i className="fal fa-users" style={{fontSize: '1.4rem'}} />
             </ListItemIcon>
             <ListItemText>Staff Team</ListItemText>
           </ListItem>
@@ -38,7 +38,7 @@ export function SiteNavigation() {
         <Link to="/community/games">
           <ListItem button>
             <ListItemIcon>
-              <i className="fal fa-trophy fa-2x" />
+              <i className="fal fa-trophy" style={{fontSize: '1.4rem'}} />
             </ListItemIcon>
             <ListItemText>High Scores</ListItemText>
           </ListItem>
@@ -46,7 +46,7 @@ export function SiteNavigation() {
         <Link to={`/profile/${user!.username}`}>
           <ListItem button>
             <ListItemIcon>
-              <i className="fal fa-user fa-2x" />
+              <i className="fal fa-user" style={{fontSize: '1.4rem'}} />
             </ListItemIcon>
             <ListItemText>My Profile</ListItemText>
           </ListItem>
@@ -54,9 +54,18 @@ export function SiteNavigation() {
         <Link to="/preferences">
           <ListItem button>
             <ListItemIcon>
-              <i className="fal fa-cog fa-2x" />
+              <i className="fal fa-cog" style={{fontSize: '1.4rem'}} />
             </ListItemIcon>
             <ListItemText>Security and Privacy</ListItemText>
+          </ListItem>
+        </Link>
+        <ListItem divider style={{borderColor: '#495057'}} />
+        <Link to="/logout">
+          <ListItem button>
+            <ListItemIcon>
+              <i className="fal fa-sign-out" style={{fontSize: '1.4rem'}} />
+            </ListItemIcon>
+            <ListItemText>Logout</ListItemText>
           </ListItem>
         </Link>
       </List>

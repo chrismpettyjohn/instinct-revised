@@ -44,7 +44,7 @@ export function UserProfile() {
         </Typography>
       </div>
       <Grid container style={{marginTop: '10%', textAlign: 'center'}}>
-        <Grid item xs={4}>
+        <Grid item xs={4} style={{borderRight: '1px solid #495057'}}>
           <Typography variant="body1">
             {Number(user.credits).toLocaleString()}
           </Typography>
@@ -52,7 +52,7 @@ export function UserProfile() {
             Credits
           </Typography>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={4} style={{borderRight: '1px solid #495057'}}>
           <Typography variant="body1">
             {Number(user.pixels).toLocaleString()}
           </Typography>
