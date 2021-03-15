@@ -1,8 +1,6 @@
-import Moment from 'moment';
 import {Link} from 'wouter';
-import {uniqBy} from 'lodash';
 import {Article} from '@instinct-prj/interface';
-import React, {ChangeEvent, useContext, useState} from 'react';
+import React, {useState} from 'react';
 import {
   Grid,
   Card,
@@ -15,40 +13,19 @@ import {
   TextField,
 } from '@material-ui/core';
 import {UserLayout} from '../../../../components/layout/user';
-import {configContext, setURL, useFetchAllArticles} from '@instinct-web/core';
+import {setURL, useFetchAllArticles} from '@instinct-web/core';
 
 type NewsFilter = (article: Article) => boolean;
 
 setURL('community/news', <ListArticles />);
 
 export function ListArticles() {
-  const {config} = useContext(configContext);
   const [name, setName] = useState('');
-  const [category, setCategory] = useState<Number>();
   const [filter, setFilter] = useState<{callback: NewsFilter}>({
     callback: (_: Article) => true,
   });
   const articles: Article[] | undefined = useFetchAllArticles();
   const filteredArticles = articles?.filter(filter.callback);
-
-  const categories =
-    articles === undefined
-      ? []
-      : uniqBy(
-          articles.map(_ => _.category),
-          'id'
-        );
-
-  function filterByCategory(categoryID: number) {
-    setFilter({
-      callback:
-        category === categoryID
-          ? (_: Article) => true
-          : (_: Article) => _?.category?.id === categoryID,
-    });
-    setCategory(category === categoryID ? undefined : categoryID);
-    setName('');
-  }
 
   function filterByTitle(name: string) {
     setFilter({
@@ -56,7 +33,6 @@ export function ListArticles() {
         _?.title.toLowerCase().indexOf(name.toLowerCase()) > -1,
     });
     setName(name);
-    setCategory(undefined);
   }
 
   return (
