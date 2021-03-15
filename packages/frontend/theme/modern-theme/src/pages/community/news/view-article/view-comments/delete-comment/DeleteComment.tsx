@@ -24,8 +24,10 @@ export function DeleteComment({comment, onDelete}: DeleteCommentProps) {
         style={{cursor: 'pointer'}}
       >
         <small>
-          <Icon type={!isLoading ? 'trash' : 'spinner fa-spin'} />
-          Delete Comment
+          <Icon
+            style={{color: 'red'}}
+            type={!isLoading ? 'trash' : 'spinner fa-spin'}
+          />
         </small>
       </div>
     </PermissionGuard>

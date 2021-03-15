@@ -3,7 +3,14 @@ import Moment from 'moment';
 import {Avatar as UserAvatar} from '@instinct-web/core';
 import {ViewCommentProps} from './ViewComments.types';
 import {DeleteComment} from './delete-comment/DeleteComment';
-import {Card, CardContent, Typography, Paper, Avatar} from '@material-ui/core';
+import {
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+  Paper,
+  Avatar,
+} from '@material-ui/core';
 import {CreateCommentModal} from '../create-comment-modal/CreateCommentModal';
 
 export function ViewComments({article, onChange}: ViewCommentProps) {
@@ -30,9 +37,16 @@ export function ViewComments({article, onChange}: ViewCommentProps) {
                 <UserAvatar look={_.author.figure} />
               </Avatar>
               <div style={{marginLeft: '2.5%'}}>
-                <Typography variant="subtitle2">
-                  {_.author.username} said:
-                </Typography>
+                <Grid container>
+                  <Grid item xs={6}>
+                    <Typography variant="subtitle2">
+                      {_.author.username} said:
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={6} style={{textAlign: 'right'}}>
+                    <DeleteComment comment={_} onDelete={onChange} />
+                  </Grid>
+                </Grid>
                 <Typography variant="body2">{_.content}</Typography>
                 <small>
                   <Typography variant="caption" gutterBottom>
