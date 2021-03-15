@@ -43,10 +43,14 @@ export function ListArticles() {
         </Grid>
         <Grid item xs={6} style={{textAlign: 'right'}}>
           <TextField
+            fullWidth
             label="Search by..."
             value={name}
             onChange={e => filterByTitle(e.target.value)}
           />
+          <Typography variant="body2">
+            Showing {filteredArticles?.length} articles
+          </Typography>
         </Grid>
       </Grid>
       <Grid container spacing={4} style={{marginTop: '2.5%'}}>
