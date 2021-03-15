@@ -1,7 +1,7 @@
 import {User} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
-import {Card} from '../../../../components/old/card/Card';
 import {Icon, userService} from '@instinct-web/core';
+import {Card, CardContent, Typography} from '@material-ui/core';
 import {GamesCardState, defaultGamesCardState} from '../Games.types';
 import {TopUserContainer} from '../components/top-user-container/TopUserContainer';
 
@@ -19,29 +19,30 @@ export function TopPoints() {
     fetchMostPoints();
   }, []);
 
-  function getHeader() {
-    return (
-      <div className="row">
-        <div className="col-6">
-          <Icon style={{color: '#92C3F6'}} type="diamond" />
-        </div>
-        <div className="col-6 text-right" style={{color: '#92C3F6'}}>
-          Diamonds
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <Card header={getHeader()}>
-      {state.users.map(user => (
-        <TopUserContainer
-          key={`top_points_${user.id!}`}
-          user={user}
-          value="points"
-          altText="diamonds"
-        />
-      ))}
+    <Card style={{background: '#272B34', color: 'white'}}>
+      <CardContent>
+        <div style={{display: 'flex'}}>
+          <Icon
+            style={{color: '#92C3F6', marginRight: '2.5%'}}
+            type="diamond"
+          />
+          <Typography
+            variant="h6"
+            style={{color: '#92C3F6', marginTop: '-1.5%'}}
+          >
+            Diamonds
+          </Typography>
+        </div>
+        {state.users.map(user => (
+          <TopUserContainer
+            key={`top_points_${user.id!}`}
+            user={user}
+            value="points"
+            altText="diamonds"
+          />
+        ))}
+      </CardContent>
     </Card>
   );
 }

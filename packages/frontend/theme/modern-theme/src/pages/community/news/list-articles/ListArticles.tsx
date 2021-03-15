@@ -56,7 +56,7 @@ export function ListArticles() {
       <Grid container spacing={4} style={{marginTop: '2.5%'}}>
         {filteredArticles?.map(_ => (
           <Grid key={`article_${_.id}`} item xs={6}>
-            <Card>
+            <Card style={{background: '#272B34', color: 'white'}}>
               <CardActionArea>
                 <Link to={`/community/news/${_.id}`}>
                   <CardMedia image={_.headerImage} style={{height: 375}} />
