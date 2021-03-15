@@ -78,7 +78,9 @@ export function ListArticles() {
           <Grid key={`article_${_.id}`} item xs={6}>
             <Card>
               <CardActionArea>
-                <CardMedia image={_.headerImage} style={{height: 375}} />
+                <Link to={`/community/news/${_.id}`}>
+                  <CardMedia image={_.headerImage} style={{height: 375}} />
+                </Link>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
                     {_.title}
