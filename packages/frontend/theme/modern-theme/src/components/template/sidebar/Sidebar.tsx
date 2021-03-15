@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {configContext} from '@instinct-web/core';
 import {UserProfile} from './user-profile/UserProfile';
 import {SiteNavigation} from './site-navigation/SiteNavigation';
+import {Footer} from './footer/Footer';
 
 export function Sidebar() {
   const {config} = useContext(configContext);
@@ -13,6 +14,7 @@ export function Sidebar() {
         minHeight: '100%',
         width: '100%',
         maxWidth: 400,
+        position: 'relative',
       }}
     >
       <div
@@ -35,6 +37,7 @@ export function Sidebar() {
       <div style={{marginTop: '10%'}}>
         <SiteNavigation />
       </div>
+      <Footer />
     </div>
   );
 }
