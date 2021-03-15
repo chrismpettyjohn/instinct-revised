@@ -13,6 +13,7 @@ import {
   CardMedia,
   Grid,
 } from '@material-ui/core';
+import {ViewComments} from './view-comments/ViewComments';
 
 setURL('community/news/:articleID', <ViewArticle />);
 
@@ -46,6 +47,12 @@ export function ViewArticle() {
           </Grid>
           <Grid item xs={4}>
             <RecentNews />
+            <div style={{marginTop: '2.5%'}}>
+              <ViewComments
+                article={article}
+                onChange={() => setRefresh(_ => _ + 1)}
+              />
+            </div>
           </Grid>
         </Grid>
       </Loading>

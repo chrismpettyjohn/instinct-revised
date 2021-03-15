@@ -1,7 +1,14 @@
 import React, {SyntheticEvent, useState} from 'react';
 import {articleService, Icon} from '@instinct-web/core';
 import {CreateCommentModalProps} from './CreateCommentModal.types';
-import {Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  TextField,
+} from '@material-ui/core';
 
 export function CreateCommentModal({
   article,
@@ -36,37 +43,35 @@ export function CreateCommentModal({
 
   return (
     <>
-      <button className="btn btn-dark" onClick={toggle} type="button">
+      <Button color="primary" variant="contained" onClick={toggle}>
         Post Comment
-      </button>
+      </Button>
       {isOpen && (
-        <Modal isOpen toggle={toggle}>
-          <ModalHeader toggle={toggle}>
-            Commenting on <b>{article.title}</b>
-          </ModalHeader>
-          <ModalBody>
-            <form onSubmit={onSubmit}>
-              <div className="form-group">
-                <b>What do you want to say?</b>
-                <textarea
-                  className="form-control"
-                  value={comment}
-                  onChange={e => setComment(e.target.value)}
-                />
-              </div>
-            </form>
-          </ModalBody>
-          <ModalFooter className="text-right">
-            <button
-              className="btn btn-success"
-              disabled={isLoading}
+        <Dialog open onClose={toggle} maxWidth="sm" fullWidth>
+          <DialogTitle>Create Comment</DialogTitle>
+          <DialogContent dividers>
+            <TextField
+              label="What do you want to say"
+              multiline
+              rows={4}
+              value={comment}
+              variant="outlined"
+              onChange={e => setComment(e.target.value)}
+              fullWidth
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button
+              autoFocus
+              color="primary"
+              disabled={!comment || isLoading}
               onClick={onSubmit}
             >
               <Icon type={buttonIcon} />
               {buttonText}
-            </button>
-          </ModalFooter>
-        </Modal>
+            </Button>
+          </DialogActions>
+        </Dialog>
       )}
     </>
   );
