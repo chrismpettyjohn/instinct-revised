@@ -1,5 +1,4 @@
 import {useLocation} from 'wouter';
-import {Footer} from '../../template/sidebar/footer/Footer';
 import {Header} from '../../template/header/Header';
 import {UserLayoutProps} from './UserLayout.types';
 import React, {useContext, useEffect} from 'react';
