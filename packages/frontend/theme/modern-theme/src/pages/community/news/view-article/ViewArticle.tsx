@@ -33,7 +33,7 @@ export function ViewArticle() {
                 title={article?.title}
                 subheader={article?.description}
               />
-              <CardMedia image={article?.headerImage} style={{height: 400}} />
+              <CardMedia image={article?.headerImage} style={{height: 300}} />
               <CardContent>
                 <ReactMarkdown source={article?.content ?? ''} />
               </CardContent>
