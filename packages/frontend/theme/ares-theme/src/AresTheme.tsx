@@ -3,12 +3,12 @@ import React, {useEffect, useState} from 'react';
 import {Client} from './components/template/client/Client';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';
 
-export function ModernTheme() {
+export function AresTheme() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function load() {
-      await import('./ModernTheme.scss');
+      await import('./AresTheme.scss');
       await import('./pages');
       setLoading(false);
     }

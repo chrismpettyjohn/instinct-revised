@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-client/modern-web",
+  "name": "@instinct-client/legacy-web",
   "version": "1.0.0",
   "scripts": {
     "start": "PORT=3001 react-app-rewired start",
@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@instinct-web/admin": "*",
-    "@instinct-theme/modern": "*",
+    "@instinct-theme/legacy": "*",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/node": "^14.14.33",
     "@types/react": "^17.0.3",

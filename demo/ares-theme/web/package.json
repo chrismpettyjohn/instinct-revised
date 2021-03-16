@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-client/nex-web",
+  "name": "@instinct-client/ares-web",
   "version": "1.0.0",
   "scripts": {
     "start": "PORT=3001 react-app-rewired start",
@@ -10,6 +10,8 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@instinct-web/admin": "*",
+    "@instinct-theme/ares": "*",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/node": "^14.14.33",
     "@types/react": "^17.0.3",

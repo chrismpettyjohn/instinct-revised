@@ -1,11 +1,11 @@
 import React from 'react';
 import {AdminPanel} from '@instinct-web/admin';
-import {AresThene} from '@instinct-theme/ares';
+import {LegacyTheme} from '@instinct-theme/legacy';
 
 export function InstinctWeb() {
   return (
-    <>
-      <AresThene />
+    <>=
+      <LegacyTheme />
       <AdminPanel />
     </>
   );
