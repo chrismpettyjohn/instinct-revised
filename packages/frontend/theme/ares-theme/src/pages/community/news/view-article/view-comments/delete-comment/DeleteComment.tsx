@@ -1,0 +1,35 @@
+import React, {useState} from 'react';
+import {DeleteCommentProps} from './DeleteComment.types';
+import {articleService, Icon, PermissionGuard} from '@instinct-web/core';
+
+export function DeleteComment({comment, onDelete}: DeleteCommentProps) {
+  const [isLoading, setLoading] = useState(false);
+
+  async function onSubmit() {
+    try {
+      if (isLoading) return;
+      setLoading(true);
+      await articleService.deleteComment(comment.articleID, comment.id);
+      onDelete();
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <PermissionGuard permission="websiteManageComments" redirect={false}>
+      <div
+        className="text-danger"
+        onClick={onSubmit}
+        style={{cursor: 'pointer'}}
+      >
+        <small>
+          <Icon
+            style={{color: 'red'}}
+            type={!isLoading ? 'trash' : 'spinner fa-spin'}
+          />
+        </small>
+      </div>
+    </PermissionGuard>
+  );
+}
