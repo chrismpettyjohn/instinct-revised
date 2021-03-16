@@ -1,8 +1,6 @@
-import Moment from 'moment';
 import React from 'react';
 import {UserProfileWidgetProps} from '../';
 import {Avatar as UserAvatar, Icon} from '@instinct-web/core';
-import {DetailsContainer} from './details-container';
 import {Avatar, Card, CardContent, Grid, Typography} from '@material-ui/core';
 
 export function UserContainer({profile}: UserProfileWidgetProps) {
@@ -20,7 +18,9 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             </Avatar>
           </Grid>
           <Grid item xs={8}>
-            <Typography variant="">{profile?.user?.username}</Typography>
+            <Typography variant="subtitle1">
+              {profile?.user?.username}
+            </Typography>
             <Typography variant="caption">"{profile?.user?.motto}"</Typography>
           </Grid>
         </Grid>

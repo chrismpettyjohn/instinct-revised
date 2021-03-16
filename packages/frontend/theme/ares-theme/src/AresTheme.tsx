@@ -1,3 +1,4 @@
+import './AresTheme.scss';
 import '@instinct-web/core';
 import React, {useEffect, useState} from 'react';
 import {Client} from './components/template/client/Client';
@@ -8,7 +9,6 @@ export function AresTheme() {
 
   useEffect(() => {
     async function load() {
-      await import('./AresTheme.scss');
       await import('./pages');
       setLoading(false);
     }

@@ -46,7 +46,7 @@ export function RecentNews() {
                   />
                   <div style={{padding: 4}}>
                     <Typography variant="subtitle1">{article.title}</Typography>
-                    <Typography variant="body2y">
+                    <Typography variant="body2">
                       {article.description}
                     </Typography>
                   </div>

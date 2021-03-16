@@ -1,4 +1,5 @@
 import '@instinct-web/core';
+import './ModernTheme.scss';
 import React, {useEffect, useState} from 'react';
 import {Client} from './components/template/client/Client';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';
@@ -8,7 +9,6 @@ export function ModernTheme() {
 
   useEffect(() => {
     async function load() {
-      await import('./ModernTheme.scss');
       await import('./pages');
       setLoading(false);
     }
