@@ -1,15 +1,16 @@
 import React from 'react';
 import {setURL} from '@instinct-web/core';
-import {HomePage} from './home-page/HomePage';
+import Typography from '@material-ui/core/Typography';
 import {UserLayout} from '../../../components/layout/user';
 
 setURL('me', <Home />);
-setURL('welcome', <Home />);
 
 export function Home() {
   return (
     <UserLayout>
-      <HomePage />
+      <div className="row">
+        <Typography variant="h4">Story</Typography>
+      </div>
     </UserLayout>
   );
 }

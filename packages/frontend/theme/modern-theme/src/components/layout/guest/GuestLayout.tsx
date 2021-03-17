@@ -1,6 +1,6 @@
 import React from 'react';
-import {Card} from '../../card/Card';
-import {Footer} from '../../footer/Footer';
+import {Card} from '../../old/card/Card';
+import {Footer} from '../../template/sidebar/footer/Footer';
 import {GuestGuard} from '@instinct-web/core';
 import {GuestLayoutProps} from './GuestLayout.types';
 

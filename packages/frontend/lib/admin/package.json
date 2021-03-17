@@ -9,7 +9,7 @@
   "scripts": {
     "build": "yarn run clean && yarn run compile",
     "clean": "rimraf -rf ./dist && rimraf -rf ./build",
-    "compile": "NODE_OPTIONS=--max_old_space_size=4096 rollup -c && yarn run compile:types",
+    "compile": "rollup -c && yarn run compile:types",
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "dependencies": {

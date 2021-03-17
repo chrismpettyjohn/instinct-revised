@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import {Card} from '../../../components/card/Card';
+import {Card} from '../../../components/old/card/Card';
 import {UserLayout} from '../../../components/layout/user';
 import {configContext, setURL} from '@instinct-web/core';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../components/old/mini-jumbotron/MiniJumbotron';
 import {ShopPackage} from './shop-package/ShopPackage';
 
 setURL('shop', <ShopHome />);

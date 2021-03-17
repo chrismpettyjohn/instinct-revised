@@ -1,11 +1,18 @@
-import './ViewArticle.scss';
+import {useRoute} from 'wouter';
 import React, {useState} from 'react';
-import {Link, useRoute} from 'wouter';
-import {UserLayout} from '../../../../components/layout/user';
+import ReactMarkdown from 'react-markdown';
 import {RecentNews} from './recent-news/RecentNews';
-import {ArticleBody} from './article-body/ArticleBody';
-import {ArticleHeader} from './article-header/ArticleHeader';
-import {Loading, setURL, useFetchArticleByID, Icon} from '@instinct-web/core';
+import {UserLayout} from '../../../../components/layout/user';
+import {Loading, setURL, useFetchArticleByID} from '@instinct-web/core';
+import {
+  Button,
+  Card,
+  CardActions,
+  CardHeader,
+  CardContent,
+  CardMedia,
+  Grid,
+} from '@material-ui/core';
 import {ViewComments} from './view-comments/ViewComments';
 
 setURL('community/news/:articleID', <ViewArticle />);
@@ -20,34 +27,34 @@ export function ViewArticle() {
   return (
     <UserLayout>
       <Loading isLoading={false}>
-        <div className="page-content">
-          <div className="row">
-            <div className="col-12">
-              <Link to="/community/news">
-                <div style={{cursor: 'pointer'}}>
-                  <Icon className="fa-4x" type="caret-left" />
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <ArticleHeader article={article} />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-8">
-              <ArticleBody article={article} />
+        <Grid container spacing={4}>
+          <Grid item xs={8}>
+            <Card style={{background: '#272B34', color: 'white'}}>
+              <CardHeader
+                title={article?.title}
+                subheader={article?.description}
+              />
+              <CardMedia image={article?.headerImage} style={{height: 300}} />
+              <CardContent>
+                <ReactMarkdown source={article?.content ?? ''} />
+              </CardContent>
+              <CardActions>
+                <Button color="primary" variant="text">
+                  Like (1)
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <RecentNews />
+            <div style={{marginTop: '2.5%'}}>
               <ViewComments
                 article={article}
                 onChange={() => setRefresh(_ => _ + 1)}
               />
             </div>
-            <div className="col-4">
-              <RecentNews />
-            </div>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </Loading>
     </UserLayout>
   );

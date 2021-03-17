@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Icon} from '@instinct-web/core';
 import {sectionContext} from '../section-context/SectionContext';
 import {AddPostModal} from '../../components/add-post-modal/AddPostModal';
-import {MiniJumbotron} from '../../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../../components/old/mini-jumbotron/MiniJumbotron';
 
 export function SectionHeader() {
   const {description, icon, title} = useContext(sectionContext);

@@ -1,8 +1,0 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:400,500,700');
-
-/* Ubuntu Habbo */
-@font-face{
-    font-family: "Ubuntu Habbo";
-    src: url("../fonts/ubuntu-habbo/font.woff") format("woff");
-    unicode-range: U+007C,U+2020,U+2022,U+00B6,U+00B1,U+00A5,U+00B5,U+00AA,U+00BA,U+00AC,U+0192,U+00BB,U+2014,U+2018,U+2021;
-}

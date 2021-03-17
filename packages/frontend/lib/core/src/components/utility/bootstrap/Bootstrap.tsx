@@ -49,10 +49,18 @@ export function Bootstrap() {
         <ServerMaintenanceGuard>
           <BannedGuard>
             <StripeProvider>
-              <>
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  minHeight: '100%',
+                  minWidth: '100%',
+                }}
+              >
                 <Router />
                 <DataPolling />
-              </>
+              </div>
             </StripeProvider>
           </BannedGuard>
         </ServerMaintenanceGuard>

@@ -1,7 +1,7 @@
 import {User} from '@instinct-prj/interface';
 import React, {useEffect, useState} from 'react';
 import {Icon, userService} from '@instinct-web/core';
-import {Card} from '../../../../components/card/Card';
+import {Card, CardContent, Typography} from '@material-ui/core';
 import {GamesCardState, defaultGamesCardState} from '../Games.types';
 import {TopUserContainer} from '../components/top-user-container/TopUserContainer';
 
@@ -19,29 +19,27 @@ export function TopPixels() {
     fetchMostPixels();
   }, []);
 
-  function getHeader() {
-    return (
-      <div className="row">
-        <div className="col-6">
-          <Icon style={{color: '#BA7CC2'}} type="duck" />
-        </div>
-        <div className="col-6 text-right" style={{color: '#BA7CC2'}}>
-          Duckets
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <Card header={getHeader()}>
-      {state.users.map(user => (
-        <TopUserContainer
-          key={`top_pixels_${user.id!}`}
-          user={user}
-          value="pixels"
-          altText="duckets"
-        />
-      ))}
+    <Card style={{background: '#272B34', color: 'white'}}>
+      <CardContent>
+        <div style={{display: 'flex'}}>
+          <Icon style={{color: '#BA7CC2', marginRight: '2.5%'}} type="duck" />
+          <Typography
+            variant="h6"
+            style={{color: '#BA7CC2', marginTop: '-1.5%'}}
+          >
+            Duckets
+          </Typography>
+        </div>
+        {state.users.map(user => (
+          <TopUserContainer
+            key={`top_pixels_${user.id!}`}
+            user={user}
+            value="pixels"
+            altText="duckets"
+          />
+        ))}
+      </CardContent>
     </Card>
   );
 }

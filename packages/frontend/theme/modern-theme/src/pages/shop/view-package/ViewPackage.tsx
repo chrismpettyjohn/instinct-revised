@@ -1,10 +1,10 @@
 import {useRoute} from 'wouter';
 import React, {useContext} from 'react';
-import {Card} from '../../../components/card/Card';
+import {Card} from '../../../components/old/card/Card';
 import {configContext, Icon, setURL} from '@instinct-web/core';
 import {UserLayout} from '../../../components/layout/user';
 import {CheckoutSection} from '../components/checkout-section/CheckoutSection';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
+import {MiniJumbotron} from '../../../components/old/mini-jumbotron/MiniJumbotron';
 
 setURL('shop/packages/:packageID', <ViewPackage />);
 

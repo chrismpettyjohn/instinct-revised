@@ -57,18 +57,29 @@ command from the root of your Instinct project.
 yarn
 ```
 
-## 4. Setup API Environment
+## 4. Build Packages
+Instinct has quite a few packages and since you're using Instinct directly from source it's up to you to compile all of them.  No worries, this is
+relatively quick and simple to do.  Run the following command from the root of Instinct
+```bash
+yarn build
+```
+
+
+## 5. Setup API Environment
 The environment variables file tells Instinct what port to run on and database to use.
 
-Please go into the folder `demo/api` and perform the following:
-1. Create a copy of `.env.example` named `.env` 
-2. Modify the database variables to your new credentials from step 2
+*  Please go into the folder `demo/<theme-folder>/api` and perform the following:
+    1. Create a copy of `.env.example` named `.env` 
+    2. Modify the database variables to your new credentials from step 2
 
-## 5. Start Apps
-From the folder `demo/api` please execute `yarn start`.  In a new terminal window please go to the folder `demo/web` and execute
+* Please go into the folder `demo/<theme-folder>/web` and perform the following:
+    1. Create a copy of `.env.example` named `.env` 
+
+## 6. Start Apps
+From the folder `demo/<theme-folder>/api` please execute `yarn start`.  In a new terminal window please go to the folder `demo/<theme-folder>/web` and execute
 `yarn start`
 
-## 6. Success
+## 7. Success
 You should see Instinct render in your browser if you setup your environment correctly.  For issues, please file a help thread on the forum
 you downloaded Instinct from.
 

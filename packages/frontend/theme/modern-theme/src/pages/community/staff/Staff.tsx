@@ -1,10 +1,12 @@
 import './Staff.scss';
 import React from 'react';
-import {Card} from '../../../components/card/Card';
 import {UserLayout} from '../../../components/layout/user';
-import {UserContainer} from '../../../components/user-container';
-import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
-import {setURL, Skeleton, useFetchStaffTeam} from '@instinct-web/core';
+import {
+  Avatar as UserAvatar,
+  setURL,
+  useFetchStaffTeam,
+} from '@instinct-web/core';
+import {Avatar, Card, CardContent, Grid, Typography} from '@material-ui/core';
 
 setURL('community/staff', <Staff />);
 
@@ -13,66 +15,52 @@ export function Staff() {
 
   return (
     <UserLayout>
-      <div className="page-content">
-        <div className="row">
-          <div className="col-12">
-            <MiniJumbotron>
-              <div className="row">
-                <div className="col-8">
-                  <h1>Staff Team</h1>
-                  <p>
-                    Our staff team works day and night to keep our users safe{' '}
-                    <br />
-                    and our hotel secure.
-                  </p>
-                </div>
-                <div className="col-4 text-right">
-                  <img
-                    src="/img/staff.gif"
-                    style={{marginTop: 10, height: 80}}
-                  />
-                </div>
-              </div>
-            </MiniJumbotron>
-          </div>
-        </div>
-        <div className="row">
-          {staff !== undefined ? (
-            staff!.map(rank => (
-              <div
-                className="col-6 d-flex align-items-stretch"
-                key={rank.id}
-                style={{marginBottom: 20}}
+      <Typography variant="h5">Staff Team</Typography>
+      <Typography variant="subtitle1">
+        Our staff team help ensure the hotel rules are followed and provide a
+        safe environment.
+      </Typography>
+      <Grid container style={{marginTop: '2.5%'}}>
+        {staff?.map(_ => (
+          <Grid key={`rank_${_.id}`} item xs={4}>
+            <Typography variant="h5">{_.name}</Typography>
+            {_.users!.map(user => (
+              <Card
+                style={{background: '#272B34', color: 'white', width: '100%'}}
+                raised
               >
-                <Card className="flex-fill" key={rank.id} header={rank.name}>
-                  {rank.users!.map(user => (
-                    <div key={user.id} className="staff-user-container">
-                      <UserContainer user={user} />
+                <CardContent>
+                  <div key={`user_${user.id}`} style={{display: 'flex'}}>
+                    <Avatar
+                      style={{
+                        border: '5px solid #9C28B0',
+                        width: 65,
+                        height: 65,
+                      }}
+                    >
+                      <UserAvatar look={user.figure} />
+                    </Avatar>
+                    <div style={{marginLeft: '10%'}}>
+                      <Typography variant="h6" component="h2">
+                        {user.username}
+                      </Typography>
+                      <Typography
+                        color="textSecondary"
+                        style={{color: user.online ? 'green' : 'red'}}
+                      >
+                        {user.online ? 'Online' : 'Offline'}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        "{user.motto}"
+                      </Typography>
                     </div>
-                  ))}
-                </Card>
-              </div>
-            ))
-          ) : (
-            <div className="col-6">
-              <Card header="Staff">
-                <div className="row">
-                  <div className="col-2">
-                    <Skeleton circle height={100} width={100} />
                   </div>
-                  <div className="col-8">
-                    <div className="mt-3">
-                      <Skeleton width={200} height={20} />
-                      <br />
-                      <Skeleton width={200} height={20} />
-                    </div>
-                  </div>
-                </div>
+                </CardContent>
               </Card>
-            </div>
-          )}
-        </div>
-      </div>
+            ))}
+          </Grid>
+        ))}
+      </Grid>
     </UserLayout>
   );
 }
