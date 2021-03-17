@@ -1,3 +1,4 @@
+import './Sidebar.scss';
 import React, {useContext} from 'react';
 import {configContext} from '@instinct-web/core';
 import {UserProfile} from './user-profile/UserProfile';
@@ -8,36 +9,48 @@ export function Sidebar() {
   const {config} = useContext(configContext);
 
   return (
-    <div
-      style={{
-        background: '#282A34',
-        minHeight: '100%',
-        width: '100%',
-        maxWidth: 400,
-        position: 'relative',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '100%',
-          marginTop: '10%',
-        }}
-      >
+    <ul id="sidebar--nav" className="h-100 list-group list-group-flush">
+      <li className="sidebar--brand d-flex justify-content-center">
         <img
-          src="https://i.imgur.com/LuTjl8B.png"
-          style={{width: 60, height: 60, marginTop: 0}}
+          src="/images/logo.png"
+          className="logo--big img-fluid d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none"
         />
-        <span className="logo" style={{fontSize: '3em'}}>
-          {config.siteName}
-        </span>
-      </div>
-      <UserProfile />
-      <div style={{marginTop: '10%'}}>
-        <SiteNavigation />
-      </div>
-      <Footer />
-    </div>
+        <img
+          src="/images/icons/ares64x64.png"
+          className="img-fluid image-pixelated d-xxl-none d-xxl-none d-xl-none d-lg-none d-md-block d-sm-block"
+        />
+      </li>
+      <li>
+        <a className="sidebar--category text-ellipsis" />
+        <div className="list-unstyled sidebar--category-nav">
+          <a className="sidebar--entry list-group-item">
+            <img
+              src="/images/icons/sidebar/dashboard.png"
+              className="image-pixelated"
+            />
+            <span className="text-ellipsis">Dashboaard</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a className="sidebar--category text-ellipsis"></a>
+        <div className="list-unstyled sidebar--category-nav">
+          <a className="sidebar--entry list-group-item">
+            <img
+              src="/images/icons/sidebar/news.png"
+              className="image-pixelated"
+            />
+            <span className="text-ellipsis">hhhgg</span>
+          </a>
+          <a className="sidebar--entry list-group-item">
+            <img
+              src="/images/icons/sidebar/employees.png"
+              className="image-pixelated"
+            />
+            <span className="text-ellipsis">employees</span>
+          </a>
+        </div>
+      </li>
+    </ul>
   );
 }

@@ -1,5 +1,5 @@
-import './AresTheme.scss';
 import '@instinct-web/core';
+import './styles/AresTheme.scss';
 import React, {useEffect, useState} from 'react';
 import {Client} from './components/template/client/Client';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';

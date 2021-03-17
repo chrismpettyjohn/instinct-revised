@@ -3,7 +3,9 @@ import {Header} from '../../template/header/Header';
 import {UserLayoutProps} from './UserLayout.types';
 import React, {useContext, useEffect} from 'react';
 import {Sidebar} from '../../template/sidebar/Sidebar';
+import {Footer} from '../../template/sidebar/footer/Footer';
 import {sessionContext, UserGuard} from '@instinct-web/core';
+import {NavBar} from '../../template/header/navbar/NavBar';
 
 export function UserLayout({children, style}: UserLayoutProps) {
   const [location, setLocation] = useLocation();
@@ -21,27 +23,18 @@ export function UserLayout({children, style}: UserLayoutProps) {
 
   return (
     <UserGuard>
-      <div className="root" style={{display: 'flex'}}>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          minWidth: '100%',
+          minHeight: '100%',
+        }}
+      >
         <Sidebar />
-        <div
-          style={{
-            width: '100%',
-            minHeight: '100%',
-            padding: 10,
-            position: 'relative',
-          }}
-        >
-          <div
-            style={{
-              paddingLeft: '2.5%',
-              paddingRight: '2.5%',
-              paddingTop: '1%',
-            }}
-          >
-            <Header />
-            <div style={{marginTop: '5%'}}>{children}</div>
-          </div>
-        </div>
+        <main className="d-inline-flex flex-column">{children}</main>
+        <Footer />
       </div>
     </UserGuard>
   );
