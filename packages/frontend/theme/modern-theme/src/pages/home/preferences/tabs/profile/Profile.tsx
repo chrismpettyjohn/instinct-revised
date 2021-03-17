@@ -4,11 +4,7 @@ import {
   defaultProfilePreferencesState,
   ProfilePreferencesState,
 } from './Profile.types';
-import {
-  Form,
-  sessionContext,
-  sessionService,
-} from '@instinct-web/core';
+import {Form, sessionContext, sessionService} from '@instinct-web/core';
 
 export function ProfilePreferences() {
   const {user} = useContext(sessionContext);

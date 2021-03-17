@@ -80,7 +80,12 @@ export function EmailPreferences() {
         style={{marginTop: '2.5%'}}
       />
       <div style={{width: '100%', marginTop: '2.5%', textAlign: 'right'}}>
-        <Button color="primary" disabled={isDisabled} variant="contained" type="submit">
+        <Button
+          color="primary"
+          disabled={isDisabled}
+          variant="contained"
+          type="submit"
+        >
           {state.showSpinner ? 'Saving Changes...' : ' Save Changes'}
         </Button>
       </div>
