@@ -1,2 +1,0 @@
-import './ForgotPassword';
-import './RedeemForgotPassword';
