@@ -1,15 +1,10 @@
 import React, {useContext, useState} from 'react';
+import {Button, TextField} from '@material-ui/core';
 import {
   defaultProfilePreferencesState,
   ProfilePreferencesState,
 } from './Profile.types';
-import {
-  Form,
-  Icon,
-  Input,
-  sessionContext,
-  sessionService,
-} from '@instinct-web/core';
+import {Form, sessionContext, sessionService} from '@instinct-web/core';
 
 export function ProfilePreferences() {
   const {user} = useContext(sessionContext);
@@ -63,28 +58,20 @@ export function ProfilePreferences() {
           <h4>There was a problem updating your profile</h4>
         </div>
       )}
-      <div>
-        <h4 className="form-subcategory">Youtube Video</h4>
-        <div className="row">
-          <div className="column-2">
-            <Input
-              type="text"
-              name="favoriteYoutubeVideo"
-              value={state.favoriteYoutubeVideo}
-              onChange={updateField}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-4 text-right">
-        <button className="btn btn-primary" type="submit">
-          {state.showSpinner ? (
-            <Icon className="fa-spin" type="spinner" />
-          ) : (
-            'Save Changes'
-          )}
-        </button>
+      <TextField
+        color="secondary"
+        variant="filled"
+        label="Youtube Video"
+        placeholder="Enter the url of your favorite Youtube video"
+        value={state.favoriteYoutubeVideo}
+        onChange={e => updateField('favoriteYoutubeVideo', e.target.value)}
+        fullWidth
+        style={{marginTop: '2.5%'}}
+      />
+      <div style={{width: '100%', marginTop: '2.5%', textAlign: 'right'}}>
+        <Button color="primary" variant="contained" type="submit">
+          {state.showSpinner ? 'Saving Changes...' : ' Save Changes'}
+        </Button>
       </div>
     </Form>
   );

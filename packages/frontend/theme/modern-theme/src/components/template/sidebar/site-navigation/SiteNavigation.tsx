@@ -3,7 +3,7 @@ import {Link} from 'wouter';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import {makeStyles} from '@material-ui/core/styles';
-import {sessionContext} from '@instinct-web/core';
+import {PermissionGuard, sessionContext} from '@instinct-web/core';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 
@@ -60,6 +60,16 @@ export function SiteNavigation() {
           </ListItem>
         </Link>
         <ListItem divider style={{borderColor: '#495057'}} />
+        <PermissionGuard permission="websiteShowAdminPanel" redirect={false}>
+          <Link to="/admin">
+            <ListItem button>
+              <ListItemIcon>
+                <i className="fal fa-cog" style={{fontSize: '1.4rem'}} />
+              </ListItemIcon>
+              <ListItemText>Admin</ListItemText>
+            </ListItem>
+          </Link>
+        </PermissionGuard>
         <Link to="/logout">
           <ListItem button>
             <ListItemIcon>

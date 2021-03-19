@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Form, Icon, Input, sessionService} from '@instinct-web/core';
+import {Form, Icon, sessionService} from '@instinct-web/core';
 import {
   EmailPreferencesState,
   defaultEmailPreferencesState,
 } from './Email.types';
+import {Button, TextField} from '@material-ui/core';
 
 export function EmailPreferences() {
   const [state, setState] = useState<EmailPreferencesState>(
@@ -59,42 +60,34 @@ export function EmailPreferences() {
           <h4>There was a problem changing your email</h4>
         </div>
       )}
-      <div>
-        <h4 className="form-subcategory">Current Password</h4>
-        <div className="row">
-          <div className="column-2">
-            <Input
-              type="password"
-              name="password"
-              placeholder="Enter your current password"
-              value={state.password}
-              onChange={updateField}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="mt-5">
-        <h4 className="form-subcategory">New email</h4>
-        <div className="row">
-          <div className="column-2">
-            <Input
-              type="text"
-              name="email"
-              placeholder="Enter your new email"
-              value={state.email}
-              onChange={updateField}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="mt-4 text-right">
-        <button className="btn btn-primary" disabled={isDisabled} type="submit">
-          {state.showSpinner ? (
-            <Icon className="fa-spin" type="spinner" />
-          ) : (
-            'Save Changes'
-          )}
-        </button>
+      <TextField
+        color="secondary"
+        variant="filled"
+        label="Current Password"
+        placeholder="Enter your password to confirm this change"
+        value={state.password}
+        onChange={e => updateField('password', e.target.value)}
+        fullWidth
+      />
+      <TextField
+        color="secondary"
+        variant="filled"
+        label="Email Address"
+        placeholder="Enter your new email"
+        value={state.email}
+        onChange={e => updateField('email', e.target.value.toLowerCase())}
+        fullWidth
+        style={{marginTop: '2.5%'}}
+      />
+      <div style={{width: '100%', marginTop: '2.5%', textAlign: 'right'}}>
+        <Button
+          color="primary"
+          disabled={isDisabled}
+          variant="contained"
+          type="submit"
+        >
+          {state.showSpinner ? 'Saving Changes...' : ' Save Changes'}
+        </Button>
       </div>
     </Form>
   );

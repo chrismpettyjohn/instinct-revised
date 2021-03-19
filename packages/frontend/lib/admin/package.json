@@ -28,7 +28,8 @@
     "react-toggle": "^4.1.1",
     "styled-components": "^5.2.1",
     "tslib": "^2.1.0",
-    "wouter": "^2.7.4"
+    "wouter": "^2.7.4",
+    "bootstrap": "^4.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",

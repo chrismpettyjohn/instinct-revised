@@ -32,7 +32,11 @@ export function ViewArticle() {
             <Card style={{background: '#272B34', color: 'white'}}>
               <CardHeader
                 title={article?.title}
-                subheader={article?.description}
+                subheader={
+                  <span style={{color: 'rgb(73, 80, 87)'}}>
+                    {article?.description}
+                  </span>
+                }
               />
               <CardMedia image={article?.headerImage} style={{height: 300}} />
               <CardContent>

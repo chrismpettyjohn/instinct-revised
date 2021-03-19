@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Form, Icon, Input, sessionService} from '@instinct-web/core';
 import {defaultSecurityPreferencesState, SecurityPreferencesState} from './';
+import {Button, TextField} from '@material-ui/core';
 
 export function SecurityPreferences() {
   const [state, setState] = useState<SecurityPreferencesState>(
@@ -61,57 +62,40 @@ export function SecurityPreferences() {
           <h4>There was a problem changing your password</h4>
         </div>
       )}
-      <div>
-        <h4 className="form-subcategory">Current Password</h4>
-        <div className="row">
-          <div className="column-2">
-            <Input
-              type="password"
-              name="currentPassword"
-              placeholder="Enter your current password"
-              value={state.currentPassword}
-              onChange={updateField}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="mt-5">
-        <h4 className="form-subcategory">New Password</h4>
-        <div className="row">
-          <div className="column-2">
-            <Input
-              type="password"
-              name="newPassword"
-              placeholder="Enter your new password"
-              value={state.newPassword}
-              onChange={updateField}
-            />
-          </div>
-          <div className="column-2">
-            <Input
-              type="password"
-              name="newPasswordAgain"
-              placeholder="Enter your new password again"
-              value={state.newPasswordAgain}
-              onChange={updateField}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="form-help">
-        <p>
-          You must use at least 6 characters. We also recommend you to combine
-          numbers and symbols for strong password protection.
-        </p>
-      </div>
-      <div className="mt-4 text-right">
-        <button className="btn btn-primary" disabled={isDisabled} type="submit">
-          {state.showSpinner ? (
-            <Icon className="fa-spin" type="spinner" />
-          ) : (
-            'Save Changes'
-          )}
-        </button>
+      <TextField
+        color="secondary"
+        variant="filled"
+        label="Current Password"
+        placeholder="Enter your current password for verification"
+        value={state.currentPassword}
+        onChange={e => updateField('currentPassword', e.target.value)}
+        fullWidth
+        style={{marginTop: '2.5%'}}
+      />
+      <TextField
+        color="secondary"
+        variant="filled"
+        label="New Password"
+        placeholder="Enter your new password"
+        value={state.newPasswordAgain}
+        onChange={e => updateField('newPassword', e.target.value)}
+        fullWidth
+        style={{marginTop: '2.5%'}}
+      />
+      <TextField
+        color="secondary"
+        variant="filled"
+        label="New Password Again"
+        placeholder="Enter your new password again"
+        value={state.newPasswordAgain}
+        onChange={e => updateField('newPasswordAgain', e.target.value)}
+        fullWidth
+        style={{marginTop: '2.5%'}}
+      />
+      <div style={{width: '100%', marginTop: '2.5%', textAlign: 'right'}}>
+        <Button color="primary" variant="contained" type="submit">
+          {state.showSpinner ? 'Saving Changes...' : ' Save Changes'}
+        </Button>
       </div>
     </Form>
   );
