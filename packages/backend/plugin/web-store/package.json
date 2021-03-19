@@ -15,6 +15,7 @@
     "stripe": "^8.138.0"
   },
   "devDependencies": {
+    "@instinct-api/session": "^2.0.0",
     "@instinct-api/database": "^2.0.0",
     "@instinct-prj/interface": "^2.0.0",
     "@nestjs/common": "^7.6.13",
