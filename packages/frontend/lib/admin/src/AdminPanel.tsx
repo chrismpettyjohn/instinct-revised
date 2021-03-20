@@ -1,4 +1,3 @@
-import 'bootstrap/scss/bootstrap';
 import React, {useEffect} from 'react';
 
 export function AdminPanel() {
