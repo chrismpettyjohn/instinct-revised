@@ -2,7 +2,7 @@
   "name": "@instinct-client/legacy-web",
   "version": "1.0.0",
   "scripts": {
-    "start": "PORT=3001 react-app-rewired start",
+    "start": "PORT=3001 SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "build:prod": "rimraf dist && rimraf ./build && SKIP_PREFLIGHT_CHECK=true react-app-rewired build && mv build dist && cp dist/index.html dist/404.html"
   },
   "dependencies": {
