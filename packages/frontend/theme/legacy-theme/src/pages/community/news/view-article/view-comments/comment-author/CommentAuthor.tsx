@@ -26,7 +26,7 @@ export function CommentAuthor({children, user}: CommentAuthorProps) {
         </div>
         {user.rank!.permissions.websiteShowStaff && (
           <div style={{width: 50}}>
-            <img src="/img/staff.gif" />
+            <img src="https://i.imgur.com/PU0iOsZ.png" />
           </div>
         )}
       </div>

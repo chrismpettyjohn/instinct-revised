@@ -1,8 +1,9 @@
 import '@instinct-web/core';
-import React, {useEffect, useState} from 'react';
-import {Bootstrap, ContextProviders} from '@instinct-web/core';
-import {Client} from './components/client/Client';
 import {useLocation} from 'wouter';
+import './public/css/LegacyTheme.scss';
+import React, {useEffect, useState} from 'react';
+import {Client} from './components/client/Client';
+import {Bootstrap, ContextProviders} from '@instinct-web/core';
 
 export function LegacyTheme() {
   const location = useLocation();

@@ -28,7 +28,7 @@ export function Staff() {
                 </div>
                 <div className="col-4 text-right">
                   <img
-                    src="/img/staff.gif"
+                    src="https://i.imgur.com/PU0iOsZ.png"
                     style={{marginTop: 10, height: 80}}
                   />
                 </div>

@@ -29,7 +29,7 @@ export function UserProfile() {
                   </div>
                   <div className="col text-right">
                     {profile?.user?.rank?.permissions?.websiteShowStaff && (
-                      <img src="/img/staff.gif" height={100} />
+                      <img src="https://i.imgur.com/PU0iOsZ.png" height={100} />
                     )}
                   </div>
                 </div>

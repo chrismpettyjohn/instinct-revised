@@ -29,7 +29,7 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             <div className="profile-icon">
               <img
                 alt="credits"
-                src="/img/icons/credits.png"
+                src="https://i.imgur.com/2vqdwIo.png"
                 style={{position: 'initial'}}
               />
               &nbsp;
@@ -38,7 +38,7 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             <div className="profile-icon">
               <img
                 alt="duckets"
-                src="/img/icons/duckets.png"
+                src="https://i.imgur.com/ITxyGkA.png"
                 style={{position: 'initial'}}
               />
               &nbsp;
@@ -47,7 +47,7 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             <div className="profile-icon">
               <img
                 alt="diamonds"
-                src="/img/icons/diamonds.png"
+                src="https://i.imgur.com/0eyLlku.png"
                 style={{position: 'initial'}}
               />
               &nbsp;{profile?.user.points.toLocaleString()}

@@ -7,7 +7,7 @@ export function RoomContainer({room}: RoomContainerProps) {
   return (
     <img
       alt="room icon"
-      src="/img/icons/room/1.gif"
+      src="https://i.imgur.com/eHAFP5o.gif"
       onClick={() => setLocation(`/rooms/${room.id}`)}
       style={{cursor: 'pointer '}}
     />
