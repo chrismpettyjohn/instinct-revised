@@ -1,6 +1,6 @@
 {
   "name": "@instinct-api/users",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -12,12 +12,12 @@
     "compile": "tsc -p tsconfig.build.json"
   },
   "devDependencies": {
-    "@instinct-api/common": "^2.0.0",
-    "@instinct-api/database": "^2.0.0",
-    "@instinct-api/google": "^2.0.0",
-    "@instinct-api/session": "^2.0.0",
-    "@instinct-api/validator": "^2.0.0",
-    "@instinct-prj/interface": "^2.0.0",
+    "@instinct-api/common": "^2.0.1",
+    "@instinct-api/database": "^2.0.1",
+    "@instinct-api/google": "^2.0.1",
+    "@instinct-api/session": "^2.0.1",
+    "@instinct-api/validator": "^2.0.1",
+    "@instinct-prj/interface": "^2.0.1",
     "@nestjs/common": "^7.6.13",
     "@nestjs/core": "^7.6.13",
     "@nestjs/typeorm": "^7.1.5",

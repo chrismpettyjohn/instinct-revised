@@ -1,6 +1,6 @@
 {
   "name": "@instinct-web/admin",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -13,8 +13,8 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "dependencies": {
-    "@instinct-prj/interface": "^2.0.0",
-    "@instinct-web/core": "^2.0.0",
+    "@instinct-prj/interface": "^2.0.1",
+    "@instinct-web/core": "^2.0.1",
     "@uiw/react-md-editor": "^2.1.10",
     "axios": "^0.21.1",
     "lodash": "^4.17.21",
