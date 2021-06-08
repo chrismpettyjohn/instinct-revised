@@ -1,6 +1,12 @@
 <img src="https://i.imgur.com/gOi5doh.png"/>
 
-Instinct is a collection of libraries around Habbo Hotel that help ease the process of creating custom websites.  
+Instinct is a collection of libraries around Habbo Hotel that help ease the process of creating custom websites. 
+
+<img src="https://i.imgur.com/hnXKQig.png" />
+
+## Screenshots
+https://imgur.com/a/0c5zTbi
+
 
 ## Discord
 Join our Discord here: https://discord.gg/ZFCV5HZ4jt

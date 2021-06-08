@@ -28,7 +28,7 @@ Download MariaDB: https://downloads.mariadb.org/
 NodeJS is the underlying runtime that executes Instinct on your computer.  It allows Javascript code that normally is written for the browser,
 also run on your computer natively.  
 
-You can download NodeJS here: https://nodejs.org/en/download/current/
+You can download NodeJS here: https://nodejs.org/en/download/
 <hr/>
 
 #### Yarn
