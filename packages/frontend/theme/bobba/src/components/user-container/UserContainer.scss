@@ -1,0 +1,78 @@
+.member-container {
+
+  &:not(:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  .member-content {
+    text-decoration: none;
+    color: #333;
+
+    .member-avatar {
+      background-color: #dadada;
+      -webkit-border-radius: 32px;
+      -moz-border-radius: 32px;
+      border-radius: 32px;
+      width: 64px;
+      height: 64px;
+      -webkit-transition: background-color 0.2s ease 0s;
+      transition: background-color 0.2s ease 0s;
+    }
+
+    &:hover .member-avatar {
+      background-color: #001726;
+  }
+
+    .member-details {
+      padding: 0 15px;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      line-height: normal;
+
+      .details-username {
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: -2px;
+      }
+
+      .details-function {
+        font-size: 13px;
+        margin: -2px 0 6px;
+      }
+
+      .details-motto {
+        font-size: 12px;
+        font-style: italic;
+        color: #828282;
+      }
+
+    }
+
+    .member-status {
+      width: 26px;
+
+      .status-icon {
+        background-color: #c71d1d;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+        width: 18px;
+        height: 18px;
+        display: block;
+
+        .online {
+          background-color: #38b54a;
+        }
+
+
+      }
+
+    }
+
+  }
+
+}
