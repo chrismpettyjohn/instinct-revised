@@ -44,27 +44,29 @@ export function Bootstrap() {
 
   try {
     return (
-      <SkeletonTheme color="#0f416d" highlightColor="#1a4d6e">
-        <ToastContainer />
-        <ServerMaintenanceGuard>
-          <BannedGuard>
-            <StripeProvider>
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  minHeight: '100%',
-                  minWidth: '100%',
-                }}
-              >
-                <Router />
-                <DataPolling />
-              </div>
-            </StripeProvider>
-          </BannedGuard>
-        </ServerMaintenanceGuard>
-      </SkeletonTheme>
+      <React.StrictMode>
+        <SkeletonTheme color="#0f416d" highlightColor="#1a4d6e">
+          <ToastContainer />
+          <ServerMaintenanceGuard>
+            <BannedGuard>
+              <StripeProvider>
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    minHeight: '100%',
+                    minWidth: '100%',
+                  }}
+                >
+                  <Router />
+                  <DataPolling />
+                </div>
+              </StripeProvider>
+            </BannedGuard>
+          </ServerMaintenanceGuard>
+        </SkeletonTheme>
+      </React.StrictMode>
     );
   } catch {
     return <RenderError />;
