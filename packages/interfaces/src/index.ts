@@ -1,5 +1,3 @@
-import './images';
-
 export * from './article';
 export * from './badge';
 export * from './beta-code';
