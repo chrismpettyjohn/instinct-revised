@@ -25,6 +25,7 @@ export interface Config {
   maintenanceEnabled: boolean;
   findRetrosUsername?: string;
   stripePublicKey: string;
+  logoURL: string;
 }
 
 export const defaultConfig: Config = {
@@ -54,4 +55,5 @@ export const defaultConfig: Config = {
   maintenanceEnabled: false,
   findRetrosUsername: undefined,
   stripePublicKey: '',
+  logoURL: '',
 };

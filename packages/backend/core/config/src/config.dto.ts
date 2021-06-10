@@ -7,6 +7,7 @@ import {
   IsOptional,
   IsPort,
   IsString,
+  IsUrl,
 } from 'class-validator';
 
 export class UpdateConfigDTO implements ConfigDTO {
@@ -150,4 +151,8 @@ export class UpdateConfigDTO implements ConfigDTO {
   @IsString()
   @IsOptional()
   stripeSecretKey!: string;
+
+  @IsUrl()
+  @IsOptional()
+  logoURL!: string;
 }

@@ -29,6 +29,7 @@ export interface ConfigDTO {
   findRetrosUsername?: string;
   stripePublicKey: string;
   stripeSecretKey: string;
+  logoURL: string;
 }
 
 export const exampleConfigDTO: ConfigDTO = {
@@ -62,4 +63,5 @@ export const exampleConfigDTO: ConfigDTO = {
   findRetrosUsername: '',
   stripePublicKey: '',
   stripeSecretKey: '',
+  logoURL: '',
 };

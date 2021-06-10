@@ -29,6 +29,7 @@ export function configWire(configEntity: ConfigEntity): Config {
     maintenanceEnabled: configEntity.maintenanceEnabled === 1,
     findRetrosUsername: configEntity.findRetrosUsername,
     stripePublicKey: configEntity.stripePublicKey,
+    logoURL: configEntity.logoURL,
   };
 }
 

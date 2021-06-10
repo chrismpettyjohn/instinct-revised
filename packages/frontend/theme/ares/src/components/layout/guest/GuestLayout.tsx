@@ -2,6 +2,8 @@ import {Link} from 'wouter';
 import './GuestLayout.scss';
 import React, {useContext} from 'react';
 import {GuestLayoutProps} from './GuestLayout.types';
+import VipRoomImage from '../../../public/images/rooms/vip.png';
+import DefaultRoomImage from '../../../public/images/rooms/default.png';
 import {configContext, GuestGuard, healthContext} from '@instinct-web/core';
 
 export function GuestLayout({children}: GuestLayoutProps) {
@@ -9,93 +11,120 @@ export function GuestLayout({children}: GuestLayoutProps) {
   const {health} = useContext(healthContext);
   return (
     <GuestGuard>
-      <div id="main">
-        <div className="container_24">
-          <div className="logo"></div>
-          <div className="textsDetails">
-            <h3>World Connected</h3>
-            <p>
-              There are <b>{health.usersOnline}</b> users online
-            </p>
-          </div>
-          <div id="contentBox">
-            <div className="padding">
-              <div className="loginPosition">
-                <h2>Welcome Back,</h2>
-                <form action="" method="post">
-                  <label htmlFor="login-username">Username:</label>
-                  <input type="text" id="login-username" />
-                  <label htmlFor="login-password">Password:</label>
-                  <input
-                    type="text"
-                    id="login-password"
-                    style={{marginBottom: -5}}
-                  />
-                  <a href="" className="sub-link">
-                    Forgot Password
-                  </a>
-                  =<button type="submit">Login</button>
-                </form>
+      <div
+        className="row h-100-vh justify-content-xxl-center justify-content-xl-center
+    justify-content-md-center align-items-xxl-center align-items-xl-center
+    align-items-md-center"
+      >
+        <main id="main" className="bg-dark no--sidebar">
+          <div className="row h-100">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div className="container h-100 w-100 d-flex flex-column">
+                <div className="d-flex h-100 flex-column justify-content-center">
+                  <div className="d-flex mb-3 mt-5 mt-xl-0 mt-lg-0">
+                    <img
+                      src={config.logoURL}
+                      className="flex-fill"
+                      id="logo"
+                      alt="Logo"
+                    />
+                  </div>
+                  <form onSubmit={() => {}}>
+                    <div className="mb-3">
+                      <label htmlFor="username" className="form-label">
+                        Username
+                      </label>
+                      <div id="username-group" className="input-group">
+                        <img
+                          className="d-xxl-block d-xl-block d-lg-block d-md-block d-none"
+                          src=""
+                        />
+                        <input
+                          type="text"
+                          id="username"
+                          className="form-control p-4"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="mb-3">
+                      <label htmlFor="password" className="form-label">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        id="password"
+                        className="form-control p-4"
+                        required
+                      />
+                    </div>
+                    <button className="btn btn-danger w-100 mt-2">Login</button>
+                  </form>
+                </div>
               </div>
             </div>
-            <div className="hotelview">
-              <div className="overlay">
+            <div className="col-xl-6 col-lg-6 d-xxl-block d-xl-block d-lg-block d-none bg-red">
+              <div className="container d-flex h-100 flex-column justify-content-center">
                 <div
-                  className="bigAvatar"
-                  style={{
-                    backgroundImage:
-                      'http://hubba.cc/hubba-imaging/avatarimage?figure=hd-190-1391.lg-3023-1429.fa-1201-63.sh-295-1408.ca-3187-96.hr-3278-39-40.ch-3030-1408.wa-3211-63-1408&gesture=sml&size=l&direction=4&head_direction=3&action=wav',
-                  }}
-                />
-              </div>
-              <div className="avatarShadow" />
-              <div className="messages">
-                <h2>Welcome to {config.siteName}</h2>
-                <p>
-                  {config.siteName} Hotel is a virtual world where you can
-                  create your own character, your own rooms and find new and old
-                  friends again.
-                </p>
-                <Link href="/register" className="registerButton">
-                  Join now for free
-                </Link>
+                  id="homeCarousel"
+                  className="carousel slide h-100 p-5"
+                  data-ride="carousel"
+                >
+                  <ol className="carousel-indicators">
+                    <li
+                      data-target="#homeCarousel"
+                      data-slide-to="0"
+                      className="active"
+                    />
+                    <li data-target="#homeCarousel" data-slide-to="1" />
+                    <li data-target="#homeCarousel" data-slide-to="2" />
+                  </ol>
+                  <div className="carousel-inner h-100">
+                    <div className="carousel-item active">
+                      <img
+                        src={DefaultRoomImage}
+                        className="d-block w-75 mx-auto"
+                      />
+                      <div className="carousel-caption d-block">
+                        <h5>Rooms</h5>
+                        <p>
+                          können now besser bearbeitet werden because
+                          Bodenlayout-Editor Feature.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <img
+                        src={VipRoomImage}
+                        className="d-block w-75 mx-auto"
+                      />
+                      <div className="carousel-caption d-block">
+                        <h5>Taler</h5>
+                        <p>
+                          are völlig kostenlos and you can verdienen durc viel
+                          Aktivität.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <img
+                        src={DefaultRoomImage}
+                        className="d-block w-75 mx-auto"
+                      />
+                      <div className="carousel-caption d-block">
+                        <h5>Rooms</h5>
+                        <p>
+                          können now besser bearbeitet werden because
+                          Bodenlayout-Editor Feature.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div style={{clear: 'both'}} />
-        <div id="threeBoxes">
-          <div
-            className="infoImages"
-            style={{backgroundImage: 'url(https://i.imgur.com/QxXZ0cS.png)'}}
-          />
-          <p style={{marginTop: 12}}>
-            You can always win great prizes at our events!
-          </p>
-        </div>
-        <div id="threeBoxes">
-          <div
-            className="infoImages"
-            style={{backgroundImage: 'url(https://i.imgur.com/QxXZ0cS.png)'}}
-          />
-          <p style={{marginTop: 12}}>
-            You can always win great prizes at our events!
-          </p>
-        </div>
-        <div id="threeBoxes">
-          <div
-            className="infoImages"
-            style={{backgroundImage: 'url(https://i.imgur.com/QxXZ0cS.png)'}}
-          />
-          <p style={{marginTop: 12}}>
-            You can always win great prizes at our events!
-          </p>
-        </div>
-        <div style={{clear: 'both'}} />
-        <div id="footer-content">
-          <div style={{float: 'left', width: '50%'}}>Hello</div>
-          <div style={{float: 'right', width: '50%'}}>Hello</div>
-        </div>
+        </main>
       </div>
     </GuestGuard>
   );

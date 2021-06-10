@@ -96,4 +96,7 @@ export class ConfigEntity {
 
   @Column({name: 'stripe_secret_key'})
   stripeSecretKey!: string;
+
+  @Column({name: 'logo_url'})
+  logoURL!: string;
 }
