@@ -1,7 +1,7 @@
 import './Register.scss';
 import {Link, useLocation} from 'wouter';
 import ReCAPTCHA from 'react-google-recaptcha';
-import React, {useContext, useState} from 'react';
+import React, {SyntheticEvent, useContext, useState} from 'react';
 import {GuestLayout} from '../../../components/layout/guest';
 import {defaultRegisterState, RegisterState} from './Register.types';
 import {
@@ -11,6 +11,7 @@ import {
   setURL,
   userService,
 } from '@instinct-web/core';
+import {FigureSelector} from './figure-selector/FigureSelector';
 
 setURL('register', <Register />);
 
@@ -39,7 +40,8 @@ export function Register() {
     }));
   }
 
-  async function onSubmit() {
+  async function onSubmit(event: SyntheticEvent) {
+    event.preventDefault();
     try {
       onChange('showSpinner', true);
       onChange('showError', false);
@@ -80,7 +82,11 @@ export function Register() {
             </div>
 
             <div className="col-12">
-              <form className="ng-pristine ng-invalid ng-touched" noValidate>
+              <form
+                className="ng-pristine ng-invalid ng-touched"
+                noValidate
+                onSubmit={onSubmit}
+              >
                 <div className="row">
                   <div className="col-xxl-6 col-xl-6 col-md-12 col-sm-12 bg-dark p-4">
                     <div className="mb-3">
@@ -96,10 +102,11 @@ export function Register() {
                         <input
                           aria-describedby="usernameHelp"
                           autoComplete="username"
-                          className="form-control p-4 ng-pristine ng-invalid ng-touched"
+                          className="form-control p-4"
                           id="username"
                           required
                           type="text"
+                          onChange={e => onChange('username', e.target.value)}
                         />
                       </div>
                       <div className="form-text" id="usernameHelp">
@@ -118,6 +125,7 @@ export function Register() {
                           id="password"
                           required
                           type="password"
+                          onChange={e => onChange('password', e.target.value)}
                         />
 
                         <div className="form-text" id="passwordHelp">
@@ -139,6 +147,9 @@ export function Register() {
                           id="confirm-password"
                           required
                           type="password"
+                          onChange={e =>
+                            onChange('passwordAgain', e.target.value)
+                          }
                         />
                         <div className="form-text" id="confirmPasswordHelp">
                           Repeat your password in the box above
@@ -159,98 +170,42 @@ export function Register() {
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                         required
                         type="email"
+                        onChange={e => onChange('email', e.target.value)}
                       />
                     </div>
 
-                    <div className="mt-4 mb-3">
-                      <label className="form-label" htmlFor="boys">
-                        Boy
-                      </label>
-
-                      <div className="row" id="boys">
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer selected"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=ea-1401-63.lg-275-73.hr-828-45.fa-1212-63.ch-255-64.hd-180-8.sh-290-91&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=hd-209-1373.lg-3320-110-1408.hr-3163-42.sh-3524-110-92.ch-3077-64-1408&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=hd-207-1.lg-3058-1428.hr-3162-1906.sh-3089-110.cc-3874-1897-1408&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=he-1605-1408.lg-285-64.hr-155-42.ch-225-1408.hd-3095-8.sh-300-1408.cc-260-84&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                     <div className="mb-3">
-                      <label className="form-label" htmlFor="girls">
-                        Girl
-                      </label>
-
-                      <div className="row" id="girls">
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=ch-660-64.ea-1401-63.hd-600-8.hr-3920-33-1345.lg-700-73.fa-1212-63.sh-725-90&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=sh-3089-110.hr-3789-61-61.ch-3539-92.lg-3019-110.hd-600-20&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=sh-3252-90-90.hr-3273-1394-42.ch-3729-110-1408.hd-3096-10.lg-3058-110&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="col-3 ng-star-inserted">
-                          <div className="d-flex justify-content-center w-100">
-                            <img
-                              className="look cursor-pointer"
-                              src="https://habbo.city/habbo-imaging/avatarimage?figure=hr-3811-1394.ch-660-1331.he-1604-63.hd-625-4.lg-3216-1328&amp;action=std&amp;gesture=std&amp;direction=2&amp;head_direction=2&amp;size=n&amp;headonly=1"
-                            />
-                          </div>
-                        </div>
-                      </div>
+                      <FigureSelector
+                        figures={[
+                          {
+                            group: 'Boy',
+                            look:
+                              'ch-660-64.ea-1401-63.hd-600-8.hr-3920-33-1345.lg-700-73.fa-1212-63.sh-725-9',
+                          },
+                          {
+                            group: 'Girl',
+                            look:
+                              'ch-660-64.ea-1401-63.hd-600-8.hr-3920-33-1345.lg-700-73.fa-1212-63.sh-725-9',
+                          },
+                          {
+                            group: 'Girl',
+                            look:
+                              'sh-3089-110.hr-3789-61-61.ch-3539-92.lg-3019-110.hd-600-2',
+                          },
+                          {
+                            group: 'Girl',
+                            look:
+                              'sh-3252-90-90.hr-3273-1394-42.ch-3729-110-1408.hd-3096-10.lg-3058-11',
+                          },
+                          {
+                            group: 'Girl',
+                            look:
+                              'hr-3811-1394.ch-660-1331.he-1604-63.hd-625-4.lg-3216-132',
+                          },
+                        ]}
+                      />
                     </div>
                   </div>
-
                   <div className="col-12">
                     <div className="mb-3">
                       <div className="selected-look d-flex justify-content-center">
@@ -259,9 +214,18 @@ export function Register() {
                     </div>
 
                     <div className="d-inline-flex justify-content-center w-100 mt-2 mb-3">
-                      <button className="btn btn-danger w-25 p-3" type="submit">
+                      <button
+                        className="btn btn-danger w-25 p-3"
+                        type="submit"
+                        disabled={disabled}
+                      >
                         Let's Go!
                       </button>
+                      <ReCAPTCHA
+                        sitekey={config.googleRecaptchaClientKey}
+                        onChange={key => onChange('captcha', key!)}
+                        size="invisible"
+                      />
                     </div>
                   </div>
                 </div>
