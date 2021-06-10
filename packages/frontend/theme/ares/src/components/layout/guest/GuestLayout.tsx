@@ -1,14 +1,12 @@
-import {Link} from 'wouter';
 import './GuestLayout.scss';
 import React, {useContext} from 'react';
 import {GuestLayoutProps} from './GuestLayout.types';
 import VipRoomImage from '../../../public/images/rooms/vip.png';
 import DefaultRoomImage from '../../../public/images/rooms/default.png';
-import {configContext, GuestGuard, healthContext} from '@instinct-web/core';
+import {configContext, GuestGuard} from '@instinct-web/core';
 
 export function GuestLayout({children}: GuestLayoutProps) {
   const {config} = useContext(configContext);
-  const {health} = useContext(healthContext);
   return (
     <GuestGuard>
       <div
@@ -29,37 +27,7 @@ export function GuestLayout({children}: GuestLayoutProps) {
                       alt="Logo"
                     />
                   </div>
-                  <form onSubmit={() => {}}>
-                    <div className="mb-3">
-                      <label htmlFor="username" className="form-label">
-                        Username
-                      </label>
-                      <div id="username-group" className="input-group">
-                        <img
-                          className="d-xxl-block d-xl-block d-lg-block d-md-block d-none"
-                          src=""
-                        />
-                        <input
-                          type="text"
-                          id="username"
-                          className="form-control p-4"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="password" className="form-label">
-                        Password
-                      </label>
-                      <input
-                        type="password"
-                        id="password"
-                        className="form-control p-4"
-                        required
-                      />
-                    </div>
-                    <button className="btn btn-danger w-100 mt-2">Login</button>
-                  </form>
+                  {children}
                 </div>
               </div>
             </div>

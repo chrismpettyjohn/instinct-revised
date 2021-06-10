@@ -2,13 +2,10 @@ import './Login.scss';
 import {FormGroup} from 'reactstrap';
 import {Link, useLocation} from 'wouter';
 import {GuestLayout} from '../../../components/layout/guest';
-import React, {useContext, useState} from 'react';
+import React, {SyntheticEvent, useContext, useState} from 'react';
 import {defaultLoginState, LoginState} from './Login.types';
 import {
   configContext,
-  Form,
-  Icon,
-  Input,
   sessionContext,
   sessionService,
   setURL,
@@ -33,7 +30,8 @@ export function Login() {
     }));
   }
 
-  async function onSubmit() {
+  async function onSubmit(event: SyntheticEvent) {
+    event.preventDefault();
     try {
       onChange('showSpinner', true);
       onChange('showError', false);
@@ -53,55 +51,45 @@ export function Login() {
 
   return (
     <GuestLayout>
-      <Form className="" disabled={disabled} onSubmit={onSubmit}>
-        {state.showError && (
-          <div className="alert-danger p-2 mb-3">
-            <b>That is not the right username or password.</b>
+      <form onSubmit={onSubmit}>
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
+          <div id="username-group" className="input-group">
+            <img
+              className="d-xxl-block d-xl-block d-lg-block d-md-block d-none"
+              src=""
+            />
+            <input
+              type="text"
+              id="username"
+              className="form-control p-4"
+              onChange={e => onChange('username', e.target.value)}
+              required
+            />
           </div>
-        )}
-        <FormGroup>
-          <h3>Username</h3>
-          <Input
-            type="text"
-            name="username"
-            value={state.username}
-            onChange={onChange}
-          />
-        </FormGroup>
-        <FormGroup>
-          <h3>Password</h3>
-          <div style={{marginTop: -10}}>
-            <Link className="forgot-password" to="/forgot-password">
-              Forgot password?
-            </Link>
-          </div>
-          <Input
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
+          <input
             type="password"
-            name="password"
-            value={state.password}
-            onChange={onChange}
+            id="password"
+            className="form-control p-4"
+            onChange={e => onChange('password', e.target.value)}
+            required
           />
-        </FormGroup>
-        <FormGroup>
-          <button
-            className="btn btn-success btn-block"
-            disabled={disabled}
-            type="submit"
-          >
-            Login
-          </button>
-          <hr />
-          <Link to="/register">
-            <button className="btn btn-dark btn-block">
-              {state.showSpinner ? (
-                <Icon className="fa-spin" type="spinner" />
-              ) : (
-                <>Join {config.siteName} for Free!</>
-              )}
-            </button>
-          </Link>
-        </FormGroup>
-      </Form>
+        </div>
+        <button
+          className="btn btn-danger w-100 mt-2"
+          type="submit"
+          disabled={disabled}
+        >
+          Login
+        </button>
+      </form>
     </GuestLayout>
   );
 }

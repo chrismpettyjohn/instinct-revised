@@ -1,19 +1,16 @@
-import {FormGroup} from 'reactstrap';
-import {Link, useLocation} from 'wouter';
-import {GuestLayout} from '../../../components/layout/guest';
+import './Register.scss';
+import {useLocation} from 'wouter';
+import ReCAPTCHA from 'react-google-recaptcha';
 import React, {useContext, useState} from 'react';
+import {GuestLayout} from '../../../components/layout/guest';
 import {defaultRegisterState, RegisterState} from './Register.types';
 import {
   configContext,
-  Form,
-  Icon,
-  Input,
   sessionContext,
   sessionService,
   setURL,
   userService,
 } from '@instinct-web/core';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 setURL('register', <Register />);
 
@@ -69,80 +66,77 @@ export function Register() {
 
   return (
     <GuestLayout>
-      <Form className="" disabled={disabled} onSubmit={onSubmit}>
-        <FormGroup>
-          <h3>Username</h3>
-          <Input
-            type="text"
-            name="username"
-            value={state.username}
-            onChange={onChange}
-          />
-        </FormGroup>
-        <FormGroup>
-          <h3>Email</h3>
-          <Input
-            type="email"
-            name="email"
-            value={state.email}
-            onChange={onChange}
-          />
-        </FormGroup>
-        <FormGroup>
-          <h3>Password</h3>
-          <Input
-            type="password"
-            name="password"
-            value={state.password}
-            onChange={onChange}
-          />
-        </FormGroup>
-        <FormGroup>
-          <h3>Password Again</h3>
-          <Input
-            type="password"
-            name="passwordAgain"
-            value={state.passwordAgain}
-            onChange={onChange}
-          />
-        </FormGroup>
-        {config.siteBeta && (
-          <FormGroup>
-            <h3>Beta Code</h3>
-            <Input
-              type="text"
-              name="betaCode"
-              value={state.betaCode}
-              onChange={onChange}
-            />
-          </FormGroup>
-        )}
-        <FormGroup>
-          <ReCAPTCHA
-            sitekey={config.googleRecaptchaClientKey}
-            onChange={x => onChange('captcha', x as string)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <button
-            className="btn btn-success btn-block"
-            disabled={disabled}
-            type="submit"
-          >
-            Register
-          </button>
-          <hr />
-          <Link to="/login">
-            <button className="btn btn-dark btn-block">
-              {state.showSpinner ? (
-                <Icon className="fa-spin" type="spinner" />
-              ) : (
-                <>Already Have an Account?</>
-              )}
-            </button>
-          </Link>
-        </FormGroup>
-      </Form>
+      <form onSubmit={onSubmit}>
+        <div className="row">
+          <div className="col-xxl-6 col-xl-6 col-md-12 col-sm-12 bg-dark p-4">
+            <div className="mb-3">
+              <label htmlFor="username" className="form-label">
+                Username
+              </label>
+              <div id="username-group" className="input-group">
+                <img
+                  className="d-xxl-block d-xl-block d-lg-block d-md-block d-none"
+                  src=""
+                />
+                <input
+                  type="text"
+                  id="username"
+                  className="form-control p-4"
+                  required
+                />
+              </div>
+              <div className="form-text">you fucked up</div>
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="form-control p-4"
+                onChange={e => onChange('password', e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="passwordAgain" className="form-label">
+                Password Again
+              </label>
+              <input
+                type="password"
+                id="passwordAgain"
+                className="form-control p-4"
+                onChange={e => onChange('passwordAgain', e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="enail" className="form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="form-control p-4"
+                onChange={e => onChange('email', e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <ReCAPTCHA
+                sitekey={config.googleRecaptchaClientKey}
+                onChange={x => onChange('captcha', x as string)}
+              />
+            </div>
+            <div className="d-inline-flex justify-content-center w-100 mt-2 mb-3">
+              <button type="submit" className="btn btn-danger w-25 p-3">
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
     </GuestLayout>
   );
 }
