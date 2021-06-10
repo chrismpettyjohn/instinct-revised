@@ -1,5 +1,5 @@
 {
-  "name": "@instinct-client/bobba-api",
+  "name": "@instinct-client/demo-api",
   "version": "0.1.0",
   "scripts": {
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
