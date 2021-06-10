@@ -12,9 +12,7 @@ export function GuestLayout({children}: GuestLayoutProps) {
     justify-content-md-center align-items-xxl-center align-items-xl-center
     align-items-md-center"
       >
-        <main id="main" className="bg-dark no--sidebar">
-          {children}
-        </main>
+        {children}
       </div>
     </GuestGuard>
   );
