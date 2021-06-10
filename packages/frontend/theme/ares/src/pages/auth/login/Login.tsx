@@ -90,6 +90,11 @@ export function Login() {
           Login
         </button>
       </form>
+      <div className="d-inline-flex justify-content-center mt-4 mt-xl-0 mt-lg-0 pb-3">
+        <Link id="register-anchor" href="/register">
+          New Around Here? <span className="ml-2 text-danger">Join {config.siteName}</span>
+        </Link>
+      </div>
     </GuestLayout>
   );
 }
