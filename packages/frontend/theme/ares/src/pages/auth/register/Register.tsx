@@ -27,6 +27,7 @@ export function Register() {
     state.password === '' ||
     state.password !== state.passwordAgain ||
     state.captcha === '' ||
+    !state.figure ||
     (config.siteBeta && state.betaCode === '') ||
     state.showSpinner;
 
@@ -176,11 +177,27 @@ export function Register() {
 
                     <div className="mb-3">
                       <FigureSelector
+                        figure={state.figure}
                         figures={[
                           {
                             group: 'Boy',
                             look:
-                              'ch-660-64.ea-1401-63.hd-600-8.hr-3920-33-1345.lg-700-73.fa-1212-63.sh-725-9',
+                              'ea-1401-63.lg-275-73.hr-828-45.fa-1212-63.ch-255-64.hd-180-8.sh-290-91',
+                          },
+                          {
+                            group: 'Boy',
+                            look:
+                              'hd-209-1373.lg-3320-110-1408.hr-3163-42.sh-3524-110-92.ch-3077-64-1408',
+                          },
+                          {
+                            group: 'Boy',
+                            look:
+                              'hd-207-1.lg-3058-1428.hr-3162-1906.sh-3089-110.cc-3874-1897-1408',
+                          },
+                          {
+                            group: 'Boy',
+                            look:
+                              'he-1605-1408.lg-285-64.hr-155-42.ch-225-1408.hd-3095-8.sh-300-1408.cc-260-84',
                           },
                           {
                             group: 'Girl',
@@ -203,6 +220,7 @@ export function Register() {
                               'hr-3811-1394.ch-660-1331.he-1604-63.hd-625-4.lg-3216-132',
                           },
                         ]}
+                        onSelect={newFigure => onChange('figure', newFigure)}
                       />
                     </div>
                   </div>

@@ -3,7 +3,11 @@ import {uniq} from 'lodash';
 import {Avatar} from '@instinct-web/core';
 import {FigureSelectorProps} from './FigureSelector.types';
 
-export function FigureSelector({figures}: FigureSelectorProps) {
+export function FigureSelector({
+  figure,
+  figures,
+  onSelect,
+}: FigureSelectorProps) {
   const groups = uniq(figures.map(_ => _.group));
 
   function getGroup(group: string) {
@@ -20,7 +24,16 @@ export function FigureSelector({figures}: FigureSelectorProps) {
               key={`group_${group}_figure_${figureIndex}`}
             >
               <div className="d-flex justify-content-center w-100">
-                <Avatar look={_.look} headOnly />
+                <Avatar
+                  className={`look cursor-pointer ${
+                    figure?.look === _.look && figure?.group === _.group
+                      ? 'selected'
+                      : ''
+                  }`}
+                  look={_.look}
+                  headOnly
+                  onClick={() => onSelect(_)}
+                />
               </div>
             </div>
           ))}
