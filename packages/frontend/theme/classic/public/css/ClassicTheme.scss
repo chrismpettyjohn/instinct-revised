@@ -1,0 +1,60 @@
+$background: #E3E3DB;
+$header-background: #BCE0EE;
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+
+  background: $background url(../images/background.png) center;
+
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  overflow: overlay;
+}
+
+ul {
+  list-style-type: none;
+
+  margin: unset;
+  padding: unset;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.container {
+  width: 75%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+main {
+  display: grid;
+
+  grid-gap: 12px;
+  grid-template-columns: auto 40%;
+
+  section {
+    margin-top: 12px;
+  }
+}
+
+a {
+  color: #FC6204;
+}
+
+@import "Global/Header";
+@import "Global/Buttons";
+@import "Global/Inputs";
+
+@import "Home/Profile";
+@import "Home/News";

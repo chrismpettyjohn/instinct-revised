@@ -1,5 +1,6 @@
 import path from 'path';
 import jsx from 'acorn-jsx';
+import copy from 'rollup-plugin-copy';
 import scss from 'rollup-plugin-scss';
 import image from '@rollup/plugin-image';
 import themesPackage from './package.json';
@@ -10,7 +11,7 @@ import resolveDependencies from '@rollup/plugin-node-resolve';
 import blockPeerDependencies from 'rollup-plugin-peer-deps-external';
 
 export default {
-  preserveModules: true,
+  preserveModules: false,
   input: './src/index.ts',
   output: [
     {
@@ -31,9 +32,9 @@ export default {
       dedupe: ['react', 'react-dom'],
     }),
 
-    // Bundle CSS and SASS files
+    // // Bundle CSS and SASS files
     scss({
-      output: './dist/themes.css',
+      output: './dist/public/css/ares-theme.css',
       failOnError: true,
       includePaths: ['node_modules/'],
       importer(url /*, prev */) {
@@ -56,8 +57,13 @@ export default {
       },
     }),
 
-    // Bundle image files
-    image(),
+    copy({
+      targets: [{src: 'src/public/images/**/*', dest: 'dist/public/images'}],
+    }),
+
+    image({
+      dom: true,
+    }),
 
     // Typescript compilation
     typescript({

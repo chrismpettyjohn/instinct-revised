@@ -1,14 +1,14 @@
+import path from 'path';
 import jsx from 'acorn-jsx';
-import url from 'postcss-url';
+import copy from 'rollup-plugin-copy';
 import scss from 'rollup-plugin-scss';
+import image from '@rollup/plugin-image';
 import themesPackage from './package.json';
 import {terser} from 'rollup-plugin-terser';
-import postcss from 'rollup-plugin-postcss';
 import commonJS from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import resolveDependencies from '@rollup/plugin-node-resolve';
 import blockPeerDependencies from 'rollup-plugin-peer-deps-external';
-import path from 'path';
 
 export default {
   preserveModules: false,
@@ -32,9 +32,9 @@ export default {
       dedupe: ['react', 'react-dom'],
     }),
 
-    // Bundle CSS and SASS files
+    // // Bundle CSS and SASS files
     scss({
-      output: './dist/themes.css',
+      output: './dist/public/css/ares-theme.css',
       failOnError: true,
       includePaths: ['node_modules/'],
       importer(url /*, prev */) {
@@ -57,14 +57,12 @@ export default {
       },
     }),
 
-    postcss({
-      plugins: [
-        url({
-          url: 'inline', // enable inline assets using base64 encoding
-          maxSize: 10, // maximum file size to inline (in kilobytes)
-          fallback: 'copy', // fallback method to use if max size is exceeded
-        }),
-      ],
+    copy({
+      targets: [{src: 'src/public/images/**/*', dest: 'dist/public/images'}],
+    }),
+
+    image({
+      dom: true,
     }),
 
     // Typescript compilation
