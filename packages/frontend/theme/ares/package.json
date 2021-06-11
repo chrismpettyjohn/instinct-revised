@@ -66,7 +66,8 @@
     "ts-loader": "^8.0.17",
     "tslib": "^2.1.0",
     "typescript": "^4.2.3",
-    "wouter": "^2.7.4"
+    "wouter": "^2.7.4",
+    "bootstrap": "^5.0.1"
   },
   "peerDependencies": {
     "axios": "^0.21.1",
@@ -82,7 +83,8 @@
     "swfobject": "^2.2.1",
     "tslib": "^2.1.0",
     "typescript": "^4.2.3",
-    "wouter": "^2.7.4"
+    "wouter": "^2.7.4",
+    "bootstrap": "^5.0.1"
   },
   "gitHead": "de80b2cef008aa6d17ed7e0616c67b2f15a93454"
 }

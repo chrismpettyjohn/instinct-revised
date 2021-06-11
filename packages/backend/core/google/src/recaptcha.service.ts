@@ -9,13 +9,10 @@ export class GoogleRecaptchaService {
 
   async passedVerification(response: string): Promise<boolean> {
     const config = await this.configRepo.getConfig();
-    const {
-      data,
-    }: AxiosResponse<
-      Record<'success', boolean>
-    > = await googleRecaptchaAPI.post(
-      `siteverify?secret=${config.googleRecaptchaSecretKey}&response=${response}`
-    );
+    const {data}: AxiosResponse<Record<'success', boolean>> =
+      await googleRecaptchaAPI.post(
+        `siteverify?secret=${config.googleRecaptchaSecretKey}&response=${response}`
+      );
     return data.success;
   }
 }

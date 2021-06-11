@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@instinct-theme/ares": "^0.1.0",
+    "@instinct-theme/classic": "^0.1.0",
     "@instinct-web/admin": "^2.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/node": "^14.14.33",

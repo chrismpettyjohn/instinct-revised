@@ -17,19 +17,19 @@ export class HealthController {
   @Get()
   async getHealth(): Promise<Health> {
     const config = await this.configRepo.getConfig();
-    const health: [
-      [{online_users: string}],
-      [{active_rooms: string}]
-    ] = await Promise.all([
-      this.userRepo
-        .getInstance()
-        .query(
-          'SELECT COUNT(*) AS "online_users" FROM users WHERE online = \'1\''
-        ),
-      this.roomRepo
-        .getInstance()
-        .query('SELECT COUNT(*) AS "active_rooms" FROM rooms WHERE users > 0'),
-    ]);
+    const health: [[{online_users: string}], [{active_rooms: string}]] =
+      await Promise.all([
+        this.userRepo
+          .getInstance()
+          .query(
+            'SELECT COUNT(*) AS "online_users" FROM users WHERE online = \'1\''
+          ),
+        this.roomRepo
+          .getInstance()
+          .query(
+            'SELECT COUNT(*) AS "active_rooms" FROM rooms WHERE users > 0'
+          ),
+      ]);
 
     return {
       maintenanceMode: config.maintenanceEnabled === 1,

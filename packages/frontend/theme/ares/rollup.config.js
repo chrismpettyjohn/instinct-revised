@@ -1,3 +1,4 @@
+import path from 'path';
 import jsx from 'acorn-jsx';
 import scss from 'rollup-plugin-scss';
 import image from '@rollup/plugin-image';
@@ -9,7 +10,7 @@ import resolveDependencies from '@rollup/plugin-node-resolve';
 import blockPeerDependencies from 'rollup-plugin-peer-deps-external';
 
 export default {
-  preserveModules: false,
+  preserveModules: true,
   input: './src/index.ts',
   output: [
     {
@@ -34,6 +35,25 @@ export default {
     scss({
       output: './dist/themes.css',
       failOnError: true,
+      includePaths: ['node_modules/'],
+      importer(url /*, prev */) {
+        // E.g. @import '~ckeditor5-theme-lark/theme/theme.scss';
+        // See https://github.com/jtangelder/sass-loader#imports
+        if (url.startsWith('~')) {
+          const filePath = path.resolve(
+            '..',
+            '..',
+            '..',
+            '..',
+            'node_modules',
+            url.slice(1)
+          );
+
+          return {
+            file: filePath,
+          };
+        }
+      },
     }),
 
     // Bundle image files

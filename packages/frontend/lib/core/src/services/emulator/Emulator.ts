@@ -17,10 +17,8 @@ export class EmulatorServiceImplementation implements EmulatorService {
   }
 
   async updateSettings(changes: EmulatorSettingsDTO) {
-    const updatedSettings: AxiosResponse<EmulatorSettings> = await backendAPI.patch(
-      'emulator/settings',
-      changes
-    );
+    const updatedSettings: AxiosResponse<EmulatorSettings> =
+      await backendAPI.patch('emulator/settings', changes);
     return updatedSettings.data;
   }
 

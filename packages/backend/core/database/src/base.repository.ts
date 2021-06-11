@@ -4,9 +4,8 @@ import {FindConditions, QueryBuilder, Repository} from 'typeorm';
 import {BaseRepositoryEvents} from './base.repository.types';
 
 export abstract class BaseRepository<Entity> {
-  readonly eventEmitter: EventEmitter<
-    BaseRepositoryEvents<Entity>
-  > = new EventEmitter();
+  readonly eventEmitter: EventEmitter<BaseRepositoryEvents<Entity>> =
+    new EventEmitter();
 
   constructor(
     readonly repo: Repository<Entity>,

@@ -11,19 +11,22 @@ export class UserLeaderBoardController {
 
   @Get('credits')
   async getMostCredits(): Promise<User[]> {
-    const users: UserEntity[] = await this.userLeaderBoardService.getMostCredits();
+    const users: UserEntity[] =
+      await this.userLeaderBoardService.getMostCredits();
     return users.map(user => userWire(user));
   }
 
   @Get('pixels')
   async getMostPixels(): Promise<User[]> {
-    const users: UserEntity[] = await this.userLeaderBoardService.getMostPixels();
+    const users: UserEntity[] =
+      await this.userLeaderBoardService.getMostPixels();
     return users.map(user => userWire(user));
   }
 
   @Get('points')
   async getMostPoints(): Promise<User[]> {
-    const users: UserEntity[] = await this.userLeaderBoardService.getMostPoints();
+    const users: UserEntity[] =
+      await this.userLeaderBoardService.getMostPoints();
     return users.map(user => userWire(user));
   }
 }

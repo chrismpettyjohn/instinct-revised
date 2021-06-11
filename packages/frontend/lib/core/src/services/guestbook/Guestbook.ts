@@ -24,9 +24,8 @@ export class GuestbookServiceImplementation implements GuestbookService {
     postID: number,
     guestbookDTO: UserGuestbookPostDTO
   ) {
-    const updatedPost: AxiosResponse<UserGuestbookPost> = await backendAPI.patch(
-      `users/${userID}/guestbook/${postID}`
-    );
+    const updatedPost: AxiosResponse<UserGuestbookPost> =
+      await backendAPI.patch(`users/${userID}/guestbook/${postID}`);
     return updatedPost.data;
   }
 

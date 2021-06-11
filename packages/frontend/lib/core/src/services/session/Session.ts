@@ -117,4 +117,5 @@ class SessionServiceImplementation implements SessionService {
   }
 }
 
-export const sessionService: SessionService = new SessionServiceImplementation();
+export const sessionService: SessionService =
+  new SessionServiceImplementation();
