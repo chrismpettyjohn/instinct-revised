@@ -34,7 +34,7 @@ export default {
 
     // // Bundle CSS and SASS files
     scss({
-      output: './dist/public/css/ares-theme.css',
+      output: './dist/public/css/classic-theme.css',
       failOnError: true,
       includePaths: ['node_modules/'],
       importer(url /*, prev */) {
