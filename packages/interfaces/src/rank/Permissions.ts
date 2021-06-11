@@ -1,5 +1,4 @@
 export interface Permissions {
-  websiteAdminClient: boolean;
   websiteShowStaff: boolean;
   websiteShowAdminPanel: boolean;
   websiteManageNews: boolean;
@@ -15,7 +14,6 @@ export interface Permissions {
 }
 
 export const examplePermissions: Permissions = {
-  websiteAdminClient: true,
   websiteShowStaff: true,
   websiteShowAdminPanel: true,
   websiteManageNews: true,

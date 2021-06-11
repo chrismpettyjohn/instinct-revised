@@ -21,7 +21,7 @@ export function UserLayout({children, style}: UserLayoutProps) {
   return (
     <UserGuard>
       <span className="page-container">
-        <Header />
+        <Header links={[]} />
         <main>
           <section className="page-container" style={style}>
             {children}

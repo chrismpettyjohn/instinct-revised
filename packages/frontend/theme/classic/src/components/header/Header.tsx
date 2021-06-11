@@ -1,27 +1,25 @@
 import './Header.scss';
-import React from 'react';
-import {Link} from 'wouter';
+import React, {useContext} from 'react';
+import {HeaderProps} from './Header.types';
+import {configContext} from '@instinct-web/core';
 
-export function Header() {
+export function Header({links}: HeaderProps) {
+  const {config} = useContext(configContext);
+
   return (
     <header>
       <div className="header-content">
         <div className="container">
-          <img
-            className="header-logo"
-            src="./images/logo.png"
-            alt="Habbo Hotel"
-          />
+          <img className="header-logo" src={config.logoURL} />
         </div>
       </div>
 
       <nav>
         <div className="container">
           <ul className="nav">
-            <li className="active">Cake</li>
-            <li>Community</li>
-            <li>Games</li>
-            <li>Credits</li>
+            {links.map(_ => (
+              <li key={`link_${_.href}`}>{_.label}</li>
+            ))}
           </ul>
 
           <ul className="nav-sub">

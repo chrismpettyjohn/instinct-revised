@@ -35,9 +35,6 @@ export function rankWire(rankEntity: RankEntity): Rank {
       websiteShowAdminPanel: permissionStatusToBoolean(
         rankEntity.websiteShowAdminPanel
       ),
-      websiteAdminClient: permissionStatusToBoolean(
-        rankEntity.websiteAdminClient
-      ),
       websiteManageBetaCodes: permissionStatusToBoolean(
         rankEntity.websiteManageBetaCodes
       ),
@@ -71,7 +68,6 @@ export function rankDataTransferObjectToEntity(rankDTO: RankDTO): RankEntity {
     websiteShowAdminPanel: booleanToPermissionStatus(
       rankDTO.websiteShowAdminPanel
     ),
-    websiteAdminClient: booleanToPermissionStatus(rankDTO.websiteAdminClient),
     websiteManageBetaCodes: booleanToPermissionStatus(
       rankDTO.websiteManageBetaCodes
     ),

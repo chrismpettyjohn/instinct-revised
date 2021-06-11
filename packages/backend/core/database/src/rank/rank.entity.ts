@@ -19,9 +19,6 @@ export class RankEntity {
   @OneToMany(() => UserEntity, user => user.rank)
   users?: UserEntity[];
 
-  @Column({name: 'website_admin_client', type: 'enum', default: '0'})
-  websiteAdminClient!: PermissionStatus;
-
   @Column({name: 'website_show_staff', type: 'enum', default: '0'})
   websiteShowStaff!: PermissionStatus;
 

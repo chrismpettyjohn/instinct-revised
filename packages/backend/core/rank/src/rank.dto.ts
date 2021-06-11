@@ -17,9 +17,6 @@ export class RankDTOClass implements RankDTO {
   users!: number[];
 
   @IsBoolean()
-  websiteAdminClient!: boolean;
-
-  @IsBoolean()
   websiteShowStaff!: boolean;
 
   @IsBoolean()

@@ -55,8 +55,11 @@ header {
 
         text-align: center;
 
-        background: #408FCC;
         background: #408FCC linear-gradient(to bottom, #408FCC 50%, #2373B2 0%);
+
+        &:hover {
+          background: darken(#408FCC, 10%);
+        }
 
         border: 2px solid #134787;
         border-bottom: none;
