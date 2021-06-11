@@ -1,10 +1,20 @@
 import './Header.scss';
+import {useLocation} from 'wouter';
 import React, {useContext} from 'react';
 import {HeaderProps} from './Header.types';
 import {configContext} from '@instinct-web/core';
 
 export function Header({links}: HeaderProps) {
+  const [location] = useLocation();
   const {config} = useContext(configContext);
+
+  function getParentLink(href: string): string {
+    return href.slice(1).split('/')[0];
+  }
+
+  const activeLink = links.find(
+    _ => getParentLink(_.href) === getParentLink(location)
+  );
 
   return (
     <header>
@@ -18,16 +28,24 @@ export function Header({links}: HeaderProps) {
         <div className="container">
           <ul className="nav">
             {links.map(_ => (
-              <li key={`link_${_.href}`}>{_.label}</li>
+              <li
+                className={_ === activeLink ? 'active' : ''}
+                key={`link_${_.href}`}
+              >
+                {_.label}
+              </li>
             ))}
           </ul>
 
           <ul className="nav-sub">
-            <li className="active">Home</li>
-            <li>My Page</li>
-            <li>Account Settings</li>
-            <li>Habbo Club</li>
-            <li>Habbo Guides</li>
+            {activeLink?.children.map(_ => (
+              <li
+                className={location === _.href ? 'active' : ''}
+                key={`child_link_${_.href}`}
+              >
+                {_.label}
+              </li>
+            ))}
           </ul>
         </div>
       </nav>

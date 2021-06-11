@@ -9,9 +9,18 @@ export function GuestLayout({children}: GuestLayoutProps) {
       <Header
         links={[
           {
-            href: '/me',
+            href: '/login',
             label: 'Chris',
-            children: [],
+            children: [
+              {
+                href: '/me',
+                label: 'Home',
+              },
+              {
+                href: '/settings',
+                label: 'Settings',
+              },
+            ],
           },
           {
             href: '/community',
