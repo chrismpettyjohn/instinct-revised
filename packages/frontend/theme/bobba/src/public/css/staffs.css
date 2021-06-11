@@ -1,0 +1,113 @@
+.detailsBox {
+    background: rgba(0, 0, 0, .3);
+    padding: 10px;
+    width: 200px;
+    height: 54px;
+    margin-left: 40px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.detailsBox:nth-last-child(2n + 1) {
+    margin-right: 0px;
+}
+
+.detailsBox .username {
+    font: 400 15px 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.detailsBox .motto {
+    font: 300 13px 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, .2);
+}
+
+.detailsBox .work {
+    font: 200 14px 'Roboto Condensed', sans-serif;
+}
+
+.detailsBox .staffBox {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border: 2px solid #FF9000;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    margin-left: -40px;
+    margin-top: -10px;
+}
+
+.detailsBox .staffBox.bg_rank_5-7 {
+    background: url(../img/staffs/rank5-7.png) no-repeat center center;
+    height: 70px;
+    width: 70px;
+}
+
+.detailsBox .staffBox.bg_rank_4 {
+    background: url(../img/staffs/rank4.png) no-repeat center center;
+    height: 70px;
+    width: 70px;
+}
+
+.detailsBox .staffBox.bg_rank_3 {
+    background: url(../img/staffs/rank3.png) no-repeat center center;
+    height: 70px;
+    width: 70px;
+}
+
+.detailsBox .staffBox .avatar {
+    background: no-repeat center -5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    position: relative;
+}
+
+.detailsBox .staffBox.online {
+    border: 2px solid #27ae60;
+}
+
+.detailsBox .staffBox .badge {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    z-index: 9;
+}
+
+.detailsBox .staffBox .badge.rank_7 {
+    background: url(../img/staffs/ADM9.gif);
+    height: 34px;
+    width: 34px;
+}
+
+.detailsBox .staffBox .badge.rank_6 {
+    background: url(../img/staffs/ADM8.gif);
+    height: 40px;
+    width: 40px;
+}
+
+.detailsBox .staffBox .badge.rank_5 {
+    background: url(../img/staffs/ADM7.gif);
+    height: 34px;
+    width: 31px;
+}
+
+.detailsBox .staffBox .badge.rank_4 {
+    background: url(../img/staffs/MOD6.gif);
+    height: 31px;
+    width: 30px;
+}
+
+.detailsBox .staffBox .badge.rank_3 {
+    background: url(../img/staffs/MOD4.gif);
+    height: 31px;
+    width: 35px;
+}

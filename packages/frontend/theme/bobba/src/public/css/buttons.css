@@ -1,0 +1,29 @@
+.btn {
+    position: absolute;
+    padding: 10px 20px;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    transition: background .3s;
+}
+
+.btn.green {
+    background: #27ae60;
+    color: #fff;
+    border: 1px solid #21884c;
+    border-bottom: 2px solid #21884c;
+}
+
+.btn.green.checkInHeader {
+    font: 600 15px 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    right: 0;
+    margin-top: 50px;
+    padding: 15px 50px;
+}
+
+.btn.green.checkInHeader:hover {
+    background: #2cbc69;
+}

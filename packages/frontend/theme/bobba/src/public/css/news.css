@@ -1,0 +1,84 @@
+.news-archive {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    width: 270px;
+}
+
+.news-archive li {
+    font: 400 14px 'Roboto', sans-serif;
+    padding: 6px 0;
+}
+
+.news-archive li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color .3s;
+}
+
+.news-archive li a:hover {
+    color: #FF9000;
+}
+
+.news-archive li a:after {
+    content: ' »';
+    float: right;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+.news-archive li a.selected {
+    color: rgba(255, 255, 255, .4);
+    pointer-events: none;
+}
+
+.footerBottomBox .headAvatar {
+    background: no-repeat center center;
+    height: 62px;
+    width: 54px;
+    float: left;
+    margin-top: -3px;
+}
+
+.footerBottomBox span {
+    font: 300 14px 'Roboto', sans-serif;
+    position: absolute;
+    top: 10px;
+}
+
+.footerBottomBox .newsAuthor {
+    font: 500 18px 'Roboto Condensed', sans-serif;
+    position: absolute;
+    top: 25px;
+    left: 54px;
+}
+
+.footerBottomBox .voting {
+    float: right;
+    width: 160px;
+}
+
+.footerBottomBox .voting span .likeHand {
+    background: url(../img/icons/like.png) no-repeat;
+    height: 20px;
+    width: 18px;
+    position: absolute;
+    margin-left: -30px;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+
+.footerBottomBox .voting span .likeHand:hover {
+    opacity: .8;
+}
+
+.footerBottomBox .voting span {
+    position: absolute;
+    right: 15px;
+    font: 300 15px 'Roboto';
+    margin-top: 8px;
+}

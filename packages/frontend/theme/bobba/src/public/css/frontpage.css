@@ -1,0 +1,272 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700italic,700,500italic,500,400italic,300italic,100italic,300,100|Roboto+Condensed:400,400italic,700,700italic,300,300italic);
+@import url(960_24_col.css);
+@import url(font-awesome.css);
+@import url(font-awesome.min.css);
+@import url(alertify.css);
+@import url(alertify.min.css);
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #25292C url(../img/header.png) bottom right no-repeat;
+    font: 14px 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+#main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -320px;
+	margin-left: -480px;
+	width: 960px;
+	height: 586px;
+}
+
+.logo {
+    background: url(../img/bobbalogo_big_whiteR_beta.png) no-repeat;
+    height: 73px;
+    width: 197px;
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    padding-right: 15px;
+}
+
+.textsDetails {
+    position: absolute;
+    width: 730px;
+	margin-top: 10px;
+    right: 0;
+    height: 73px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.textsDetails h3 {
+    font: 500 35px 'Roboto Condensed';
+    margin-top: 10px;
+    line-height: 0px;
+    text-transform: uppercase;
+}
+
+.textsDetails p {
+    font: 200 30px 'Roboto', sans-serif;
+    margin-top: 0;
+    line-height: 0px;
+}
+
+.textsDetails p b {
+    color: #FF9000;
+    font-weight: 400;
+}
+
+#contentBox {
+    background: rgba(0, 0, 0, .35);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .15);
+    color: #fff;
+    height: 300px;
+    width: 98%;
+    position: relative;
+	margin-top: 100px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#contentBox .padding {
+    background: rgba(255, 255, 255, .03);
+    height: 300px;
+    width: 335px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+	position: absolute;
+}
+
+#contentBox .padding .loginPosition {
+    position: absolute;
+    width: 300px;
+	height: 290px;
+    left: 15px;
+}
+
+#contentBox .padding h2 {
+    font: 200 30px 'Roboto Condensed';
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#contentBox .padding label {
+    font: 400 15px 'Roboto', sans-serif;
+}
+
+#contentBox .padding input[type=text], input[type=password] {
+    background: #fff;
+    width: 100%;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: none;
+    padding: 8px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#contentBox .padding input[type=text]:active, input[type=passsword]:active, input[type=text]:focus, input[type=password]:focus {
+    box-shadow: inset 0 0 0 2px #FF9000;
+}
+
+#contentBox .padding input[type=submit] {
+	background: #27ae60;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	color: #fff;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	outline: none;
+	transition: background .3s;
+	cursor: pointer;
+	position: absolute;
+	bottom: 10px;
+	font: 400 16px 'Roboto', sans-serif;
+}
+
+#contentBox .padding input[type=submit]:hover {
+	background: #2ecc71;
+}
+
+#contentBox .padding .sub-link {
+	font: 300 13px 'Roboto', sans-serif;
+	float: right;
+	color: rgba(255, 255, 255, .6);
+	text-decoration: none;
+}
+
+#contentBox .hotelview {
+    background: url(../img/frontpage/hotelview.png) no-repeat center left;
+    width: 600px;
+    position: absolute;
+    right: 10px;
+    height: 300px;
+    border-top-right-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+}
+
+#contentBox .hotelview .overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, .7);
+	height: 100%;
+	width: 100%;
+}
+
+#contentBox .hotelview .overlay .bigAvatar {
+    background: no-repeat center center;
+    height: 220px;
+    width: 128px;
+    position: absolute;
+    right: 20px;
+    z-index: 9999;
+    top: 40px;
+}
+
+#contentBox .hotelview .overlay .avatarShadow {
+    background: url(../img/frontpage/avatar_shadow.png) no-repeat;
+    height: 45px;
+    width: 91px;
+    position: absolute;
+    top: 220px;
+    right: 45px;
+}
+
+#contentBox .hotelview .overlay h2 {
+	font: 300 30px 'Roboto Condensed', sans-serif;
+	margin-left: 40px;
+    margin-top: 50px;
+}
+
+#contentBox .hotelview .overlay p {
+	width: 400px;
+	margin-left: 40px;
+	font-size: 15px;
+}
+
+#contentBox .hotelview .overlay .registerButton {
+	background: #FF9000;
+	width: 370px;
+	padding: 10px;
+	position: absolute;
+	bottom: 50px;
+	margin-left: 40px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font: 400 16px 'Roboto', sans-serif;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	transition: background .3s;
+    text-transform: uppercase;
+}
+
+#contentBox .hotelview .overlay .registerButton:hover {
+	background: #FF9D1E;
+}
+
+#threeBoxes {
+    background: rgba(0, 0, 0, .35);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .15);
+    color: rgba(255, 255, 255, .7);
+    height: 100px;
+    width: 293.3px;
+    position: relative;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+#threeBoxes:nth-last-child(3n) {
+    margin-right: 0px;
+}
+
+#threeBoxes .infoImages {
+	background: no-repeat center center;
+	height: 75px;
+	width: 75px;
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	float: left;
+	margin-left: 0px;
+	margin-top: 15px;
+}
+
+#threeBoxes h3 {
+    font: 300 18px 'Roboto', sans-serif;
+    margin-left: 85px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#threeBoxes p {
+	width: 180px;
+	margin-top: 0px;
+    margin-left: 85px;
+}
+
+#footer-content {
+    color: rgba(255, 255, 255, .3);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+}
