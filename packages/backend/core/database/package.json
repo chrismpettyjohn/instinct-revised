@@ -17,7 +17,7 @@
     "mysql2": "^2.2.5",
     "node-cache": "^5.1.2",
     "randomstring": "^1.1.5",
-    "typeorm": "^0.2.31"
+    "typeorm": "0.2.31"
   },
   "devDependencies": {
     "@instinct-api/common": "^2.0.1",
