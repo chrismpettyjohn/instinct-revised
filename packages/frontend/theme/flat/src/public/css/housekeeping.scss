@@ -1,0 +1,166 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css";
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Material+Icons";
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+
+$font: 'Montserrat', sans-serif;
+
+body {
+  background: #F8F9FE;
+  font: 13px/1.3 $font;
+  color: #4a4a4a;
+}
+
+#main-center {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  image-rendering: pixelated;
+
+  .logo {
+    background: url(../images/bobbalogo_big_whiteR_beta.png);
+    height: 73px;
+    width: 197px;
+    margin: 0 auto;
+  }
+
+  .login-box {
+    background: #fff;
+    height: auto;
+    width: 100%;
+    margin: 30px 0 0 0;
+    border-radius: 5px;
+    padding: 45px;
+
+    h2 {
+      font: 600 16pt $font;
+      margin: 0 0 20px 0;
+      color: #515151;
+    }
+
+    .alert {
+      padding: 10px 15px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      border-radius: 5px;
+      margin: 0 0 20px 0;
+      font: 500 13px $font;
+
+      &.error {
+        background: #FD6A78;
+      }
+    }
+
+    label {
+      display: block;
+      color: rgba(83, 91, 101, .8);
+      font: 600 13px $font;
+      margin: 0 0 5px 0;
+    }
+
+    input[type=text], input[type=password] {
+      color: #283747;
+      resize: none;
+      outline: none;
+      font: 500 12px $font;
+      padding: 13px;
+      border-radius: 5px;
+      width: 100%;
+      margin: 0 0 30px 0;
+      border: 1px solid #eee;
+    }
+
+    button {
+      background: #448AFF;
+      padding: 15px;
+      width: 100%;
+      border-radius: 5px;
+      font: 600 13px $font;
+      color: #fff;
+      transition: background .2s;
+      outline: none;
+      border: 0;
+
+      &:hover {
+        background: #79BEFF;
+      }
+    }
+  }
+}
+
+#header-content {
+  background: #448AFF;
+  height: 320px;
+  width: 100%;
+
+  .cards {
+    background: #fff;
+    border-radius: 5px;
+    margin: 50px 0 0 0;
+
+    .body {
+      padding: 1.5rem;
+      flex: 1 1 auto;
+
+      .card-title {
+        font: 700 .8125rem $font;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, .4);
+      }
+
+      span {
+        font: 400 1.25rem $font;
+        color: #32325d;
+      }
+    }
+  }
+}
+
+#navigation {
+  background: #fff;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  padding: 20px;
+
+  .logo {
+    background: url(../images/bobbalogo_big_whiteR_beta.png);
+    height: 73px;
+    width: 197px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .dashboard-link {
+    background: #448AFF;
+    padding: 15px;
+    width: 100%;
+    border-radius: 50px;
+    font: 600 13px $font;
+    color: #fff;
+    transition: background .2s;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+
+    &:hover {
+      background: #79BEFF;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #main {
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  #main .container-fluid {
+    padding-right: 39px !important;
+    padding-left: 39px !important;
+  }
+}

@@ -1,0 +1,99 @@
+$font: 'Poppins', 'Roboto', sans-serif;
+
+.btn {
+    border-radius: 5px;
+    font: 600 12px $font;
+    text-decoration: none;
+    color: #fff;
+    transition: background .2s;
+    padding: 10px 20px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .05);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+
+    &.big {
+        padding: 15px 40px;
+        font: 600 13px $font;
+        text-transform: uppercase;
+    }
+    
+    &.green {
+        background: #52be80;
+
+        &:hover {
+            background: #57ca89;
+        }
+    }
+
+    &.orange {
+        background: #ffca28;
+
+        &:hover {
+            background: #ffe082;
+        }
+    }
+
+    &.red {
+        background: #ef5350;
+
+        &:hover {
+            background: #e57373;
+        }
+    }
+
+    &.disabled {
+        background: #cfd8dc;
+        cursor: default;
+
+        &:hover {
+            background: #cfd8dc;
+        }
+    }
+
+    &.login-button {
+        position: relative;
+        float: right;
+    }
+
+    &.register-button {
+        position: relative;
+        width: 100%;
+        float: left;
+    }
+
+    &.back-register {
+        float: left;
+        position: relative;
+        padding: 10px 20px;
+        font: 600 13px $font;
+        text-transform: uppercase;
+    }
+
+    &.next-register {
+        float: right;
+        position: relative;
+        padding: 10px 20px;
+        font: 600 13px $font;
+        text-transform: uppercase;
+    }
+
+    &.check-in-header {
+        position: absolute;
+        right: 0;
+        top: 60px;
+    }
+
+    &.news-slider-btn {
+        position: absolute;
+        right: 60px;
+        top: 14px;
+    }
+
+    &.news-card-btn {
+        position: absolute;
+        right: 20px;
+        bottom: 14px;
+    }
+}

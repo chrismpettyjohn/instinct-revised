@@ -9,6 +9,7 @@
       "@instinct-web/nitro-client": ["packages/frontend/lib/nitro-client/src"],
       "@instinct-web/flash-client": ["packages/frontend/lib/flash-client/src"],
       "@instinct-theme/ares": ["packages/frontend/theme/ares/src"],
+      "@instinct-theme/flat": ["packages/frontend/theme/flat/src"],
       "@instinct-theme/bobba": ["packages/frontend/theme/bobba/src"],
       "@instinct-theme/classic": ["packages/frontend/theme/classic/src"],
       "@instinct-api/users":  ["packages/backend/core/user/src"],
