@@ -31,6 +31,8 @@ header {
       bottom: 0;
 
       margin: auto 0;
+      width: 200px;
+      height: 200px;
     }
   }
 
@@ -56,6 +58,10 @@ header {
         text-align: center;
 
         background: #408FCC linear-gradient(to bottom, #408FCC 50%, #2373B2 0%);
+
+        &:not(:first-child) {
+        margin-left: 4px;
+      }
 
         &:hover {
           background: darken(#408FCC, 10%);
