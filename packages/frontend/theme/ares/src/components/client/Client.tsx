@@ -1,18 +1,10 @@
 import './Client.scss';
 import React, {useContext} from 'react';
-import {FlashClient} from '@instinct-web/flash-client';
 import {NitroClient} from '@instinct-web/nitro-client';
 import {ClientActions} from './client-actions/ClientActions';
-import {FindRetrosVoteModal} from '../findretros-vote-modal/FindRetrosVoteModal';
-import {
-  configContext,
-  sessionContext,
-  themeContext,
-  UserGuard,
-} from '@instinct-web/core';
+import {sessionContext, themeContext, UserGuard} from '@instinct-web/core';
 
 export function Client() {
-  const {config} = useContext(configContext);
   const {user} = useContext(sessionContext);
   const {showClient} = useContext(themeContext);
 
@@ -24,23 +16,14 @@ export function Client() {
     return null;
   }
 
-  function getGame() {
-    return (
+  return (
+    <UserGuard redirect={false}>
       <div
         className={`hotel-container ${showClient ? 'visible' : 'not-visible'}`}
       >
         <ClientActions />
-        {user?.clientType === 'flash' ? <FlashClient /> : <NitroClient />}
+        <NitroClient />
       </div>
-    );
-  }
-
-  return (
-    <UserGuard redirect={false}>
-      {config.findRetrosUsername && (
-        <FindRetrosVoteModal>{getGame()}</FindRetrosVoteModal>
-      )}
-      {!config.findRetrosUsername && getGame()}
     </UserGuard>
   );
 }

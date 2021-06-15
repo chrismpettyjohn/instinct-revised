@@ -1,10 +1,9 @@
 import {useLocation} from 'wouter';
 import {Header} from '../../header/Header';
-import {Footer} from '../../footer/Footer';
-import {NavBar} from '../../header/navbar/NavBar';
 import {UserLayoutProps} from './UserLayout.types';
 import React, {useContext, useEffect} from 'react';
 import {sessionContext, UserGuard} from '@instinct-web/core';
+import {Sidebar} from '../../sidebar/Sidebar';
 
 export function UserLayout({children, style}: UserLayoutProps) {
   const [location, setLocation] = useLocation();
@@ -22,16 +21,10 @@ export function UserLayout({children, style}: UserLayoutProps) {
 
   return (
     <UserGuard>
-      <span className="page-container">
+      <Sidebar />
+      <main className="'d-inline-flex flex-column">
         <Header />
-        <NavBar />
-        <main>
-          <section className="page-container" style={style}>
-            {children}
-          </section>
-        </main>
-      </span>
-      <Footer />
+      </main>
     </UserGuard>
   );
 }

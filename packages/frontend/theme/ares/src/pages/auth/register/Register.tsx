@@ -174,6 +174,14 @@ export function Register() {
                   </div>
 
                   <div className="mb-3">
+                    <ReCAPTCHA
+                      sitekey={config.googleRecaptchaClientKey}
+                      onChange={key => onChange('captcha', key!)}
+                      onExpired={() => onChange('captcha', undefined)}
+                    />
+                  </div>
+
+                  <div className="mb-3">
                     <FigureSelector
                       figure={state.figure}
                       figures={[
@@ -195,19 +203,19 @@ export function Register() {
                         },
                         {
                           group: 'Girl',
-                          look: 'ch-660-64.ea-1401-63.hd-600-8.hr-3920-33-1345.lg-700-73.fa-1212-63.sh-725-9',
+                          look: 'hr-3791-45.wa-4060-92-71.lg-3933-92.hd-629-1392.fa-3276-72.ca-3414-92.he-3082-92.ch-3881-110.sh-735-110',
                         },
                         {
                           group: 'Girl',
-                          look: 'sh-3089-110.hr-3789-61-61.ch-3539-92.lg-3019-110.hd-600-2',
+                          look: 'lg-720-92.fa-3276-97.ch-50000-77.he-1603-77.hd-629-15.hr-7326-1403-1403.ha-4136-92.ca-3885-92-92.sh-3035-7',
                         },
                         {
                           group: 'Girl',
-                          look: 'sh-3252-90-90.hr-3273-1394-42.ch-3729-110-1408.hd-3096-10.lg-3058-11',
+                          look: 'hd-600-2.he-1603-71.lg-3078-71.sh-906-92.hr-3852-45.ha-1005-1414.ca-3885-1414-1408.ch-665-92.fa-3276-73',
                         },
                         {
                           group: 'Girl',
-                          look: 'hr-3811-1394.ch-660-1331.he-1604-63.hd-625-4.lg-3216-132',
+                          look: 'lg-3018-1338.hr-3852-32.he-3329-1412-1330.sh-3016-1409.hd-605-8.ch-3293-92-1412.fa-3276-97',
                         },
                       ]}
                       onSelect={newFigure => onChange('figure', newFigure)}
@@ -218,7 +226,7 @@ export function Register() {
                   <div className="mb-3">
                     <div className="selected-look d-flex justify-content-center">
                       <img
-                        src={`https://habbo.city/habbo-imaging/avatarimage?figure=${
+                        src={`https://avatars.habboon.pw/avatarimage.php?figure=${
                           state.figure
                             ? state.figure.look
                             : 'h-3089-110.hr-3789-61-61.ch-3539-92.lg-3019-110.hd-600-20'
@@ -226,7 +234,9 @@ export function Register() {
                       />
                     </div>
                   </div>
+                </div>
 
+                <div className="col-12">
                   <div className="d-inline-flex justify-content-center w-100 mt-2 mb-3">
                     <button
                       className="btn btn-danger w-25 p-3"
@@ -235,11 +245,6 @@ export function Register() {
                     >
                       Let's Go!
                     </button>
-                    <ReCAPTCHA
-                      sitekey={config.googleRecaptchaClientKey}
-                      onChange={key => onChange('captcha', key!)}
-                      size="invisible"
-                    />
                   </div>
                 </div>
               </div>
