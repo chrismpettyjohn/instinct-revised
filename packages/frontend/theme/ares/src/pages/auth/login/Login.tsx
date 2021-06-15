@@ -10,7 +10,7 @@ import {
   setURL,
 } from '@instinct-web/core';
 import {Carousel} from '../../../components/carousel/Carousel';
-import {UsernameField} from './username-field/UsernameField';
+import {AutoPopulateUsernameField} from './auto-populate-username-field/AutoPopulateUsernameField';
 
 setURL('login', <Login />);
 
@@ -71,7 +71,7 @@ export function Login() {
                   </div>
                   <form onSubmit={onSubmit}>
                     <div className="mb-3">
-                      <UsernameField
+                      <AutoPopulateUsernameField
                         onChange={newUsername =>
                           onChange('username', newUsername)
                         }

@@ -1,6 +1,7 @@
 import './Sidebar.scss';
-import React from 'react';
 import {Link} from 'wouter';
+import React, {useContext} from 'react';
+import {configContext} from '@instinct-web/core';
 import NewsIcon from '../../public/images/icons/news.png';
 import LogoutIcon from '../../public/images/icons/logout.png';
 import StaffIcon from '../../public/images/icons/employees.png';
@@ -8,13 +9,14 @@ import SettingsIcon from '../../public/images/icons/settings.png';
 import DashboardIcon from '../../public/images/icons/dashboard.png';
 
 export function Sidebar() {
+  const {config} = useContext(configContext);
   return (
     <div className="ares-sidebar">
       <ul className="h-100 list-group list-group-flush" id="sidebar--nav">
         <li className="sidebar--brand d-flex justify-content-center">
           <img
             className="logo--big img-fluid d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none"
-            src="https://habbo.im/assets/images/logo.png"
+            src={config.logoURL}
           />
         </li>
         <li>

@@ -24,6 +24,7 @@ export function UserLayout({children, style}: UserLayoutProps) {
       <Sidebar />
       <main className="'d-inline-flex flex-column">
         <Header />
+        {children}
       </main>
     </UserGuard>
   );

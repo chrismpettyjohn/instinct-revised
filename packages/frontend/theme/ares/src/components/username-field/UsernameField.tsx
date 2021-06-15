@@ -1,18 +1,12 @@
 import React from 'react';
-import {UserProfile} from '@instinct-prj/interface';
 import {UsernameFieldProps} from './UsernameField.types';
-import DefaultUserImage from '../../../../public/images/habbo.gif';
-import {createOptionalFetchHook, userService} from '@instinct-web/core';
-import {safeUserLookup} from './safe-user-lookup';
+import DefaultUserImage from '../../public/images/habbo.gif';
 
-export function UsernameField({username, onChange}: UsernameFieldProps) {
-  const user = createOptionalFetchHook<string, UserProfile>(
-    () => safeUserLookup(username!) as any,
-    username
-  );
-
-  console.log(user, username);
-
+export function UsernameField({
+  figure,
+  username,
+  onChange,
+}: UsernameFieldProps) {
   return (
     <>
       <label className="form-label" htmlFor="username">
@@ -23,8 +17,8 @@ export function UsernameField({username, onChange}: UsernameFieldProps) {
           alt="Mannequin"
           className="d-xxl-block d-xl-block d-lg-block d-md-block d-none mannequin"
           src={
-            user?.user?.figure
-              ? `https://www.habbo.com.br/habbo-imaging/avatarimage?figure=${user.user.figure}`
+            figure
+              ? `https://www.habbo.com.br/habbo-imaging/avatarimage?figure=${figure}`
               : DefaultUserImage
           }
         />
@@ -35,6 +29,7 @@ export function UsernameField({username, onChange}: UsernameFieldProps) {
           id="username"
           required
           type="text"
+          value={username}
           onChange={e => onChange(e.target.value)}
         />
       </div>

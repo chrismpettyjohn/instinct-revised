@@ -2,7 +2,6 @@ import './Register.scss';
 import {Link, useLocation} from 'wouter';
 import ReCAPTCHA from 'react-google-recaptcha';
 import {GuestLayout} from '../../../components/layout/guest';
-import DefaultUserImage from '../../..//public/images/habbo.gif';
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import {defaultRegisterState, RegisterState} from './Register.types';
 import {
@@ -13,6 +12,7 @@ import {
   userService,
 } from '@instinct-web/core';
 import {FigureSelector} from './figure-selector/FigureSelector';
+import {UsernameField} from '../../../components/username-field/UsernameField';
 
 setURL('register', <Register />);
 
@@ -84,33 +84,13 @@ export function Register() {
               <div className="row">
                 <div className="col-xxl-6 col-xl-6 col-md-12 col-sm-12 bg-dark p-4">
                   <div className="mb-3">
-                    <label className="form-label" htmlFor="username">
-                      Username
-                    </label>
-                    <div className="input-group" id="username-group">
-                      <img
-                        alt="Mannequin"
-                        className="d-xxl-block d-xl-block d-lg-block d-md-block d-none mannequin"
-                        src={
-                          state.figure
-                            ? `https://www.habbo.com.br/habbo-imaging/avatarimage?figure=${state.figure.look}`
-                            : DefaultUserImage
-                        }
-                      />
-                      <input
-                        aria-describedby="usernameHelp"
-                        autoComplete="username"
-                        className="form-control p-4"
-                        id="username"
-                        required
-                        type="text"
-                        onChange={e => onChange('username', e.target.value)}
-                        value={state.username}
-                      />
-                    </div>
-                    <div className="form-text" id="usernameHelp">
-                      Type your username in the box above
-                    </div>
+                    <UsernameField
+                      onChange={newUsername =>
+                        onChange('username', newUsername)
+                      }
+                      username={state.username}
+                      figure={state.figure?.look}
+                    />
                   </div>
                   <div className="mb-3">
                     <div className="mb-3">
