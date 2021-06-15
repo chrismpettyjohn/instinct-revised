@@ -1,6 +1,8 @@
 import './Sidebar.scss';
 import React from 'react';
+import {Link} from 'wouter';
 import NewsIcon from '../../public/images/icons/news.png';
+import LogoutIcon from '../../public/images/icons/logout.png';
 import StaffIcon from '../../public/images/icons/employees.png';
 import SettingsIcon from '../../public/images/icons/settings.png';
 import DashboardIcon from '../../public/images/icons/dashboard.png';
@@ -18,31 +20,53 @@ export function Sidebar() {
         <li>
           <a className="sidebar--category text-ellipsis">Home</a>
           <div className="list-unstyled sidebar--category-nav">
-            <a className="sidebar--entry list-group-item active" href="/me">
+            <Link className="sidebar--entry list-group-item active" href="/me">
               <img className="image-pixelated" src={DashboardIcon} />
               <span className="text-ellipsis">Dashboard</span>
-            </a>
+            </Link>
           </div>
           <div className="list-unstyled sidebar--category-nav">
-            <a className="sidebar--entry list-group-item active" href="/me">
+            <Link
+              className="sidebar--entry list-group-item active"
+              href="/settings"
+            >
               <img className="image-pixelated" src={SettingsIcon} />
               <span className="text-ellipsis">Settings</span>
-            </a>
+            </Link>
           </div>
         </li>
         <li>
           <a className="sidebar--category text-ellipsis">Community</a>
           <div className="list-unstyled sidebar--category-nav">
-            <a className="sidebar--entry list-group-item active" href="/me">
+            <Link
+              className="sidebar--entry list-group-item active"
+              href="/news"
+            >
               <img className="image-pixelated" src={NewsIcon} />
               <span className="text-ellipsis">News</span>
-            </a>
+            </Link>
           </div>
           <div className="list-unstyled sidebar--category-nav">
-            <a className="sidebar--entry list-group-item active" href="/me">
+            <Link
+              className="sidebar--entry list-group-item active"
+              href="/staff"
+            >
               <img className="image-pixelated" src={StaffIcon} />
               <span className="text-ellipsis">Staff Team</span>
-            </a>
+            </Link>
+          </div>
+        </li>
+        <li className="mt-auto mb-3">
+          <div className="list-unstyled sidebar--category-nav">
+            <Link className="sidebar--entry list-group-item" href="/logout">
+              <img src={LogoutIcon} className="image-pixelated" />
+              <span
+                className="text-ellipsis"
+                style={{verticalAlign: 'inherit'}}
+              >
+                Sign out
+              </span>
+            </Link>
           </div>
         </li>
       </ul>
