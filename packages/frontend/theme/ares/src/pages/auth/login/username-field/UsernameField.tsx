@@ -3,12 +3,15 @@ import {UserProfile} from '@instinct-prj/interface';
 import {UsernameFieldProps} from './UsernameField.types';
 import DefaultUserImage from '../../../../public/images/habbo.gif';
 import {createOptionalFetchHook, userService} from '@instinct-web/core';
+import {safeUserLookup} from './safe-user-lookup';
 
 export function UsernameField({username, onChange}: UsernameFieldProps) {
   const user = createOptionalFetchHook<string, UserProfile>(
-    userService.getByUsername,
+    () => safeUserLookup(username!) as any,
     username
   );
+
+  console.log(user, username);
 
   return (
     <>
@@ -19,7 +22,11 @@ export function UsernameField({username, onChange}: UsernameFieldProps) {
         <img
           alt="Mannequin"
           className="d-xxl-block d-xl-block d-lg-block d-md-block d-none mannequin"
-          src={user?.user?.figure ?? DefaultUserImage}
+          src={
+            user?.user?.figure
+              ? `https://www.habbo.com.br/habbo-imaging/avatarimage?figure=${user.user.figure}`
+              : DefaultUserImage
+          }
         />
         <input
           aria-describedby="usernameHelp"

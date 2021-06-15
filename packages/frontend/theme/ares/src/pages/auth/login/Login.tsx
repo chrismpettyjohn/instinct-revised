@@ -10,6 +10,7 @@ import {
   setURL,
 } from '@instinct-web/core';
 import {Carousel} from '../../../components/carousel/Carousel';
+import {UsernameField} from './username-field/UsernameField';
 
 setURL('login', <Login />);
 
@@ -70,22 +71,12 @@ export function Login() {
                   </div>
                   <form onSubmit={onSubmit}>
                     <div className="mb-3">
-                      <label htmlFor="username" className="form-label">
-                        Username
-                      </label>
-                      <div id="username-group" className="input-group">
-                        <img
-                          className="d-xxl-block d-xl-block d-lg-block d-md-block d-none"
-                          src="https://habbo.im/assets/images/habbo.gif"
-                        />
-                        <input
-                          type="text"
-                          id="username"
-                          className="form-control p-4"
-                          onChange={e => onChange('username', e.target.value)}
-                          required
-                        />
-                      </div>
+                      <UsernameField
+                        onChange={newUsername =>
+                          onChange('username', newUsername)
+                        }
+                        username={state.username}
+                      />
                     </div>
                     <div className="mb-3">
                       <label htmlFor="password" className="form-label">
@@ -95,6 +86,7 @@ export function Login() {
                         type="password"
                         id="password"
                         className="form-control p-4"
+                        value={state.password}
                         onChange={e => onChange('password', e.target.value)}
                         required
                       />
