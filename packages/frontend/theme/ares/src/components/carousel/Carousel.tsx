@@ -37,7 +37,6 @@ export function Carousel({slides, slideClassName, slideStyle}: CarouselProps) {
           onExited={() => setAnimating(false)}
           key={slide.backgroundImage}
           className={slideClassName}
-          style={slideStyle}
         >
           <img src={slide.backgroundImage} />
           <CarouselCaption

@@ -24,7 +24,7 @@ export function UserLayout({children, style}: UserLayoutProps) {
     <UserGuard>
       <div className="user-layout">
         <Sidebar />
-        <main className="d-inline-flex flex-column bg-danger">
+        <main className="d-inline-flex flex-column">
           <Header />
           {children}
         </main>
