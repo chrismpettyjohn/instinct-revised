@@ -1,5 +1,6 @@
 import jsx from 'acorn-jsx';
 import scss from 'rollup-plugin-scss';
+import copy from 'rollup-plugin-copy';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
 import {terser} from 'rollup-plugin-terser';
@@ -40,6 +41,10 @@ export default {
     scss({
       output: './dist/frontend.css',
       failOnError: true,
+    }),
+
+    copy({
+      targets: [{src: 'src/public/fonts/**/*', dest: 'dist/public/fonts'}],
     }),
 
     // Bundle image files

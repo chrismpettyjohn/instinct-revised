@@ -1,6 +1,4 @@
-import 'react-toastify/dist/ReactToastify.css';
-import 'react-datepicker/dist/react-datepicker.css';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import './public/css/Instinct.scss';
 
 export * from './api';
 export * from './components';

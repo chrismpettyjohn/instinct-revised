@@ -1,10 +1,11 @@
 import './Home.scss';
 import React from 'react';
 import {setURL} from '@instinct-web/core';
+import {MyFriends} from './my-friends/MyFriends';
 import {UserLayout} from '../../../components/layout/user';
+import {NewsCarousel} from './news-carousel/NewsCarousel';
 import {UserContainer} from './user-container/UserContainer';
 import {CurrentEvents} from './current-events/CurrentEvents';
-import {NewsCarousel} from './news-carousel/NewsCarousel';
 
 setURL('me', <Home />);
 
@@ -20,6 +21,11 @@ export function Home() {
             </div>
             <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 mb-4">
               <NewsCarousel />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xl-8 col-lg-9 col-md-12 col-sm-12 mb-4">
+              <MyFriends />
             </div>
           </div>
         </div>
