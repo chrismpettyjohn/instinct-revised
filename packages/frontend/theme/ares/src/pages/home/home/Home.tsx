@@ -9,7 +9,6 @@ setURL('me', <Home />);
 export function Home() {
   return (
     <UserLayout>
-      Home Page
       <div id="home-page">
         <UserContainer />
       </div>
