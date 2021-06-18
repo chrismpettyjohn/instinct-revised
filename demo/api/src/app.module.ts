@@ -5,6 +5,7 @@ import {ForumModule} from '@instinct-api/forum';
 import {EmailModule} from '@instinct-api/emails';
 import {GroupModule} from '@instinct-api/groups';
 import {PhotoModule} from '@instinct-api/photos';
+import {RoomModule} from '@instinct-api/rooms';
 import {ConfigModule} from '@instinct-api/config';
 import {CommonModule} from '@instinct-api/common';
 import {GoogleModule} from '@instinct-api/google';
@@ -34,6 +35,7 @@ import {ForgotPasswordModule} from '@instinct-plugin/forgot-password-api';
     HealthModule,
     PhotoModule,
     RankModule,
+    RoomModule,
     SessionModule,
     UserModule,
     FindRetrosModule,
