@@ -26,6 +26,5 @@ As of right now, Instinct is only compatible with *ArcturusMS by Krews* and *Nit
 * React
 * NestJS
 
-
 ## Educational Purposes
 Please note, that this project is to be used for educational purposes and is not available for commercial purposes nor resale.
