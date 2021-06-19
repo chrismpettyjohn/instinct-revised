@@ -11,6 +11,7 @@
       "@instinct-theme/ares": ["packages/frontend/theme/ares/src"],
       "@instinct-theme/flat": ["packages/frontend/theme/flat/src"],
       "@instinct-theme/bobba": ["packages/frontend/theme/bobba/src"],
+      "@instinct-theme/cosmic": ["packages/frontend/theme/cosmic/src"],
       "@instinct-theme/classic": ["packages/frontend/theme/classic/src"],
       "@instinct-api/users":  ["packages/backend/core/user/src"],
       "@instinct-api/emails":  ["packages/backend/core/email/src"],
