@@ -58,7 +58,10 @@ export default {
     }),
 
     copy({
-      targets: [{src: 'src/public/images/**/*', dest: 'dist/public/images'}],
+      targets: [
+        {src: 'src/public/images/**/*', dest: 'dist/public/images'},
+        {src: 'src/public/fonts/**/*', dest: 'dist/public/fonts'},
+      ],
     }),
 
     image({

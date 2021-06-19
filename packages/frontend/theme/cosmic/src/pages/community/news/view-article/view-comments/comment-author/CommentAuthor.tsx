@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'wouter';
 import {Avatar} from '@instinct-web/core';
 import {CommentAuthorProps} from './CommentAuthor.types';
+import StaffBadge from '../../../../../../public/img/staff_badge.gif';
 
 export function CommentAuthor({children, user}: CommentAuthorProps) {
   return (
@@ -26,7 +27,7 @@ export function CommentAuthor({children, user}: CommentAuthorProps) {
         </div>
         {user.rank!.permissions.websiteShowStaff && (
           <div style={{width: 50}}>
-            <img src="/img/staff.gif" />
+            <img src={StaffBadge} />
           </div>
         )}
       </div>

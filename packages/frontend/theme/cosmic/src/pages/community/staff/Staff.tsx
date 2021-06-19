@@ -2,6 +2,7 @@ import './Staff.scss';
 import React from 'react';
 import {Card} from '../../../components/card/Card';
 import {UserLayout} from '../../../components/layout/user';
+import StaffImage from '../../../public/img/header/staff.png';
 import {UserContainer} from '../../../components/user-container';
 import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 import {setURL, Skeleton, useFetchStaffTeam} from '@instinct-web/core';
@@ -27,10 +28,7 @@ export function Staff() {
                   </p>
                 </div>
                 <div className="col-4 text-right">
-                  <img
-                    src="/img/staff.gif"
-                    style={{marginTop: 10, height: 80}}
-                  />
+                  <img src={StaffImage} style={{marginTop: 10, height: 80}} />
                 </div>
               </div>
             </MiniJumbotron>

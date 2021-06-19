@@ -1,6 +1,5 @@
 import '@instinct-web/core';
 import {useLocation} from 'wouter';
-import './public/css/CosmicTheme.scss';
 import React, {useEffect, useState} from 'react';
 import {Client} from './components/client/Client';
 import {Bootstrap, ContextProviders} from '@instinct-web/core';

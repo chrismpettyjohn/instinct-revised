@@ -1,14 +1,15 @@
-import React from 'react';
 import {Card} from '../../card/Card';
+import React, {useContext} from 'react';
 import {Footer} from '../../footer/Footer';
-import {GuestGuard} from '@instinct-web/core';
 import {GuestLayoutProps} from './GuestLayout.types';
+import {configContext, GuestGuard} from '@instinct-web/core';
 
 export function GuestLayout({
   children,
   section = 'home',
   style,
 }: GuestLayoutProps) {
+  const {config} = useContext(configContext);
   return (
     <GuestGuard>
       <span className="page-container">
@@ -19,7 +20,7 @@ export function GuestLayout({
                 <div className="col-12">
                   <img
                     className="header-logo"
-                    src="/img/logo/regular.png"
+                    src={config.logoURL}
                     style={{width: 400}}
                   />
                   <Card style={{minWidth: 450}}>

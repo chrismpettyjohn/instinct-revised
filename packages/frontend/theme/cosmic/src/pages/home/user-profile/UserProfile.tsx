@@ -6,6 +6,7 @@ import {Friends} from './friends';
 import {UserContainer} from './user-container';
 import {UserLayout} from '../../../components/layout/user';
 import {FavoriteVideo} from './favorite-video/FavoriteVideo';
+import StaffBadge from '../../../public/img/staff_badge.gif';
 import {Loading, setURL, useFetchUserByUsername} from '@instinct-web/core';
 import {MiniJumbotron} from '../../../components/mini-jumbotron/MiniJumbotron';
 
@@ -29,7 +30,7 @@ export function UserProfile() {
                   </div>
                   <div className="col text-right">
                     {profile?.user?.rank?.permissions?.websiteShowStaff && (
-                      <img src="/img/staff.gif" height={100} />
+                      <img src={StaffBadge} height={100} />
                     )}
                   </div>
                 </div>

@@ -3,6 +3,9 @@ import React from 'react';
 import {UserProfileWidgetProps} from '../';
 import {Avatar, Icon} from '@instinct-web/core';
 import {DetailsContainer} from './details-container';
+import CreditsIcon from '../../../../public/img/icons/credits.png';
+import DucketsIcon from '../../../../public/img/icons/duckets.png';
+import DiamondsIcon from '../../../../public/img/icons/diamonds.png';
 
 export function UserContainer({profile}: UserProfileWidgetProps) {
   return (
@@ -29,7 +32,7 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             <div className="profile-icon">
               <img
                 alt="credits"
-                src="/img/icons/credits.png"
+                src={CreditsIcon}
                 style={{position: 'initial'}}
               />
               &nbsp;
@@ -38,7 +41,7 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             <div className="profile-icon">
               <img
                 alt="duckets"
-                src="/img/icons/duckets.png"
+                src={DucketsIcon}
                 style={{position: 'initial'}}
               />
               &nbsp;
@@ -47,7 +50,7 @@ export function UserContainer({profile}: UserProfileWidgetProps) {
             <div className="profile-icon">
               <img
                 alt="diamonds"
-                src="/img/icons/diamonds.png"
+                src={DiamondsIcon}
                 style={{position: 'initial'}}
               />
               &nbsp;{profile?.user.points.toLocaleString()}

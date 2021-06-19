@@ -2,19 +2,13 @@ import {Link} from 'wouter';
 import './EnterHotelButton.scss';
 import {Modal, ModalBody} from 'reactstrap';
 import React, {useContext, useEffect, useState} from 'react';
-import {
-  configContext,
-  healthContext,
-  sessionContext,
-  themeContext,
-} from '@instinct-web/core';
+import {configContext, healthContext, sessionContext} from '@instinct-web/core';
 import {ClientOption} from './client-option/ClientOption';
 
 export function EnterHotelButton() {
+  const {user} = useContext(sessionContext);
   const {config} = useContext(configContext);
   const {health} = useContext(healthContext);
-  const {applicationMode} = useContext(themeContext);
-  const {user, setUser} = useContext(sessionContext);
   const [isOpen, setModal] = useState(false);
 
   useEffect(() => {
@@ -26,26 +20,6 @@ export function EnterHotelButton() {
   function toggle() {
     if (user!.clientType === 'flash') return;
     setModal(_ => !_);
-  }
-
-  if (applicationMode) {
-    return (
-      <div style={{float: 'right'}}>
-        <div className="enter-hotel-button">
-          <div className="client-icon">
-            <img src="/img/logo/flash.svg" />
-          </div>
-          <div className="client-text">
-            <Link href={'/play/flash'}>
-              Enter {config.siteName}
-              <div style={{fontSize: '.6em'}}>
-                {health.usersOnline} users online
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
   }
 
   return (
