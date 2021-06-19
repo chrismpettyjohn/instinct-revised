@@ -1,49 +1,54 @@
-$background: #E3E3DB;
-$header-background: #BCE0EE;
+@import "./bootstrap.min.css";
+@import "./fonts.css";
+@import "./theme.css";
+@import "./theme.responsive.css";
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
+.popular-group {
+  background-color: #10426d !important;
+  border-color: #0b6395;
+  color: white;
 
-body {
-  margin: 0;
-  background: $background url(../images/background.png) center;
-  font-size: 12px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-ul {
-  list-style-type: none;
-
-  margin: unset;
-  padding: unset;
-
-  li {
-    display: inline-block;
+  &:hover {
+    border-color: #70c8e8;
   }
 }
 
-.container {
-  width: 75%;
-  max-width: 1000px;
-
-  margin: 0 auto;
-
-  position: relative;
+.alert-danger {
+  color: white;
+  background-color: #C2185B;
 }
 
-main {
-  display: grid;
+.modal-header {
+  background: #001726;
+  color: white;
+  border-color: #0b6395;
 
-  grid-gap: 12px;
-  grid-template-columns: auto 40%;
-
-  section {
-    margin-top: 12px;
+  .close {
+    color: white;
   }
 }
 
-a {
-  color: #FC6204;
+.modal-body {
+  background: #10426d;
+  color: white;
+}
+
+.modal-footer {
+  background: #001726;
+  color: white;
+  border-color: #0b6395;
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+.member-container .member-content {
+  color: white;
+}
+
+.popular-group {
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
