@@ -5,6 +5,8 @@
 
 .ares-header {
   min-height: 6.5rem;
+  width: calc(100% - 15em);
+  margin-left: 15em;
 
   & > .container {
     @include media-breakpoint-down(md) {

@@ -14,7 +14,7 @@ setURL('me', <Home />);
 export function Home() {
   return (
     <UserLayout>
-      <div id="home-page h-100">
+      <>
         <UserContainer />
         <div className="container">
           <div className="row">
@@ -41,7 +41,7 @@ export function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </>
     </UserLayout>
   );
 }
