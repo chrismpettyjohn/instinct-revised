@@ -14,7 +14,7 @@ setURL('me', <Home />);
 export function Home() {
   return (
     <UserLayout>
-      <div id="home-page h-100 w-100">
+      <div id="home-page h-100">
         <UserContainer />
         <div className="container">
           <div className="row">

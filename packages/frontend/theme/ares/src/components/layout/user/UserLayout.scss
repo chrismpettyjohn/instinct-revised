@@ -3,9 +3,10 @@
   min-height: 100%;
 
   main {
+    padding-top: 5.28rem;
+    height: 100vh;
+    width: calc(100% - 15em);
     margin-left: 15em;
-    margin-top: 6.5em;
-    width: 100%;
-    min-height: 100%;
+    transition: 250ms width;
   }
 }

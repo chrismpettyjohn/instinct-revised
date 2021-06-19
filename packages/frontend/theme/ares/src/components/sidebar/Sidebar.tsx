@@ -5,7 +5,6 @@ import {configContext} from '@instinct-web/core';
 import NewsIcon from '../../public/images/icons/news.png';
 import LogoutIcon from '../../public/images/icons/logout.png';
 import StaffIcon from '../../public/images/icons/employees.png';
-import SettingsIcon from '../../public/images/icons/settings.png';
 import DashboardIcon from '../../public/images/icons/dashboard.png';
 
 export function Sidebar() {
@@ -25,15 +24,6 @@ export function Sidebar() {
             <Link className="sidebar--entry list-group-item active" href="/me">
               <img className="image-pixelated" src={DashboardIcon} />
               <span className="text-ellipsis">Dashboard</span>
-            </Link>
-          </div>
-          <div className="list-unstyled sidebar--category-nav">
-            <Link
-              className="sidebar--entry list-group-item active"
-              href="/settings"
-            >
-              <img className="image-pixelated" src={SettingsIcon} />
-              <span className="text-ellipsis">Settings</span>
             </Link>
           </div>
         </li>
