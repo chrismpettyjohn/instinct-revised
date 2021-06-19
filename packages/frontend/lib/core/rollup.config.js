@@ -44,7 +44,10 @@ export default {
     }),
 
     copy({
-      targets: [{src: 'src/public/fonts/**/*', dest: 'dist/public/fonts'}],
+      targets: [
+        {src: 'src/public/fonts/**/*', dest: 'dist/public/fonts'},
+        {src: 'src/public/css/**/*', dest: 'dist/public/css'},
+      ],
     }),
 
     // Bundle image files

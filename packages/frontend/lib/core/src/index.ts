@@ -1,4 +1,4 @@
-import './public/css/Instinct.scss';
+import './Instinct.scss';
 
 export * from './api';
 export * from './components';
