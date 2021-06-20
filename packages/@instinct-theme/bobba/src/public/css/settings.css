@@ -1,0 +1,128 @@
+.settingsAlert {
+    background: rgba(0, 0, 0, .6);
+    padding: 10px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.settingsAlert .warning {
+    color: #f1c40f;
+    float: left;
+    margin-top: 4px;
+}
+
+.settingsAlert p {
+    width: 835px;
+    position: absolute;
+    right: 15px;
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+#navigationTab {
+    background: rgba(0, 0, 0, .4);
+    padding: 15px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    transition: background .3s;
+    cursor: pointer;
+    margin-bottom: 5px;
+    height: 30px;
+    position: relative;
+}
+
+#navigationTab:hover {
+    background: rgba(0, 0, 0, .6);
+}
+
+#navigationTab.selected {
+    background: rgba(0, 0, 0, .6);
+    pointer-events: none;
+}
+
+#navigationTab .icon {
+    float: left;
+}
+
+#navigationTab h3 {
+    position: absolute;
+    left: 60px;
+    top: -6px;
+    font: 400 16px 'Roboto Condensed', sans-serif;
+}
+
+#navigationTab b {
+    position: absolute;
+    left: 60px;
+    top: 33px;
+    font: 400 12px 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, .5);
+}
+
+label {
+    font-weight: 500;
+}
+
+input[type=text] {
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.desc {
+    margin-top: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .4);
+    margin-bottom: 7px;
+}
+
+.buttonSet {
+    margin-right: 7px;
+}
+
+.ui-button{
+    width:100px;
+    font-weight:300;
+    font-family: Roboto;
+    font-size: 13px; 
+    -webkit-user-select: none;    
+    -moz-user-select: none;      
+    -ms-user-select: none;        
+    user-select: none;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.ui-state-active {
+    font-weight:bold !important;
+    font-size: 14px;	
+    font-family: Roboto;
+}
+
+input[type=submit] {
+    background: #27ae60;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #fff;
+    font: 400 14px 'Roboto', sans-serif;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+    float: right;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background .3s;
+    top: 10px;
+    right: 20px;
+    position: relative;
+}
+
+input[type=submit]:hover {
+    background: #2ecc71;
+}

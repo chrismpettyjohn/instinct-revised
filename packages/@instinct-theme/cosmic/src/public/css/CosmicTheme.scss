@@ -1,0 +1,54 @@
+@import "./bootstrap.min.css";
+@import "./fonts.css";
+@import "./theme.css";
+@import "./theme.responsive.css";
+
+.popular-group {
+  background-color: #10426d !important;
+  border-color: #0b6395;
+  color: white;
+
+  &:hover {
+    border-color: #70c8e8;
+  }
+}
+
+.alert-danger {
+  color: white;
+  background-color: #C2185B;
+}
+
+.modal-header {
+  background: #001726;
+  color: white;
+  border-color: #0b6395;
+
+  .close {
+    color: white;
+  }
+}
+
+.modal-body {
+  background: #10426d;
+  color: white;
+}
+
+.modal-footer {
+  background: #001726;
+  color: white;
+  border-color: #0b6395;
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+.member-container .member-content {
+  color: white;
+}
+
+.popular-group {
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}

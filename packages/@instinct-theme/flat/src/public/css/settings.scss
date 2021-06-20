@@ -1,0 +1,166 @@
+$font: 'Poppins', 'Roboto', sans-serif;
+
+$font-color: #424251;
+
+.alert {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 0 14px 0;
+  color: #fff;
+  text-align: center;
+
+  &.success {
+    background: #52be80;
+  }
+
+  &.failed {
+    background: #e57373;
+  }
+}
+
+label {
+  font: 600 13px $font;
+  display: block;
+}
+
+.desc {
+  font: 500 12px $font;
+  color: rgba(66, 66, 81, .6);
+  margin: 0 0 40px 0;
+  display: inline-block;
+}
+
+.btnset {
+  float: right;
+  position: relative;
+  top: -20px;
+  margin: 0 0 30px 0;
+
+  &:last-child {
+    margin: 0 0 50px 0;
+  }
+}
+
+.ui-button {
+  width: 100px;
+  font: 300 13px $font;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.ui-state-active {
+  font: 600 13px $font;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  border: 1px solid #52be80;
+  background: #57ca89;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.save {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#settings-navigation-box {
+  background: #fff;
+  border-radius: 5px;
+  color: $font-color;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, .005);
+  position: relative;
+  margin: 0 0 15px;
+  padding: 20px;
+  transition: background .2s, color .2s;
+  display: block;
+  height: 80px;
+
+  .icon {
+    font-size: 32px;
+    float: left;
+    margin: 4px 0 0 0;
+    transition: color .2s;
+  }
+
+  .settings-title {
+    position: absolute;
+    left: 70px;
+    top: 22px;
+    display: block;
+    font: 600 13px $font;
+    transition: color .2s;
+  }
+
+  .settings-desc {
+    position: absolute;
+    left: 70px;
+    top: 42px;
+    display: block;
+    font: 500 12px $font;
+    color: rgba(66, 66, 81, .6);
+    transition: color .2s;
+  }
+
+  &:hover {
+    background: $font-color;
+
+    .icon {
+      color: #fff;
+    }
+
+    .settings-title {
+      color: #fff;
+    }
+
+    .settings-desc {
+      color: rgba(255, 255, 255, .6);
+    }
+  }
+
+  &.selected {
+    background: $font-color;
+    pointer-events: none;
+
+    .icon {
+      color: #fff;
+    }
+
+    .settings-title {
+      color: #fff;
+    }
+
+    .settings-desc {
+      color: rgba(255, 255, 255, .6);
+    }
+  }
+}
+
+input[type=text], input[type=email], input[type=password] {
+  background: #fff;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  outline: none;
+  font: 600 13px $font;
+  color: rgba(66, 66, 81, .7);
+  margin: 5px 0 10px 0;
+
+  &::placeholder {
+    font: 600 13px $font;
+    color: rgba(66, 66, 81, .5);
+  }
+}
+
+.line {
+  background: rgba(0, 0, 0, .1);
+  height: 1px;
+  width: 100%;
+  margin: 0 0 20px 0;
+}

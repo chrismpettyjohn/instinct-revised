@@ -1,0 +1,153 @@
+.bdm h2 {
+    font: 300 18px 'Roboto', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.bdm h2 span {
+    font-weight: 400;
+}
+
+.bdm h2 p {
+    margin-top: 50px;
+}
+
+.bdm .plate {
+    background: url(../img/about-box-vip.png);
+    height: 91px;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+
+.bdm .plate .plateAvatar {
+    background: no-repeat center center;
+    height: 110px;
+    width: 64px;
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+}
+
+.bdm .plate .plateAvatar .bigHead {
+    background: no-repeat center center;
+    height: 124px;
+    width: 108px;
+    position: absolute;
+    bottom: 18px;
+    left: -25px;
+}
+
+#hot-rooms {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 190px;
+}
+
+#hot-rooms li {
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, .03);
+}
+
+#hot-rooms li:nth-last-child(odd) {
+    background: rgba(0, 0, 0, .1);
+}
+
+#hot-rooms li:last-child {
+    border-bottom: none;
+}
+
+#hot-rooms .image {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    margin-top: 12px;
+}
+
+#hot-rooms .image.room_icon_1 {
+    background: url(../img/icons/room_icon_1.gif);
+}
+
+#hot-rooms .image.room_icon_2 {
+    background: url(../img/icons/room_icon_2.gif);
+}
+
+#hot-rooms .image.room_icon_3 {
+    background: url(../img/icons/room_icon_3.gif);
+}
+
+#hot-rooms .image.room_icon_4 {
+    background: url(../img/icons/room_icon_4.gif);
+}
+
+#hot-rooms .image.room_icon_5 {
+    background: url(../img/icons/room_icon_5.gif);
+}
+
+#hot-rooms li .details {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 390px;
+}
+
+#hot-rooms li .details .room-title {
+    font: 500 14px 'Roboto';
+    position: absolute;
+}
+
+#hot-rooms li .details .room-desc {
+    font: 300 12px 'Roboto Condensed';
+    position: absolute;
+    margin-top: 20px;
+}
+
+#hot-rooms li .details a.like {
+    background: url(../img/icons/like.png);
+    height: 20px;
+    width: 18px;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    margin-top: 10px;
+    transition: opacity .3s;
+}
+
+#hot-rooms li .details a.like:hover {
+    opacity: .5;
+}
+
+#hot-rooms li .details .likeCount {
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    margin-top: 12px;
+}
+
+.hotelUpdates {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    height: 210px;
+}
+
+.hotelUpdates li {
+    padding: 13px;
+}
+
+.hotelUpdates li:nth-last-child(odd) {
+    background: rgba(0, 0, 0, .1);
+}
+
+.hotelUpdates li:last-child {
+    border-bottom: none;
+}

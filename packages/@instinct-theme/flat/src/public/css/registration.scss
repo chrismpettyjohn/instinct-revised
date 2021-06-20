@@ -1,0 +1,164 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,400,500,700,900";
+@import "https://pro-next.fontawesome.com/releases/v5.6.3/css/all.css";
+
+$font: 'Poppins', 'Roboto', sans-serif;
+
+$font-color: #424251;
+
+body {
+    background: #94c1d3;
+    color: $font-color;
+    font: 500 13px $font;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.main {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.logo {
+    background: url(../images/bobbalogo_big_whiteR_beta.png);
+    height: 73px;
+    width: 197px;
+    margin: 30px auto;
+    image-rendering: pixelated;
+}
+
+.content-box {
+    background: #fff;
+    border-radius: 5px;
+    color: $font-color;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, .005);
+    position: relative;
+
+    .title-box {
+        position: relative;
+        border-bottom: 1px solid rgba(46, 58, 63, .02);
+        padding: 20px;
+
+        .title {
+            font: 600 13.5px $font;
+            float: left;
+        }
+
+        .steps {
+            font: 500 12px $font;
+            color: rgba(46, 58, 63, .7);
+            text-align: right;
+        }
+    }
+
+    .png20 {
+        padding: 20px;
+    }
+
+    .alert {
+        background: #ef5350;
+        color: #fff;
+        font: 600 12px $font;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 0 0 20px 0;
+    }
+
+    .genders {
+        width: 270px;
+        margin: 0 auto;
+
+        .male {
+            background: no-repeat center center;
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            float: left;
+            margin: 0 0 20px 0;
+            cursor: pointer;
+
+            &.selected {
+                filter: drop-shadow(4px 4px 0 #94c1d3) drop-shadow(-4px 0px 0 #94c1d3) drop-shadow(0 -4px 0 #94c1d3);
+            }
+
+            input[type=radio] {
+                display: none !important;
+            }
+        }
+        .female {
+            background: no-repeat center center;
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            float: right;
+            margin: 0 0 20px 0;
+            cursor: pointer;
+
+            &.selected {
+                filter: drop-shadow(4px 4px 0 #94c1d3) drop-shadow(-4px 0px 0 #94c1d3) drop-shadow(0 -4px 0 #94c1d3);
+            }
+
+            input[type=radio] {
+                display: none !important;
+            }
+        }
+    }
+
+    .desc {
+        font: 600 11px $font;
+        color: rgba(66, 66, 81, .6);
+        margin: 0 0 20px 0;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+
+        &:last-of-type {
+            margin: 0 0 40px 0;
+            padding: 0;
+            border-bottom: none;
+        }
+    }
+
+    label {
+        font: 600 13px $font;
+        margin: 0 0 20px 0;
+    }
+
+    select {
+        background: #fcfcfc;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, .05);
+        outline: none;
+        font: 600 12px $font;
+        color: rgba(66, 66, 81, .7);
+        margin: 0 0 10px 0;
+
+        &::placeholder {
+            font: 600 13px $font;
+            color: rgba(66, 66, 81, .5);
+        }
+    }
+
+    input[type=text], input[type=password] {
+        background: #fcfcfc;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, .05);
+        outline: none;
+        font: 600 12px $font;
+        color: rgba(66, 66, 81, .7);
+        margin: 0 0 10px 0;
+
+        &::placeholder {
+            font: 600 13px $font;
+            color: rgba(66, 66, 81, .5);
+        }
+    }
+}
+
+@import "_buttons";
