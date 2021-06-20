@@ -4,7 +4,7 @@ The User module provides several REST endpoints for working with bans on the fro
 ### REST API
 
 #### Create Ban
-Creates a new ban for users with the `Maanage Bans` scope
+Creates a new ban for users with the `Manage Bans` scope
 ```
 POST /api/users/bans
 {
@@ -16,19 +16,19 @@ POST /api/users/bans
 ```
 
 #### Fetch Bans
-Returns an array of bans for users with the `Maanage Bans` scope
+Returns an array of bans for users with the `Manage Bans` scope
 ```
 GET /api/users/bans
 ```
 
 #### Fetch Ban by ID
-Returns a ban by ID for users with the `Maanage Bans` scope
+Returns a ban by ID for users with the `Manage Bans` scope
 ```
 GET /api/users/bans/:banID
 ```
 
-#### Delete Ban
-Deletes a ban by ID for users with the `Maanage Bans` scope
+#### Delete Ban by ID
+Deletes a ban by ID for users with the `Manage Bans` scope
 ```
 DELETE /api/users/bans/:banID
 ```

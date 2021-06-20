@@ -1,57 +1,40 @@
 ## Overview
-The User module provides several REST endpoints for usage on the front-end.
+The User module provides several REST endpoints for working with users on the front-end.
 
 ### REST API
 
-#### Login Using Password
-Returns a signed JWT when given a valid username and password combination
+#### Register Account
+Creates a new user provided the user isn't surpassing the max accounts per IP and passed the recaptcha
 ```
-POST /api/session
-{
-    username: string;
-    password: string;
-}
+POST /api/users
 ```
 
-#### Fetch User Info
-Returns the profile of the currently authenticated user
+#### Fetch Online Users
+Returns an array of online users to the public
 ```
-GET /api/session
-```
-
-#### Create SSO
-Generates and returns a SSO for entering the game for the currently authenticated user
-```
-POST /api/session/sso
+GET /api/users/online
 ```
 
-#### Update Settings - Preferences
-Updates account preferences for the currently authenticated user
+#### Fetch Users of the Week
+Returns an array of users picked to be user of the week to the public
 ```
-POST /api/session/preferences
-{
-  favoriteYoutubeVide?: string;
-  clientType?: 'nitro' | 'flash' | 'desktop';
-}
+GET /api/users/user-of-the-week
 ```
 
-#### Update Settings - Email
-Updates account email for the currently authenticated user
+#### Fetch User by ID
+Returns a user by ID to the public
 ```
-POST /api/session/email
-{
-  email: string;
-  password: string;
-}
+GET /api/users/:userID
 ```
 
-#### Update Settings - Password
-Updates account security for the currently authenticated user
+#### Fetch User by ID - Rooms
+Returns an array of rooms belonging to a user by ID to the public
 ```
-POST /api/session/email
-{
-  oldPassword: string;
-  newPassword: string;
-  newPasswordAgain: string;
-}
+GET /api/users/:userID/rooms
+```
+
+#### Fetch User Profile by Username
+Returns a user profile by Username to the public
+```
+GET /api/users/profile/:username
 ```
