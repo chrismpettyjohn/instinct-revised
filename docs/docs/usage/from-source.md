@@ -17,7 +17,7 @@ A good code editor to start out with would be Visual Code: https://code.visualst
 <hr/>
 
 #### Database Software
-Managing your database is an essential part of hotel development and working with Instinct.  For the sakes of this tutorial, you will 
+Managing your database is an essential part of hotel development and working with Instinct.  For the sakes of this tutorial, you will
 be using MariaDB with the full Instinct SQL.  Please note, if you're migrating to Instinct you will have to go a different path.
 
 Download MariaDB: https://downloads.mariadb.org/
@@ -26,7 +26,7 @@ Download MariaDB: https://downloads.mariadb.org/
 
 #### NodeJS
 NodeJS is the underlying runtime that executes Instinct on your computer.  It allows Javascript code that normally is written for the browser,
-also run on your computer natively.  
+also run on your computer natively.
 
 You can download NodeJS here: https://nodejs.org/en/download/
 <hr/>
@@ -69,11 +69,11 @@ yarn build
 The environment variables file tells Instinct what port to run on and database to use.
 
 *  Please go into the folder `demo/<theme-folder>/api` and perform the following:
-    1. Create a copy of `.env.example` named `.env` 
+    1. Create a copy of `.env.example` named `.env`
     2. Modify the database variables to your new credentials from step 2
 
 * Please go into the folder `demo/<theme-folder>/web` and perform the following:
-    1. Create a copy of `.env.example` named `.env` 
+    1. Create a copy of `.env.example` named `.env`
 
 ## 6. Start Apps
 From the folder `demo/<theme-folder>/api` please execute `yarn start`.  In a new terminal window please go to the folder `demo/<theme-folder>/web` and execute
