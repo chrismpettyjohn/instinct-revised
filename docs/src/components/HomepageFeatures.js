@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Instinct is a a headless CMS that provdides everything you need to build a retro
+        Instinct is a a headless CMS that provides everything you need to build a retro
       </>
     ),
   },
