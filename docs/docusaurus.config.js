@@ -5,13 +5,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Instinct',
   tagline: 'Retro development without the hassle',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://instinct.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'chrismpettyjohn', // Usually your GitHub org/user name.
+  projectName: 'Instinct-Revised', // Usually your repo name.
   themeConfig: {
     navbar: {
       logo: {
@@ -93,13 +93,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/chrismpettyjohn/Instinct-Revised/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
