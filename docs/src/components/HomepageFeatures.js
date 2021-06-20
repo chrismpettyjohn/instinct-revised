@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    icon: 'fa-check-circle',
     description: (
       <>
         Instinct is a a headless CMS that provides everything you need to build a retro
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Developer First',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    icon: 'fa-file-code',
     description: (
       <>
         Every aspect of Instinct is written as an individual package allowing developers more freedom
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'No Boilerplate',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    icon: 'fa-times-circle',
     description: (
       <>
         Everything from authentication to frontend hooks is already written for you
@@ -32,7 +32,7 @@ const FeatureList = [
   },
   {
     title: 'Endless Customization',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    icon: 'fa-paint-brush',
     description: (
       <>
         Instinct provides dozens of libraries for your retro out of the box
@@ -41,7 +41,7 @@ const FeatureList = [
   },
   {
     title: 'Open Source',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    icon: 'fa-heart',
     description: (
       <>
         We believe in giving back to the community through high quality open source code
@@ -49,23 +49,48 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Plugins',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Plugin Support',
+    icon: 'fa-puzzle-piece',
     description: (
       <>
-        Instinct supports a plugin system with the usage of NestJS to promote code reusability.
+        Instinct supports a plugin system with the usage of NestJS to promote code reusability
+      </>
+    ),
+  },
+  {
+    title: 'Modular Architecture',
+    icon: 'fa-puzzle-piece',
+    description: (
+      <>
+        By utilizing modular architecture, we can prevent code duplication and bugs along the way
+      </>
+    ),
+  },
+  {
+    title: 'Blazing Fast',
+    icon: 'fa-rocket',
+    description: (
+      <>
+        With an average response rate of 25ms, Instinct's API proves retros don't have to be slow
+      </>
+    ),
+  },
+  {
+    title: 'Single Page App',
+    icon: 'fa-desktop',
+    description: (
+      <>
+        SPAs allow visitors to engage with your website without waiting on the backend to render
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
       <div className="text--center padding-horiz--md">
+        <i className={`fas ${icon} fa-4x`} style={{marginBottom: '1rem'}} />
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
