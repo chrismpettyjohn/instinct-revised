@@ -11,8 +11,15 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="/img/logo.png" />
+        <img src="/img/logo.png" alt="Instinct" />
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/WELCOME">
+            Learn More
+          </Link>
+        </div>
       </div>
     </header>
   );
