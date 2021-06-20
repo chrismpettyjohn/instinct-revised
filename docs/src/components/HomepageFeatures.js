@@ -59,7 +59,7 @@ const FeatureList = [
   },
   {
     title: 'Modular Architecture',
-    icon: 'fa-puzzle-piece',
+    icon: 'fa-network-wired',
     description: (
       <>
         By utilizing modular architecture, we can prevent code duplication and bugs along the way
