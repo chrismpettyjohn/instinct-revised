@@ -1,57 +1,34 @@
 ## Overview
-The User module provides several REST endpoints for usage on the front-end.
+The User module provides several REST endpoints for working with bans on the front-end.
 
 ### REST API
 
-#### Login Using Password
-Returns a signed JWT when given a valid username and password combination
+#### Create Ban
+Creates a new ban for users with the `Maanage Bans` scope
 ```
-POST /api/session
+POST /api/users/bans
 {
-    username: string;
-    password: string;
+  userID: number;
+  reason: string;
+  banStart: number;
+  banEnd: number;
 }
 ```
 
-#### Fetch User Info
-Returns the profile of the currently authenticated user
+#### Fetch Bans
+Returns an array of bans for users with the `Maanage Bans` scope
 ```
-GET /api/session
-```
-
-#### Create SSO
-Generates and returns a SSO for entering the game for the currently authenticated user
-```
-POST /api/session/sso
+GET /api/users/bans
 ```
 
-#### Update Settings - Preferences
-Updates account preferences for the currently authenticated user
+#### Fetch Ban by ID
+Returns a ban by ID for users with the `Maanage Bans` scope
 ```
-POST /api/session/preferences
-{
-  favoriteYoutubeVide?: string;
-  clientType?: 'nitro' | 'flash' | 'desktop';
-}
+GET /api/users/bans/:banID
 ```
 
-#### Update Settings - Email
-Updates account email for the currently authenticated user
+#### Delete Ban
+Deletes a ban by ID for users with the `Maanage Bans` scope
 ```
-POST /api/session/email
-{
-  email: string;
-  password: string;
-}
-```
-
-#### Update Settings - Password
-Updates account security for the currently authenticated user
-```
-POST /api/session/email
-{
-  oldPassword: string;
-  newPassword: string;
-  newPasswordAgain: string;
-}
+DELETE /api/users/bans/:banID
 ```
