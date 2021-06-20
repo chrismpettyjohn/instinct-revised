@@ -40,15 +40,15 @@ module.exports = {
           items: [
             {
               label: 'From Source',
-              to: '/docs/intro',
+              to: '/docs/Use Instinct/From Source',
             },
             {
               label: 'New Project',
-              to: '/docs/intro',
+              to: '/docs/Use Instinct/New Project',
             },
             {
               label: 'In Production',
-              to: '/docs/intro',
+              to: '/docs/Use Instinct/In Production',
             },
           ],
         },
