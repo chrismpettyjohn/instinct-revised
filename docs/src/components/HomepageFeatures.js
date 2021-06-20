@@ -57,33 +57,6 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: 'Typescript',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        By using Typescript, Instinct provides a type safe and easy to use API on the front and back end.
-      </>
-    ),
-  },
-  {
-    title: 'NestJS',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        On the backend. Instinct is setup as dozens of NestJS modules allowing hotel owners to easily add functionality.
-      </>
-    ),
-  },
-  {
-    title: 'React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Instinct offers many frontend libraries for theming and functionality to make building your website a breeze.
-      </>
-    ),
-  },
 ];
 
 function Feature({Svg, title, description}) {
