@@ -1,21 +1,20 @@
 ## Overview
-The Articles Module provides reusable RESTful APIs, services, pipes and more to work with news articles
+News Articles are used to keep your users updated about the latest events, changes and other important
+information.  
 
-### REST API
-
-#### Fetch Articles
+### Fetch Articles
 Returns an array of news articles to the public
 ```
 GET /api/articles
 ```
 
-#### Fetch Article by ID
+### Fetch Article by ID
 Returns a news article by its ID to the public
 ```
 GET /api/articles/:articleID
 ```
 
-#### Create Article
+### Create Article
 Creates a new news article for users with the `Manage News` scope
 ```
 POST /api/articles
@@ -29,7 +28,7 @@ POST /api/articles
 }
 ```
 
-#### Update Article by ID
+### Update Article by ID
 Updates a news article for users with the `Manage News` scope
 ```
 PATCH /api/articles/:articleID
@@ -43,7 +42,7 @@ PATCH /api/articles/:articleID
 }
 ```
 
-#### Delete Article by ID
+### Delete Article by ID
 Deletes a news article for users with the `Manage News` scope
 ```
 Delete /api/articles/:articleID

@@ -26,4 +26,4 @@ The following people have contributed design work to additional themes.
 * **Sonay** - Bobba Theme
 * **Cake** - Classic Theme
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_5lUSTmkM_0?controls=0&amp;start&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_5lUSTmkM_0?controls=0&amp;start" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
