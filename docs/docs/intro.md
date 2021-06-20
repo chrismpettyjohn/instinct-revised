@@ -4,6 +4,10 @@ Instinct is a [Headless CMS](https://www.contentful.com/r/knowledgebase/what-is-
 By using Instinct, you can focus on the parts of your hotel that are important!  Instinct provides all of the boilerplate
 you need to build a modern website including a full API and React app.
 
+## What Is Documented?
+The following sections are completed:
+* REST API
+
 ## Why do I need Instinct?
 Most hotels use outdated technology that is built on PHP 5 or follows bad standards.  Instinct offers dozens of libraries with a
 standardized API that is battle tested for your hotel.
