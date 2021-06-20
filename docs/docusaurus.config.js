@@ -79,7 +79,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Instinct by LeChris`,
+      copyright: 'Instinct by LeChris',
     },
     prism: {
       theme: lightCodeTheme,
