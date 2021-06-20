@@ -24,6 +24,11 @@ module.exports = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://discord.gg/ecweHJ3F9M',
+          label: 'Discord',
+          position: 'right',
+        },
       ],
     },
     footer: {

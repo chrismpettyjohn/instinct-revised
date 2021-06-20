@@ -1,18 +1,12 @@
 <img src="https://i.imgur.com/gOi5doh.png"/>
 
-Instinct is a collection of libraries around Habbo Hotel that help ease the process of creating custom websites.
+<img src="https://i.imgur.com/hnXKQig.png" />
 
-## Compatibility
-As of right now, Instinct is only compatible with *ArcturusMS by Krews* and *Nitro HTML5 by Billsonnn*.
+## Screenshots
+https://imgur.com/a/0c5zTbi
 
-## Future Changes
-We hope to introduce multiple themes, languages and more into Instinct.
-
-## Technology
-* NodeJS
-* Typescript
-* React
-* NestJS
+## Discord
+Join our Discord here: https://discord.gg/ecweHJ3F9M
 
 ## Educational Purposes
 Please note, that this project is to be used for educational purposes and is not available for commercial purposes nor resale.

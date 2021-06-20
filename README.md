@@ -6,7 +6,7 @@
 https://imgur.com/a/0c5zTbi
 
 ## Discord
-Join our Discord here: https://discord.gg/ZFCV5HZ4jt
+Join our Discord here: https://discord.gg/ecweHJ3F9M
 
 ## Getting Started
 If you'd like to start using Instinct, you can follow the tutorial [here](https://instinct.dev)
