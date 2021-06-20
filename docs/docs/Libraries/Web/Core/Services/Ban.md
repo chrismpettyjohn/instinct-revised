@@ -2,7 +2,7 @@
 The Ban Service is responsible for any logic pertaining to CRUD operations with bans via the REST API.
 
 ## Usage
-```
+```typescript
 import { banService } from '@instinct-web/core';
 ```
 ## Methods

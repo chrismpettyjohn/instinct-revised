@@ -2,7 +2,7 @@
 The Article Service is responsible for any logic pertaining to CRUD operations with news articles via the REST API.
 
 ## Usage
-```
+```typescript
 import { articleService } from '@instinct-web/core';
 ```
 
