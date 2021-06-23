@@ -12,7 +12,7 @@
     "compile": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "crypto-random-string": "^4.0.0"
+    "crypto-random-string": "3.3.1"
   },
   "devDependencies": {
     "@instinct-api/common": "^2.4.3",
