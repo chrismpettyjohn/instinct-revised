@@ -7,6 +7,7 @@ you need to build a modern website including a full API and React app.
 ## What Is Documented?
 The following sections are completed:
 * REST API > Core
+* Libraries > Web > Core > Context
 * Libraries > Web > Core > Services
 
 ## Why do I need Instinct?
