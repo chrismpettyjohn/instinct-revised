@@ -24,3 +24,4 @@ Returns a room by ID to the public
 ```typescript
 const room = await roomService.getByID(1);
 ```
+ 
