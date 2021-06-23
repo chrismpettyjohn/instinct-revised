@@ -1,5 +1,5 @@
 ## Description
-The Guestbook Service is responsible for any logic pertaining profile guestbooks
+The Guestbook Service is responsible for any logic pertaining to profile guestbooks
 
 ## Usage
 ```typescript
