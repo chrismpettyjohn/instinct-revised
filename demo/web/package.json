@@ -1,6 +1,6 @@
 {
   "name": "@instinct-client/demo-web",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "scripts": {
     "start": "PORT=3001 SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "build:prod": "rimraf dist && rimraf ./build && SKIP_PREFLIGHT_CHECK=true react-app-rewired build && mv build dist && cp dist/index.html dist/404.html"
