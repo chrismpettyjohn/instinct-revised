@@ -7,6 +7,8 @@ Instinct's frontend libraries follow [Atomic Design](https://codeburst.io/atomic
 Instinct makes heavy usage of [React Context](https://reactjs.org/docs/context.html).  For those of you unfamiliar to React, context
 is a way of sharing objects across different components at different levels easier.  
 
+Instinct utilizes Context as a means of making state globally accessible such as user sessions, theme settings and more.
+
 ### Components
 Another principle of React is  [Component Based Architecture](https://reactjs.org/docs/components-and-props.html).  By utilizing components,
 we can reuse bits of logic and design instead of needing to reinvent the wheel.  Furthermore, it makes fixing bugs and adding features
