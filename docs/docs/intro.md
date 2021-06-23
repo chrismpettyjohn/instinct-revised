@@ -6,7 +6,8 @@ you need to build a modern website including a full API and React app.
 
 ## What Is Documented?
 The following sections are completed:
-* REST API
+* REST API > Core
+* Libraries > Web > Core > Services
 
 ## Why do I need Instinct?
 Most hotels use outdated technology that is built on PHP 5 or follows bad standards.  Instinct offers dozens of libraries with a
@@ -16,10 +17,6 @@ By using Instinct, your developers can focus on creating beautiful themes and no
 
 ## Does Instinct Cost Money?
 Instinct is open source and will never cost money.
-
-## What Does Instinct Look Like?
-Read above.  Instinct is a headless CMS meaning there is no "theme" for Instinct.  Themes are additional features the Instinct
-team has added to make it easier for you, the user to get started. 
 
 ## Who Makes Instinct?
 Instinct is worked on solely by **LeChris**
