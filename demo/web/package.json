@@ -1,6 +1,6 @@
 {
   "name": "@instinct-client/demo-web",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "scripts": {
     "start": "PORT=3001 SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "build:prod": "rimraf dist && rimraf ./build && SKIP_PREFLIGHT_CHECK=true react-app-rewired build && mv build dist && cp dist/index.html dist/404.html"
@@ -13,7 +13,7 @@
     "@instinct-theme/ares": "^0.3.5",
     "@instinct-theme/bobba": "^0.3.5",
     "@instinct-theme/classic": "^0.3.5",
-    "@instinct-theme/cosmic": "^1.1.5",
+    "@instinct-theme/cosmic": "^1.1.6",
     "@instinct-theme/flat": "^0.3.5",
     "@instinct-web/admin": "^2.4.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
