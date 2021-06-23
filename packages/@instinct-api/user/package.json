@@ -24,7 +24,7 @@
     "class-validator": "^0.13.1",
     "moment": "^2.29.1",
     "typeorm": "0.2.31",
-    "typescript": "~4.3.4"
+    "typescript": "~4.2.3"
   },
   "peerDependencies": {
     "@instinct-api/common": "^1.9.0",
@@ -39,7 +39,7 @@
     "class-validator": "^0.13.1",
     "moment": "^2.29.1",
     "typeorm": "0.2.31",
-    "typescript": "~4.3.4"
+    "typescript": "~4.2.3"
   },
   "gitHead": "21e01d7501fe1f1124c2a549fdc3eca62bb3f29c"
 }

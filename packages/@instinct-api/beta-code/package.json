@@ -20,7 +20,7 @@
     "@instinct-prj/interface": "^2.4.3",
     "@nestjs/common": "^7.6.18",
     "@nestjs/core": "^7.6.18",
-    "typescript": "~4.3.4"
+    "typescript": "~4.2.3"
   },
   "peerDependencies": {
     "@instinct-api/database": "^1.9.0",
@@ -28,7 +28,7 @@
     "@instinct-prj/interface": "^1.9.0",
     "@nestjs/common": "^7.6.18",
     "@nestjs/core": "^7.6.18",
-    "typescript": "~4.3.4"
+    "typescript": "~4.2.3"
   },
   "gitHead": "21e01d7501fe1f1124c2a549fdc3eca62bb3f29c"
 }
