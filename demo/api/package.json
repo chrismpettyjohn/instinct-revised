@@ -29,16 +29,16 @@
     "@instinct-web/admin": "^2.0.1",
     "@instinct-web/flash-client": "^2.0.1",
     "@instinct-web/nitro-client": "^2.0.1",
-    "@nestjs/common": "^7.6.13",
-    "@nestjs/core": "^7.6.13",
-    "@nestjs/platform-express": "^7.6.13",
+    "@nestjs/common": "^7.6.18",
+    "@nestjs/core": "^7.6.18",
+    "@nestjs/platform-express": "^7.6.18",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "cors": "^2.8.5",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.0.0",
     "tsconfig-paths": "^3.9.0",
-    "typeorm": "0.2.31",
-    "typescript": "^4.2.3"
+    "typeorm": "0.2.34",
+    "typescript": "^4.3.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10"
