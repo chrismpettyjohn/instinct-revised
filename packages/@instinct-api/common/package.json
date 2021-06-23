@@ -1,6 +1,6 @@
 {
   "name": "@instinct-api/common",
-  "version": "2.3.0",
+  "version": "2.40",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
