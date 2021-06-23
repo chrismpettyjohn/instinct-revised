@@ -12,7 +12,7 @@ import { clientContext } from '@instinct-web/core';
 ```
 
 ### loadingProgress
-The current loading profess of the flash client measured in percentages.
+The current loading progress of the flash client measured in percentages.
 ```typescript
 const {loadingProgress} = useContext(clientContext);
 ```
