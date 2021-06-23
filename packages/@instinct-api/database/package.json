@@ -1,6 +1,6 @@
 {
   "name": "@instinct-api/database",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
