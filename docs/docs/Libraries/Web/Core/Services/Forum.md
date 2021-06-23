@@ -1,7 +1,7 @@
 ## Description
 The Forum Service is responsible for any logic pertaining to website forums.  
 
-**Please note** This functionality is independent of group forums and specified to Instinct,
+**Please note** This functionality is independent of group forums and specified to Instinct
 
 ## Usage
 ```typescript
