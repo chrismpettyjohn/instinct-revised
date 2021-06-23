@@ -1,6 +1,6 @@
 {
   "name": "@instinct-web/admin",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@instinct-prj/interface": "^2.4.3",
-    "@instinct-web/core": "^2.4.3",
+    "@instinct-web/core": "^2.4.4",
     "@uiw/react-md-editor": "^3.3.7",
     "axios": "^0.21.1",
     "lodash": "^4.17.21",

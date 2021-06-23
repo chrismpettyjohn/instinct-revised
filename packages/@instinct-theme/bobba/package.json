@@ -1,6 +1,6 @@
 {
   "name": "@instinct-theme/bobba",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -15,9 +15,9 @@
   "dependencies": {
     "@instinct-prj/interface": "^2.4.3",
     "@instinct-prj/interface-rp": "^1.11.0",
-    "@instinct-web/core": "^2.4.3",
-    "@instinct-web/flash-client": "^2.4.3",
-    "@instinct-web/nitro-client": "^2.4.3",
+    "@instinct-web/core": "^2.4.4",
+    "@instinct-web/flash-client": "^2.4.4",
+    "@instinct-web/nitro-client": "^2.4.4",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.58",

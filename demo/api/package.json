@@ -1,6 +1,6 @@
 {
   "name": "@instinct-client/demo-api",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "scripts": {
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
   },
@@ -26,9 +26,9 @@
     "@instinct-plugin/manage-users-api": "^2.4.4",
     "@instinct-plugin/user-guestbook-api": "^2.4.4",
     "@instinct-prj/interface": "^2.4.3",
-    "@instinct-web/admin": "^2.4.3",
-    "@instinct-web/flash-client": "^2.4.3",
-    "@instinct-web/nitro-client": "^2.4.3",
+    "@instinct-web/admin": "^2.4.4",
+    "@instinct-web/flash-client": "^2.4.4",
+    "@instinct-web/nitro-client": "^2.4.4",
     "@nestjs/common": "^7.6.18",
     "@nestjs/core": "^7.6.18",
     "@nestjs/platform-express": "^7.6.18",
