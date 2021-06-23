@@ -28,4 +28,20 @@ The following people have contributed design work to additional themes.
 * **Sonay** - Bobba Theme
 * **Cake** - Classic Theme
 
+## Why Choose Instinct?
+Instinct is **not the traditional** retro CMS.  Instinct is a collection of libraries that make building tools for
+retros easier, whether it's a CMS, admin panel, etc.
+
+Instinct's one true goal is to make retro development easier.  We provide all the scaffolding needing to create a
+scalable, modern and secure website leaving you to do the any extra customizations you may need.
+
+## Who Is Instinct For?
+Instinct is aimed at developers and people wanting to learn development.
+
+## Will There Be A Simpler Instinct?
+In the distant future, there are plans for a CMS utilizing Instinct that provides an auto installer and interactive admin panel.
+
+Ideally, retro users would be comfortable creating new Instinct projects for their hotels and would knowledgeable with Instinct's
+API.  By using Instinct, retro users can save hundreds of hours in time by avoiding recreating the wheel.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_5lUSTmkM_0?controls=0&amp;start" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
