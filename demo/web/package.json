@@ -1,6 +1,6 @@
 {
   "name": "@instinct-client/demo-web",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "scripts": {
     "start": "PORT=3001 SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "build:prod": "rimraf dist && rimraf ./build && SKIP_PREFLIGHT_CHECK=true react-app-rewired build && mv build dist && cp dist/index.html dist/404.html"
@@ -10,12 +10,12 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@instinct-theme/ares": "^0.3.1",
-    "@instinct-theme/bobba": "^0.3.1",
-    "@instinct-theme/classic": "^0.3.1",
-    "@instinct-theme/cosmic": "^1.1.1",
-    "@instinct-theme/flat": "^0.3.1",
-    "@instinct-web/admin": "^2.4.1",
+    "@instinct-theme/ares": "^0.3.2",
+    "@instinct-theme/bobba": "^0.3.2",
+    "@instinct-theme/classic": "^0.3.2",
+    "@instinct-theme/cosmic": "^1.1.2",
+    "@instinct-theme/flat": "^0.3.2",
+    "@instinct-web/admin": "^2.4.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/node": "^15.12.4",
     "@types/react": "^17.0.11",
@@ -42,5 +42,5 @@
     ]
   },
   "proxy": "http://localhost:3000",
-  "gitHead": "666fd849df63157270e8806263b377121dac51dc"
+  "gitHead": "47424cba0feac0b3087f6bac60070f0594e3f706"
 }

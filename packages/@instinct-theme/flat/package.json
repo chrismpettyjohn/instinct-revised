@@ -1,6 +1,6 @@
 {
   "name": "@instinct-theme/flat",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -13,11 +13,11 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "dependencies": {
-    "@instinct-prj/interface": "^2.4.1",
+    "@instinct-prj/interface": "^2.4.2",
     "@instinct-prj/interface-rp": "^1.11.0",
-    "@instinct-web/core": "^2.4.1",
-    "@instinct-web/flash-client": "^2.4.1",
-    "@instinct-web/nitro-client": "^2.4.1",
+    "@instinct-web/core": "^2.4.2",
+    "@instinct-web/flash-client": "^2.4.2",
+    "@instinct-web/nitro-client": "^2.4.2",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.58",
@@ -87,5 +87,5 @@
     "typescript": "^4.3.4",
     "wouter": "^2.7.4"
   },
-  "gitHead": "666fd849df63157270e8806263b377121dac51dc"
+  "gitHead": "47424cba0feac0b3087f6bac60070f0594e3f706"
 }
