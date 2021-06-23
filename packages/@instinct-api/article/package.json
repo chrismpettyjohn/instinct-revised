@@ -1,6 +1,6 @@
 {
   "name": "@instinct-api/articles",
-  "version": "1.2.0",
+  "version": "2.3.0",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [

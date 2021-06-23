@@ -10,11 +10,11 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@instinct-theme/ares": "^0.4.0",
-    "@instinct-theme/bobba": "^0.4.0",
-    "@instinct-theme/classic": "^0.4.0",
-    "@instinct-theme/cosmic": "^1.2.0",
-    "@instinct-theme/flat": "^0.4.0",
+    "@instinct-theme/ares": "^0.2.0",
+    "@instinct-theme/bobba": "^0.2.0",
+    "@instinct-theme/classic": "^0.2.0",
+    "@instinct-theme/cosmic": "^1.0.0",
+    "@instinct-theme/flat": "^0.2.0",
     "@instinct-web/admin": "^2.3.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/node": "^15.12.4",
