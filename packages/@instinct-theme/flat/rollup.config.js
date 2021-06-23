@@ -45,7 +45,6 @@ export default {
             '..',
             '..',
             '..',
-            '..',
             'node_modules',
             url.slice(1)
           );
