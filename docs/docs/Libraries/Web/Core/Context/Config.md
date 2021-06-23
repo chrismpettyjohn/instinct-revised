@@ -1,5 +1,9 @@
 ## Description
-The Config Context is responsible storing Instinct's config settings
+The Config Context is responsible for storing Instinct's config settings
+
+**Please note:**
+<br />
+The health context is automatically managed by the `Data Polling` component
 
 ## Usage
 ```typescript

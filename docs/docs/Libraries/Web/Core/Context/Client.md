@@ -3,7 +3,7 @@ The Client Context is responsible storing the loading progress of the client
 
 **Please note:**
 <br />
-The client context is only used with the *Flash Client* 
+The client context is only used with the *Flash Client* and is automatically managed
 
 ## Usage
 ```typescript
