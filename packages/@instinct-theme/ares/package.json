@@ -67,7 +67,7 @@
     "thread-loader": "^3.0.4",
     "ts-loader": "^9.2.3",
     "tslib": "^2.3.0",
-    "typescript": "^4.3.4",
+   "typescript": "~4.2.3",
     "wouter": "^2.7.4"
   },
   "peerDependencies": {
@@ -84,7 +84,7 @@
     "react-toastify": "^7.0.4",
     "swfobject": "^2.2.1",
     "tslib": "^2.3.0",
-    "typescript": "^4.3.4",
+   "typescript": "~4.2.3",
     "wouter": "^2.7.4"
   },
   "gitHead": "21e01d7501fe1f1124c2a549fdc3eca62bb3f29c"
