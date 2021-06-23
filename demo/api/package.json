@@ -1,6 +1,6 @@
 {
   "name": "@instinct-client/demo-api",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "scripts": {
     "start": "node_modules/.bin/ts-node -r tsconfig-paths/register src/index.ts"
   },
@@ -22,7 +22,7 @@
     "@instinct-api/session": "^2.4.3",
     "@instinct-api/users": "^2.4.3",
     "@instinct-plugin/findretros-api": "^2.4.3",
-    "@instinct-plugin/forgot-password-api": "^2.4.3",
+    "@instinct-plugin/forgot-password-api": "^2.4.4",
     "@instinct-plugin/manage-users-api": "^2.4.3",
     "@instinct-plugin/user-guestbook-api": "^2.4.3",
     "@instinct-prj/interface": "^2.4.3",
