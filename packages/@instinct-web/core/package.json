@@ -1,6 +1,6 @@
 {
   "name": "@instinct-web/core",
-  "version": "2.4.5",
+  "version": "2.4.6",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -57,7 +57,7 @@
     "sass-loader": "^12.1.0",
     "thread-loader": "^3.0.4",
     "ts-loader": "^9.2.3",
-   "typescript": "~4.2.3"
+    "typescript": "~4.2.3"
   },
   "peerDependencies": {
     "@stripe/react-stripe-js": "^1.4.1",
@@ -65,7 +65,7 @@
     "bootstrap": "^5.0.2",
     "react": "^17.0.1",
     "reactstrap": "^8.9.0",
-   "typescript": "~4.2.3"
+    "typescript": "~4.2.3"
   },
   "gitHead": "21e01d7501fe1f1124c2a549fdc3eca62bb3f29c"
 }

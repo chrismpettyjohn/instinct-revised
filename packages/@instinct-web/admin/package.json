@@ -1,6 +1,6 @@
 {
   "name": "@instinct-web/admin",
-  "version": "2.4.5",
+  "version": "2.4.6",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@instinct-prj/interface": "^2.4.4",
-    "@instinct-web/core": "^2.4.5",
+    "@instinct-web/core": "^2.4.6",
     "@uiw/react-md-editor": "^3.3.7",
     "axios": "^0.21.1",
     "lodash": "^4.17.21",
@@ -54,13 +54,13 @@
     "sass-loader": "^12.1.0",
     "thread-loader": "^3.0.4",
     "ts-loader": "^9.2.3",
-   "typescript": "~4.2.3"
+    "typescript": "~4.2.3"
   },
   "peerDependencies": {
     "react": "^17.0.1",
     "react-select": "^4.3.1",
     "reactstrap": "^8.9.0",
-   "typescript": "~4.2.3"
+    "typescript": "~4.2.3"
   },
   "gitHead": "21e01d7501fe1f1124c2a549fdc3eca62bb3f29c"
 }
