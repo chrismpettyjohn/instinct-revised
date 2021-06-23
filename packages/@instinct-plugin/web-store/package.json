@@ -1,6 +1,6 @@
 {
   "name": "@instinct-plugin/web-store-api",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -15,9 +15,9 @@
     "stripe": "^8.156.0"
   },
   "devDependencies": {
-    "@instinct-api/database": "^2.4.4",
-    "@instinct-api/session": "^2.4.4",
-    "@instinct-prj/interface": "^2.4.3",
+    "@instinct-api/database": "^2.4.5",
+    "@instinct-api/session": "^2.4.5",
+    "@instinct-prj/interface": "^2.4.4",
     "@nestjs/common": "^7.6.18",
     "@nestjs/core": "^7.6.18",
     "typescript": "~4.2.3"

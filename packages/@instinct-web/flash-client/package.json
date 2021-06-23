@@ -1,6 +1,6 @@
 {
   "name": "@instinct-web/flash-client",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "main": "dist/index.js",
   "types": "dist/types",
   "files": [
@@ -13,8 +13,8 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "dependencies": {
-    "@instinct-prj/interface": "^2.4.3",
-    "@instinct-web/core": "^2.4.4",
+    "@instinct-prj/interface": "^2.4.4",
+    "@instinct-web/core": "^2.4.5",
     "swfobject": "^2.2.1"
   },
   "devDependencies": {
